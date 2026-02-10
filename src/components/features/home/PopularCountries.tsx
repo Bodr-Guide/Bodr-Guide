@@ -1,13 +1,10 @@
 "use client";
 
-import { useState, useEffect, useMemo, useRef, useCallback } from "react";
+import { useState, useEffect, useMemo, useRef } from "react";
 import Link from "next/link";
 import { Country } from "@/lib/types";
 import { getCountryImage } from "@/lib/countryImages";
 import VisaBadge from "@/components/ui/VisaBadge";
-
-// 한 페이지에 표시할 카드 수
-const CARDS_PER_PAGE = 4;
 
 interface PopularCountriesProps {
   countries: Country[];
@@ -16,15 +13,14 @@ interface PopularCountriesProps {
 // 국가 카드 가로 캐러셀 섹션 컴포넌트
 export default function PopularCountries({ countries }: PopularCountriesProps) {
   const [searchQuery, setSearchQuery] = useState("");
-  const [page, setPage] = useState(0);
-  const scrollRef = useRef<HTMLDivElement>(null);
+  const [isPaused, setIsPaused] = useState(false);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   // 히어로 섹션 검색바와 연동 (커스텀 이벤트 수신)
   useEffect(() => {
     const handleHeroSearch = (e: Event) => {
       const customEvent = e as CustomEvent<string>;
       setSearchQuery(customEvent.detail);
-      setPage(0);
     };
 
     window.addEventListener("hero-search", handleHeroSearch);
@@ -43,20 +39,33 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
     );
   }, [countries, searchQuery]);
 
-  const totalPages = Math.ceil(filteredCountries.length / CARDS_PER_PAGE);
-  const canPrev = page > 0;
-  const canNext = page < totalPages - 1;
+  // 무한 스크롤을 위해 카드 리스트를 3번 복제
+  const duplicatedCountries = [
+    ...filteredCountries,
+    ...filteredCountries,
+    ...filteredCountries,
+  ];
 
-  const goTo = useCallback((newPage: number) => {
-    setPage(newPage);
-    if (scrollRef.current) {
-      const cardWidth = scrollRef.current.scrollWidth / filteredCountries.length;
-      scrollRef.current.scrollTo({
-        left: newPage * CARDS_PER_PAGE * cardWidth,
+  // 이전/다음 버튼 클릭 핸들러
+  const handlePrev = () => {
+    if (scrollContainerRef.current) {
+      const cardWidth = scrollContainerRef.current.scrollWidth / duplicatedCountries.length;
+      scrollContainerRef.current.scrollBy({
+        left: -cardWidth * 4, // 4개 카드만큼 이동
         behavior: "smooth",
       });
     }
-  }, [filteredCountries.length]);
+  };
+
+  const handleNext = () => {
+    if (scrollContainerRef.current) {
+      const cardWidth = scrollContainerRef.current.scrollWidth / duplicatedCountries.length;
+      scrollContainerRef.current.scrollBy({
+        left: cardWidth * 4, // 4개 카드만큼 이동
+        behavior: "smooth",
+      });
+    }
+  };
 
   return (
     <section id="destinations" className="relative bg-slate-950 px-8 pt-4 pb-12">
@@ -66,35 +75,21 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
           <p className="text-sm text-slate-500">
             {filteredCountries.length}개 국가
           </p>
-          {totalPages > 1 && (
+          {filteredCountries.length > 4 && (
             <div className="flex items-center gap-3">
               {/* 이전 버튼 */}
               <button
-                onClick={() => canPrev && goTo(page - 1)}
-                disabled={!canPrev}
-                className={`flex h-8 w-8 items-center justify-center rounded-full border transition-colors ${
-                  canPrev
-                    ? "border-slate-600 text-slate-300 hover:border-slate-400 hover:text-white"
-                    : "border-slate-800 text-slate-700 cursor-not-allowed"
-                }`}
+                onClick={handlePrev}
+                className="flex h-8 w-8 items-center justify-center rounded-full border border-slate-600 text-slate-300 transition-colors hover:border-slate-400 hover:text-white"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="h-4 w-4">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
                 </svg>
               </button>
-              {/* 페이지 인디케이터 */}
-              <span className="text-xs tabular-nums text-slate-500">
-                {page + 1} / {totalPages}
-              </span>
               {/* 다음 버튼 */}
               <button
-                onClick={() => canNext && goTo(page + 1)}
-                disabled={!canNext}
-                className={`flex h-8 w-8 items-center justify-center rounded-full border transition-colors ${
-                  canNext
-                    ? "border-slate-600 text-slate-300 hover:border-slate-400 hover:text-white"
-                    : "border-slate-800 text-slate-700 cursor-not-allowed"
-                }`}
+                onClick={handleNext}
+                className="flex h-8 w-8 items-center justify-center rounded-full border border-slate-600 text-slate-300 transition-colors hover:border-slate-400 hover:text-white"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="h-4 w-4">
                   <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
@@ -104,17 +99,26 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
           )}
         </div>
 
-        {/* 국가 카드 가로 스크롤 */}
+        {/* 국가 카드 무한 스크롤 */}
         {filteredCountries.length > 0 ? (
           <div
-            ref={scrollRef}
-            className="flex gap-4 overflow-x-hidden scroll-smooth"
+            className="overflow-hidden"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
           >
-            {filteredCountries.map((country) => (
-              <div key={country.id} className="w-[calc(25%-12px)] flex-shrink-0">
-                <CountryCard country={country} />
-              </div>
-            ))}
+            <div
+              ref={scrollContainerRef}
+              className="flex gap-4"
+              style={{
+                animation: isPaused ? "none" : "scroll 20s linear infinite",
+              }}
+            >
+              {duplicatedCountries.map((country, index) => (
+                <div key={`${country.id}-${index}`} className="w-[calc(25%-12px)] flex-shrink-0">
+                  <CountryCard country={country} />
+                </div>
+              ))}
+            </div>
           </div>
         ) : (
           <div className="flex flex-col items-center justify-center py-20">

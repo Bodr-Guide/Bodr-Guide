@@ -67,9 +67,9 @@ export default function HeroSection() {
         </div>
 
         {/* 우측: 설명 + 검색바 */}
-        <div className="flex-1 lg:max-w-md lg:pl-12">
+        <div className="flex-1 lg:max-w-md lg:pl-24 lg:pt-20">
           {/* 설명 텍스트 */}
-          <p className="mb-6 text-[15px] leading-relaxed text-slate-400">
+          <p className="mb-6 ml-6 text-[15px] leading-relaxed text-slate-400">
             대한민국 여권으로 떠나는 가장 자유로운 여행.
             <br />
             전 세계 입국 규정을 한눈에 확인하세요.
