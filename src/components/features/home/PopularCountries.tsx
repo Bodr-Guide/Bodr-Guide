@@ -22,41 +22,49 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
     const handleHeroSearch = (e: Event) => {
       const customEvent = e as CustomEvent<string>;
       setSearchQuery(customEvent.detail);
+      setCurrentIndex(0); // 검색 시 위치 초기화
     };
 
     window.addEventListener("hero-search", handleHeroSearch);
     return () => window.removeEventListener("hero-search", handleHeroSearch);
   }, []);
 
-  // 검색어 기반 필터링
+  // 검색어 기반 필터링 (복수 검색 지원)
   const filteredCountries = useMemo(() => {
     if (!searchQuery.trim()) return countries;
+
     const q = searchQuery.toLowerCase().trim();
-    return countries.filter(
-      (c) =>
-        c.nameKo.includes(q) ||
-        c.nameEn.toLowerCase().includes(q) ||
-        c.continent.includes(q)
+    const keywords = q.split(/[\s,]+/); // 띄어쓰기 또는 쉼표로 여러 검색어 분리
+
+    return countries.filter((c) =>
+      keywords.some((keyword) =>
+        c.nameKo.includes(keyword) ||
+        c.nameEn.toLowerCase().includes(keyword) ||
+        c.continent.includes(keyword)
+      )
     );
   }, [countries, searchQuery]);
 
-  // 무한 스크롤을 위해 카드 리스트를 3번 복제
-  const duplicatedCountries = [
-    ...filteredCountries,
-    ...filteredCountries,
-    ...filteredCountries,
-  ];
+  // 검색 중이 아닐 때만 무한 스크롤을 위해 카드 리스트를 3번 복제
+  const isSearching = searchQuery.trim().length > 0;
+  const duplicatedCountries = isSearching
+    ? filteredCountries
+    : [
+        ...filteredCountries,
+        ...filteredCountries,
+        ...filteredCountries,
+      ];
 
   const cardWidth = 25; // 각 카드가 25%
   const totalCards = filteredCountries.length;
 
-  // 자동 스크롤 애니메이션
+  // 자동 스크롤 애니메이션 (검색 중이 아닐 때만)
   useEffect(() => {
-    if (isPaused || totalCards === 0) return;
+    if (isPaused || totalCards === 0 || isSearching) return;
 
     const interval = setInterval(() => {
       setCurrentIndex((prev) => {
-        const next = prev + 0.02; // 부드러운 이동을 위한 작은 증가값
+        const next = prev + 0.005; // 부드러운 이동을 위한 작은 증가값 (속도 더 느리게)
         // 한 세트가 끝나면 원점으로 리셋 (끊김 없이)
         if (next >= totalCards) {
           return 0;
@@ -66,7 +74,7 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
     }, 50); // 50ms마다 업데이트
 
     return () => clearInterval(interval);
-  }, [isPaused, totalCards]);
+  }, [isPaused, totalCards, isSearching]);
 
   // 이전/다음 버튼 핸들러
   const handlePrev = () => {

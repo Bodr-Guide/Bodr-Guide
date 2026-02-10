@@ -5,6 +5,7 @@ import { getCountryById, getAllCountries } from "@/lib/data";
 import { getGalleryImages } from "@/lib/galleryImages";
 import { VISA_STATUS_MAP } from "@/lib/types";
 import ParallaxGallery from "@/components/features/country/ParallaxGallery";
+import CountryNavigationBar from "@/components/features/country/CountryNavigationBar";
 
 // SSG: 빌드 시 모든 국가 경로를 사전 생성
 export async function generateStaticParams() {
@@ -48,6 +49,7 @@ export default async function CountryPage({
 
   const galleryImages = getGalleryImages(id);
   const visaInfo = VISA_STATUS_MAP[country.visaStatus];
+  const allCountries = getAllCountries();
 
   // 갤러리 아이템을 패럴랙스 형식으로 변환
   const galleryItems = galleryImages.map((img, idx) => ({
@@ -79,6 +81,9 @@ export default async function CountryPage({
         </svg>
         돌아가기
       </Link>
+
+      {/* 나라 네비게이션 바 */}
+      <CountryNavigationBar countries={allCountries} currentCountryId={id} />
 
       {/* 패럴랙스 갤러리 */}
       <ParallaxGallery
