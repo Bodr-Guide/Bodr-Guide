@@ -87,7 +87,3 @@ vercel
 ```
 
 환경 변수는 Vercel Dashboard > Settings > Environment Variables 에서 설정합니다.
-
-## License
-
-MIT
