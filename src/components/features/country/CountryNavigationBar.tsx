@@ -18,7 +18,7 @@ export default function CountryNavigationBar({
 }: CountryNavigationBarProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
-  const animationFrameRef = useRef<number>();
+  const animationFrameRef = useRef<number | undefined>(undefined);
   const lastTimeRef = useRef<number>(0);
 
   // 무한 스크롤을 위해 카드 3번 복제
