@@ -1,0 +1,17 @@
+{
+  "id": "MA",
+  "nameKo": "모로코",
+  "nameEn": "Morocco",
+  "continent": "아프리카",
+  "flagEmoji": "🇲🇦",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 90,
+  "visaNote": "관광 목적 90일 무비자 입국 가능",
+  "importantNotes": [
+    "라마단 기간 중 공공장소에서 음식 섭취 자제",
+    "여성 여행자 홀로 이동 시 호객행위 주의",
+    "모로코 디르함(MAD) 반출 금지, 출국 전 환전 필요"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행"
+}

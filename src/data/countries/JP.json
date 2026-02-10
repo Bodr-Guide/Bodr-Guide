@@ -1,0 +1,23 @@
+{
+  "id": "JP",
+  "nameKo": "일본",
+  "nameEn": "Japan",
+  "continent": "아시아",
+  "flagEmoji": "🇯🇵",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 90,
+  "visaNote": "관광 목적 90일 무비자 입국 가능",
+  "entryRegistration": {
+    "required": false,
+    "type": "Visit Japan Web",
+    "applicationUrl": "https://vjw-lp.digital.go.jp/",
+    "description": "필수는 아니나 사전 등록 시 입국 심사 간소화. 무료."
+  },
+  "importantNotes": [
+    "귀국 항공편 예약 확인서 지참 권장",
+    "체류 기간 내 취업 활동 불가",
+    "입국 시 지문 및 안면 촬영 실시"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행"
+}

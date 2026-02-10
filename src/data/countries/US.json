@@ -1,0 +1,24 @@
+{
+  "id": "US",
+  "nameKo": "미국",
+  "nameEn": "United States",
+  "continent": "북미",
+  "flagEmoji": "🇺🇸",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 90,
+  "visaNote": "비자면제프로그램(VWP) 적용, ESTA 사전 승인 필수",
+  "entryRegistration": {
+    "required": true,
+    "type": "ESTA (Electronic System for Travel Authorization)",
+    "applicationUrl": "https://esta.cbp.dhs.gov/",
+    "description": "출발 최소 72시간 전 ESTA 신청 필수. 수수료 $21. 유효기간 2년, 복수 입국 가능."
+  },
+  "importantNotes": [
+    "ESTA 미승인 시 탑승 거부, 출발 전 반드시 승인 상태 확인",
+    "입국 심사 시 체류 목적, 숙소, 귀국 일정 등 질문에 대비",
+    "미국 내 주(州)별로 법률이 다르므로 방문 지역 법규 사전 확인",
+    "팁 문화: 레스토랑 15~20%, 택시 15% 정도가 관례"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "SA",
+  "nameKo": "사우디아라비아",
+  "nameEn": "Saudi Arabia",
+  "continent": "중동",
+  "flagEmoji": "🇸🇦",
+  "visaStatus": "e_visa",
+  "visaNote": "전자비자(e-Visa) 사전 신청 필수, 관광 90일 (1년 복수 입국)",
+  "entryRegistration": {
+    "required": true,
+    "type": "e-Visa",
+    "applicationUrl": "https://visa.visitsaudi.com/",
+    "description": "출발 전 전자비자 온라인 신청 필수. 수수료 약 535 SAR (약 $142, 보험 포함). 유효기간 1년, 복수 입국 가능."
+  },
+  "importantNotes": [
+    "이슬람 성지 메카와 메디나는 비무슬림 출입 금지",
+    "라마단 기간 중 공공장소에서 음식 섭취 및 흡연 금지",
+    "공공장소에서 과도한 애정 표현 금지",
+    "주류 반입 및 음주 전면 금지"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행"
+}

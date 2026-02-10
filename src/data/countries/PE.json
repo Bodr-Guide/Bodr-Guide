@@ -1,0 +1,17 @@
+{
+  "id": "PE",
+  "nameKo": "페루",
+  "nameEn": "Peru",
+  "continent": "남미",
+  "flagEmoji": "🇵🇪",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 90,
+  "visaNote": "관광 목적 최대 183일까지 가능하나, 입국 시 90일 부여가 일반적",
+  "importantNotes": [
+    "고산지대(쿠스코, 마추픽추 등) 고산병 주의, 도착 후 충분한 적응 시간 필요",
+    "리마 등 대도시 소매치기 및 택시 사기 주의",
+    "마추픽추 입장은 사전 예약 필수, 당일 매진 빈번"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행"
+}

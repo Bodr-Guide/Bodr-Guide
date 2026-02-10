@@ -1,0 +1,22 @@
+{
+  "id": "AU",
+  "nameKo": "호주",
+  "nameEn": "Australia",
+  "continent": "오세아니아",
+  "flagEmoji": "🇦🇺",
+  "visaStatus": "e_visa",
+  "visaNote": "전자여행허가(ETA) 사전 승인 필수, 최대 90일 체류",
+  "entryRegistration": {
+    "required": true,
+    "type": "ETA (Electronic Travel Authority)",
+    "applicationUrl": "https://www.eta.homeaffairs.gov.au/",
+    "description": "호주 ETA 앱을 통해 신청 필수. 수수료 AUD $20. 유효기간 1년, 복수 입국 가능."
+  },
+  "importantNotes": [
+    "ETA 미승인 시 탑승 거부, 출발 전 반드시 승인 상태 확인",
+    "입국 시 식품, 동식물 검역이 매우 엄격 (미신고 시 고액 벌금)",
+    "자외선이 매우 강하므로 자외선 차단제 필수"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행"
+}

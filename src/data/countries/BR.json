@@ -1,0 +1,17 @@
+{
+  "id": "BR",
+  "nameKo": "브라질",
+  "nameEn": "Brazil",
+  "continent": "남미",
+  "flagEmoji": "🇧🇷",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 90,
+  "visaNote": "관광 목적 90일 무비자 입국 가능",
+  "importantNotes": [
+    "치안 불안, 관광지에서도 귀중품 소지 최소화 권장",
+    "황열병 예방접종 증명서(옐로카드) 지참 권장",
+    "여권 잔여 유효기간 6개월 이상 필요"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행"
+}

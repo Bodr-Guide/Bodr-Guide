@@ -1,0 +1,17 @@
+{
+  "id": "LA",
+  "nameKo": "라오스",
+  "nameEn": "Laos",
+  "continent": "아시아",
+  "flagEmoji": "🇱🇦",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 30,
+  "visaNote": "관광 목적 30일 무비자 입국 가능, 초과 시 도착비자 발급 가능",
+  "importantNotes": [
+    "30일 초과 체류 시 도착비자(VOA) $40 별도 발급 가능",
+    "여권 잔여 유효기간 6개월 이상 필요",
+    "불교 사원 방문 시 복장 제한 (긴 바지, 어깨 가림)"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행"
+}

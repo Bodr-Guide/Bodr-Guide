@@ -1,0 +1,17 @@
+{
+  "id": "DE",
+  "nameKo": "독일",
+  "nameEn": "Germany",
+  "continent": "유럽",
+  "flagEmoji": "🇩🇪",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 90,
+  "visaNote": "솅겐 협정국, 180일 중 최대 90일 무비자 체류 가능",
+  "importantNotes": [
+    "솅겐 지역 전체 합산 180일 중 90일 체류 제한",
+    "의료보험 미가입 시 입국 거부 가능성 있음",
+    "일요일 및 공휴일 대부분의 상점 휴무"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행"
+}

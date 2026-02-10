@@ -1,0 +1,22 @@
+{
+  "id": "OM",
+  "nameKo": "오만",
+  "nameEn": "Oman",
+  "continent": "중동",
+  "flagEmoji": "🇴🇲",
+  "visaStatus": "e_visa",
+  "visaNote": "전자비자(e-Visa) 사전 신청 필수, 관광 30일",
+  "entryRegistration": {
+    "required": true,
+    "type": "e-Visa",
+    "applicationUrl": "https://evisa.rop.gov.om/",
+    "description": "출발 전 전자비자 온라인 신청 필수. 수수료 약 20 OMR. 처리 기간 약 1~3영업일."
+  },
+  "importantNotes": [
+    "라마단 기간 중 공공장소에서 음식 섭취 자제",
+    "모스크 및 공공장소에서 적절한 복장 착용 필요",
+    "사막 지역 운전 시 4WD 차량 필수, 충분한 식수 준비"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "TZ",
+  "nameKo": "탄자니아",
+  "nameEn": "Tanzania",
+  "continent": "아프리카",
+  "flagEmoji": "🇹🇿",
+  "visaStatus": "visa_on_arrival",
+  "visaFreeStayDays": 90,
+  "visaNote": "도착비자 발급 가능, 90일 체류, $50",
+  "importantNotes": [
+    "도착비자는 킬리만자로, 다르에스살람 공항 등에서 발급 가능",
+    "황열병 예방접종 증명서(옐로카드) 지참 필수",
+    "말라리아 위험 지역으로 예방약 복용 권장"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행"
+}

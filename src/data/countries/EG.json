@@ -1,0 +1,18 @@
+{
+  "id": "EG",
+  "nameKo": "이집트",
+  "nameEn": "Egypt",
+  "continent": "아프리카",
+  "flagEmoji": "🇪🇬",
+  "visaStatus": "visa_on_arrival",
+  "visaFreeStayDays": 30,
+  "visaNote": "공항 도착 시 도착비자 발급, 30일 체류, $25",
+  "importantNotes": [
+    "도착비자는 카이로, 룩소르 등 주요 국제공항에서 발급 가능",
+    "유적지 주변 호객꾼 및 바가지 요금 주의",
+    "여성 여행자 노출 있는 복장 자제 권장",
+    "수돗물 음용 금지, 생수 구매 필수"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행"
+}

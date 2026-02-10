@@ -1,0 +1,17 @@
+{
+  "id": "AR",
+  "nameKo": "아르헨티나",
+  "nameEn": "Argentina",
+  "continent": "남미",
+  "flagEmoji": "🇦🇷",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 90,
+  "visaNote": "관광 목적 90일 무비자 입국 가능",
+  "importantNotes": [
+    "부에노스아이레스 등 대도시 소매치기 주의",
+    "환율 변동이 크므로 환전 시 공식 환전소 이용 권장",
+    "여권 잔여 유효기간 6개월 이상 필요"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행"
+}

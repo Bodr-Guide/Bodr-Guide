@@ -1,0 +1,22 @@
+{
+  "id": "KE",
+  "nameKo": "케냐",
+  "nameEn": "Kenya",
+  "continent": "아프리카",
+  "flagEmoji": "🇰🇪",
+  "visaStatus": "e_visa",
+  "visaNote": "전자여행허가(eTA) 사전 신청 필수",
+  "entryRegistration": {
+    "required": true,
+    "type": "eTA (Electronic Travel Authorization)",
+    "applicationUrl": "https://www.etakenya.go.ke/",
+    "description": "출발 전 eTA 온라인 신청 필수. 무료. 처리 기간 약 3영업일."
+  },
+  "importantNotes": [
+    "eTA 미승인 시 입국 불가, 출발 전 반드시 승인 확인",
+    "황열병 예방접종 증명서(옐로카드) 지참 필수",
+    "사파리 투어 시 야생동물 접근 금지, 가이드 지시 준수"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행"
+}

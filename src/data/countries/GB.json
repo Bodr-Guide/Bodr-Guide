@@ -1,0 +1,23 @@
+{
+  "id": "GB",
+  "nameKo": "영국",
+  "nameEn": "United Kingdom",
+  "continent": "유럽",
+  "flagEmoji": "🇬🇧",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 180,
+  "visaNote": "관광 목적 6개월 무비자 입국 가능, ETA 사전 승인 필요",
+  "entryRegistration": {
+    "required": true,
+    "type": "ETA (Electronic Travel Authorisation)",
+    "applicationUrl": "https://www.gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta",
+    "description": "입국 전 ETA 사전 승인 필수. 수수료 £10. 유효기간 2년, 복수 입국 가능."
+  },
+  "importantNotes": [
+    "ETA 미승인 시 입국 불가, 출발 전 반드시 승인 확인",
+    "솅겐 지역과 별도 입국 절차 (영국은 솅겐 비가입국)",
+    "NHS 의료 서비스는 관광객에게 유료, 여행자 보험 필수 권장"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "VN",
+  "nameKo": "베트남",
+  "nameEn": "Vietnam",
+  "continent": "아시아",
+  "flagEmoji": "🇻🇳",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 45,
+  "visaNote": "관광 목적 45일 무비자 입국 가능",
+  "importantNotes": [
+    "45일 초과 체류 시 전자비자(e-Visa) 사전 신청 필요",
+    "입국 시 여권 잔여 유효기간 6개월 이상 필요",
+    "오토바이 운전 시 국제운전면허증 인정 안 됨, 현지 면허 필요"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "IN",
+  "nameKo": "인도",
+  "nameEn": "India",
+  "continent": "아시아",
+  "flagEmoji": "🇮🇳",
+  "visaStatus": "e_visa",
+  "visaNote": "전자비자(e-Visa) 사전 신청 필수, 관광 e-Visa 30일/1년/5년",
+  "entryRegistration": {
+    "required": true,
+    "type": "e-Visa",
+    "applicationUrl": "https://indianvisaonline.gov.in/evisa/tvoa.html",
+    "description": "출발 최소 4일 전 전자비자 신청 필수. 수수료 $25~$80."
+  },
+  "importantNotes": [
+    "전자비자는 지정된 공항 및 항구에서만 입국 가능",
+    "여권 잔여 유효기간 6개월 이상 및 빈 페이지 2장 이상 필요",
+    "위생 관련 주의: 수돗물 음용 금지, 길거리 음식 주의",
+    "인도 화폐(루피) 반출입 금지"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "CA",
+  "nameKo": "캐나다",
+  "nameEn": "Canada",
+  "continent": "북미",
+  "flagEmoji": "🇨🇦",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 180,
+  "visaNote": "관광 목적 6개월 무비자 입국 가능, eTA 사전 승인 필수",
+  "entryRegistration": {
+    "required": true,
+    "type": "eTA (Electronic Travel Authorization)",
+    "applicationUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/eta.html",
+    "description": "항공편 입국 시 eTA 사전 승인 필수. 수수료 CAD $7. 유효기간 5년."
+  },
+  "importantNotes": [
+    "eTA는 항공편 입국 시에만 필수, 육로/해상 입국 시 불필요",
+    "대마초 합법이나 국경 통과 시 소지 금지",
+    "겨울철 극한 추위 대비 필수, 방한용품 준비 권장"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행"
+}

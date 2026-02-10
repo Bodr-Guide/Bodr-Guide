@@ -1,0 +1,17 @@
+{
+  "id": "CZ",
+  "nameKo": "체코",
+  "nameEn": "Czech Republic",
+  "continent": "유럽",
+  "flagEmoji": "🇨🇿",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 90,
+  "visaNote": "솅겐 협정국, 180일 중 최대 90일 무비자 체류 가능",
+  "importantNotes": [
+    "솅겐 지역 전체 합산 180일 중 90일 체류 제한",
+    "프라하 구시가지 관광객 대상 소매치기 주의",
+    "유로화가 아닌 체코 코루나(CZK) 사용, 환전소 수수료 비교 필수"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "AE",
+  "nameKo": "아랍에미리트",
+  "nameEn": "United Arab Emirates",
+  "continent": "중동",
+  "flagEmoji": "🇦🇪",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 90,
+  "visaNote": "관광 목적 90일 무비자 입국 가능",
+  "importantNotes": [
+    "라마단 기간 중 공공장소에서 음식 섭취 및 흡연 금지",
+    "공공장소에서 과도한 애정 표현 금지 (벌금 또는 구금)",
+    "주류는 허가된 장소(호텔, 바 등)에서만 음용 가능",
+    "마약 관련 범죄에 매우 엄격한 처벌 적용"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행"
+}

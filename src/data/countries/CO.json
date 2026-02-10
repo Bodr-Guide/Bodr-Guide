@@ -1,0 +1,17 @@
+{
+  "id": "CO",
+  "nameKo": "콜롬비아",
+  "nameEn": "Colombia",
+  "continent": "남미",
+  "flagEmoji": "🇨🇴",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 90,
+  "visaNote": "관광 목적 90일 무비자 입국 가능",
+  "importantNotes": [
+    "보고타 등 대도시 야간 외출 시 치안 주의",
+    "황열병 예방접종 증명서 요구 가능 (아마존 지역 방문 시 필수)",
+    "택시 이용 시 콜택시 또는 앱(Uber 등) 이용 권장"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행"
+}

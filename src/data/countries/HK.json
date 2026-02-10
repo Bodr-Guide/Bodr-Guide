@@ -1,0 +1,17 @@
+{
+  "id": "HK",
+  "nameKo": "홍콩",
+  "nameEn": "Hong Kong",
+  "continent": "아시아",
+  "flagEmoji": "🇭🇰",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 90,
+  "visaNote": "관광 목적 90일 무비자 입국 가능",
+  "importantNotes": [
+    "홍콩과 중국 본토는 별도 입국 절차 필요 (홍콩 비자로 중국 입국 불가)",
+    "귀국 항공권 지참 권장",
+    "전자담배 반입 및 사용 전면 금지"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행"
+}

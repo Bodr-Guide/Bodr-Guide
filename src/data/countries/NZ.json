@@ -1,0 +1,23 @@
+{
+  "id": "NZ",
+  "nameKo": "뉴질랜드",
+  "nameEn": "New Zealand",
+  "continent": "오세아니아",
+  "flagEmoji": "🇳🇿",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 90,
+  "visaNote": "관광 목적 90일 무비자 입국 가능, NZeTA 사전 승인 필수",
+  "entryRegistration": {
+    "required": true,
+    "type": "NZeTA (New Zealand Electronic Travel Authority)",
+    "applicationUrl": "https://nzeta.immigration.govt.nz/",
+    "description": "출발 전 NZeTA 신청 필수. 앱 신청 NZD $17 / 웹 신청 NZD $23. IVL(관광세) NZD $35 별도."
+  },
+  "importantNotes": [
+    "NZeTA 미승인 시 탑승 거부, 출발 전 반드시 승인 확인",
+    "입국 시 식품, 등산 장비 등 검역 매우 엄격",
+    "렌터카 이용 시 국제운전면허증 필수, 좌측 통행"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행"
+}

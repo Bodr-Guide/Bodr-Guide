@@ -1,0 +1,17 @@
+{
+  "id": "AT",
+  "nameKo": "오스트리아",
+  "nameEn": "Austria",
+  "continent": "유럽",
+  "flagEmoji": "🇦🇹",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 90,
+  "visaNote": "솅겐 협정국, 180일 중 최대 90일 무비자 체류 가능",
+  "importantNotes": [
+    "솅겐 지역 전체 합산 180일 중 90일 체류 제한",
+    "대중교통 무임승차 적발 시 즉시 벌금 부과",
+    "겨울철 산악 지역 이동 시 체인 장착 의무"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행"
+}

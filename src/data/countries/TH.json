@@ -1,0 +1,17 @@
+{
+  "id": "TH",
+  "nameKo": "태국",
+  "nameEn": "Thailand",
+  "continent": "아시아",
+  "flagEmoji": "🇹🇭",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 90,
+  "visaNote": "관광 목적 90일 무비자 입국 가능",
+  "importantNotes": [
+    "입국 시 귀국 항공권 및 숙소 예약 확인서 요구 가능",
+    "왕실 모독죄가 엄격히 적용되므로 왕실 관련 발언 주의",
+    "전자담배 반입 및 사용 금지, 적발 시 벌금 또는 구금"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "ES",
+  "nameKo": "스페인",
+  "nameEn": "Spain",
+  "continent": "유럽",
+  "flagEmoji": "🇪🇸",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 90,
+  "visaNote": "솅겐 협정국, 180일 중 최대 90일 무비자 체류 가능",
+  "importantNotes": [
+    "솅겐 지역 전체 합산 180일 중 90일 체류 제한",
+    "바르셀로나 등 관광지 소매치기 빈발, 귀중품 관리 주의",
+    "시에스타(낮 휴식) 문화로 오후 2~5시 상점 휴업 가능"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행"
+}

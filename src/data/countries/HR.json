@@ -1,0 +1,17 @@
+{
+  "id": "HR",
+  "nameKo": "크로아티아",
+  "nameEn": "Croatia",
+  "continent": "유럽",
+  "flagEmoji": "🇭🇷",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 90,
+  "visaNote": "솅겐 협정국, 180일 중 최대 90일 무비자 체류 가능",
+  "importantNotes": [
+    "솅겐 지역 전체 합산 180일 중 90일 체류 제한",
+    "2023년부터 유로화(EUR) 사용 (기존 쿠나에서 변경)",
+    "두브로브니크 구시가지 캐리어 사용 제한 구역 있음"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행"
+}

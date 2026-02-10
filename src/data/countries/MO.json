@@ -1,0 +1,17 @@
+{
+  "id": "MO",
+  "nameKo": "마카오",
+  "nameEn": "Macao",
+  "continent": "아시아",
+  "flagEmoji": "🇲🇴",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 90,
+  "visaNote": "관광 목적 90일 무비자 입국 가능",
+  "importantNotes": [
+    "마카오와 중국 본토는 별도 입국 절차 필요",
+    "홍콩에서 마카오 이동 시에도 별도 출입국 심사 진행",
+    "카지노 입장은 만 21세 이상만 가능"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행"
+}

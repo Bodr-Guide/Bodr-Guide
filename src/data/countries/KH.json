@@ -1,0 +1,22 @@
+{
+  "id": "KH",
+  "nameKo": "캄보디아",
+  "nameEn": "Cambodia",
+  "continent": "아시아",
+  "flagEmoji": "🇰🇭",
+  "visaStatus": "e_visa",
+  "visaNote": "전자비자(e-Visa) 또는 도착비자(VOA) 모두 가능, 30일 체류",
+  "entryRegistration": {
+    "required": true,
+    "type": "e-Visa",
+    "applicationUrl": "https://www.evisa.gov.kh/",
+    "description": "전자비자 사전 신청 가능. 수수료 $36. 도착비자는 공항에서 $30."
+  },
+  "importantNotes": [
+    "도착비자 발급 시 여권 사진 1장 및 현금 $30 필요",
+    "여권 잔여 유효기간 6개월 이상 필요",
+    "유적지 앙코르와트 방문 시 노출이 심한 복장 제한"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행"
+}

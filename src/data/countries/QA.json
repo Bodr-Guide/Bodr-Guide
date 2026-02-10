@@ -1,0 +1,17 @@
+{
+  "id": "QA",
+  "nameKo": "카타르",
+  "nameEn": "Qatar",
+  "continent": "중동",
+  "flagEmoji": "🇶🇦",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 30,
+  "visaNote": "관광 목적 30일 무비자 입국 가능",
+  "importantNotes": [
+    "라마단 기간 중 공공장소에서 음식 섭취 자제",
+    "공공장소에서 노출이 심한 복장 자제 권장",
+    "주류는 허가된 호텔 및 레스토랑에서만 음용 가능"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행"
+}

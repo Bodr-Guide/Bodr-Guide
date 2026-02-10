@@ -1,0 +1,17 @@
+{
+  "id": "TW",
+  "nameKo": "대만",
+  "nameEn": "Taiwan",
+  "continent": "아시아",
+  "flagEmoji": "🇹🇼",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 90,
+  "visaNote": "관광 목적 90일 무비자 입국 가능",
+  "importantNotes": [
+    "귀국 항공권 또는 제3국 출국 항공권 지참 권장",
+    "전자담배 반입 금지, 적발 시 벌금 부과",
+    "육류 제품 반입 금지 (아프리카돼지열병 방역), 위반 시 고액 벌금"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행"
+}

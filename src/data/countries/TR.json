@@ -1,0 +1,17 @@
+{
+  "id": "TR",
+  "nameKo": "튀르키예",
+  "nameEn": "Türkiye",
+  "continent": "중동",
+  "flagEmoji": "🇹🇷",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 90,
+  "visaNote": "관광 목적 90일 무비자 입국 가능 (180일 중 90일)",
+  "importantNotes": [
+    "180일 중 최대 90일 체류 제한",
+    "이스탄불 등 관광지 소매치기 및 사기 주의",
+    "모스크 방문 시 긴 옷 착용 및 신발 탈의 필요"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행"
+}

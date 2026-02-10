@@ -1,0 +1,17 @@
+{
+  "id": "ZA",
+  "nameKo": "남아프리카공화국",
+  "nameEn": "South Africa",
+  "continent": "아프리카",
+  "flagEmoji": "🇿🇦",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 30,
+  "visaNote": "관광 목적 30일 무비자 입국 가능",
+  "importantNotes": [
+    "치안이 불안하므로 야간 외출 자제, 귀중품 관리 철저히",
+    "요하네스버그 도심 지역 도보 이동 자제 권장",
+    "여권 빈 페이지 2장 이상 필요 (입출국 도장용)"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행"
+}

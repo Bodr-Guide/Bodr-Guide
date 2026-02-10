@@ -1,0 +1,17 @@
+{
+  "id": "CL",
+  "nameKo": "칠레",
+  "nameEn": "Chile",
+  "continent": "남미",
+  "flagEmoji": "🇨🇱",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 90,
+  "visaNote": "관광 목적 90일 무비자 입국 가능",
+  "importantNotes": [
+    "입국 시 PDI(Tarjeta de Turismo) 관광카드 발급, 출국 시까지 보관 필수",
+    "지진 다발 지역으로 비상 대피 요령 사전 숙지 권장",
+    "산티아고 대중교통 이용 시 BIP 카드 필요"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행"
+}

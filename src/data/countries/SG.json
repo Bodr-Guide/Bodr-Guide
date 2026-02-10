@@ -1,0 +1,23 @@
+{
+  "id": "SG",
+  "nameKo": "싱가포르",
+  "nameEn": "Singapore",
+  "continent": "아시아",
+  "flagEmoji": "🇸🇬",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 90,
+  "visaNote": "관광 목적 90일 무비자 입국 가능",
+  "entryRegistration": {
+    "required": true,
+    "type": "SG Arrival Card",
+    "applicationUrl": "https://eservices.ica.gov.sg/sgarrivalcard/",
+    "description": "입국 3일 전까지 전자 입국카드(SGAC) 온라인 제출 필수. 무료."
+  },
+  "importantNotes": [
+    "껌 반입 금지 (치료용 제외), 위반 시 벌금 부과",
+    "공공장소 흡연 금지구역 위반 시 최대 1,000 SGD 벌금",
+    "입국 시 전자 입국카드(SG Arrival Card) 사전 작성 필수"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행"
+}

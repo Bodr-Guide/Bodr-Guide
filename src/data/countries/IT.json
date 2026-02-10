@@ -1,0 +1,17 @@
+{
+  "id": "IT",
+  "nameKo": "이탈리아",
+  "nameEn": "Italy",
+  "continent": "유럽",
+  "flagEmoji": "🇮🇹",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 90,
+  "visaNote": "솅겐 협정국, 180일 중 최대 90일 무비자 체류 가능",
+  "importantNotes": [
+    "솅겐 지역 전체 합산 180일 중 90일 체류 제한",
+    "소매치기 주의, 특히 로마, 밀라노 등 관광지",
+    "공공장소에서 음주 제한 지역 있음, 위반 시 벌금 부과"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행"
+}

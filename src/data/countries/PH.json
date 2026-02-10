@@ -1,0 +1,17 @@
+{
+  "id": "PH",
+  "nameKo": "필리핀",
+  "nameEn": "Philippines",
+  "continent": "아시아",
+  "flagEmoji": "🇵🇭",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 30,
+  "visaNote": "관광 목적 30일 무비자 입국 가능",
+  "importantNotes": [
+    "귀국 항공권 또는 제3국 출국 항공권 필수 지참",
+    "여권 잔여 유효기간 6개월 이상 필요",
+    "마약 관련 범죄에 매우 엄격한 처벌 적용"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행"
+}

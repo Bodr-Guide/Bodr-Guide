@@ -1,0 +1,17 @@
+{
+  "id": "MX",
+  "nameKo": "멕시코",
+  "nameEn": "Mexico",
+  "continent": "북미",
+  "flagEmoji": "🇲🇽",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 180,
+  "visaNote": "관광 목적 180일 무비자 입국 가능",
+  "importantNotes": [
+    "입국 시 FMM(관광카드) 작성 필요, 출국 시 반납",
+    "치안 불안 지역(국경 지역 등) 여행 자제 권장",
+    "수돗물 음용 금지, 생수 구매 필수"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행"
+}

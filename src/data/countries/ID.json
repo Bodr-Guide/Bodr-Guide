@@ -1,0 +1,18 @@
+{
+  "id": "ID",
+  "nameKo": "인도네시아",
+  "nameEn": "Indonesia",
+  "continent": "아시아",
+  "flagEmoji": "🇮🇩",
+  "visaStatus": "visa_on_arrival",
+  "visaFreeStayDays": 30,
+  "visaNote": "도착비자(VOA) 30일, 공항에서 500,000 IDR(약 $35) 결제",
+  "importantNotes": [
+    "도착비자는 주요 국제공항 및 항구에서 발급 가능",
+    "도착비자 1회 연장 가능 (최대 60일 체류)",
+    "여권 잔여 유효기간 6개월 이상 및 빈 페이지 1장 이상 필요",
+    "마약 관련 범죄 시 사형 포함 극형 적용"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행"
+}

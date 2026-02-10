@@ -1,0 +1,17 @@
+{
+  "id": "FJ",
+  "nameKo": "피지",
+  "nameEn": "Fiji",
+  "continent": "오세아니아",
+  "flagEmoji": "🇫🇯",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 120,
+  "visaNote": "관광 목적 120일(4개월) 무비자 입국 가능",
+  "importantNotes": [
+    "귀국 항공권 및 체류 기간 중 충분한 경비 증명 필요",
+    "사이클론 시즌(11~4월) 기상 상황 확인 필수",
+    "수돗물 음용 자제, 생수 구매 권장"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행"
+}

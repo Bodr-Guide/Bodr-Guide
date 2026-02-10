@@ -1,0 +1,17 @@
+{
+  "id": "NL",
+  "nameKo": "네덜란드",
+  "nameEn": "Netherlands",
+  "continent": "유럽",
+  "flagEmoji": "🇳🇱",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 90,
+  "visaNote": "솅겐 협정국, 180일 중 최대 90일 무비자 체류 가능",
+  "importantNotes": [
+    "솅겐 지역 전체 합산 180일 중 90일 체류 제한",
+    "자전거 전용도로 보행 시 사고 위험 주의",
+    "대마초는 커피숍에서만 소량 허용, 공공장소 사용 금지"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행"
+}

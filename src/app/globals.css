@@ -1,0 +1,261 @@
+@import "tailwindcss";
+
+/* ========================================
+   다크 테마 기본 스타일
+   ======================================== */
+
+:root {
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #12121a;
+  --bg-card: #161622;
+  --text-primary: #f5f5f5;
+  --text-secondary: #a3a3a3;
+  --text-muted: #6b6b6b;
+  --border-color: #1e1e2e;
+  --accent-green: #22c55e;
+  --accent-red: #ef4444;
+  --accent-blue: #3b82f6;
+  --accent-cyan: #06d6a0;
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  html::-webkit-scrollbar {
+    display: none;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+}
+
+/* ========================================
+   패럴랙스 갤러리 CSS
+   ======================================== */
+
+.parallax-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--bg-primary);
+}
+
+.project-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.project img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.5);
+  will-change: transform;
+}
+
+/* 미니맵 */
+.minimap {
+  position: fixed;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.minimap-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.minimap-img-preview {
+  width: 80px;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.minimap-img-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 250px;
+  overflow: hidden;
+  will-change: transform;
+}
+
+.minimap-img-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.5);
+  will-change: transform;
+}
+
+.minimap-info-list {
+  width: 200px;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+}
+
+.minimap-item-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  will-change: transform;
+}
+
+.minimap-item-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.minimap-item-info-row p {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.02em;
+}
+
+.minimap-item-info-row p:first-child {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+/* 패럴랙스 오버레이 그래디언트 */
+.project::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 10, 15, 0.3) 0%,
+    rgba(10, 10, 15, 0.1) 40%,
+    rgba(10, 10, 15, 0.5) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* 뒤로가기 버튼 */
+.back-button {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-decoration: none;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* 국가 정보 오버레이 */
+.country-info-overlay {
+  position: fixed;
+  bottom: 60px;
+  left: 40px;
+  z-index: 100;
+  max-width: 400px;
+}
+
+.country-info-overlay h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 8px;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+.country-info-overlay .country-en {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+}
+
+.country-info-overlay .visa-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 500;
+  backdrop-filter: blur(8px);
+}
+
+/* 반응형: 모바일에서 미니맵 숨김 */
+@media (max-width: 768px) {
+  .minimap {
+    display: none;
+  }
+
+  .country-info-overlay {
+    left: 20px;
+    bottom: 40px;
+  }
+
+  .country-info-overlay h1 {
+    font-size: 32px;
+  }
+
+  .back-button {
+    top: 16px;
+    left: 16px;
+  }
+}
