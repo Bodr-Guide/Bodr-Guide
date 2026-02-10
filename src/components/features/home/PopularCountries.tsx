@@ -14,6 +14,7 @@ interface PopularCountriesProps {
 export default function PopularCountries({ countries }: PopularCountriesProps) {
   const [searchQuery, setSearchQuery] = useState("");
   const [isPaused, setIsPaused] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   // 히어로 섹션 검색바와 연동 (커스텀 이벤트 수신)
@@ -46,25 +47,46 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
     ...filteredCountries,
   ];
 
-  // 이전/다음 버튼 클릭 핸들러
-  const handlePrev = () => {
-    if (scrollContainerRef.current) {
-      const cardWidth = scrollContainerRef.current.scrollWidth / duplicatedCountries.length;
-      scrollContainerRef.current.scrollBy({
-        left: -cardWidth * 4, // 4개 카드만큼 이동
-        behavior: "smooth",
+  const cardWidth = 25; // 각 카드가 25%
+  const totalCards = filteredCountries.length;
+
+  // 자동 스크롤 애니메이션
+  useEffect(() => {
+    if (isPaused || totalCards === 0) return;
+
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => {
+        const next = prev + 0.02; // 부드러운 이동을 위한 작은 증가값
+        // 한 세트가 끝나면 원점으로 리셋 (끊김 없이)
+        if (next >= totalCards) {
+          return 0;
+        }
+        return next;
       });
-    }
+    }, 50); // 50ms마다 업데이트
+
+    return () => clearInterval(interval);
+  }, [isPaused, totalCards]);
+
+  // 이전/다음 버튼 핸들러
+  const handlePrev = () => {
+    setCurrentIndex((prev) => {
+      const newIndex = prev - 1;
+      if (newIndex < 0) {
+        return totalCards - 1;
+      }
+      return newIndex;
+    });
   };
 
   const handleNext = () => {
-    if (scrollContainerRef.current) {
-      const cardWidth = scrollContainerRef.current.scrollWidth / duplicatedCountries.length;
-      scrollContainerRef.current.scrollBy({
-        left: cardWidth * 4, // 4개 카드만큼 이동
-        behavior: "smooth",
-      });
-    }
+    setCurrentIndex((prev) => {
+      const newIndex = prev + 1;
+      if (newIndex >= totalCards) {
+        return 0;
+      }
+      return newIndex;
+    });
   };
 
   return (
@@ -108,9 +130,9 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
           >
             <div
               ref={scrollContainerRef}
-              className="flex gap-4"
+              className="flex gap-4 transition-transform duration-300 ease-out"
               style={{
-                animation: isPaused ? "none" : "scroll 20s linear infinite",
+                transform: `translateX(-${(currentIndex * cardWidth)}%)`,
               }}
             >
               {duplicatedCountries.map((country, index) => (
