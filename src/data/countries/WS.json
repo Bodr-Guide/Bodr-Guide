@@ -1,0 +1,44 @@
+{
+  "id": "WS",
+  "nameKo": "사모아",
+  "nameEn": "Samoa",
+  "continent": "오세아니아",
+  "flagEmoji": "🇼🇸",
+  "visaStatus": "visa_on_arrival",
+  "visaFreeStayDays": 60,
+  "visaNote": "도착비자(Visa on Arrival) 60일 발급 가능",
+  "importantNotes": [
+    "귀국 항공권 지참 필요",
+    "사이클론 시즌(11~4월) 기상 정보 확인 필수",
+    "일요일은 안식일로 대부분 상점 운영 중단",
+    "문화적으로 노출 의상 자제 (특히 마을 방문 시)"
+  ],
+  "updatedAt": "2026-02-11",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "+4시간",
+    "voltage": "230V",
+    "currency": "WST (탈라)",
+    "flight": "약 14시간 (경유)"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "note": "국제운전면허증(IDP) 필요"
+  },
+  "alerts": [
+    "사이클론 시즌(11~4월) 기상 주의",
+    "자외선 매우 강함",
+    "지진 및 쓰나미 위험 지역"
+  ],
+  "checklist": [
+    "여권 (유효기간 6개월 이상)",
+    "항공권",
+    "숙소 예약 확인서",
+    "리턴 티켓",
+    "여행자 보험"
+  ]
+}

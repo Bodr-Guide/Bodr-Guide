@@ -76,5 +76,11 @@
     "숙소 바우처",
     "리턴 티켓",
     "방수 재킷 (우기 시)"
-  ]
+  ],
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "minimumAge": 18,
+    "note": "국제운전면허증(IDP) 필요. 관광 목적으로 최대 90일 사용 가능. 비포장 도로가 많으므로 4WD 차량 권장."
+  }
 }

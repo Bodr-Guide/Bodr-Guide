@@ -1,0 +1,42 @@
+{
+  "id": "NG",
+  "nameKo": "나이지리아",
+  "nameEn": "Nigeria",
+  "continent": "아프리카",
+  "flagEmoji": "🇳🇬",
+  "visaStatus": "e_visa",
+  "visaFreeStayDays": 30,
+  "visaNote": "e-Visa 사전 신청 필수, 30일 체류",
+  "importantNotes": [
+    "황열병 예방접종 증명서 필수",
+    "말라리아 위험 지역으로 예방약 복용 권장",
+    "수돗물 음용 금지",
+    "대도시 외곽 지역 치안 불안, 야간 이동 자제"
+  ],
+  "updatedAt": "2026-02-11",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-8시간",
+    "voltage": "240V",
+    "currency": "NGN (나이라)",
+    "flight": "약 17시간 (경유)"
+  },
+  "passportValidity": { "months": 6 },
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "note": "국제운전면허증(IDP) 필요"
+  },
+  "alerts": [
+    "황열병 예방접종 필수",
+    "북동부 보코하람 활동 지역 여행 금지",
+    "수돗물 음용 금지"
+  ],
+  "checklist": [
+    "여권 (유효기간 6개월 이상)",
+    "항공권",
+    "e-Visa 출력본",
+    "황열병 예방접종 증명서",
+    "숙소 바우처"
+  ]
+}

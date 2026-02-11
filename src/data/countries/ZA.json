@@ -76,5 +76,11 @@
     "숙소 바우처",
     "리턴 티켓",
     "여행자 보험"
-  ]
+  ],
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "minimumAge": 18,
+    "note": "국제운전면허증(IDP) 필요. 남아공은 좌측통행 국가이며, 야간 운전 시 보안에 주의 필요."
+  }
 }

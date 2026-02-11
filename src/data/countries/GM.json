@@ -1,0 +1,41 @@
+{
+  "id": "GM",
+  "nameKo": "감비아",
+  "nameEn": "Gambia",
+  "continent": "아프리카",
+  "flagEmoji": "🇬🇲",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 90,
+  "visaNote": "무비자 90일 체류 가능",
+  "importantNotes": [
+    "황열병 예방접종 증명서(옐로카드) 지참 필수",
+    "말라리아 위험 지역으로 예방약 복용 권장",
+    "수돗물 음용 금지, 생수 구매 필수"
+  ],
+  "updatedAt": "2026-02-11",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-9시간",
+    "voltage": "230V",
+    "currency": "GMD (감비아 달라시)",
+    "flight": "약 19시간 (경유)"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "note": "국제운전면허증(IDP) 필요"
+  },
+  "alerts": [
+    "황열병 예방접종 필수",
+    "말라리아 예방약 복용 권장"
+  ],
+  "checklist": [
+    "여권 (유효기간 6개월 이상)",
+    "항공권",
+    "황열병 예방접종 증명서",
+    "숙소 바우처"
+  ]
+}

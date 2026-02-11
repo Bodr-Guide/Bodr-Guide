@@ -77,5 +77,11 @@
     "여권 사본 저장",
     "숙소 바우처",
     "리턴 티켓"
-  ]
+  ],
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "minimumAge": 16,
+    "note": "국제운전면허증(IDP) 인정. 미국 영토로 IDP 소지 시 관광 기간 동안 운전 가능. 한국 면허증 원본도 함께 지참 필요."
+  }
 }

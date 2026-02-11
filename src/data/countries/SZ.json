@@ -1,0 +1,37 @@
+{
+  "id": "SZ",
+  "nameKo": "에스와티니",
+  "nameEn": "Eswatini",
+  "continent": "아프리카",
+  "flagEmoji": "🇸🇿",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 30,
+  "visaNote": "무비자 30일 체류 가능",
+  "importantNotes": [
+    "말라리아 위험 지역 일부 존재, 예방약 복용 권장",
+    "남아공에서 육로 입국 시 여권에 출입국 도장 반드시 확인",
+    "야생동물 보호구역 방문 시 가이드 동행 권장"
+  ],
+  "updatedAt": "2026-02-11",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-7시간",
+    "voltage": "230V",
+    "currency": "SZL (에스와티니 릴랑게니)",
+    "flight": "약 20시간 (경유)"
+  },
+  "passportValidity": { "months": 6 },
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "note": "국제운전면허증(IDP) 필요"
+  },
+  "alerts": [
+    "말라리아 위험 지역 일부 존재"
+  ],
+  "checklist": [
+    "여권 (유효기간 6개월 이상)",
+    "항공권",
+    "숙소 바우처"
+  ]
+}

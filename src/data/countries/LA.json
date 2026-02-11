@@ -65,5 +65,11 @@
     "여권 사본 저장",
     "숙소 바우처",
     "리턴 티켓"
-  ]
+  ],
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "minimumAge": 18,
+    "note": "국제운전면허증(IDP) 필요. 라오스 도로 사정이 열악하고 비포장 도로가 많아 운전 시 각별한 주의 필요. 야간 운전 자제 권장."
+  }
 }

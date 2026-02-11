@@ -1,0 +1,42 @@
+{
+  "id": "MD",
+  "nameKo": "몰도바",
+  "nameEn": "Moldova",
+  "continent": "유럽",
+  "flagEmoji": "🇲🇩",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 90,
+  "visaNote": "대한민국 여권 소지자는 90일간 무비자 체류 가능.",
+  "importantNotes": [
+    "트란스니스트리아(친러시아 분리 지역)는 몰도바 정부 통제 밖으로 방문 시 주의 필요",
+    "공용어는 루마니아어이며, 러시아어도 널리 사용됨",
+    "유럽에서 물가가 가장 저렴한 국가 중 하나",
+    "와인 생산이 유명하며 와이너리 투어 인기"
+  ],
+  "updatedAt": "2026-02-11",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-7시간",
+    "voltage": "230V",
+    "currency": "MDL (몰도바 레우)",
+    "flight": "약 13시간 (경유)"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "note": "국제운전면허증(IDP) 필요"
+  },
+  "alerts": [
+    "트란스니스트리아 지역 방문 자제 — 미승인 분리 지역",
+    "야간 택시 이용 시 공인 택시 앱 사용 권장"
+  ],
+  "checklist": [
+    "여권 (유효기간 6개월 이상)",
+    "항공권",
+    "숙소 예약 확인서",
+    "여행자 보험"
+  ]
+}

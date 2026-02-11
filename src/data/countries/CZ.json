@@ -76,5 +76,11 @@
     "숙소 바우처",
     "리턴 티켓",
     "여행자 보험"
-  ]
+  ],
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "minimumAge": 18,
+    "note": "국제운전면허증(IDP) 필요. 고속도로 이용 시 비네트(Vignette) 스티커 구매 필수. 시내 주차 구역 규정 엄격."
+  }
 }

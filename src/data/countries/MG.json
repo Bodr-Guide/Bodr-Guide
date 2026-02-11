@@ -67,5 +67,11 @@
     "숙소 바우처",
     "리턴 티켓",
     "USD/유로 현금 (도착비자)"
-  ]
+  ],
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "minimumAge": 18,
+    "note": "국제운전면허증(IDP) 필요. 마다가스카르 도로 인프라가 매우 열악하여 4WD 차량 필수. 장거리 이동 시 국내선 이용 권장."
+  }
 }

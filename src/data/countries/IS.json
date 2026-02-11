@@ -1,0 +1,46 @@
+{
+  "id": "IS",
+  "nameKo": "아이슬란드",
+  "nameEn": "Iceland",
+  "continent": "유럽",
+  "flagEmoji": "🇮🇸",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 90,
+  "visaNote": "솅겐 협정국. 솅겐 지역 180일 중 최대 90일 무비자 체류 가능.",
+  "importantNotes": [
+    "솅겐 지역 전체 합산 180일 중 90일 체류 제한",
+    "날씨가 급변하므로 방풍·방수 의류 필수",
+    "오프로드 주행은 법으로 금지되어 있으며 위반 시 고액 벌금 부과",
+    "온천 방문 시 사전 샤워 필수 (문화적 규칙)",
+    "EU 회원국이 아니므로 유로 대신 아이슬란드 크로나(ISK) 사용"
+  ],
+  "updatedAt": "2026-02-11",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-9시간",
+    "voltage": "230V",
+    "currency": "ISK (아이슬란드 크로나)",
+    "flight": "약 14시간 (경유)"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "note": "국제운전면허증(IDP) 필요. 겨울철 F-road 주행 시 4WD 차량 필수."
+  },
+  "alerts": [
+    "화산 활동 지역 — 여행 전 화산 경보 확인 필수",
+    "겨울철 도로 폐쇄 빈번 — road.is에서 도로 상황 실시간 확인",
+    "급변하는 날씨 — 레이어드 복장 필수"
+  ],
+  "checklist": [
+    "여권 (유효기간 6개월 이상)",
+    "항공권",
+    "숙소 예약 확인서",
+    "여행자 보험",
+    "방풍·방수 의류",
+    "국제운전면허증 (렌터카 이용 시)"
+  ]
+}

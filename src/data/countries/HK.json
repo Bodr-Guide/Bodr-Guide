@@ -74,5 +74,11 @@
     "여권 사본 저장",
     "숙소 바우처",
     "리턴 티켓"
-  ]
+  ],
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "minimumAge": 18,
+    "note": "국제운전면허증(IDP) 필요. 좌측통행 국가이므로 운전 시 주의. 도심 주차가 매우 어렵고 대중교통이 편리하여 렌터카보다 대중교통 이용 권장."
+  }
 }

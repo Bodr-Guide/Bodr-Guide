@@ -1,0 +1,44 @@
+{
+  "id": "BY",
+  "nameKo": "벨라루스",
+  "nameEn": "Belarus",
+  "continent": "유럽",
+  "flagEmoji": "🇧🇾",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 30,
+  "visaNote": "민스크 국제공항을 통해 입국하는 경우에만 30일 무비자 체류 가능. 육로 입국 시 비자 필요. 러시아발 항공편으로 입국 시에도 무비자 적용 불가.",
+  "importantNotes": [
+    "반드시 민스크 국제공항을 통해 입출국해야 무비자 혜택 적용",
+    "러시아를 경유하여 육로 또는 항공으로 입국 시 무비자 적용 불가",
+    "입국 시 의료보험 증명서 제시 필요 (최소 보장액 10,000 EUR)",
+    "외화 반출입 신고 한도 있으므로 대액 현금 소지 시 세관 신고 필요"
+  ],
+  "updatedAt": "2026-02-11",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-6시간",
+    "voltage": "230V",
+    "currency": "BYN (벨라루스 루블)",
+    "flight": "약 12시간 (경유)"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "note": "국제운전면허증(IDP) 필요"
+  },
+  "alerts": [
+    "민스크 공항 입국만 무비자 — 육로/러시아 경유 입국 시 비자 필수",
+    "서방 제재로 인해 국제 카드(Visa/Mastercard) 사용이 제한될 수 있음 — 현금 준비 필수",
+    "정치 집회 및 시위 접근 금지 — 외국인 체포 사례 있음"
+  ],
+  "checklist": [
+    "여권 (유효기간 6개월 이상)",
+    "항공권 (민스크 직항 또는 제3국 경유)",
+    "의료보험 증명서 (최소 10,000 EUR 보장)",
+    "숙소 예약 확인서",
+    "여행자 보험"
+  ]
+}

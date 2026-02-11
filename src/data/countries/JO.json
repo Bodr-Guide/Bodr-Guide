@@ -69,5 +69,11 @@
     "여권 사본 저장",
     "숙소 바우처",
     "리턴 티켓"
-  ]
+  ],
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "minimumAge": 18,
+    "note": "국제운전면허증(IDP) 필요. 요르단 렌터카 이용 시 IDP 필수. 사막 도로(와디럼 등) 운전 시 사륜구동 차량 권장."
+  }
 }

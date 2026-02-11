@@ -1,0 +1,42 @@
+{
+  "id": "IQ",
+  "nameKo": "이라크",
+  "nameEn": "Iraq",
+  "continent": "중동",
+  "flagEmoji": "🇮🇶",
+  "visaStatus": "visa_on_arrival",
+  "visaFreeStayDays": 60,
+  "visaNote": "쿠르드 자치지역(에르빌, 술레이마니야)에서만 도착비자 발급 가능(60일), 기타 지역은 사전 비자 필수",
+  "importantNotes": [
+    "쿠르드 자치지역(KRG)에서만 도착비자 발급 가능, 바그다드 등 기타 지역은 사전 비자 필수",
+    "이라크 대부분 지역 극도의 치안 불안, 테러 위험 상존",
+    "외교부 여행금지 지역 포함, 여행 전 반드시 최신 안전 정보 확인",
+    "사진 촬영 시 군사시설, 검문소 촬영 절대 금지"
+  ],
+  "updatedAt": "2026-02-11",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-6시간",
+    "voltage": "230V",
+    "currency": "IQD (이라크 디나르)",
+    "flight": "약 12시간 (경유)"
+  },
+  "passportValidity": { "months": 6 },
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "note": "국제운전면허증(IDP) 필요"
+  },
+  "alerts": [
+    "외교부 여행경보 발령 지역",
+    "쿠르드 자치지역 외 극도의 치안 불안",
+    "테러 위험 상존"
+  ],
+  "checklist": [
+    "여권 (유효기간 6개월 이상)",
+    "항공권",
+    "USD 현금 (도착비자 비용)",
+    "여행자 보험 증서 (긴급 의료 후송 포함)",
+    "숙소 바우처"
+  ]
+}

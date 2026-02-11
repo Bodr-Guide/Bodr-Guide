@@ -66,5 +66,11 @@
     "여행자보험 증명서",
     "EUR 현금 준비",
     "숙소 예약 확인서"
-  ]
+  ],
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "minimumAge": 18,
+    "note": "국제운전면허증(IDP) 인정. 다만 관광객 대상 렌터카 서비스가 매우 제한적이며, 차량 상태가 열악할 수 있음. 국영 렌터카 업체(Cubacar, Rex 등)만 이용 가능."
+  }
 }

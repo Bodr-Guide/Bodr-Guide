@@ -60,5 +60,10 @@
     "숙소 바우처",
     "리턴 티켓",
     "여행자 보험 가입 확인"
-  ]
+  ],
+  "drivingLicense": {
+    "idpAccepted": false,
+    "directRecognition": false,
+    "note": "몰디브는 관광객 운전이 허용되지 않음. 리조트 섬에서는 자체 교통수단 이용."
+  }
 }

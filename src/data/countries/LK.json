@@ -85,5 +85,11 @@
     "여권 사본 저장",
     "숙소 바우처",
     "리턴 티켓"
-  ]
+  ],
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "minimumAge": 18,
+    "note": "국제운전면허증(IDP) 필요. 스리랑카는 좌측통행 국가. 도로가 좁고 교통 혼잡하여 현지 운전 경험이 없으면 운전기사 고용 권장."
+  }
 }

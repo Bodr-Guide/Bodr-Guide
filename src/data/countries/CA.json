@@ -84,5 +84,11 @@
     "여권 사본 저장",
     "숙소 바우처",
     "리턴 티켓"
-  ]
+  ],
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": true,
+    "minimumAge": 16,
+    "note": "한국 운전면허 직접 인정 (상호인정 협정). 주(Province)별로 규정이 다르며, 대부분 3~6개월까지 한국 면허로 운전 가능. 국제운전면허증(IDP) 지참 권장."
+  }
 }

@@ -74,5 +74,11 @@
     "숙소 바우처",
     "리턴 티켓",
     "여행자 보험"
-  ]
+  ],
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "minimumAge": 18,
+    "note": "국제운전면허증(IDP) 필요. 해안 절벽 도로와 산악 도로가 많아 운전 시 주의 필요. 여름 성수기 교통 혼잡."
+  }
 }

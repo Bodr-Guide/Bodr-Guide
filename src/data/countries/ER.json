@@ -1,0 +1,42 @@
+{
+  "id": "ER",
+  "nameKo": "에리트레아",
+  "nameEn": "Eritrea",
+  "continent": "아프리카",
+  "flagEmoji": "🇪🇷",
+  "visaStatus": "visa_required",
+  "visaNote": "사전 비자 발급 필수, 제3국 에리트레아 대사관에서 신청",
+  "importantNotes": [
+    "비자 사전 발급 필수",
+    "외국인 이동 제한 지역 존재, 사전 허가 필요",
+    "의료 시설 매우 열악",
+    "국경 지역 분쟁 위험"
+  ],
+  "updatedAt": "2026-02-11",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-6시간",
+    "voltage": "230V",
+    "currency": "ERN (에리트레아 낙파)",
+    "flight": "약 16시간 (경유)"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "note": "국제운전면허증(IDP) 필요"
+  },
+  "alerts": [
+    "외교부 여행경보 발령 지역",
+    "외국인 이동 제한 지역 존재",
+    "의료 시설 부족"
+  ],
+  "checklist": [
+    "여권 (유효기간 6개월 이상)",
+    "항공권",
+    "비자",
+    "숙소 바우처"
+  ]
+}

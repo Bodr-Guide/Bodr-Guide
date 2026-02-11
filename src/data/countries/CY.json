@@ -1,0 +1,42 @@
+{
+  "id": "CY",
+  "nameKo": "키프로스",
+  "nameEn": "Cyprus",
+  "continent": "유럽",
+  "flagEmoji": "🇨🇾",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 90,
+  "visaNote": "키프로스는 EU 회원국이나 솅겐 협정 미가입국입니다. 별도로 90일 무비자 체류가 가능합니다.",
+  "importantNotes": [
+    "키프로스는 솅겐 협정국이 아니므로 솅겐 체류 일수와 별도로 계산됩니다",
+    "북키프로스(터키 점령 지역) 방문 시 남키프로스 재입국에 문제가 생길 수 있습니다",
+    "EU 회원국이지만 유로존 가입국이므로 유로(EUR) 사용",
+    "여름철 극심한 더위 (40도 이상) 주의"
+  ],
+  "updatedAt": "2026-02-11",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-7시간",
+    "voltage": "230V",
+    "currency": "EUR (유로)",
+    "flight": "약 12시간 (경유)"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "note": "국제운전면허증(IDP) 필요. 영국식 좌측통행 국가."
+  },
+  "alerts": [
+    "북키프로스(터키 점령 지역) 방문 시 주의 — 남북 간 이동 제한 가능",
+    "여름철 극심한 고온 (40도 이상) — 탈수 주의"
+  ],
+  "checklist": [
+    "여권 (유효기간 6개월 이상)",
+    "항공권",
+    "숙소 예약 확인서",
+    "여행자 보험"
+  ]
+}

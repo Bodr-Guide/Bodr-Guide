@@ -1,0 +1,46 @@
+{
+  "id": "TL",
+  "nameKo": "동티모르",
+  "nameEn": "Timor-Leste",
+  "continent": "아시아",
+  "flagEmoji": "🇹🇱",
+  "visaStatus": "visa_on_arrival",
+  "visaFreeStayDays": 30,
+  "visaNote": "도착비자(Visa on Arrival) 30일 발급 가능, 비용 $30",
+  "importantNotes": [
+    "도착비자 신청 시 귀국 항공권, 여권용 사진, 비자 수수료 $30 필요",
+    "의료 인프라 열악, 여행자 보험 필수",
+    "우기(11~4월) 도로 침수 빈발",
+    "수돗물 음용 절대 금지"
+  ],
+  "updatedAt": "2026-02-11",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "0시간",
+    "voltage": "220V",
+    "currency": "USD (미국 달러)",
+    "flight": "약 8시간 (경유)"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "note": "국제운전면허증(IDP) 필요, 도로 상태 불량"
+  },
+  "alerts": [
+    "의료 인프라 매우 열악",
+    "우기(11~4월) 도로 침수 주의",
+    "수돗물 음용 금지",
+    "모기 주의 (뎅기열, 말라리아)"
+  ],
+  "checklist": [
+    "여권 (유효기간 6개월 이상)",
+    "항공권",
+    "여권용 사진 1매 (도착비자 신청용)",
+    "비자 수수료 USD $30",
+    "리턴 티켓",
+    "여행자 보험 (의료 후송 포함 권장)"
+  ]
+}

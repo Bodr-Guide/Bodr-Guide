@@ -60,5 +60,11 @@
     "USD 현금 (비자 수수료 $52 포함)",
     "증명사진 1장",
     "고산병 약 (다이아목스 등)"
-  ]
+  ],
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "minimumAge": 18,
+    "note": "국제운전면허증(IDP) 필요. 우유니 사막 등 비포장 도로가 많아 4WD 차량 권장. 고산 지역 운전 시 고산병 주의."
+  }
 }

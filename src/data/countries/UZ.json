@@ -77,5 +77,11 @@
     "USD 현금 (환전용)",
     "세관신고서 보관용 파우치",
     "리턴 티켓"
-  ]
+  ],
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "minimumAge": 18,
+    "note": "국제운전면허증(IDP) 필요. 도시 간 장거리 이동 시 도로 상태가 고르지 않을 수 있으며, 현지 교통 법규 준수 필수."
+  }
 }

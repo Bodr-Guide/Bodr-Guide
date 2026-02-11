@@ -1,0 +1,42 @@
+{
+  "id": "ZW",
+  "nameKo": "짐바브웨",
+  "nameEn": "Zimbabwe",
+  "continent": "아프리카",
+  "flagEmoji": "🇿🇼",
+  "visaStatus": "visa_on_arrival",
+  "visaFreeStayDays": 30,
+  "visaNote": "공항 도착 시 도착비자 발급, 30일 체류, $30 (단수) / $45 (복수)",
+  "importantNotes": [
+    "황열병 예방접종 증명서 지참 권장 (감염 지역 경유 시 필수)",
+    "말라리아 위험 지역으로 예방약 복용 권장",
+    "빅토리아 폭포 방문 시 잠비아-짐바브웨 KAZA UniVisa ($50) 활용 가능",
+    "수돗물 음용 금지",
+    "현지 통화 불안정, USD 현금 준비 권장"
+  ],
+  "updatedAt": "2026-02-11",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-7시간",
+    "voltage": "220V",
+    "currency": "ZWL (짐바브웨 달러) / USD 통용",
+    "flight": "약 19시간 (경유)"
+  },
+  "passportValidity": { "months": 6 },
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "note": "국제운전면허증(IDP) 필요"
+  },
+  "alerts": [
+    "말라리아 예방약 복용 권장",
+    "현지 통화 불안정, USD 현금 준비 권장"
+  ],
+  "checklist": [
+    "여권 (유효기간 6개월 이상)",
+    "항공권",
+    "USD 현금 (도착비자 비용 및 현지 사용)",
+    "숙소 바우처",
+    "황열병 예방접종 증명서"
+  ]
+}

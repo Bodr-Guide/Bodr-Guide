@@ -1,0 +1,43 @@
+{
+  "id": "KZ",
+  "nameKo": "카자흐스탄",
+  "nameEn": "Kazakhstan",
+  "continent": "유럽",
+  "flagEmoji": "🇰🇿",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 30,
+  "visaNote": "대한민국 여권 소지자는 30일간 무비자 체류 가능.",
+  "importantNotes": [
+    "입국 후 5일 이내 체류 등록(레지스트레이션)이 필요할 수 있음 — 호텔 숙박 시 자동 등록",
+    "국토가 매우 넓어 도시 간 이동에 장시간 소요",
+    "겨울철 영하 30도 이하로 떨어질 수 있으므로 방한 대비 필수",
+    "카자흐어와 러시아어가 공용어이며, 영어 소통이 어려울 수 있음"
+  ],
+  "updatedAt": "2026-02-11",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-3시간",
+    "voltage": "220V",
+    "currency": "KZT (텡게)",
+    "flight": "약 8시간 (직항/경유)"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "note": "국제운전면허증(IDP) 필요"
+  },
+  "alerts": [
+    "겨울철 극한 추위 — 방한 장비 필수",
+    "장거리 이동 시 연료 및 식수 충분히 준비"
+  ],
+  "checklist": [
+    "여권 (유효기간 6개월 이상)",
+    "항공권",
+    "숙소 예약 확인서",
+    "여행자 보험",
+    "방한용품 (겨울철)"
+  ]
+}

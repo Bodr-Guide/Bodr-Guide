@@ -1,0 +1,42 @@
+{
+  "id": "KM",
+  "nameKo": "코모로",
+  "nameEn": "Comoros",
+  "continent": "아프리카",
+  "flagEmoji": "🇰🇲",
+  "visaStatus": "visa_on_arrival",
+  "visaFreeStayDays": 45,
+  "visaNote": "도착비자 발급 가능, 45일 체류",
+  "importantNotes": [
+    "도착비자는 모로니 국제공항에서 발급 가능",
+    "말라리아 위험 지역으로 예방약 복용 권장",
+    "의료 시설 열악, 여행자 보험 필수",
+    "수돗물 음용 금지"
+  ],
+  "updatedAt": "2026-02-11",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-6시간",
+    "voltage": "220V",
+    "currency": "KMF (코모로 프랑)",
+    "flight": "약 18시간 (경유)"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "note": "국제운전면허증(IDP) 필요"
+  },
+  "alerts": [
+    "말라리아 예방약 복용 권장",
+    "의료 시설 부족"
+  ],
+  "checklist": [
+    "여권 (유효기간 6개월 이상)",
+    "항공권",
+    "숙소 바우처",
+    "USD 현금 (도착비자)"
+  ]
+}

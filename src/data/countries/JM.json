@@ -66,5 +66,11 @@
     "숙소 바우처",
     "리턴 티켓",
     "USD 현금 (소액 준비)"
-  ]
+  ],
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "minimumAge": 18,
+    "note": "국제운전면허증(IDP) 필요. 좌측통행 국가이므로 운전 시 주의. 도로 상태가 고르지 않으며 야간 운전은 자제 권장."
+  }
 }

@@ -69,5 +69,11 @@
     "숙소 바우처",
     "리턴 티켓",
     "USD 현금 (갈라파고스 입장료 포함)"
-  ]
+  ],
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "minimumAge": 18,
+    "note": "국제운전면허증(IDP) 필요. 에콰도르에서 운전 시 IDP와 한국 면허증 원본을 함께 지참해야 합니다."
+  }
 }

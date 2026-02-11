@@ -83,5 +83,11 @@
     "여권 사본 저장",
     "숙소 바우처",
     "리턴 티켓"
-  ]
+  ],
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "minimumAge": 18,
+    "note": "국제운전면허증(IDP) 필요. 태국에서 오토바이 렌트 시에도 IDP 필수. 무면허 운전 시 보험 적용 불가."
+  }
 }

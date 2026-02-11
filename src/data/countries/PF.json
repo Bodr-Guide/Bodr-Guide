@@ -1,0 +1,43 @@
+{
+  "id": "PF",
+  "nameKo": "프랑스령 폴리네시아",
+  "nameEn": "French Polynesia",
+  "continent": "오세아니아",
+  "flagEmoji": "🇵🇫",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 90,
+  "visaNote": "프랑스 해외영토로 관광 목적 90일 무비자 입국 가능 (180일 중 90일)",
+  "importantNotes": [
+    "프랑스 해외영토로 솅겐 지역과 별도 입국 규정 적용",
+    "귀국 항공권 및 숙소 예약 확인서 지참 필요",
+    "물가가 매우 높음 (프랑스 본토보다 비쌈)"
+  ],
+  "updatedAt": "2026-02-11",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-19시간",
+    "voltage": "220V",
+    "currency": "XPF (CFP 프랑)",
+    "flight": "약 16시간 (경유)"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "note": "국제운전면허증(IDP) 필요"
+  },
+  "alerts": [
+    "사이클론 시즌(11~4월) 기상 주의",
+    "자외선 매우 강함",
+    "물가 매우 높음"
+  ],
+  "checklist": [
+    "여권 (유효기간 6개월 이상)",
+    "항공권",
+    "숙소 예약 확인서",
+    "리턴 티켓",
+    "여행자 보험"
+  ]
+}

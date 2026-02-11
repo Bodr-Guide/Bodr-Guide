@@ -1,0 +1,43 @@
+{
+  "id": "SV",
+  "nameKo": "엘살바도르",
+  "nameEn": "El Salvador",
+  "continent": "북미",
+  "flagEmoji": "🇸🇻",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 90,
+  "visaNote": "CA-4 협정에 따라 과테말라, 온두라스, 니카라과, 엘살바도르 4개국 합산 90일 무비자 체류 가능",
+  "importantNotes": [
+    "CA-4 협정국(GT, HN, NI, SV) 합산 90일 체류 제한",
+    "비트코인이 법정 화폐로 인정됨",
+    "갱단 관련 치안 이슈 주의, 관광지 외 야간 외출 자제"
+  ],
+  "updatedAt": "2026-02-11",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-15시간",
+    "voltage": "115V",
+    "currency": "USD (미국 달러)",
+    "flight": "약 19시간 (경유)"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "note": "국제운전면허증(IDP) 필요"
+  },
+  "alerts": [
+    "일부 지역 갱단 관련 치안 불안",
+    "야간 외출 및 장거리 이동 자제",
+    "화산 활동 지역 주의"
+  ],
+  "checklist": [
+    "여권 (유효기간 6개월 이상)",
+    "항공권",
+    "숙소 예약 확인서",
+    "리턴 티켓",
+    "여행자 보험"
+  ]
+}

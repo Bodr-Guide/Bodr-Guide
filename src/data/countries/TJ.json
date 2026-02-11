@@ -1,0 +1,45 @@
+{
+  "id": "TJ",
+  "nameKo": "타지키스탄",
+  "nameEn": "Tajikistan",
+  "continent": "유럽",
+  "flagEmoji": "🇹🇯",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 30,
+  "visaNote": "대한민국 여권 소지자는 30일간 무비자 체류 가능.",
+  "importantNotes": [
+    "파미르 고원(GBAO) 지역 방문 시 별도 특별 허가증 필요",
+    "고산 지역이 대부분 — 고산병 대비 필수 (수도 두샨베 해발 800m, 파미르 4,000m 이상)",
+    "현금 사용이 주류이며 ATM은 주요 도시에만 있음",
+    "타지크어와 러시아어가 사용되며, 영어 소통은 어려움"
+  ],
+  "updatedAt": "2026-02-11",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-4시간",
+    "voltage": "220V",
+    "currency": "TJS (소모니)",
+    "flight": "약 10시간 (경유)"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "note": "국제운전면허증(IDP) 필요. 산악 도로 비포장 구간 다수 — 4WD 차량 필수."
+  },
+  "alerts": [
+    "아프가니스탄 접경 지역 방문 금지",
+    "파미르 고원 방문 시 별도 GBAO 허가증 필수",
+    "산악 도로 낙석·산사태 위험 — 우기(3~5월) 특히 주의"
+  ],
+  "checklist": [
+    "여권 (유효기간 6개월 이상)",
+    "항공권",
+    "숙소 예약 확인서",
+    "여행자 보험",
+    "고산병 예방약",
+    "GBAO 허가증 (파미르 방문 시)"
+  ]
+}

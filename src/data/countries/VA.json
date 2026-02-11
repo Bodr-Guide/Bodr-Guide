@@ -1,0 +1,43 @@
+{
+  "id": "VA",
+  "nameKo": "바티칸 시국",
+  "nameEn": "Vatican City",
+  "continent": "유럽",
+  "flagEmoji": "🇻🇦",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 90,
+  "visaNote": "바티칸은 독립 국가이나 이탈리아에 둘러싸여 있어 이탈리아를 통해서만 입국 가능합니다. 솅겐 지역 180일 중 최대 90일 체류 가능.",
+  "importantNotes": [
+    "세계에서 가장 작은 국가 (0.44km2)",
+    "성 베드로 대성당, 바티칸 박물관 입장 시 복장 규정 엄격 (어깨·무릎 노출 금지)",
+    "바티칸 박물관은 사전 온라인 예약 강력 권장 — 현장 대기 수 시간",
+    "수요일 오전 교황 일반 알현 참석 가능 (무료, 사전 예약)"
+  ],
+  "updatedAt": "2026-02-11",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-8시간",
+    "voltage": "230V",
+    "currency": "EUR (유로)",
+    "flight": "약 12시간 (로마 경유)"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "note": "바티칸 시국 내 차량 통행 불가. 도보로만 이동."
+  },
+  "alerts": [
+    "소매치기 주의 — 관광객 밀집 지역",
+    "종교 행사 기간 극심한 인파 — 안전 주의"
+  ],
+  "checklist": [
+    "여권 (유효기간 6개월 이상)",
+    "항공권 (로마 입국)",
+    "바티칸 박물관 사전 예약",
+    "복장 준비 (어깨·무릎 노출 금지)",
+    "여행자 보험"
+  ]
+}

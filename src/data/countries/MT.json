@@ -85,5 +85,11 @@
     "숙소 바우처",
     "리턴 티켓",
     "여행자 보험"
-  ]
+  ],
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "minimumAge": 18,
+    "note": "국제운전면허증(IDP) 필요. 몰타는 좌측통행 국가(영국식). 도로가 좁고 주차 공간이 제한적이므로 소형 차량 렌트 권장."
+  }
 }

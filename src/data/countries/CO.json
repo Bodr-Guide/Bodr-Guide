@@ -75,5 +75,11 @@
     "여권 사본 저장",
     "숙소 바우처",
     "리턴 티켓"
-  ]
+  ],
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "minimumAge": 16,
+    "note": "국제운전면허증(IDP) 필요. 관광 목적으로 체류 기간 동안 사용 가능. 보고타 등 대도시 교통 혼잡 주의."
+  }
 }

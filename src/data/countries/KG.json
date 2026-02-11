@@ -1,0 +1,43 @@
+{
+  "id": "KG",
+  "nameKo": "키르기스스탄",
+  "nameEn": "Kyrgyzstan",
+  "continent": "유럽",
+  "flagEmoji": "🇰🇬",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 30,
+  "visaNote": "대한민국 여권 소지자는 30일간 무비자 체류 가능. 최대 60일까지 현지에서 연장 가능.",
+  "importantNotes": [
+    "체류 연장은 비슈케크 이민국에서 신청 가능 (최대 60일)",
+    "고산 지역이 많으므로 고산병 대비 필요 (수도 비슈케크 해발 800m)",
+    "현금 사용이 일반적이며 ATM은 주요 도시에만 있음",
+    "산악 트레킹 시 가이드 동반 권장"
+  ],
+  "updatedAt": "2026-02-11",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-3시간",
+    "voltage": "220V",
+    "currency": "KGS (솜)",
+    "flight": "약 9시간 (경유)"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "note": "국제운전면허증(IDP) 필요. 산악 도로 주행 시 4WD 차량 권장."
+  },
+  "alerts": [
+    "산악 지역 도로 상태 열악 — 비포장 도로 다수",
+    "국경 지역(타지키스탄, 우즈베키스탄 접경) 분쟁 가능성 — 여행 자제"
+  ],
+  "checklist": [
+    "여권 (유효기간 6개월 이상)",
+    "항공권",
+    "숙소 예약 확인서",
+    "여행자 보험",
+    "고산병 예방약"
+  ]
+}

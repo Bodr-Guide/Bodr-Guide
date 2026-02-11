@@ -84,5 +84,11 @@
     "숙소 바우처",
     "리턴 티켓",
     "여행자 보험"
-  ]
+  ],
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "minimumAge": 18,
+    "note": "국제운전면허증(IDP) 필요. 6개월까지 IDP + 한국 면허증으로 운전 가능. 고속도로 톨게이트 및 도심 제한구역(ZBE) 주의."
+  }
 }

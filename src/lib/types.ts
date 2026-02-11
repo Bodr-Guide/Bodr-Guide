@@ -44,6 +44,14 @@ export interface VisaTypeInfo {
   applicationUrl?: string;
 }
 
+// 운전면허 정보
+export interface DrivingLicenseInfo {
+  idpAccepted: boolean;          // 국제운전면허증(IDP) 인정 여부
+  directRecognition: boolean;    // 한국 면허 직접 인정 여부 (상호인정 협정)
+  minimumAge?: number;           // 최소 운전 연령
+  note: string;                  // 상세 설명
+}
+
 // 국가 데이터 인터페이스
 export interface Country {
   id: string;
@@ -65,6 +73,7 @@ export interface Country {
   timeline?: TimelineItem[];
   alerts?: string[];
   checklist?: string[];
+  drivingLicense?: DrivingLicenseInfo;
 }
 
 // 비자 상태 라벨 및 색상 매핑

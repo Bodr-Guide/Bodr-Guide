@@ -1,0 +1,46 @@
+{
+  "id": "PK",
+  "nameKo": "파키스탄",
+  "nameEn": "Pakistan",
+  "continent": "아시아",
+  "flagEmoji": "🇵🇰",
+  "visaStatus": "e_visa",
+  "visaFreeStayDays": 30,
+  "visaNote": "e-Visa 사전 신청 필요 (ETA 또는 온라인 비자 시스템)",
+  "importantNotes": [
+    "일부 지역(발루치스탄, FATA 등) 외교부 여행경보 발령",
+    "이슬람 국가로 현지 문화 및 복장 규범 존중 필요",
+    "라마단 기간 중 공공장소 음식 섭취 자제",
+    "수돗물 음용 자제, 생수 필수"
+  ],
+  "updatedAt": "2026-02-11",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-4시간",
+    "voltage": "230V",
+    "currency": "PKR (루피)",
+    "flight": "약 9시간"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "note": "국제운전면허증(IDP) 필요, 현지 교통 상황 혼잡"
+  },
+  "alerts": [
+    "발루치스탄, FATA 등 일부 지역 여행경보 발령",
+    "테러 위험 지역 주의",
+    "야간 이동 자제",
+    "수돗물 음용 금지"
+  ],
+  "checklist": [
+    "여권 (유효기간 6개월 이상)",
+    "항공권",
+    "e-Visa 승인서 출력",
+    "숙소 예약 확인서",
+    "리턴 티켓",
+    "여행자 보험"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "PG",
+  "nameKo": "파푸아뉴기니",
+  "nameEn": "Papua New Guinea",
+  "continent": "오세아니아",
+  "flagEmoji": "🇵🇬",
+  "visaStatus": "e_visa",
+  "visaFreeStayDays": 30,
+  "visaNote": "e-Visa 사전 신청 필요 (온라인 비자 시스템)",
+  "importantNotes": [
+    "치안 불안정, 특히 포트모르즈비 및 대도시 주의",
+    "부족 간 분쟁 발생 지역 회피 권장",
+    "의료 인프라 열악, 여행자 보험 필수",
+    "말라리아 위험 지역, 예방약 복용 권장"
+  ],
+  "updatedAt": "2026-02-11",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "+1시간",
+    "voltage": "240V",
+    "currency": "PGK (키나)",
+    "flight": "약 10시간 (경유)"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "note": "국제운전면허증(IDP) 필요, 도로 상태 불량"
+  },
+  "alerts": [
+    "포트모르즈비 등 대도시 치안 불안",
+    "부족 간 분쟁 발생 지역 주의",
+    "말라리아 위험 지역",
+    "의료 인프라 열악"
+  ],
+  "checklist": [
+    "여권 (유효기간 6개월 이상)",
+    "항공권",
+    "e-Visa 승인서 출력",
+    "숙소 예약 확인서",
+    "리턴 티켓",
+    "여행자 보험 (의료 후송 포함 권장)",
+    "말라리아 예방약"
+  ]
+}

@@ -73,5 +73,11 @@
     "숙소 바우처",
     "리턴 티켓",
     "USD 현금 (현지 환전용)"
-  ]
+  ],
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "minimumAge": 18,
+    "note": "국제운전면허증(IDP) 필요. 우루과이 도로 상태는 양호하며, 고속도로 톨게이트 현금 결제 가능."
+  }
 }

@@ -74,5 +74,11 @@
     "숙소 바우처",
     "리턴 티켓",
     "국제운전면허증"
-  ]
+  ],
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "minimumAge": 18,
+    "note": "국제운전면허증(IDP) 필요. 나미비아는 좌측통행 국가. 비포장 도로가 많아 4WD 차량 렌트 필수. 야생동물 도로 출현에 주의."
+  }
 }

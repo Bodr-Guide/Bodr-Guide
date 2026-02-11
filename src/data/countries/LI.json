@@ -1,0 +1,42 @@
+{
+  "id": "LI",
+  "nameKo": "리히텐슈타인",
+  "nameEn": "Liechtenstein",
+  "continent": "유럽",
+  "flagEmoji": "🇱🇮",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 90,
+  "visaNote": "솅겐 협정국. 솅겐 지역 180일 중 최대 90일 무비자 체류 가능.",
+  "importantNotes": [
+    "솅겐 지역 전체 합산 180일 중 90일 체류 제한",
+    "스위스와 개방 국경 — 스위스 프랑(CHF) 사용",
+    "면적이 매우 작은 국가 (약 160km2)로 당일 여행으로 충분",
+    "공용어는 독일어"
+  ],
+  "updatedAt": "2026-02-11",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-8시간",
+    "voltage": "230V",
+    "currency": "CHF (스위스 프랑)",
+    "flight": "약 13시간 (경유, 취리히 경유 후 육로)"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "note": "국제운전면허증(IDP) 필요"
+  },
+  "alerts": [
+    "겨울철 산악 도로 결빙 주의",
+    "물가가 스위스와 동일한 수준으로 높음"
+  ],
+  "checklist": [
+    "여권 (유효기간 6개월 이상)",
+    "항공권 (스위스 또는 오스트리아 경유)",
+    "숙소 예약 확인서",
+    "여행자 보험"
+  ]
+}

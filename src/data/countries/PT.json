@@ -83,5 +83,11 @@
     "숙소 바우처",
     "리턴 티켓",
     "여행자 보험"
-  ]
+  ],
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "minimumAge": 18,
+    "note": "국제운전면허증(IDP) 필요. EU 회원국으로 유럽 교통 규칙 적용. 고속도로 전자 톨게이트(Via Verde) 이용 시 사전 등록 필요."
+  }
 }

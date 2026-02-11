@@ -1,0 +1,42 @@
+{
+  "id": "MK",
+  "nameKo": "북마케도니아",
+  "nameEn": "North Macedonia",
+  "continent": "유럽",
+  "flagEmoji": "🇲🇰",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 90,
+  "visaNote": "대한민국 여권 소지자는 90일간 무비자 체류 가능.",
+  "importantNotes": [
+    "EU 및 솅겐 미가입국 — 별도 입국 규정 적용",
+    "공용어는 마케도니아어이며, 알바니아어도 공용어",
+    "오흐리드 호수가 UNESCO 세계유산으로 유명",
+    "물가가 서유럽 대비 매우 저렴"
+  ],
+  "updatedAt": "2026-02-11",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-8시간",
+    "voltage": "230V",
+    "currency": "MKD (마케도니아 디나르)",
+    "flight": "약 14시간 (경유)"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "note": "국제운전면허증(IDP) 필요"
+  },
+  "alerts": [
+    "국경 지역 간 민족 갈등 가능성 — 대규모 집회 접근 자제",
+    "겨울철 산악 도로 결빙 주의"
+  ],
+  "checklist": [
+    "여권 (유효기간 6개월 이상)",
+    "항공권",
+    "숙소 예약 확인서",
+    "여행자 보험"
+  ]
+}

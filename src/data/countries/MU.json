@@ -76,5 +76,11 @@
     "숙소 바우처",
     "리턴 티켓",
     "방충제 및 선크림"
-  ]
+  ],
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "minimumAge": 18,
+    "note": "국제운전면허증(IDP) 필요. 모리셔스는 좌측통행 국가(영국식). 해안 도로가 잘 정비되어 있으나 산악 지역 도로 주의."
+  }
 }

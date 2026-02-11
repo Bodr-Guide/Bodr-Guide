@@ -117,5 +117,11 @@
     "여권 사본 저장",
     "숙소 바우처",
     "리턴 티켓"
-  ]
+  ],
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": true,
+    "minimumAge": 16,
+    "note": "대부분의 주에서 한국 운전면허 + IDP로 운전 가능. 일부 주(조지아, 플로리다 등)에서 한국 면허 직접 인정. 주별로 규정이 다르므로 방문 주의 규정 확인 필요."
+  }
 }

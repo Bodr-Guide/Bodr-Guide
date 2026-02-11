@@ -1,0 +1,43 @@
+{
+  "id": "BN",
+  "nameKo": "브루나이",
+  "nameEn": "Brunei",
+  "continent": "아시아",
+  "flagEmoji": "🇧🇳",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 30,
+  "visaNote": "관광 목적 30일 무비자 입국 가능",
+  "importantNotes": [
+    "이슬람 국가로 샤리아법 적용, 복장 및 행동 규범 준수 필요",
+    "주류 반입 및 공공장소 음주 금지",
+    "라마단 기간 중 공공장소 음식 섭취 자제"
+  ],
+  "updatedAt": "2026-02-11",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-1시간",
+    "voltage": "240V",
+    "currency": "BND (브루나이 달러)",
+    "flight": "약 6시간"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "note": "국제운전면허증(IDP) 필요"
+  },
+  "alerts": [
+    "이슬람 율법(샤리아법) 엄격 적용",
+    "주류 반입 및 공공장소 음주 금지",
+    "동성애 행위 불법"
+  ],
+  "checklist": [
+    "여권 (유효기간 6개월 이상)",
+    "항공권",
+    "숙소 예약 확인서",
+    "리턴 티켓",
+    "여행자 보험"
+  ]
+}

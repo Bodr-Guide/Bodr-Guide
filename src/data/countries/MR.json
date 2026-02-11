@@ -1,0 +1,42 @@
+{
+  "id": "MR",
+  "nameKo": "모리타니",
+  "nameEn": "Mauritania",
+  "continent": "아프리카",
+  "flagEmoji": "🇲🇷",
+  "visaStatus": "visa_on_arrival",
+  "visaFreeStayDays": 30,
+  "visaNote": "도착비자 발급 가능, 30일 체류",
+  "importantNotes": [
+    "도착비자는 누악쇼트 국제공항에서 발급 가능",
+    "이슬람 국가로 라마단 기간 중 음식점 영업 제한",
+    "사막 지역 여행 시 충분한 수분과 자외선 차단 필수",
+    "여성 여행자 노출 있는 복장 자제 권장"
+  ],
+  "updatedAt": "2026-02-11",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-9시간",
+    "voltage": "220V",
+    "currency": "MRU (모리타니 우기야)",
+    "flight": "약 19시간 (경유)"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "note": "국제운전면허증(IDP) 필요"
+  },
+  "alerts": [
+    "동부 국경 지역 테러 위험",
+    "사막 지역 극심한 고온 주의"
+  ],
+  "checklist": [
+    "여권 (유효기간 6개월 이상)",
+    "항공권",
+    "숙소 바우처",
+    "USD/EUR 현금 (도착비자)"
+  ]
+}

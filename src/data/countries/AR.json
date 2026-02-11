@@ -75,5 +75,11 @@
     "여권 사본 저장",
     "숙소 바우처",
     "리턴 티켓"
-  ]
+  ],
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "minimumAge": 17,
+    "note": "국제운전면허증(IDP) 필요. 관광 목적으로 최대 체류 기간 동안 사용 가능. 부에노스아이레스 시내 교통이 혼잡하므로 주의 필요."
+  }
 }

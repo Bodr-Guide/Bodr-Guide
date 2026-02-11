@@ -81,12 +81,18 @@ function getCardInfo(country: Country) {
   return { visaLabel, visaColor, entryLabel, entryColor, passportLabel, visaTypesSummary };
 }
 
+// 페이지당 표시 개수 옵션
+type PerPage = 10 | 20 | 30;
+const PER_PAGE_OPTIONS: PerPage[] = [10, 20, 30];
+
 export default function PopularCountries({ countries }: PopularCountriesProps) {
   const [searchQuery, setSearchQuery] = useState("");
   const [showAll, setShowAll] = useState(false);
   const [sortType, setSortType] = useState<SortType>("default");
   const [continentFilters, setContinentFilters] = useState<Set<Continent>>(new Set());
   const [seasonFilters, setSeasonFilters] = useState<Set<Season>>(new Set());
+  const [perPage, setPerPage] = useState<PerPage>(30);
+  const [currentPage, setCurrentPage] = useState(1);
 
   // 히어로 섹션 검색바 연동
   useEffect(() => {
@@ -113,6 +119,7 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
     setSortType("default");
     setContinentFilters(new Set());
     setSeasonFilters(new Set());
+    setCurrentPage(1);
   };
 
   const hasActiveFilter = sortType !== "default" || continentFilters.size > 0 || seasonFilters.size > 0;
@@ -175,6 +182,24 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
 
     return result;
   }, [countries, searchQuery, showAll, continentFilters, seasonFilters, sortType]);
+
+  // 필터/검색/정렬 변경 시 페이지 리셋
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchQuery, continentFilters, seasonFilters, sortType, perPage]);
+
+  // 페이지네이션 계산 (전체보기 또는 검색 중일 때만 적용)
+  const needsPagination = (showAll || searchQuery.trim().length > 0) && displayCountries.length > perPage;
+  const totalPages = needsPagination ? Math.ceil(displayCountries.length / perPage) : 1;
+  const paginatedCountries = needsPagination
+    ? displayCountries.slice((currentPage - 1) * perPage, currentPage * perPage)
+    : displayCountries;
+
+  // 페이지 변경 핸들러 (스크롤 이동 포함)
+  const goToPage = (page: number) => {
+    setCurrentPage(page);
+    document.getElementById("destinations")?.scrollIntoView({ behavior: "smooth" });
+  };
 
   const isSearching = searchQuery.trim().length > 0;
 
@@ -300,10 +325,35 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
           </div>
         )}
 
+        {/* 페이지당 표시 개수 선택 + 결과 요약 — 전체보기 또는 검색 중일 때 */}
+        {(showAll || isSearching) && displayCountries.length > 0 && (
+          <div className="mb-3 flex items-center justify-between">
+            <p className="text-[11px] text-slate-500">
+              총 {displayCountries.length}개 중 {(currentPage - 1) * perPage + 1}–{Math.min(currentPage * perPage, displayCountries.length)}
+            </p>
+            <div className="flex items-center gap-1.5">
+              <span className="text-[11px] text-slate-500 mr-1">표시</span>
+              {PER_PAGE_OPTIONS.map((n) => (
+                <button
+                  key={n}
+                  onClick={() => setPerPage(n)}
+                  className={`rounded-md px-2 py-0.5 text-[11px] font-medium transition-colors ${
+                    perPage === n
+                      ? "bg-white text-slate-900"
+                      : "bg-slate-800/60 text-slate-400 hover:bg-slate-700/60 hover:text-slate-300"
+                  }`}
+                >
+                  {n}개
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* 국가 카드 그리드: 모바일 1열 / sm 2열 / lg 3열 */}
-        {displayCountries.length > 0 ? (
+        {paginatedCountries.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
-            {displayCountries.map((country) => (
+            {paginatedCountries.map((country) => (
               <CountryCard key={country.id} country={country} />
             ))}
           </div>
@@ -311,6 +361,62 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
           <div className="flex flex-col items-center justify-center py-20">
             <p className="text-lg font-medium text-slate-400">검색 결과가 없습니다</p>
             <p className="mt-1 text-sm text-slate-500">다른 검색어로 시도해보세요.</p>
+          </div>
+        )}
+
+        {/* 페이지네이션 버튼 */}
+        {needsPagination && (
+          <div className="mt-6 flex items-center justify-center gap-1">
+            {/* 이전 페이지 */}
+            <button
+              onClick={() => goToPage(Math.max(1, currentPage - 1))}
+              disabled={currentPage === 1}
+              className="rounded-lg px-2.5 py-1.5 text-xs text-slate-400 hover:bg-slate-800 hover:text-white transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+
+            {/* 페이지 번호 — 항상 최소 5개 표시 */}
+            {(() => {
+              const pages: (number | "...")[] = [];
+              if (totalPages <= 7) {
+                for (let i = 1; i <= totalPages; i++) pages.push(i);
+              } else {
+                pages.push(1);
+                if (currentPage > 4) pages.push("...");
+                const start = Math.max(2, currentPage - 2);
+                const end = Math.min(totalPages - 1, currentPage + 2);
+                for (let i = start; i <= end; i++) pages.push(i);
+                if (currentPage < totalPages - 3) pages.push("...");
+                pages.push(totalPages);
+              }
+              return pages.map((p, idx) =>
+                p === "..." ? (
+                  <span key={`dots-${idx}`} className="px-1.5 text-xs text-slate-600">…</span>
+                ) : (
+                  <button
+                    key={p}
+                    onClick={() => goToPage(p)}
+                    className={`min-w-[28px] rounded-lg px-2 py-1.5 text-xs font-medium transition-colors ${
+                      currentPage === p
+                        ? "bg-white text-slate-900"
+                        : "text-slate-400 hover:bg-slate-800 hover:text-white"
+                    }`}
+                  >
+                    {p}
+                  </button>
+                )
+              );
+            })()}
+
+            {/* 다음 페이지 */}
+            <button
+              onClick={() => goToPage(Math.min(totalPages, currentPage + 1))}
+              disabled={currentPage === totalPages}
+              className="rounded-lg px-2.5 py-1.5 text-xs text-slate-400 hover:bg-slate-800 hover:text-white transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
           </div>
         )}
       </div>

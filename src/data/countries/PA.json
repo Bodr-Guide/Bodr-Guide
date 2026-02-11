@@ -76,5 +76,11 @@
     "숙소 바우처",
     "리턴 티켓",
     "USD 현금 ($500 이상 권장)"
-  ]
+  ],
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "minimumAge": 18,
+    "note": "국제운전면허증(IDP)으로 90일간 운전 가능. 파나마시티 교통 체증이 심하며, 우기 시 도로 침수 주의."
+  }
 }

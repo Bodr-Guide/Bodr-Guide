@@ -68,5 +68,11 @@
     "숙소 바우처",
     "리턴 티켓",
     "USD 현금 (도착비자)"
-  ]
+  ],
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "minimumAge": 17,
+    "note": "국제운전면허증(IDP) 필요. 발리, 자카르타 등에서 렌터카 이용 시 IDP 필수. 오토바이도 IDP 필요."
+  }
 }

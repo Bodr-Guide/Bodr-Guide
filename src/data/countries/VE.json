@@ -1,0 +1,46 @@
+{
+  "id": "VE",
+  "nameKo": "베네수엘라",
+  "nameEn": "Venezuela",
+  "continent": "남미",
+  "flagEmoji": "🇻🇪",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 90,
+  "visaNote": "관광 목적 90일 무비자 입국 가능",
+  "importantNotes": [
+    "치안 상황 매우 불안정, 외교부 여행경보 발령 지역",
+    "강도, 납치 등 강력 범죄 빈발",
+    "경제 불안정으로 현지 물가 변동 심함, USD 현금 필수",
+    "의료 인프라 열악, 여행자 보험 필수"
+  ],
+  "updatedAt": "2026-02-11",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-13시간",
+    "voltage": "120V",
+    "currency": "VES (볼리바르)",
+    "flight": "약 22시간 (경유)"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "note": "국제운전면허증(IDP) 필요, 도로 상태 불량 구간 많음"
+  },
+  "alerts": [
+    "외교부 여행경보 발령 지역 — 치안 매우 불안",
+    "강도, 납치 등 강력 범죄 빈발",
+    "경제 불안정, 현지 화폐 가치 급변동",
+    "야간 외출 절대 자제",
+    "의료 인프라 열악"
+  ],
+  "checklist": [
+    "여권 (유효기간 6개월 이상)",
+    "항공권",
+    "여행자 보험 (의료 후송 포함 권장)",
+    "리턴 티켓",
+    "USD 현금 (충분히 준비)"
+  ]
+}

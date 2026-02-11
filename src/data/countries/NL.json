@@ -76,5 +76,11 @@
     "숙소 바우처",
     "리턴 티켓",
     "여행자 보험"
-  ]
+  ],
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "minimumAge": 18,
+    "note": "국제운전면허증(IDP) 필요. 네덜란드는 자전거 교통이 매우 발달하여 자전거 전용도로 주의. 암스테르담 시내는 주차 요금이 매우 비쌈."
+  }
 }

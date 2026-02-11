@@ -69,5 +69,11 @@
     "숙소 바우처",
     "리턴 티켓",
     "여행자 보험"
-  ]
+  ],
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "minimumAge": 18,
+    "note": "국제운전면허증(IDP) 필요. EU 회원국이나 한국과 상호인정 협정 없음. 관광 기간 동안 IDP로 운전 가능."
+  }
 }

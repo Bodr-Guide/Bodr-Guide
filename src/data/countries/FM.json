@@ -1,0 +1,43 @@
+{
+  "id": "FM",
+  "nameKo": "미크로네시아",
+  "nameEn": "Micronesia",
+  "continent": "오세아니아",
+  "flagEmoji": "🇫🇲",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 30,
+  "visaNote": "관광 목적 30일 무비자 입국 가능",
+  "importantNotes": [
+    "귀국 항공권 지참 필요",
+    "항공편 매우 제한적, 사전 예약 필수",
+    "의료 인프라 열악, 여행자 보험 필수"
+  ],
+  "updatedAt": "2026-02-11",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "+2시간",
+    "voltage": "120V",
+    "currency": "USD (미국 달러)",
+    "flight": "약 12시간 (경유)"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "note": "국제운전면허증(IDP) 필요"
+  },
+  "alerts": [
+    "태풍 시즌 기상 주의",
+    "의료 인프라 열악, 긴급 의료 후송 어려움",
+    "자외선 매우 강함"
+  ],
+  "checklist": [
+    "여권 (유효기간 6개월 이상)",
+    "항공권",
+    "숙소 예약 확인서",
+    "리턴 티켓",
+    "여행자 보험 (의료 후송 포함 권장)"
+  ]
+}

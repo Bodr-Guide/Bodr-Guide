@@ -1,0 +1,42 @@
+{
+  "id": "LY",
+  "nameKo": "리비아",
+  "nameEn": "Libya",
+  "continent": "아프리카",
+  "flagEmoji": "🇱🇾",
+  "visaStatus": "visa_required",
+  "visaNote": "사전 비자 발급 필수, 리비아 대사관에서 신청",
+  "importantNotes": [
+    "비자 사전 발급 필수",
+    "내전 지속 중으로 치안 매우 불안정",
+    "여행 자제 또는 철수 권고 지역",
+    "의료 시설 극히 열악"
+  ],
+  "updatedAt": "2026-02-11",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-7시간",
+    "voltage": "230V",
+    "currency": "LYD (리비아 디나르)",
+    "flight": "약 16시간 (경유)"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "note": "국제운전면허증(IDP) 필요"
+  },
+  "alerts": [
+    "외교부 여행경보 발령 지역",
+    "내전 지속으로 치안 매우 불안정",
+    "여행 자제 또는 철수 권고"
+  ],
+  "checklist": [
+    "여권 (유효기간 6개월 이상)",
+    "항공권",
+    "비자",
+    "숙소 바우처"
+  ]
+}

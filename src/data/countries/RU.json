@@ -1,0 +1,47 @@
+{
+  "id": "RU",
+  "nameKo": "러시아",
+  "nameEn": "Russia",
+  "continent": "유럽",
+  "flagEmoji": "🇷🇺",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 60,
+  "visaNote": "한-러 사증면제 협정에 따라 대한민국 여권 소지자는 60일간 무비자 체류 가능.",
+  "importantNotes": [
+    "입국 시 출입국카드(Migration Card) 작성 필수 — 출국 시까지 보관",
+    "도착 후 7영업일 이내 체류 등록(레지스트레이션) 필요 — 호텔 숙박 시 자동 등록",
+    "서방 제재로 인해 Visa/Mastercard 국제 카드 사용 불가 — 현금(루블) 필수",
+    "겨울철 극한 추위 — 모스크바 기준 영하 20도 이하 가능"
+  ],
+  "updatedAt": "2026-02-11",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-6시간 (모스크바 기준)",
+    "voltage": "220V",
+    "currency": "RUB (루블)",
+    "flight": "약 10시간 (직항, 현재 제한적)"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "note": "국제운전면허증(IDP) 필요. 도로 상태 및 교통 문화 주의."
+  },
+  "alerts": [
+    "우크라이나 전쟁으로 인해 항공편 운항이 제한적 — 제3국 경유 필요 가능",
+    "서방 제재로 국제 카드(Visa/Mastercard) 사용 불가 — 현금 필수",
+    "체첸, 다게스탄 등 북캅카스 지역 방문 자제",
+    "우크라이나 접경 지역 방문 금지",
+    "반전 시위 등 정치적 행사 참여 절대 금지 — 외국인 구금 사례 있음"
+  ],
+  "checklist": [
+    "여권 (유효기간 6개월 이상)",
+    "항공권",
+    "숙소 예약 확인서",
+    "여행자 보험",
+    "현금 (루블, USD 환전용)",
+    "출입국카드 보관"
+  ]
+}

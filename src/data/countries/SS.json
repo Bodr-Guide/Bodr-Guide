@@ -1,0 +1,42 @@
+{
+  "id": "SS",
+  "nameKo": "남수단",
+  "nameEn": "South Sudan",
+  "continent": "아프리카",
+  "flagEmoji": "🇸🇸",
+  "visaStatus": "visa_required",
+  "visaNote": "사전 비자 발급 필수, 주한 남수단 대사관 또는 제3국 대사관에서 신청",
+  "importantNotes": [
+    "내전 및 무력 충돌 지속, 극도로 위험한 치안 상황",
+    "외교부 여행금지 지역 포함, 여행 전 반드시 최신 안전 정보 확인",
+    "의료 시설 매우 열악, 긴급 의료 후송 보험 필수",
+    "식수 및 식량 보급 불안정, 충분한 준비물 지참"
+  ],
+  "updatedAt": "2026-02-11",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-6시간",
+    "voltage": "230V",
+    "currency": "SSP (남수단 파운드)",
+    "flight": "약 18시간 (경유)"
+  },
+  "passportValidity": { "months": 6 },
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "note": "국제운전면허증(IDP) 필요"
+  },
+  "alerts": [
+    "외교부 여행경보 발령 지역",
+    "내전 및 무력 충돌 지속",
+    "의료 시설 매우 열악",
+    "여행 자제 강력 권고"
+  ],
+  "checklist": [
+    "여권 (유효기간 6개월 이상)",
+    "항공권",
+    "비자 발급 확인서",
+    "여행자 보험 증서 (긴급 의료 후송 포함)",
+    "숙소 바우처"
+  ]
+}

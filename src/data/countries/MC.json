@@ -1,0 +1,42 @@
+{
+  "id": "MC",
+  "nameKo": "모나코",
+  "nameEn": "Monaco",
+  "continent": "유럽",
+  "flagEmoji": "🇲🇨",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 90,
+  "visaNote": "모나코는 솅겐 협정국은 아니지만, 프랑스를 통해서만 입국 가능하므로 솅겐 비자 규정이 사실상 적용됩니다. 솅겐 지역 180일 중 최대 90일 체류 가능.",
+  "importantNotes": [
+    "프랑스 니스에서 기차 또는 버스로 약 20~30분 거리",
+    "자체 공항이 없으므로 니스 코트다쥐르 공항(NCE) 이용",
+    "세계에서 두 번째로 작은 국가 (약 2km2)",
+    "카지노 입장 시 여권 필수 — 모나코 국적자는 입장 불가"
+  ],
+  "updatedAt": "2026-02-11",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-8시간",
+    "voltage": "230V",
+    "currency": "EUR (유로)",
+    "flight": "약 13시간 (니스 경유)"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "note": "국제운전면허증(IDP) 필요. 시내 주차 공간이 매우 제한적."
+  },
+  "alerts": [
+    "물가가 유럽 최고 수준 — 예산 충분히 준비",
+    "F1 그랑프리 기간(5월) 숙소 예약 극도로 어려움"
+  ],
+  "checklist": [
+    "여권 (유효기간 6개월 이상)",
+    "항공권 (니스 공항)",
+    "숙소 예약 확인서",
+    "여행자 보험"
+  ]
+}

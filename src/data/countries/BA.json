@@ -69,5 +69,11 @@
     "숙소 바우처",
     "리턴 티켓",
     "여행자 보험"
-  ]
+  ],
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "minimumAge": 18,
+    "note": "국제운전면허증(IDP) 필요. 도로 상태가 불량한 구간이 있으며, 지뢰 미제거 지역 근처 비포장도로 운전 시 각별히 주의 필요."
+  }
 }

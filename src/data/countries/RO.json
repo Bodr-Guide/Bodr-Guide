@@ -77,5 +77,11 @@
     "숙소 바우처",
     "리턴 티켓",
     "여행자 보험"
-  ]
+  ],
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "minimumAge": 18,
+    "note": "국제운전면허증(IDP) 필요. 고속도로 이용 시 비네트(로비네타) 구매 필수. 산악 도로 야간 운전 시 주의 필요."
+  }
 }

@@ -69,5 +69,11 @@
     "숙소 바우처",
     "리턴 티켓",
     "여행자 보험"
-  ]
+  ],
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": true,
+    "minimumAge": 18,
+    "note": "한국 운전면허 직접 인정 (상호인정 협정). 6개월까지 한국 면허로 운전 가능. 장기 체류 시 벨기에 면허로 교환 가능."
+  }
 }

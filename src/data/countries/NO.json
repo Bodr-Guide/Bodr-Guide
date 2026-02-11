@@ -1,0 +1,45 @@
+{
+  "id": "NO",
+  "nameKo": "노르웨이",
+  "nameEn": "Norway",
+  "continent": "유럽",
+  "flagEmoji": "🇳🇴",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 90,
+  "visaNote": "솅겐 협정국. 솅겐 지역 180일 중 최대 90일 무비자 체류 가능.",
+  "importantNotes": [
+    "솅겐 지역 전체 합산 180일 중 90일 체류 제한",
+    "EU 회원국이 아니므로 유로 대신 노르웨이 크로네(NOK) 사용",
+    "세계 최고 수준의 물가 — 예산 충분히 준비 필요",
+    "여름철 백야 현상, 겨울철 극야 현상 — 일조량 변화 대비"
+  ],
+  "updatedAt": "2026-02-11",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-8시간",
+    "voltage": "230V",
+    "currency": "NOK (노르웨이 크로네)",
+    "flight": "약 11시간"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": true,
+    "note": "한국 운전면허증 직접 인정 (한-노르웨이 상호인정 협정). 국제운전면허증(IDP)도 사용 가능."
+  },
+  "alerts": [
+    "겨울철 도로 결빙 및 폭설 — 스노우 타이어 필수 (법적 의무)",
+    "피오르드 지역 도로 급경사·급커브 다수 — 운전 주의",
+    "북극곰 출몰 지역(스발바르 제도) 방문 시 안전 장비 필수"
+  ],
+  "checklist": [
+    "여권 (유효기간 6개월 이상)",
+    "항공권",
+    "숙소 예약 확인서",
+    "여행자 보험",
+    "방한용품 (겨울철)",
+    "국제운전면허증 (렌터카 이용 시)"
+  ]
+}

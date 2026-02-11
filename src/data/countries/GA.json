@@ -1,0 +1,42 @@
+{
+  "id": "GA",
+  "nameKo": "가봉",
+  "nameEn": "Gabon",
+  "continent": "아프리카",
+  "flagEmoji": "🇬🇦",
+  "visaStatus": "e_visa",
+  "visaFreeStayDays": 30,
+  "visaNote": "전자비자(e-Visa) 사전 신청 필요, 30일 체류",
+  "importantNotes": [
+    "전자비자 사전 승인 후 입국 가능",
+    "황열병 예방접종 증명서(옐로카드) 지참 필수",
+    "말라리아 위험 지역으로 예방약 복용 권장"
+  ],
+  "updatedAt": "2026-02-11",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-8시간",
+    "voltage": "220V",
+    "currency": "XAF (중앙아프리카 세파프랑)",
+    "flight": "약 19시간 (경유)"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "note": "국제운전면허증(IDP) 필요"
+  },
+  "alerts": [
+    "황열병 예방접종 필수",
+    "말라리아 예방약 복용 권장"
+  ],
+  "checklist": [
+    "여권 (유효기간 6개월 이상)",
+    "항공권",
+    "전자비자 출력본",
+    "황열병 예방접종 증명서",
+    "숙소 바우처"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "id": "LB",
+  "nameKo": "레바논",
+  "nameEn": "Lebanon",
+  "continent": "중동",
+  "flagEmoji": "🇱🇧",
+  "visaStatus": "visa_on_arrival",
+  "visaFreeStayDays": 30,
+  "visaNote": "공항 도착 시 도착비자 발급, 30일 체류, 무료",
+  "importantNotes": [
+    "이스라엘 입국 기록이 있는 여권 소지 시 입국 거부",
+    "남부 국경 지역 (헤즈볼라 활동 지역) 접근 금지",
+    "경제 위기로 현금 인출 제한, USD 현금 충분히 준비",
+    "정전 빈번, 휴대용 보조 배터리 준비 권장"
+  ],
+  "updatedAt": "2026-02-11",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-7시간",
+    "voltage": "220V",
+    "currency": "LBP (레바논 파운드) / USD 통용",
+    "flight": "약 12시간 (경유)"
+  },
+  "passportValidity": { "months": 6 },
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "note": "국제운전면허증(IDP) 필요"
+  },
+  "alerts": [
+    "외교부 여행경보 발령 지역",
+    "남부 국경 지역 접근 금지",
+    "경제 위기로 현금 인출 제한"
+  ],
+  "checklist": [
+    "여권 (유효기간 6개월 이상)",
+    "항공권",
+    "USD 현금",
+    "숙소 바우처",
+    "여행자 보험 증서"
+  ]
+}

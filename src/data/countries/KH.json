@@ -82,5 +82,11 @@
     "여권 사본 저장",
     "증명사진 1장",
     "USD 현금"
-  ]
+  ],
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "minimumAge": 18,
+    "note": "국제운전면허증(IDP) 필요. 프놈펜, 시엠립 등에서 오토바이 렌트 시에도 IDP 권장."
+  }
 }

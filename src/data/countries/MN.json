@@ -77,5 +77,11 @@
     "방한 용품 (패딩, 장갑, 핫팩)",
     "오프라인 지도 다운로드",
     "리턴 티켓"
-  ]
+  ],
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "minimumAge": 18,
+    "note": "국제운전면허증(IDP) 필요. 울란바토르 외 지역은 비포장 도로가 대부분이므로 4WD 차량 필수. 초원 지역 주유소가 드물어 연료 사전 확보 필요."
+  }
 }

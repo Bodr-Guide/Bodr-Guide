@@ -77,5 +77,11 @@
     "숙소 바우처",
     "리턴 티켓",
     "여행자 보험"
-  ]
+  ],
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "minimumAge": 17,
+    "note": "국제운전면허증(IDP) 필요. 좌측통행 국가이므로 운전 시 주의. 렌터카 이용 시 만 25세 이상 권장 (25세 미만 추가 요금)."
+  }
 }

@@ -60,5 +60,11 @@
     "숙소 바우처",
     "리턴 티켓",
     "reef-safe 선크림"
-  ]
+  ],
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "minimumAge": 21,
+    "note": "국제운전면허증(IDP) 또는 한국 면허 + 영문 번역본으로 운전 가능. 팔라우 현지 임시면허 발급도 가능."
+  }
 }

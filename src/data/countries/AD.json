@@ -1,0 +1,43 @@
+{
+  "id": "AD",
+  "nameKo": "안도라",
+  "nameEn": "Andorra",
+  "continent": "유럽",
+  "flagEmoji": "🇦🇩",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 90,
+  "visaNote": "안도라는 솅겐 협정국은 아니지만, 프랑스 또는 스페인을 경유해야 입국 가능하므로 솅겐 비자 규정이 사실상 적용됩니다. 솅겐 지역 180일 중 최대 90일 체류 가능.",
+  "importantNotes": [
+    "안도라 자체 공항이 없으므로 프랑스 또는 스페인에서 육로로 입국해야 합니다",
+    "안도라 체류 일수는 솅겐 체류 일수에 포함되지 않으나, 경유국 체류 일수는 포함됩니다",
+    "면세 쇼핑이 가능하나 EU 입국 시 면세 한도 초과 물품에 대해 세관 신고 필요",
+    "공용어는 카탈루냐어이며, 스페인어와 프랑스어도 통용됩니다"
+  ],
+  "updatedAt": "2026-02-11",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-8시간",
+    "voltage": "230V",
+    "currency": "EUR (유로)",
+    "flight": "약 14시간 (경유)"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "note": "국제운전면허증(IDP) 필요"
+  },
+  "alerts": [
+    "겨울철 산악 도로 결빙 및 폭설 주의 — 체인 또는 스노우 타이어 필수",
+    "의료 시설이 제한적이므로 여행자 보험 가입 권장"
+  ],
+  "checklist": [
+    "여권 (유효기간 6개월 이상)",
+    "항공권 (경유편)",
+    "숙소 예약 확인서",
+    "여행자 보험",
+    "솅겐 지역 체류 일수 확인"
+  ]
+}

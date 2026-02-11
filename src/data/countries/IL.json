@@ -77,5 +77,11 @@
     "숙소 바우처",
     "리턴 티켓",
     "일정표"
-  ]
+  ],
+  "drivingLicense": {
+    "idpAccepted": true,
+    "directRecognition": false,
+    "minimumAge": 17,
+    "note": "국제운전면허증(IDP) 필요. IDP 소지 시 입국 후 1년간 운전 가능. 안식일(금~토) 일부 도로 통제 가능."
+  }
 }
