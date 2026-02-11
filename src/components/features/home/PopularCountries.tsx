@@ -3,11 +3,23 @@
 
 import { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
-import { Country } from "@/lib/types";
+import { Country, VisaStatus, Continent, CONTINENTS } from "@/lib/types";
 import { getCountryImage } from "@/lib/countryImages";
 
 // 한국인 인기 여행지 9개국 (고정)
 const POPULAR_IDS = ["JP", "TH", "VN", "US", "FR", "TW", "SG", "AU", "GB"];
+
+// 정렬 옵션
+type SortType = "default" | "name_asc" | "name_desc";
+
+// 비자 필터 옵션
+const VISA_FILTERS: { value: VisaStatus | "all"; label: string }[] = [
+  { value: "all", label: "전체" },
+  { value: "visa_free", label: "무비자" },
+  { value: "visa_on_arrival", label: "도착비자" },
+  { value: "e_visa", label: "전자비자" },
+  { value: "visa_required", label: "비자 필요" },
+];
 
 interface PopularCountriesProps {
   countries: Country[];
@@ -57,22 +69,38 @@ function getRequirementTags(country: Country) {
 
 export default function PopularCountries({ countries }: PopularCountriesProps) {
   const [searchQuery, setSearchQuery] = useState("");
+  const [showAll, setShowAll] = useState(false);
+  const [sortType, setSortType] = useState<SortType>("default");
+  const [continentFilter, setContinentFilter] = useState<Continent | "all">("all");
+  const [visaFilter, setVisaFilter] = useState<VisaStatus | "all">("all");
 
   // 히어로 섹션 검색바 연동
   useEffect(() => {
     const handleHeroSearch = (e: Event) => {
       setSearchQuery((e as CustomEvent<string>).detail);
+      setShowAll(false);
     };
     window.addEventListener("hero-search", handleHeroSearch);
     return () => window.removeEventListener("hero-search", handleHeroSearch);
   }, []);
 
-  // 검색 중이면 전체 필터, 아니면 인기 9개국만
+  // 필터 초기화
+  const resetFilters = () => {
+    setSortType("default");
+    setContinentFilter("all");
+    setVisaFilter("all");
+  };
+
+  const hasActiveFilter = sortType !== "default" || continentFilter !== "all" || visaFilter !== "all";
+
+  // 검색 중이면 전체 필터, 전체보기면 전체, 아니면 인기 9개국만
   const displayCountries = useMemo(() => {
+    let result: Country[];
+
     if (searchQuery.trim()) {
       const q = searchQuery.toLowerCase().trim();
       const keywords = q.split(/[\s,]+/);
-      return countries.filter((c) =>
+      result = countries.filter((c) =>
         keywords.some(
           (kw) =>
             c.nameKo.includes(kw) ||
@@ -80,12 +108,34 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
             c.continent.includes(kw)
         )
       );
+    } else if (showAll) {
+      result = [...countries];
+    } else {
+      // 인기 9개국 순서 유지
+      return POPULAR_IDS
+        .map((id) => countries.find((c) => c.id === id))
+        .filter(Boolean) as Country[];
     }
-    // 인기 9개국 순서 유지
-    return POPULAR_IDS
-      .map((id) => countries.find((c) => c.id === id))
-      .filter(Boolean) as Country[];
-  }, [countries, searchQuery]);
+
+    // 대륙 필터
+    if (continentFilter !== "all") {
+      result = result.filter((c) => c.continent === continentFilter);
+    }
+
+    // 비자 필터
+    if (visaFilter !== "all") {
+      result = result.filter((c) => c.visaStatus === visaFilter);
+    }
+
+    // 정렬
+    if (sortType === "name_asc") {
+      result.sort((a, b) => a.nameKo.localeCompare(b.nameKo, "ko"));
+    } else if (sortType === "name_desc") {
+      result.sort((a, b) => b.nameKo.localeCompare(a.nameKo, "ko"));
+    }
+
+    return result;
+  }, [countries, searchQuery, showAll, continentFilter, visaFilter, sortType]);
 
   const isSearching = searchQuery.trim().length > 0;
 
@@ -96,21 +146,102 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
         <div className="mb-3 flex items-center justify-between">
           <div>
             <h2 className="text-lg sm:text-xl font-bold text-white">
-              {isSearching ? "검색 결과" : "인기 여행지"}
+              {isSearching ? "검색 결과" : showAll ? "전체 여행지" : "인기 여행지"}
             </h2>
             <p className="text-xs sm:text-sm text-slate-500 mt-0.5">
               {displayCountries.length}개 국가
             </p>
           </div>
           {!isSearching && (
-            <Link
-              href="/#destinations"
+            <button
+              onClick={() => { setShowAll(!showAll); resetFilters(); }}
               className="text-xs text-slate-400 hover:text-white transition-colors"
             >
-              전체 보기 →
-            </Link>
+              {showAll ? "인기 여행지만 ←" : "전체 보기 →"}
+            </button>
           )}
         </div>
+
+        {/* 필터 바 — 전체보기 또는 검색 중일 때만 표시 */}
+        {(showAll || isSearching) && (
+          <div className="mb-4 flex flex-wrap items-center gap-2">
+            {/* 대륙 필터 */}
+            <div className="flex flex-wrap gap-1.5">
+              {[{ value: "all" as const, label: "전체" }, ...CONTINENTS.map((c) => ({ value: c, label: c }))].map(
+                (item) => (
+                  <button
+                    key={item.value}
+                    onClick={() => setContinentFilter(item.value)}
+                    className={`rounded-full px-3 py-1 text-[11px] font-medium transition-colors ${
+                      continentFilter === item.value
+                        ? "bg-white text-slate-900"
+                        : "bg-slate-800/60 text-slate-400 hover:bg-slate-700/60 hover:text-slate-300"
+                    }`}
+                  >
+                    {item.label}
+                  </button>
+                )
+              )}
+            </div>
+
+            {/* 구분선 */}
+            <div className="hidden sm:block h-4 w-px bg-slate-700" />
+
+            {/* 비자 필터 */}
+            <div className="flex flex-wrap gap-1.5">
+              {VISA_FILTERS.map((item) => (
+                <button
+                  key={item.value}
+                  onClick={() => setVisaFilter(item.value)}
+                  className={`rounded-full px-3 py-1 text-[11px] font-medium transition-colors ${
+                    visaFilter === item.value
+                      ? "bg-white text-slate-900"
+                      : "bg-slate-800/60 text-slate-400 hover:bg-slate-700/60 hover:text-slate-300"
+                  }`}
+                >
+                  {item.label}
+                </button>
+              ))}
+            </div>
+
+            {/* 구분선 */}
+            <div className="hidden sm:block h-4 w-px bg-slate-700" />
+
+            {/* 정렬 */}
+            <div className="flex gap-1.5">
+              <button
+                onClick={() => setSortType(sortType === "name_asc" ? "default" : "name_asc")}
+                className={`rounded-full px-3 py-1 text-[11px] font-medium transition-colors ${
+                  sortType === "name_asc"
+                    ? "bg-white text-slate-900"
+                    : "bg-slate-800/60 text-slate-400 hover:bg-slate-700/60 hover:text-slate-300"
+                }`}
+              >
+                가나다순
+              </button>
+              <button
+                onClick={() => setSortType(sortType === "name_desc" ? "default" : "name_desc")}
+                className={`rounded-full px-3 py-1 text-[11px] font-medium transition-colors ${
+                  sortType === "name_desc"
+                    ? "bg-white text-slate-900"
+                    : "bg-slate-800/60 text-slate-400 hover:bg-slate-700/60 hover:text-slate-300"
+                }`}
+              >
+                역순
+              </button>
+            </div>
+
+            {/* 필터 초기화 */}
+            {hasActiveFilter && (
+              <button
+                onClick={resetFilters}
+                className="rounded-full px-3 py-1 text-[11px] font-medium text-rose-400 bg-rose-500/10 hover:bg-rose-500/20 transition-colors"
+              >
+                초기화
+              </button>
+            )}
+          </div>
+        )}
 
         {/* 국가 카드 그리드: 모바일 1열 / sm 2열 / lg 3열 */}
         {displayCountries.length > 0 ? (
