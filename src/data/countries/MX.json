@@ -40,6 +40,32 @@
       "description": "FMM 입국카드를 기내에서 작성하세요. 출국 시까지 보관 필수."
     }
   ],
+  "visaTypes": [
+    {
+      "name": "취업비자",
+      "duration": "최대 4년 (갱신 가능)",
+      "description": "멕시코 고용주의 초청을 통한 임시 거주 비자(Residente Temporal). 노동 허가 포함.",
+      "fee": "$50",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://embamex.sre.gob.mx/corea/"
+    },
+    {
+      "name": "유학비자",
+      "duration": "수학 기간",
+      "description": "멕시코 교육기관 입학 허가서를 기반으로 한 학생 임시 거주 비자.",
+      "fee": "$50",
+      "processingTime": "약 2~6주",
+      "applicationUrl": "https://embamex.sre.gob.mx/corea/"
+    },
+    {
+      "name": "디지털노마드비자",
+      "duration": "최대 4년",
+      "description": "일시 체류비자(Residente Temporal)로 원격근무 가능. 월 소득 약 $2,600 이상 또는 잔고 $43,000 이상 증명 필요.",
+      "fee": "$50",
+      "processingTime": "약 2~4주",
+      "applicationUrl": "https://embamex.sre.gob.mx/corea/"
+    }
+  ],
   "alerts": [
     "FMM 카드 분실 시 출국 시 벌금",
     "수돗물 음용 금지",

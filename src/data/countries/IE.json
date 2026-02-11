@@ -41,6 +41,32 @@
       "description": "숙소 예약 확인서, 리턴 티켓, 체류 경비 증빙을 준비하세요."
     }
   ],
+  "visaTypes": [
+    {
+      "name": "워킹홀리데이비자",
+      "duration": "최대 1년",
+      "description": "만 18~30세 대상, 취업과 여행을 병행할 수 있는 비자. 연간 쿼터 400명",
+      "fee": "€100",
+      "processingTime": "약 2~4주",
+      "applicationUrl": "https://www.irishimmigration.ie/"
+    },
+    {
+      "name": "취업비자",
+      "duration": "고용 기간",
+      "description": "아일랜드 고용주의 스폰서십이 필요한 취업 허가 비자 (Employment Permit)",
+      "fee": "€1,000",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://enterprise.gov.ie/en/what-we-do/workplace-and-skills/employment-permits/"
+    },
+    {
+      "name": "유학비자",
+      "duration": "학업 기간",
+      "description": "아일랜드 교육기관 입학 허가를 받은 학생 대상 비자",
+      "fee": "€100",
+      "processingTime": "약 2~6주",
+      "applicationUrl": "https://www.irishimmigration.ie/"
+    }
+  ],
   "alerts": [
     "날씨 변화가 심해 우비/방수 재킷 필수",
     "더블린 시내 소매치기 주의",

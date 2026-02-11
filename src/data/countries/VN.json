@@ -40,6 +40,32 @@
       "description": "기내에서 배포되는 입국카드를 작성하세요."
     }
   ],
+  "visaTypes": [
+    {
+      "name": "취업비자",
+      "duration": "최대 2년 (갱신 가능)",
+      "description": "베트남 고용주의 스폰서십이 필요한 취업 비자. 별도 워크퍼밋(Work Permit) 취득 필요",
+      "fee": "$25",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://evisa.xuatnhapcanh.gov.vn/"
+    },
+    {
+      "name": "유학비자",
+      "duration": "수학 기간 (최대 1년, 갱신 가능)",
+      "description": "베트남 교육기관 입학 허가서가 필요한 학생 비자 (DH 비자)",
+      "fee": "$25",
+      "processingTime": "약 2~6주",
+      "applicationUrl": "https://evisa.xuatnhapcanh.gov.vn/"
+    },
+    {
+      "name": "장기체류비자",
+      "duration": "최대 5년",
+      "description": "투자, 가족 합류, 은퇴 등 장기 체류 목적의 거주 비자. e-Visa(90일)도 활용 가능",
+      "fee": "$25~$135",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://evisa.xuatnhapcanh.gov.vn/"
+    }
+  ],
   "alerts": [
     "현금 환전은 공인 환전소 이용",
     "오토바이 교통 주의",

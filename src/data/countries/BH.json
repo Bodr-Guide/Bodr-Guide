@@ -13,6 +13,7 @@
       "duration": "14일",
       "description": "관광 목적 단수 입국 전자비자",
       "fee": "BHD 9",
+      "processingTime": "약 3~5영업일",
       "applicationUrl": "https://www.evisa.gov.bh/"
     },
     {
@@ -20,6 +21,7 @@
       "duration": "1년 (회당 최대 30일)",
       "description": "1년간 복수 입국 가능, 1회 입국 시 최대 30일 체류",
       "fee": "BHD 29",
+      "processingTime": "약 3~5영업일",
       "applicationUrl": "https://www.evisa.gov.bh/"
     }
   ],

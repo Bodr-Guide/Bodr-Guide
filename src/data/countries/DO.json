@@ -45,6 +45,24 @@
     "리조트 외 지역 야간 외출 자제",
     "수돗물 음용 금지, 생수 구매 필수"
   ],
+  "visaTypes": [
+    {
+      "name": "취업비자",
+      "duration": "고용 기간 (1년, 갱신 가능)",
+      "description": "현지 고용주의 스폰서십 및 노동부 승인이 필요한 취업 비자",
+      "fee": "$200",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://www.mirex.gob.do/servicios-consulares/visas"
+    },
+    {
+      "name": "유학비자",
+      "duration": "학업 기간",
+      "description": "도미니카 공화국 교육기관의 입학 허가서가 필요한 학생 비자",
+      "fee": "$200",
+      "processingTime": "약 2~6주",
+      "applicationUrl": "https://www.mirex.gob.do/servicios-consulares/visas"
+    }
+  ],
   "checklist": [
     "여권 사본 저장",
     "관광카드 비용 (USD $10 현금)",

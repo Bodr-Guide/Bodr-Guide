@@ -12,7 +12,8 @@
       "name": "무료 도착비자",
       "duration": "30일",
       "description": "관광 목적 무료 발급, 리턴 티켓 및 숙소 예약 확인서 필수 제시",
-      "fee": "무료"
+      "fee": "무료",
+      "processingTime": "현장 발급"
     }
   ],
   "importantNotes": [

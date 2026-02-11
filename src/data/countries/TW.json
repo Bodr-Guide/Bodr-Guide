@@ -40,6 +40,32 @@
       "description": "기내에서 배포되는 입국카드를 작성하세요."
     }
   ],
+  "visaTypes": [
+    {
+      "name": "워킹홀리데이비자",
+      "duration": "최대 180일 (1회 연장 가능, 최대 1년)",
+      "description": "만 18~30세 대상, 한국-대만 워킹홀리데이 협정에 따른 체류 및 취업 허가 비자",
+      "fee": "TWD 3,100",
+      "processingTime": "약 2~4주",
+      "applicationUrl": "https://www.boca.gov.tw/"
+    },
+    {
+      "name": "취업비자",
+      "duration": "고용 계약 기간 (최대 3년, 갱신 가능)",
+      "description": "대만 고용주의 스폰서십이 필요한 취업 허가 비자. 노동부 워크퍼밋 선 취득 필요",
+      "fee": "TWD 3,100",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://www.boca.gov.tw/"
+    },
+    {
+      "name": "유학비자",
+      "duration": "수학 기간",
+      "description": "대만 교육기관 입학 허가서가 필요한 학생 비자 (거류증 별도 발급)",
+      "fee": "TWD 2,400",
+      "processingTime": "약 2~6주",
+      "applicationUrl": "https://www.boca.gov.tw/"
+    }
+  ],
   "alerts": [
     "110V 어댑터 필수 지참",
     "야시장 현금 결제 위주"

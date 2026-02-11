@@ -48,6 +48,32 @@
       "description": "MDAC 등록 확인 화면을 스크린샷으로 저장하세요."
     }
   ],
+  "visaTypes": [
+    {
+      "name": "취업비자",
+      "duration": "최대 5년 (갱신 가능)",
+      "description": "말레이시아 고용주가 이민국에 Employment Pass를 신청. 카테고리에 따라 최소 급여 기준 상이.",
+      "fee": "MYR 1,000",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://www.imi.gov.my/"
+    },
+    {
+      "name": "유학비자",
+      "duration": "수학 기간",
+      "description": "말레이시아 교육기관이 이민국에 Student Pass를 신청. 입학 허가서 및 재정 증명 필요.",
+      "fee": "MYR 500",
+      "processingTime": "약 2~6주",
+      "applicationUrl": "https://www.imi.gov.my/"
+    },
+    {
+      "name": "은퇴비자 (MM2H)",
+      "duration": "5년 (갱신 가능)",
+      "description": "Malaysia My Second Home 프로그램. 일정 금액의 정기예금과 월 소득 증명 필요. 장기 체류 희망자용.",
+      "fee": "MYR 5,000",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://www.imi.gov.my/"
+    }
+  ],
   "alerts": [
     "이슬람 문화 존중 (모스크 방문 시 복장 주의)",
     "마약 소지 시 사형 가능"

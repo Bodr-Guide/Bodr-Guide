@@ -46,6 +46,32 @@
       "description": "한국 여권 소지자는 e-Gate 자동 입국심사 이용 가능합니다."
     }
   ],
+  "visaTypes": [
+    {
+      "name": "워킹홀리데이비자",
+      "duration": "최대 2년",
+      "description": "만 18~30세 대상, 영국 Youth Mobility Scheme (YMS) 비자로 취업과 여행 병행 가능",
+      "fee": "£298",
+      "processingTime": "약 2~4주",
+      "applicationUrl": "https://www.gov.uk/youth-mobility"
+    },
+    {
+      "name": "취업비자",
+      "duration": "최대 5년",
+      "description": "영국 고용주의 스폰서십이 필요한 Skilled Worker 비자",
+      "fee": "£719",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://www.gov.uk/skilled-worker-visa"
+    },
+    {
+      "name": "유학비자",
+      "duration": "학업 기간",
+      "description": "영국 교육기관 입학 허가를 받은 학생 대상 Student 비자",
+      "fee": "£490",
+      "processingTime": "약 2~6주",
+      "applicationUrl": "https://www.gov.uk/student-visa"
+    }
+  ],
   "alerts": [
     "좌측통행 (차량 주의)",
     "영국식 3핀 플러그 어댑터 필수",

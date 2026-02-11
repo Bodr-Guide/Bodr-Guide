@@ -12,6 +12,7 @@
       "duration": "최대 30일",
       "description": "단기 관광 목적 방문 시 필요한 일반 관광비자",
       "fee": "약 $60",
+      "processingTime": "약 5~10영업일",
       "applicationUrl": "http://www.visaforchina.cn/"
     },
     {
@@ -19,17 +20,20 @@
       "duration": "30~90일",
       "description": "비즈니스 방문, 상업 활동 목적의 단기 체류 비자",
       "fee": "약 $60",
+      "processingTime": "약 5~10영업일",
       "applicationUrl": "http://www.visaforchina.cn/"
     },
     {
       "name": "경유비자면제 (144시간)",
       "duration": "최대 144시간 (6일)",
-      "description": "베이징, 상하이, 광저우 등 특정 도시 경유 시 무비자 환승 가능. 제3국행 항공권 필수."
+      "description": "베이징, 상하이, 광저우 등 특정 도시 경유 시 무비자 환승 가능. 제3국행 항공권 필수.",
+      "processingTime": "현장 발급"
     },
     {
       "name": "학생비자 (X비자)",
       "duration": "X1: 180일 이상 (장기) / X2: 180일 미만 (단기)",
       "description": "중국 내 교육기관에서 유학할 목적의 비자. X1은 장기 유학, X2는 단기 연수용.",
+      "processingTime": "약 5~10영업일",
       "applicationUrl": "http://www.visaforchina.cn/"
     }
   ],

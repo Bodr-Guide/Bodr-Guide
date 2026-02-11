@@ -40,6 +40,32 @@
       "description": "입국심사 시 전자 도착카드가 자동 발급됩니다."
     }
   ],
+  "visaTypes": [
+    {
+      "name": "워킹홀리데이비자",
+      "duration": "최대 1년",
+      "description": "만 18~30세 대상, 취업과 여행을 병행할 수 있는 비자. 연간 쿼터 1,000명",
+      "fee": "HKD 230",
+      "processingTime": "약 2~4주",
+      "applicationUrl": "https://www.immd.gov.hk/eng/services/visas/working_holiday_scheme.html"
+    },
+    {
+      "name": "취업비자",
+      "duration": "고용 기간",
+      "description": "홍콩 고용주의 스폰서십이 필요한 취업 허가 비자",
+      "fee": "HKD 230",
+      "processingTime": "약 4~6주",
+      "applicationUrl": "https://www.immd.gov.hk/eng/services/visas/employment.html"
+    },
+    {
+      "name": "유학비자",
+      "duration": "학업 기간",
+      "description": "홍콩 교육기관 입학 허가를 받은 학생 대상 비자",
+      "fee": "HKD 230",
+      "processingTime": "약 4~6주",
+      "applicationUrl": "https://www.immd.gov.hk/eng/services/visas/study.html"
+    }
+  ],
   "alerts": [
     "옥토퍼스 카드 구입 권장 (교통/결제)",
     "영국식 3핀 플러그 사용"

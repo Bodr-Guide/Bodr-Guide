@@ -12,7 +12,9 @@
       "name": "e-Visa 관광",
       "duration": "최대 90일",
       "description": "관광 목적 전자비자, 온라인 사전 신청 필수",
-      "fee": "KWD 3"
+      "fee": "KWD 3",
+      "processingTime": "약 3~5영업일",
+      "applicationUrl": "https://evisa.moi.gov.kw/"
     }
   ],
   "importantNotes": [

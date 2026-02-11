@@ -41,6 +41,40 @@
       "description": "숙소 예약 확인서, 리턴 티켓을 준비하세요."
     }
   ],
+  "visaTypes": [
+    {
+      "name": "워킹홀리데이비자",
+      "duration": "최대 1년",
+      "description": "한국-몰타 워킹홀리데이 협정에 따라 만 18~30세 신청 가능. 연간 쿼터 제한 있음.",
+      "fee": "EUR 100",
+      "processingTime": "약 2~4주",
+      "applicationUrl": "https://www.identitymalta.com/"
+    },
+    {
+      "name": "취업비자",
+      "duration": "고용 계약 기간",
+      "description": "몰타 고용주의 스폰서십을 통해 Identity Malta에 단일 허가(Single Permit) 신청.",
+      "fee": "EUR 230",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://www.identitymalta.com/"
+    },
+    {
+      "name": "유학비자",
+      "duration": "수학 기간",
+      "description": "몰타 교육기관 입학 허가서를 기반으로 발급되는 학생 비자. 어학연수도 포함.",
+      "fee": "EUR 100",
+      "processingTime": "약 2~6주",
+      "applicationUrl": "https://www.identitymalta.com/"
+    },
+    {
+      "name": "디지털노마드비자",
+      "duration": "최대 1년 (갱신 가능)",
+      "description": "Nomad Residence Permit. 월 EUR 2,700 이상 수입 증명 필요. 몰타 외부 고용주/클라이언트 대상 원격근무자용.",
+      "fee": "EUR 300",
+      "processingTime": "약 2~4주",
+      "applicationUrl": "https://nomad.residencymalta.gov.mt/"
+    }
+  ],
   "alerts": [
     "좌측통행 국가 (영국식 운전)",
     "여름철 강한 자외선 주의",

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 // 메인 히어로 섹션 컴포넌트
 export default function HeroSection() {
@@ -28,8 +29,11 @@ export default function HeroSection() {
       <div className="relative mx-auto flex max-w-7xl flex-col px-8 lg:flex-row lg:items-end lg:justify-between">
         {/* 좌측: 타이포그래피 영역 */}
         <div className="mb-6 flex-1 lg:mb-0">
-          {/* 배지 */}
-          <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-slate-700/60 bg-slate-800/30 px-4 py-1.5">
+          {/* 배지 — 클릭 시 비자 가이드 페이지 이동 */}
+          <Link
+            href="/visa-guide"
+            className="mb-3 inline-flex items-center gap-2 rounded-full border border-slate-700/60 bg-slate-800/30 px-4 py-1.5 hover:border-emerald-500/40 hover:bg-emerald-500/10 transition-all"
+          >
             {/* 반짝임 아이콘 */}
             <svg
               width="14"
@@ -47,7 +51,8 @@ export default function HeroSection() {
             <span className="text-xs font-medium tracking-wider text-slate-300">
               2026 VISA GUIDE
             </span>
-          </div>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-slate-500"><path d="m9 18 6-6-6-6"/></svg>
+          </Link>
 
           {/* 메인 타이틀 */}
           <h1 className="text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">

@@ -46,6 +46,32 @@
     "유로화 사용 불가, 덴마크 크로네만 사용",
     "일요일 대부분 상점 휴무"
   ],
+  "visaTypes": [
+    {
+      "name": "워킹홀리데이비자",
+      "duration": "최대 1년",
+      "description": "만 18~30세 대상, 취업과 여행을 병행할 수 있는 비자",
+      "fee": "DKK 2,550",
+      "processingTime": "약 2~4주",
+      "applicationUrl": "https://www.nyidanmark.dk/en-GB"
+    },
+    {
+      "name": "취업비자 (Work Permit)",
+      "duration": "최대 4년 (갱신 가능)",
+      "description": "현지 고용주의 고용계약서가 필요하며, 급여 기준 충족 시 패스트트랙 가능",
+      "fee": "DKK 3,685",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://www.nyidanmark.dk/en-GB/You-want-to-apply/Work"
+    },
+    {
+      "name": "유학비자 (Study Permit)",
+      "duration": "학업 기간",
+      "description": "덴마크 교육기관의 입학 허가서 및 재정 증빙이 필요한 학생 비자",
+      "fee": "DKK 2,550",
+      "processingTime": "약 2~6주",
+      "applicationUrl": "https://www.nyidanmark.dk/en-GB/You-want-to-apply/Study"
+    }
+  ],
   "checklist": [
     "여권 사본 저장",
     "숙소 바우처",

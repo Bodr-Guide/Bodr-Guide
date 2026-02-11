@@ -49,6 +49,64 @@
       "description": "기내에서 세관신고서를 작성하세요. 식품 반입 신고 필수."
     }
   ],
+  "visaTypes": [
+    {
+      "name": "B1/B2 (단기 상용/관광)",
+      "duration": "최대 6개월 (10년 복수비자)",
+      "description": "ESTA 조건에 맞지 않거나 90일 이상 체류가 필요한 경우 신청하는 정식 비자. B1은 비즈니스 미팅·컨퍼런스, B2는 관광·의료 목적. 미국 내 체류 연장 가능",
+      "fee": "$185",
+      "processingTime": "약 2~8주",
+      "applicationUrl": "https://travel.state.gov/content/travel/en/us-visas.html"
+    },
+    {
+      "name": "취업비자 (H-1B)",
+      "duration": "최대 3년 (6년까지 연장 가능)",
+      "description": "전문직 종사자를 위한 취업 비자. 미국 고용주의 스폰서십과 학사 이상 학력 필요. 연간 발급 쿼터 제한(85,000명)",
+      "fee": "$190",
+      "processingTime": "약 3~6개월",
+      "applicationUrl": "https://travel.state.gov/content/travel/en/us-visas.html"
+    },
+    {
+      "name": "주재원비자 (L-1)",
+      "duration": "L-1A 최대 7년 / L-1B 최대 5년",
+      "description": "다국적 기업의 관리자(L-1A) 또는 전문지식 보유자(L-1B)를 미국 지사로 파견할 때 사용하는 비자. 한국 본사에서 1년 이상 근무 필요",
+      "fee": "$190",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://travel.state.gov/content/travel/en/us-visas.html"
+    },
+    {
+      "name": "유학비자 (F-1)",
+      "duration": "수학 기간 + 60일 유예",
+      "description": "미국 SEVP 인증 교육기관의 I-20 입학허가서가 필요한 학생 비자. OPT를 통해 졸업 후 최대 3년(STEM) 취업 가능",
+      "fee": "$185",
+      "processingTime": "약 2~6주",
+      "applicationUrl": "https://travel.state.gov/content/travel/en/us-visas.html"
+    },
+    {
+      "name": "교환방문비자 (J-1)",
+      "duration": "프로그램 기간 (최대 18개월)",
+      "description": "인턴십, 연수, 교환학생, 오페어 등 교류 프로그램 참가자를 위한 비자. DS-2019 서류 필요",
+      "fee": "$185",
+      "processingTime": "약 2~6주",
+      "applicationUrl": "https://travel.state.gov/content/travel/en/us-visas.html"
+    },
+    {
+      "name": "투자비자 (E-2)",
+      "duration": "최대 2년 (무한 갱신 가능)",
+      "description": "한미 투자협정에 따른 투자자 비자. 상당한 규모의 미국 내 사업 투자 필요. 배우자 취업 가능",
+      "fee": "$315",
+      "processingTime": "약 2~4개월",
+      "applicationUrl": "https://travel.state.gov/content/travel/en/us-visas.html"
+    },
+    {
+      "name": "투자이민 (EB-5)",
+      "duration": "영주권 (조건부 2년 → 영구)",
+      "description": "미국 내 $800,000~$1,050,000 이상 투자 시 영주권 취득 가능. 10명 이상 고용 창출 조건. 가족 동반 가능",
+      "fee": "$3,675",
+      "processingTime": "약 12~24개월",
+      "applicationUrl": "https://travel.state.gov/content/travel/en/us-visas.html"
+    }
+  ],
   "alerts": [
     "ESTA 미승인 시 입국 불가",
     "팁 문화 (식당 15-20%, 택시 15%)",

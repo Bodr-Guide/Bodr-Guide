@@ -12,6 +12,7 @@
       "duration": "30일 (단수입국)",
       "description": "단기 관광 목적의 전자비자. 입국일로부터 30일간 체류 가능.",
       "fee": "$25",
+      "processingTime": "약 3~5영업일",
       "applicationUrl": "https://indianvisaonline.gov.in/evisa/tvoa.html"
     },
     {
@@ -19,6 +20,7 @@
       "duration": "1년 복수입국 (회당 최대 90일)",
       "description": "1년간 유효한 복수입국 관광 전자비자. 1회 체류 시 최대 90일.",
       "fee": "$40",
+      "processingTime": "약 3~5영업일",
       "applicationUrl": "https://indianvisaonline.gov.in/evisa/tvoa.html"
     },
     {
@@ -26,6 +28,7 @@
       "duration": "5년 복수입국 (회당 최대 90일)",
       "description": "5년간 유효한 복수입국 관광 전자비자. 1회 체류 시 최대 90일.",
       "fee": "$80",
+      "processingTime": "약 3~5영업일",
       "applicationUrl": "https://indianvisaonline.gov.in/evisa/tvoa.html"
     },
     {
@@ -33,6 +36,7 @@
       "duration": "1년 복수입국 (회당 최대 180일)",
       "description": "상용, 비즈니스 목적의 전자비자. 무역, 회의, 기술 협력 등.",
       "fee": "$80",
+      "processingTime": "약 3~5영업일",
       "applicationUrl": "https://indianvisaonline.gov.in/evisa/tvoa.html"
     }
   ],

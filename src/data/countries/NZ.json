@@ -48,6 +48,32 @@
       "description": "뉴질랜드 여행자 신고서를 온라인으로 제출하세요."
     }
   ],
+  "visaTypes": [
+    {
+      "name": "워킹홀리데이비자",
+      "duration": "최대 1년",
+      "description": "한국-뉴질랜드 워킹홀리데이 협정에 따라 만 18~30세 신청 가능. 연간 3,000명 쿼터. 3개월간 수학 가능.",
+      "fee": "NZD 455",
+      "processingTime": "약 2~4주",
+      "applicationUrl": "https://www.immigration.govt.nz/"
+    },
+    {
+      "name": "취업비자",
+      "duration": "최대 3년",
+      "description": "뉴질랜드 고용주의 Job Offer를 기반으로 신청. ANZSCO 직업 목록에 해당하는 직종이어야 함.",
+      "fee": "NZD 750",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://www.immigration.govt.nz/"
+    },
+    {
+      "name": "유학비자",
+      "duration": "수학 기간",
+      "description": "뉴질랜드 교육기관 입학 허가서와 학비 납부 증명, 생활비 증빙(연 NZD 20,000)이 필요.",
+      "fee": "NZD 395",
+      "processingTime": "약 2~6주",
+      "applicationUrl": "https://www.immigration.govt.nz/"
+    }
+  ],
   "alerts": [
     "식품/식물 반입 매우 엄격",
     "자외선 매우 강함 (선크림 필수)",

@@ -40,6 +40,32 @@
       "description": "여권과 리턴 티켓을 준비하세요."
     }
   ],
+  "visaTypes": [
+    {
+      "name": "취업비자",
+      "duration": "최대 5년",
+      "description": "남아공 고용주의 스폰서십이 필요한 취업 비자 (General Work Visa). 노동부 기술 부족 직종 확인 필요",
+      "fee": "ZAR 1,520",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "http://www.dha.gov.za/"
+    },
+    {
+      "name": "유학비자",
+      "duration": "수학 기간",
+      "description": "남아공 교육기관 입학 허가서가 필요한 학생 비자 (Study Visa)",
+      "fee": "ZAR 1,520",
+      "processingTime": "약 2~6주",
+      "applicationUrl": "http://www.dha.gov.za/"
+    },
+    {
+      "name": "디지털노마드비자",
+      "duration": "최대 1년 (갱신 가능)",
+      "description": "해외 소득이 있는 원격 근무자를 위한 원격근무비자. 월 소득 ZAR 1백만 이상 또는 고용 증명 필요",
+      "fee": "ZAR 1,520",
+      "processingTime": "약 2~4주",
+      "applicationUrl": "http://www.dha.gov.za/"
+    }
+  ],
   "alerts": [
     "치안 주의 (야간 외출 자제)",
     "남아공 전용 플러그 (M타입)",

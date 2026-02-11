@@ -41,6 +41,32 @@
       "description": "숙소 예약 확인서, 리턴 티켓을 준비하세요."
     }
   ],
+  "visaTypes": [
+    {
+      "name": "취업비자",
+      "duration": "최대 2년 (갱신 가능)",
+      "description": "리투아니아 고용주의 스폰서십이 필요한 국가 비자(D). EU 블루카드 신청도 가능.",
+      "fee": "EUR 120",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://www.vfrgroup.com/en/lithuania/"
+    },
+    {
+      "name": "유학비자",
+      "duration": "수학 기간",
+      "description": "리투아니아 교육기관 입학 허가서를 기반으로 발급되는 국가 비자(D).",
+      "fee": "EUR 60",
+      "processingTime": "약 2~6주",
+      "applicationUrl": "https://www.vfrgroup.com/en/lithuania/"
+    },
+    {
+      "name": "장기체류비자",
+      "duration": "최대 1년",
+      "description": "가족 결합, 연구 등 목적으로 90일 이상 체류 시 필요한 국가 비자(D).",
+      "fee": "EUR 120",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://www.vfrgroup.com/en/lithuania/"
+    }
+  ],
   "alerts": [
     "겨울철 도로 결빙 주의 (렌터카 이용 시)",
     "빌뉴스 구시가지 야간 이동 시 주의",

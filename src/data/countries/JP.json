@@ -48,6 +48,32 @@
       "description": "Visit Japan Web에서 발급받은 QR 코드를 스크린샷으로 저장하세요."
     }
   ],
+  "visaTypes": [
+    {
+      "name": "워킹홀리데이비자",
+      "duration": "최대 1년",
+      "description": "만 18~30세 대상, 취업과 여행을 병행할 수 있는 비자. 연간 쿼터 10,000명",
+      "fee": "무료",
+      "processingTime": "약 2~4주",
+      "applicationUrl": "https://www.kr.emb-japan.go.jp/itpr_ko/visa.html"
+    },
+    {
+      "name": "취업비자",
+      "duration": "1~5년",
+      "description": "일본 고용주의 스폰서십이 필요한 취업 허가 비자 (기술/인문지식/국제업무 등)",
+      "fee": "¥4,000",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://www.kr.emb-japan.go.jp/itpr_ko/visa.html"
+    },
+    {
+      "name": "유학비자",
+      "duration": "학업 기간",
+      "description": "일본 교육기관 입학 허가를 받은 학생 대상 비자. 주 28시간 아르바이트 가능",
+      "fee": "¥3,000",
+      "processingTime": "약 2~6주",
+      "applicationUrl": "https://www.kr.emb-japan.go.jp/itpr_ko/visa.html"
+    }
+  ],
   "alerts": [
     "금제품 반입 주의 (육류 가공품 등)",
     "110V 어댑터 필수 지참"

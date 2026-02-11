@@ -41,6 +41,31 @@
       "description": "기내에서 입국카드를 작성하고 여권, 리턴 티켓을 준비하세요."
     }
   ],
+  "visaTypes": [
+    {
+      "name": "취업비자",
+      "duration": "최대 4년 (갱신 가능)",
+      "description": "모리셔스 고용주의 Occupation Permit 또는 Work Permit 신청이 필요. 직종에 따라 요건 상이.",
+      "fee": "$250",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://occupationpermit.mu/"
+    },
+    {
+      "name": "유학비자",
+      "duration": "수학 기간",
+      "description": "모리셔스 교육기관 입학 허가서와 재정 증명을 기반으로 발급되는 학생 비자.",
+      "fee": "$200",
+      "processingTime": "약 2~6주"
+    },
+    {
+      "name": "디지털노마드비자",
+      "duration": "최대 1년 (갱신 가능)",
+      "description": "Premium Visa. 해외 소득이 있는 원격근무자를 위한 장기 체류 허가. 월 소득 $1,500 이상 증명 필요.",
+      "fee": "무료",
+      "processingTime": "약 2~4주",
+      "applicationUrl": "https://www.edbmauritius.org/premium-visa"
+    }
+  ],
   "alerts": [
     "해양 스포츠 시 안전장비 착용 필수",
     "사이클론 시즌(1~3월) 기상 상황 확인",

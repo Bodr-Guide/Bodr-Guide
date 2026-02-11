@@ -41,6 +41,29 @@
       "description": "여권, 귀국 항공권, 숙소 예약 확인서를 준비하세요."
     }
   ],
+  "visaTypes": [
+    {
+      "name": "취업비자",
+      "duration": "고용 계약 기간",
+      "description": "나미비아 내무부에 Work Permit 신청 필요. 고용주의 초청장과 해당 분야 자격 증명 요구.",
+      "fee": "NAD 3,000",
+      "processingTime": "약 1~3개월"
+    },
+    {
+      "name": "유학비자",
+      "duration": "수학 기간",
+      "description": "나미비아 교육기관의 입학 허가서를 기반으로 발급되는 Study Permit.",
+      "fee": "NAD 1,500",
+      "processingTime": "약 2~6주"
+    },
+    {
+      "name": "장기체류비자",
+      "duration": "최대 2년 (갱신 가능)",
+      "description": "가족 결합, 투자, 사업 등 목적으로 90일 이상 체류 시 필요한 Temporary Residence Permit.",
+      "fee": "NAD 3,000",
+      "processingTime": "약 1~3개월"
+    }
+  ],
   "alerts": [
     "야생동물 도로 출현 주의 (야간 운전 자제)",
     "일교차 매우 큼 (방한 의류 필수)",

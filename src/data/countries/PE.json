@@ -40,6 +40,32 @@
       "description": "기내에서 배포되는 입국카드를 작성하세요."
     }
   ],
+  "visaTypes": [
+    {
+      "name": "취업비자",
+      "duration": "최대 1년 (갱신 가능)",
+      "description": "페루 고용주의 고용 계약서를 기반으로 이민국(Migraciones)에 취업 거주 비자 신청.",
+      "fee": "$30",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://www.migraciones.gob.pe/"
+    },
+    {
+      "name": "유학비자",
+      "duration": "수학 기간",
+      "description": "페루 교육기관의 입학 허가서를 기반으로 발급되는 학생 거주 비자.",
+      "fee": "$30",
+      "processingTime": "약 2~6주",
+      "applicationUrl": "https://www.migraciones.gob.pe/"
+    },
+    {
+      "name": "장기체류비자",
+      "duration": "최대 1년 (갱신 가능)",
+      "description": "183일 초과 체류 또는 사업, 투자 목적으로 이민국에 임시 거주 비자 신청 필요.",
+      "fee": "$30",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://www.migraciones.gob.pe/"
+    }
+  ],
   "alerts": [
     "고산병 주의 (쿠스코 3,400m)",
     "수돗물 음용 금지",

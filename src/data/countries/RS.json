@@ -41,6 +41,32 @@
       "description": "숙소 예약 확인서, 리턴 티켓을 준비하세요."
     }
   ],
+  "visaTypes": [
+    {
+      "name": "취업비자",
+      "duration": "고용 계약 기간 (최대 1년, 갱신 가능)",
+      "description": "세르비아 고용주의 스폰서십이 필요한 취업 허가 비자. 노동허가서 선 취득 필요",
+      "fee": "EUR 50",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://www.mfa.gov.rs/en"
+    },
+    {
+      "name": "유학비자",
+      "duration": "수학 기간",
+      "description": "세르비아 교육기관 입학 허가서가 필요한 학생 비자",
+      "fee": "EUR 50",
+      "processingTime": "약 2~6주",
+      "applicationUrl": "https://www.mfa.gov.rs/en"
+    },
+    {
+      "name": "디지털노마드비자",
+      "duration": "최대 1년",
+      "description": "원격 근무자를 위한 비자. 세르비아 정부가 디지털노마드 유치를 위해 도입한 제도",
+      "fee": "EUR 50",
+      "processingTime": "약 2~4주",
+      "applicationUrl": "https://www.mfa.gov.rs/en"
+    }
+  ],
   "alerts": [
     "코소보 경유 입출국 시 세르비아 재입국 거부 가능성",
     "베오그라드 시내 택시 미터기 확인 필수",

@@ -41,6 +41,32 @@
       "description": "입국 시 세관신고서 2부를 작성하세요. 출국 시 1부를 제출해야 하므로 반드시 보관하세요."
     }
   ],
+  "visaTypes": [
+    {
+      "name": "취업비자",
+      "duration": "고용 계약 기간 (최대 1년, 갱신 가능)",
+      "description": "우즈베키스탄 고용주의 스폰서십과 노동허가서가 필요한 취업 비자",
+      "fee": "$80",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://e-visa.gov.uz/"
+    },
+    {
+      "name": "유학비자",
+      "duration": "수학 기간",
+      "description": "우즈베키스탄 교육기관 입학 허가서가 필요한 학생 비자",
+      "fee": "$60",
+      "processingTime": "약 2~6주",
+      "applicationUrl": "https://e-visa.gov.uz/"
+    },
+    {
+      "name": "장기체류비자",
+      "duration": "최대 1년 (갱신 가능)",
+      "description": "가족 합류, 사업, 선교 등 장기 체류 목적의 거주 허가 비자",
+      "fee": "$80",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://e-visa.gov.uz/"
+    }
+  ],
   "alerts": [
     "여름(6~8월) 기온 40도 이상 — 탈수 및 열사병 주의",
     "택시 미터기 미사용 일반적 — 승차 전 요금 협상 필수",

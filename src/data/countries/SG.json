@@ -48,6 +48,32 @@
       "description": "제출 완료 확인 이메일의 QR 코드를 준비하세요."
     }
   ],
+  "visaTypes": [
+    {
+      "name": "워크홀리데이프로그램",
+      "duration": "6개월",
+      "description": "만 18~25세 대상, 싱가포르 Work Holiday Programme을 통한 취업 체험 비자. 연간 쿼터 제한 있음",
+      "fee": "SGD 150",
+      "processingTime": "약 2~4주",
+      "applicationUrl": "https://www.mom.gov.sg/passes-and-permits/work-holiday-programme"
+    },
+    {
+      "name": "취업비자",
+      "duration": "최대 2년 (갱신 가능)",
+      "description": "싱가포르 고용주의 스폰서십이 필요한 Employment Pass. 월 급여 SGD 5,000 이상 요건",
+      "fee": "SGD 105",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://www.mom.gov.sg/passes-and-permits/employment-pass"
+    },
+    {
+      "name": "유학비자",
+      "duration": "수학 기간",
+      "description": "싱가포르 교육기관의 입학 허가서가 필요한 Student Pass",
+      "fee": "SGD 30",
+      "processingTime": "약 2~6주",
+      "applicationUrl": "https://www.ica.gov.sg/enter-transit-depart/entering-singapore/student-pass"
+    }
+  ],
   "alerts": [
     "껌 반입 금지 (벌금 부과)",
     "공공장소 흡연 시 벌금",

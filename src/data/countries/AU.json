@@ -12,6 +12,7 @@
       "duration": "최대 90일 (1년 복수입국)",
       "description": "관광 또는 단기 상용 목적의 전자여행허가. 호주 ETA 앱에서 신청.",
       "fee": "AUD 20",
+      "processingTime": "약 1~3영업일",
       "applicationUrl": "https://www.eta.homeaffairs.gov.au/"
     },
     {
@@ -19,6 +20,7 @@
       "duration": "3~12개월",
       "description": "장기 관광, 가족 방문 등 목적의 비자. ETA로 부족한 경우 신청.",
       "fee": "AUD 190~",
+      "processingTime": "약 2~4주",
       "applicationUrl": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/visitor-600"
     },
     {
@@ -26,6 +28,7 @@
       "duration": "최대 1년",
       "description": "만 18~30세 대상, 호주에서 여행과 취업을 병행할 수 있는 비자.",
       "fee": "AUD 635",
+      "processingTime": "약 2~4주",
       "applicationUrl": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-462"
     },
     {
@@ -33,6 +36,7 @@
       "duration": "과정 기간에 따라 상이",
       "description": "호주 내 교육기관에서 정규 과정을 이수하기 위한 유학 비자.",
       "fee": "AUD 710",
+      "processingTime": "약 2~6주",
       "applicationUrl": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500"
     }
   ],

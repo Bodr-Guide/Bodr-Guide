@@ -12,12 +12,14 @@
       "name": "투어리스트 카드 (Tourist Card)",
       "duration": "30일 (현지에서 30일 연장 가능)",
       "description": "관광 목적 방문 시 필요한 관광카드. 항공사 카운터, 여행사, 쿠바 대사관에서 구매 가능.",
-      "fee": "약 $50"
+      "fee": "약 $50",
+      "processingTime": "현장 발급"
     },
     {
       "name": "비즈니스비자",
       "duration": "초청 기관에 따라 상이",
-      "description": "상용 목적 방문 비자. 쿠바 측 초청장 및 초청 기관의 승인 필요."
+      "description": "상용 목적 방문 비자. 쿠바 측 초청장 및 초청 기관의 승인 필요.",
+      "processingTime": "약 2~4주"
     }
   ],
   "importantNotes": [

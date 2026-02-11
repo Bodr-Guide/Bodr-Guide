@@ -12,6 +12,7 @@
       "duration": "28일",
       "description": "관광 목적 전자비자, 온라인 사전 신청 필수",
       "fee": "$50",
+      "processingTime": "약 3~5영업일",
       "applicationUrl": "https://evisa.moip.gov.mm/"
     },
     {
@@ -19,6 +20,7 @@
       "duration": "70일",
       "description": "비즈니스 목적 전자비자, 온라인 사전 신청 필수",
       "fee": "$70",
+      "processingTime": "약 3~5영업일",
       "applicationUrl": "https://evisa.moip.gov.mm/"
     }
   ],

@@ -194,11 +194,22 @@ export default async function CountryPage({
                     <div key={idx} className="bg-slate-800/50 rounded-xl px-4 sm:px-5 py-3 sm:py-4">
                       <div className="flex items-center justify-between mb-1.5">
                         <h3 className="text-sm sm:text-base font-bold text-white">{visa.name}</h3>
-                        {visa.fee && (
-                          <span className="text-[11px] sm:text-xs font-semibold text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded-full">{visa.fee}</span>
+                        <div className="flex items-center gap-2">
+                          {visa.fee && (
+                            <span className="text-[11px] sm:text-xs font-semibold text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded-full">{visa.fee}</span>
+                          )}
+                        </div>
+                      </div>
+                      {/* 체류기간 + 소요시간 */}
+                      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mb-1.5">
+                        <p className="text-[11px] sm:text-xs text-sky-400 font-medium">{visa.duration}</p>
+                        {visa.processingTime && (
+                          <p className="text-[11px] sm:text-xs text-slate-500 flex items-center gap-1">
+                            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-slate-500"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            심사 {visa.processingTime}
+                          </p>
                         )}
                       </div>
-                      <p className="text-[11px] sm:text-xs text-sky-400 font-medium mb-1.5">{visa.duration}</p>
                       <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">{visa.description}</p>
                       {visa.applicationUrl && (
                         <a

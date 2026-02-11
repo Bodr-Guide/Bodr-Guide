@@ -46,6 +46,24 @@
     "사라예보 구시가지 소매치기 주의",
     "도로 상태 불량 구간 존재 (야간 운전 자제)"
   ],
+  "visaTypes": [
+    {
+      "name": "취업비자",
+      "duration": "고용 기간 (1년, 갱신 가능)",
+      "description": "현지 고용주의 초청장 및 노동허가가 필요한 취업 비자",
+      "fee": "€80",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "http://www.mvp.gov.ba/konzularne_informacije/vize/default.aspx?id=207&langTag=en-US"
+    },
+    {
+      "name": "유학비자",
+      "duration": "학업 기간",
+      "description": "보스니아 교육기관의 입학 허가서가 필요한 학생 비자",
+      "fee": "€60",
+      "processingTime": "약 2~6주",
+      "applicationUrl": "http://www.mvp.gov.ba/konzularne_informacije/vize/default.aspx?id=207&langTag=en-US"
+    }
+  ],
   "checklist": [
     "여권 사본 저장",
     "숙소 바우처",

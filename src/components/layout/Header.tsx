@@ -29,24 +29,11 @@ export default function Header() {
           BodrGuide.
         </Link>
 
-        {/* 네비게이션 링크 */}
-        <div className="flex items-center gap-7">
-          {/* Destinations 링크 */}
-          <Link
-            href="/#destinations"
-            className="hidden text-[13px] text-slate-300 transition-colors hover:text-white sm:block"
-          >
-            Destinations
-          </Link>
-
-          {/* Magazine 링크 */}
-          <Link
-            href="/#magazine"
-            className="hidden text-[13px] text-slate-300 transition-colors hover:text-white sm:block"
-          >
-            Magazine
-          </Link>
-
+        {/* 네비게이션 링크 (추후 개발 예정) */}
+        <div className="hidden sm:flex items-center gap-7">
+          <span className="text-[13px] text-slate-500 cursor-default">Service 1</span>
+          <span className="text-[13px] text-slate-500 cursor-default">Service 2</span>
+          <span className="text-[13px] text-slate-500 cursor-default">Service 3</span>
         </div>
       </nav>
     </header>

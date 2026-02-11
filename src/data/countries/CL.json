@@ -45,6 +45,32 @@
     "지진 다발 지역",
     "산티아고 스모그 주의"
   ],
+  "visaTypes": [
+    {
+      "name": "워킹홀리데이비자",
+      "duration": "최대 1년",
+      "description": "만 18~30세 대상, 취업과 여행을 병행할 수 있는 비자",
+      "fee": "$100",
+      "processingTime": "약 2~4주",
+      "applicationUrl": "https://www.chile.gob.cl/corea/"
+    },
+    {
+      "name": "취업비자 (Visa Sujeta a Contrato)",
+      "duration": "고용 기간 (최대 2년, 갱신 가능)",
+      "description": "현지 고용주와의 고용계약서가 필요한 취업 비자",
+      "fee": "$100",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://www.chile.gob.cl/corea/"
+    },
+    {
+      "name": "유학비자 (Visa de Estudiante)",
+      "duration": "학업 기간",
+      "description": "칠레 교육기관의 입학 허가서가 필요한 학생 비자",
+      "fee": "$100",
+      "processingTime": "약 2~6주",
+      "applicationUrl": "https://www.chile.gob.cl/corea/"
+    }
+  ],
   "checklist": [
     "여권 사본 저장",
     "숙소 바우처",

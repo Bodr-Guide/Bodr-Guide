@@ -41,6 +41,32 @@
       "description": "숙소 예약 확인서, 리턴 티켓을 준비하세요."
     }
   ],
+  "visaTypes": [
+    {
+      "name": "워킹홀리데이비자",
+      "duration": "1년",
+      "description": "만 18~30세 대상, 한국-슬로바키아 워킹홀리데이 협정에 따른 체류 및 취업 허가 비자",
+      "fee": "EUR 80",
+      "processingTime": "약 2~4주",
+      "applicationUrl": "https://www.mzv.sk/web/en"
+    },
+    {
+      "name": "취업비자",
+      "duration": "고용 계약 기간 (최대 2년, 갱신 가능)",
+      "description": "슬로바키아 고용주의 스폰서십이 필요한 취업 허가 비자. EU 블루카드 신청도 가능",
+      "fee": "EUR 170",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://www.mzv.sk/web/en"
+    },
+    {
+      "name": "유학비자",
+      "duration": "수학 기간",
+      "description": "슬로바키아 교육기관 입학 허가서가 필요한 학생 비자",
+      "fee": "EUR 80",
+      "processingTime": "약 2~6주",
+      "applicationUrl": "https://www.mzv.sk/web/en"
+    }
+  ],
   "alerts": [
     "고속도로 비네트 미구매 시 고액 벌금",
     "브라티슬라바 구시가지 소매치기 주의",

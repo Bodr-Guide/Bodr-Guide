@@ -41,6 +41,29 @@
       "description": "숙소 예약 확인서, 리턴 티켓을 준비하세요."
     }
   ],
+  "visaTypes": [
+    {
+      "name": "취업비자",
+      "duration": "최대 1년 (갱신 가능)",
+      "description": "몬테네그로 고용주의 초청장과 노동 허가를 기반으로 발급되는 취업 비자.",
+      "fee": "EUR 80",
+      "processingTime": "약 1~3개월"
+    },
+    {
+      "name": "유학비자",
+      "duration": "수학 기간",
+      "description": "몬테네그로 교육기관의 입학 허가서가 필요한 학생 비자.",
+      "fee": "EUR 50",
+      "processingTime": "약 2~6주"
+    },
+    {
+      "name": "장기체류비자",
+      "duration": "최대 1년",
+      "description": "30일 초과 체류 시 필요한 임시 체류 허가. 현지 경찰서에서 신청.",
+      "fee": "EUR 50",
+      "processingTime": "약 1~3개월"
+    }
+  ],
   "alerts": [
     "여름 성수기 코토르/부드바 매우 혼잡",
     "해안 절벽 도로 운전 주의",

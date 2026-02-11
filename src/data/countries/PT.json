@@ -40,6 +40,40 @@
       "description": "숙소 예약 확인서, 리턴 티켓을 준비하세요."
     }
   ],
+  "visaTypes": [
+    {
+      "name": "워킹홀리데이비자",
+      "duration": "1년",
+      "description": "만 18~30세 대상, 한국-포르투갈 워킹홀리데이 협정에 따른 체류 및 취업 허가 비자",
+      "fee": "EUR 90",
+      "processingTime": "약 2~4주",
+      "applicationUrl": "https://vistos.mne.gov.pt/"
+    },
+    {
+      "name": "취업비자",
+      "duration": "고용 계약 기간",
+      "description": "포르투갈 고용주의 스폰서십이 필요한 취업 허가 비자 (D1 비자)",
+      "fee": "EUR 90",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://vistos.mne.gov.pt/"
+    },
+    {
+      "name": "유학비자",
+      "duration": "수학 기간",
+      "description": "포르투갈 교육기관 입학 허가서가 필요한 학생 비자 (D4 비자)",
+      "fee": "EUR 75",
+      "processingTime": "약 2~6주",
+      "applicationUrl": "https://vistos.mne.gov.pt/"
+    },
+    {
+      "name": "디지털노마드비자",
+      "duration": "1년 (갱신 가능)",
+      "description": "월 소득 EUR 3,040 이상의 원격 근무자를 위한 D8 디지털노마드 비자",
+      "fee": "EUR 75",
+      "processingTime": "약 2~4주",
+      "applicationUrl": "https://vistos.mne.gov.pt/"
+    }
+  ],
   "alerts": [
     "소매치기 주의 (리스본 트램 28번)",
     "관광세 별도 부과"

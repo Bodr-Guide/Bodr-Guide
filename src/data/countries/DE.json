@@ -45,6 +45,40 @@
     "현금 결제 선호 (카드 안 되는 곳 많음)",
     "자전거 도로 보행 주의"
   ],
+  "visaTypes": [
+    {
+      "name": "워킹홀리데이비자",
+      "duration": "최대 1년",
+      "description": "만 18~30세 대상, 취업과 여행을 병행할 수 있는 비자",
+      "fee": "€75",
+      "processingTime": "약 2~4주",
+      "applicationUrl": "https://seoul.diplo.de/kr-ko/service/visa-einreise"
+    },
+    {
+      "name": "취업비자 (Arbeitsvisum)",
+      "duration": "최대 4년 (갱신 가능)",
+      "description": "현지 고용주의 고용계약서 및 연방고용청 승인이 필요한 취업 비자",
+      "fee": "€75",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://seoul.diplo.de/kr-ko/service/visa-einreise"
+    },
+    {
+      "name": "유학비자",
+      "duration": "학업 기간 (2년 단위 갱신)",
+      "description": "독일 대학 입학 허가서 및 재정 증빙(연간 약 €11,208 차단계좌)이 필요한 학생 비자",
+      "fee": "€75",
+      "processingTime": "약 2~6주",
+      "applicationUrl": "https://seoul.diplo.de/kr-ko/service/visa-einreise"
+    },
+    {
+      "name": "디지털노마드비자 (프리랜서비자)",
+      "duration": "최대 3년 (갱신 가능)",
+      "description": "프리랜서 또는 자영업자 대상, 사업계획서 및 재정 증빙이 필요한 체류 허가",
+      "fee": "€100",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://seoul.diplo.de/kr-ko/service/visa-einreise"
+    }
+  ],
   "checklist": [
     "여권 사본 저장",
     "숙소 바우처",

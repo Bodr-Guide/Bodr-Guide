@@ -44,6 +44,32 @@
     "일요일/공휴일 상점 휴무",
     "비엔나 대중교통 검표 철저 (무임승차 벌금)"
   ],
+  "visaTypes": [
+    {
+      "name": "워킹홀리데이비자",
+      "duration": "최대 1년",
+      "description": "만 18~30세 대상, 취업과 여행을 병행할 수 있는 비자",
+      "fee": "€160",
+      "processingTime": "약 2~4주",
+      "applicationUrl": "https://www.bmeia.gv.at/ko/oeb-seoul/"
+    },
+    {
+      "name": "취업비자 (Rot-Weiß-Rot Karte)",
+      "duration": "최대 2년 (갱신 가능)",
+      "description": "고숙련 인력 대상 취업 허가 비자로 고용주 스폰서십 필요",
+      "fee": "€160",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://www.migration.gv.at/en/types-of-immigration/permanent-immigration/red-white-red-card/"
+    },
+    {
+      "name": "유학비자",
+      "duration": "학업 기간 (1년 단위 갱신)",
+      "description": "오스트리아 대학 입학 허가서가 필요한 학생 체류 허가",
+      "fee": "€160",
+      "processingTime": "약 2~6주",
+      "applicationUrl": "https://www.bmeia.gv.at/ko/oeb-seoul/"
+    }
+  ],
   "checklist": [
     "여권 사본 저장",
     "숙소 바우처",

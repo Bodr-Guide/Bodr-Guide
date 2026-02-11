@@ -12,19 +12,22 @@
       "name": "도착비자 15일",
       "duration": "15일",
       "description": "관광 목적 단기 체류용 도착비자",
-      "fee": "$30"
+      "fee": "$30",
+      "processingTime": "현장 발급"
     },
     {
       "name": "도착비자 30일",
       "duration": "30일",
       "description": "관광 목적 도착비자, 가장 일반적인 선택",
-      "fee": "$50"
+      "fee": "$50",
+      "processingTime": "현장 발급"
     },
     {
       "name": "도착비자 90일",
       "duration": "90일",
       "description": "관광 목적 장기 체류용 도착비자",
-      "fee": "$125"
+      "fee": "$125",
+      "processingTime": "현장 발급"
     }
   ],
   "importantNotes": [

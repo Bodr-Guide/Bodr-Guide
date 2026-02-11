@@ -40,6 +40,32 @@
       "description": "입국심사 시 입국카드를 작성하세요."
     }
   ],
+  "visaTypes": [
+    {
+      "name": "취업비자",
+      "duration": "고용 계약 기간 (최대 2년)",
+      "description": "마카오 특별행정구 고용주가 노동사무국(DSAL)에 비거주 근로자 허가를 신청해야 하며, 별도의 블루카드 발급 필요.",
+      "fee": "MOP 200",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://www.dsi.gov.mo/"
+    },
+    {
+      "name": "유학비자",
+      "duration": "수학 기간",
+      "description": "마카오 교육기관 입학 허가서를 기반으로 출입경사무청(DSI)에 체류 허가 신청.",
+      "fee": "MOP 200",
+      "processingTime": "약 2~6주",
+      "applicationUrl": "https://www.dsi.gov.mo/"
+    },
+    {
+      "name": "장기체류비자",
+      "duration": "최대 1년 (갱신 가능)",
+      "description": "가족 결합, 투자 등 목적으로 90일 초과 체류 시 마카오 출입경사무청에 체류 허가 신청 필요.",
+      "fee": "MOP 200",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://www.dsi.gov.mo/"
+    }
+  ],
   "alerts": [
     "홍콩 달러도 통용 가능",
     "카지노 21세 이상만 출입 가능"

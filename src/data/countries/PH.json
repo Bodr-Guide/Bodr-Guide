@@ -42,6 +42,32 @@
       "description": "eTravel 등록 후 발급된 QR 코드를 준비하세요."
     }
   ],
+  "visaTypes": [
+    {
+      "name": "취업비자",
+      "duration": "최대 3년 (갱신 가능)",
+      "description": "필리핀 고용주가 노동고용부(DOLE)에서 외국인 고용 허가(AEP)를 발급받은 후 이민국에 취업 비자(9g) 신청.",
+      "fee": "$200",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://immigration.gov.ph/"
+    },
+    {
+      "name": "유학비자",
+      "duration": "수학 기간",
+      "description": "필리핀 교육기관의 입학 허가서를 기반으로 발급되는 학생 비자(9f). 한 학기 이상 수학 시 필요.",
+      "fee": "$100",
+      "processingTime": "약 2~6주",
+      "applicationUrl": "https://immigration.gov.ph/"
+    },
+    {
+      "name": "은퇴비자 (SRRV)",
+      "duration": "영구 (갱신 불필요)",
+      "description": "Special Resident Retiree's Visa. 만 35세 이상 신청 가능. 지정 은행에 $1,500~$50,000 예치 필요 (연령/조건에 따라 상이).",
+      "fee": "$1,400",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://pra.gov.ph/"
+    }
+  ],
   "alerts": [
     "마약 관련 법규 매우 엄격",
     "귀중품 소매치기 주의",

@@ -40,6 +40,32 @@
       "description": "여권, 리턴 티켓, 숙소 예약 확인서를 준비하세요."
     }
   ],
+  "visaTypes": [
+    {
+      "name": "취업비자",
+      "duration": "최대 2년 (갱신 가능)",
+      "description": "파나마 고용주의 노동 허가를 기반으로 이민국에 취업 비자 신청. 현지 변호사 대리 신청이 일반적.",
+      "fee": "$250",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://www.migracion.gob.pa/"
+    },
+    {
+      "name": "유학비자",
+      "duration": "수학 기간",
+      "description": "파나마 교육기관의 입학 허가서를 기반으로 발급되는 학생 비자.",
+      "fee": "$250",
+      "processingTime": "약 2~6주",
+      "applicationUrl": "https://www.migracion.gob.pa/"
+    },
+    {
+      "name": "은퇴비자 (Pensionado)",
+      "duration": "영구 (갱신 불필요)",
+      "description": "월 $1,000 이상 연금 수령 증명 시 영주권 취득 가능. 세계적으로 유명한 은퇴자 우대 프로그램으로 각종 할인 혜택 제공.",
+      "fee": "$250",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://www.migracion.gob.pa/"
+    }
+  ],
   "alerts": [
     "USD 통용 (별도 환전 불필요)",
     "콜론 지역 치안 주의",

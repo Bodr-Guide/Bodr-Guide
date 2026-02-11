@@ -40,6 +40,32 @@
       "description": "여권과 리턴 티켓을 준비하세요."
     }
   ],
+  "visaTypes": [
+    {
+      "name": "취업비자",
+      "duration": "고용 계약 기간 (최대 2년, 갱신 가능)",
+      "description": "카타르 고용주의 스폰서십이 필요한 취업 허가 비자. 고용주가 노동부 승인을 받아야 함",
+      "fee": "QAR 200",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://portal.moi.gov.qa/"
+    },
+    {
+      "name": "사업비자",
+      "duration": "최대 1년 (갱신 가능)",
+      "description": "카타르에서 사업 활동을 위한 비자. 투자 또는 사업체 설립 시 필요",
+      "fee": "QAR 500",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://portal.moi.gov.qa/"
+    },
+    {
+      "name": "유학비자",
+      "duration": "수학 기간",
+      "description": "카타르 교육기관 입학 허가서가 필요한 학생 비자",
+      "fee": "QAR 200",
+      "processingTime": "약 2~6주",
+      "applicationUrl": "https://portal.moi.gov.qa/"
+    }
+  ],
   "alerts": [
     "공공장소 음주 금지",
     "복장 규정 주의 (어깨/무릎 가림)",

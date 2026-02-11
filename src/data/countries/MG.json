@@ -12,13 +12,15 @@
       "name": "도착비자 30일",
       "duration": "30일",
       "description": "관광 목적 도착비자, 공항에서 현금(유로/USD)으로 결제",
-      "fee": "€35"
+      "fee": "€35",
+      "processingTime": "현장 발급"
     },
     {
       "name": "도착비자 60일",
       "duration": "60일",
       "description": "관광 목적 장기 체류 도착비자",
-      "fee": "€40"
+      "fee": "€40",
+      "processingTime": "현장 발급"
     }
   ],
   "importantNotes": [

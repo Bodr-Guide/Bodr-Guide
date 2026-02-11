@@ -41,6 +41,32 @@
       "description": "별도 입국 카드 없이 여권만으로 입국 심사가 진행됩니다. 체류 목적 질문에 대비하세요."
     }
   ],
+  "visaTypes": [
+    {
+      "name": "취업비자",
+      "duration": "고용 기간",
+      "description": "조지아 고용주의 스폰서십이 필요한 취업 허가 비자",
+      "fee": "$50",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://www.geoconsul.gov.ge/HtmlPage/Html/View?id=956&lang=Eng"
+    },
+    {
+      "name": "유학비자",
+      "duration": "학업 기간",
+      "description": "조지아 교육기관 입학 허가를 받은 학생 대상 비자",
+      "fee": "$50",
+      "processingTime": "약 2~6주",
+      "applicationUrl": "https://www.geoconsul.gov.ge/HtmlPage/Html/View?id=956&lang=Eng"
+    },
+    {
+      "name": "디지털노마드비자",
+      "duration": "최대 1년",
+      "description": "Remotely from Georgia 프로그램으로, 해외 소득 월 $2,000 이상인 원격 근무자 대상",
+      "fee": "무료",
+      "processingTime": "약 2~4주",
+      "applicationUrl": "https://stophere.ge/"
+    }
+  ],
   "alerts": [
     "분쟁 지역(압하지야, 남오세티야) 절대 방문 금지 — 안전 및 법적 문제",
     "트빌리시 구시가지 야간 소매치기 주의 — 귀중품 관리 철저히",

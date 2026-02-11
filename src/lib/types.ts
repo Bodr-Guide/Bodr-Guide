@@ -40,6 +40,7 @@ export interface VisaTypeInfo {
   duration: string;
   description: string;
   fee?: string;
+  processingTime?: string;
   applicationUrl?: string;
 }
 

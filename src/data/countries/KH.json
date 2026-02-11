@@ -12,19 +12,23 @@
       "duration": "30일",
       "description": "온라인으로 사전 신청하는 관광 전자비자. 처리 기간 약 3영업일.",
       "fee": "$36 + 수수료 $6",
+      "processingTime": "약 3~5영업일",
       "applicationUrl": "https://www.evisa.gov.kh/"
     },
     {
       "name": "도착비자 (Tourist Visa, T)",
       "duration": "30일",
       "description": "프놈펜, 시엠립 공항 등에서 도착 시 발급받는 관광비자. 여권 사진 1장 필요.",
-      "fee": "$30"
+      "fee": "$30",
+      "processingTime": "현장 발급"
     },
     {
       "name": "비즈니스비자 (EB)",
       "duration": "30일 (현지에서 연장 가능)",
       "description": "비즈니스 목적 방문 비자. 현지에서 1년, 2년, 3년 단위로 연장 가능.",
-      "fee": "$35"
+      "fee": "$35",
+      "processingTime": "약 3~5영업일",
+      "applicationUrl": "https://www.evisa.gov.kh/"
     }
   ],
   "entryRegistration": {

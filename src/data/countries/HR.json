@@ -40,6 +40,40 @@
       "description": "숙소 예약 확인서, 리턴 티켓을 준비하세요."
     }
   ],
+  "visaTypes": [
+    {
+      "name": "워킹홀리데이비자",
+      "duration": "최대 1년",
+      "description": "만 18~30세 대상, 취업과 여행을 병행할 수 있는 비자",
+      "fee": "€60",
+      "processingTime": "약 2~4주",
+      "applicationUrl": "https://mvep.gov.hr/services-for-citizens/visas-work-and-residence-permits-118/visa-requirements-by-country/korea-republic-of/105252"
+    },
+    {
+      "name": "취업비자",
+      "duration": "고용 기간",
+      "description": "크로아티아 고용주의 스폰서십이 필요한 취업 허가 비자",
+      "fee": "€60",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://mvep.gov.hr/services-for-citizens/visas-work-and-residence-permits-118/"
+    },
+    {
+      "name": "유학비자",
+      "duration": "학업 기간",
+      "description": "크로아티아 교육기관 입학 허가를 받은 학생 대상 장기체류 비자",
+      "fee": "€60",
+      "processingTime": "약 2~6주",
+      "applicationUrl": "https://mvep.gov.hr/services-for-citizens/visas-work-and-residence-permits-118/"
+    },
+    {
+      "name": "디지털노마드비자",
+      "duration": "최대 1년",
+      "description": "해외 소득이 있는 원격 근무자를 위한 디지털 노마드 체류 허가",
+      "fee": "€60",
+      "processingTime": "약 2~4주",
+      "applicationUrl": "https://mup.gov.hr/uzg-covid/english/286212"
+    }
+  ],
   "alerts": [
     "여름 성수기 두브로브니크 매우 혼잡",
     "국립공원 수영 가능 구역 확인"

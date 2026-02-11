@@ -12,13 +12,15 @@
       "name": "도착비자",
       "duration": "30일",
       "description": "관광 목적으로 공항에서 발급 가능",
-      "fee": "JOD 40"
+      "fee": "JOD 40",
+      "processingTime": "현장 발급"
     },
     {
       "name": "Jordan Pass",
       "duration": "30일",
       "description": "관광비자 수수료 면제 + 페트라 등 40개 이상 유적지 입장 포함",
       "fee": "JOD 70~80",
+      "processingTime": "즉시 발급 (온라인 구매)",
       "applicationUrl": "https://www.jordanpass.jo"
     }
   ],

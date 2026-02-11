@@ -40,6 +40,40 @@
       "description": "기내에서 TM.6 입국카드를 작성하세요."
     }
   ],
+  "visaTypes": [
+    {
+      "name": "취업비자",
+      "duration": "최대 1년 (갱신 가능)",
+      "description": "태국 고용주의 스폰서십이 필요한 Non-B 취업 비자. 별도 워크퍼밋(Work Permit) 취득 필요",
+      "fee": "THB 2,000",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://www.thaievisa.go.th/"
+    },
+    {
+      "name": "유학비자",
+      "duration": "수학 기간 (최대 1년, 갱신 가능)",
+      "description": "태국 교육기관 입학 허가서가 필요한 Non-ED 학생 비자",
+      "fee": "THB 2,000",
+      "processingTime": "약 2~6주",
+      "applicationUrl": "https://www.thaievisa.go.th/"
+    },
+    {
+      "name": "디지털노마드비자",
+      "duration": "최대 5년",
+      "description": "연 소득 $80,000 이상의 원격 근무자를 위한 DTV(Destination Thailand Visa) 또는 LTR 비자",
+      "fee": "THB 10,000",
+      "processingTime": "약 2~4주",
+      "applicationUrl": "https://www.thaievisa.go.th/"
+    },
+    {
+      "name": "은퇴비자",
+      "duration": "1년 (갱신 가능)",
+      "description": "만 50세 이상 대상, 태국 은행 예치금 THB 800,000 이상 필요한 Non-O 리타이어먼트 비자",
+      "fee": "THB 2,000",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://www.thaievisa.go.th/"
+    }
+  ],
   "alerts": [
     "왕실 모독죄 엄격 처벌",
     "전자담배 반입 금지 (벌금 최대 50만 바트)",

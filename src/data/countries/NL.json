@@ -40,6 +40,32 @@
       "description": "숙소 예약 확인서, 리턴 티켓을 준비하세요."
     }
   ],
+  "visaTypes": [
+    {
+      "name": "워킹홀리데이비자",
+      "duration": "최대 1년",
+      "description": "한국-네덜란드 워킹홀리데이 협정에 따라 만 18~30세 신청 가능. 연간 100명 쿼터.",
+      "fee": "EUR 210",
+      "processingTime": "약 2~4주",
+      "applicationUrl": "https://www.netherlandsandyou.nl/"
+    },
+    {
+      "name": "취업비자",
+      "duration": "최대 5년",
+      "description": "네덜란드 고용주가 IND(이민귀화청)에 취업 허가 및 거주 허가를 동시 신청. 고숙련 이민자(Kennismigrant) 제도 활용 가능.",
+      "fee": "EUR 350",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://ind.nl/en"
+    },
+    {
+      "name": "유학비자",
+      "duration": "수학 기간",
+      "description": "네덜란드 교육기관이 IND에 거주 허가를 대리 신청. 학비 납부 증명 및 재정 증빙 필요.",
+      "fee": "EUR 210",
+      "processingTime": "약 2~6주",
+      "applicationUrl": "https://ind.nl/en"
+    }
+  ],
   "alerts": [
     "자전거 도로 보행 절대 금지",
     "관광세 별도 부과 (암스테르담)",

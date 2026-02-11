@@ -45,6 +45,24 @@
     "스위스 전용 플러그 (J타입)",
     "일요일 상점 휴무"
   ],
+  "visaTypes": [
+    {
+      "name": "취업비자 (L/B Permit)",
+      "duration": "최대 1년 (L) 또는 5년 (B)",
+      "description": "현지 고용주의 스폰서십이 필요하며 EU/EFTA 국민 우선 고용 원칙 적용",
+      "fee": "CHF 150",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://www.eda.admin.ch/countries/south-korea/en/home/visa.html"
+    },
+    {
+      "name": "유학비자",
+      "duration": "학업 기간 (1년 단위 갱신)",
+      "description": "스위스 교육기관의 입학 허가서 및 재정 증빙이 필요한 학생 비자",
+      "fee": "CHF 150",
+      "processingTime": "약 2~6주",
+      "applicationUrl": "https://www.eda.admin.ch/countries/south-korea/en/home/visa.html"
+    }
+  ],
   "checklist": [
     "여권 사본 저장",
     "숙소 바우처",

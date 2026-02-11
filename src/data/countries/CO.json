@@ -45,6 +45,32 @@
     "택시 앱 사용 권장 (길거리 호출 지양)",
     "고산병 주의 (보고타 2,600m)"
   ],
+  "visaTypes": [
+    {
+      "name": "취업비자 (Visa M - Trabajo)",
+      "duration": "최대 3년",
+      "description": "현지 고용주의 스폰서십이 필요한 취업 비자",
+      "fee": "$230",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://www.cancilleria.gov.co/en/procedures_services/visa"
+    },
+    {
+      "name": "유학비자 (Visa M - Estudiante)",
+      "duration": "학업 기간",
+      "description": "콜롬비아 교육기관의 입학 허가서가 필요한 학생 비자",
+      "fee": "$177",
+      "processingTime": "약 2~6주",
+      "applicationUrl": "https://www.cancilleria.gov.co/en/procedures_services/visa"
+    },
+    {
+      "name": "디지털노마드비자",
+      "duration": "최대 2년",
+      "description": "해외 소득이 있는 원격근무자 대상, 월 소득 COP 3,000,000 이상 증빙 필요",
+      "fee": "$177",
+      "processingTime": "약 2~4주",
+      "applicationUrl": "https://www.cancilleria.gov.co/en/procedures_services/visa"
+    }
+  ],
   "checklist": [
     "여권 사본 저장",
     "숙소 바우처",

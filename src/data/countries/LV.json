@@ -41,6 +41,32 @@
       "description": "숙소 예약 확인서, 리턴 티켓을 준비하세요."
     }
   ],
+  "visaTypes": [
+    {
+      "name": "취업비자",
+      "duration": "최대 5년 (갱신 가능)",
+      "description": "라트비아 고용주의 초청이 필요한 장기 체류 비자(D). EU 블루카드도 신청 가능.",
+      "fee": "EUR 100",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://www.mfa.gov.lv/en/consular-information"
+    },
+    {
+      "name": "유학비자",
+      "duration": "수학 기간",
+      "description": "라트비아 교육기관의 입학 허가서를 기반으로 발급되는 장기 체류 비자(D).",
+      "fee": "EUR 60",
+      "processingTime": "약 2~6주",
+      "applicationUrl": "https://www.mfa.gov.lv/en/consular-information"
+    },
+    {
+      "name": "장기체류비자",
+      "duration": "최대 1년",
+      "description": "가족 결합, 연구, 종교 활동 등 목적으로 90일 이상 체류 시 필요한 국가 비자(D).",
+      "fee": "EUR 100",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://www.mfa.gov.lv/en/consular-information"
+    }
+  ],
   "alerts": [
     "겨울철 영하 20도 이하 가능, 방한 장비 필수",
     "리가 구시가지 야간 주취자 주의",

@@ -41,6 +41,32 @@
       "description": "숙소 예약 확인서, 리턴 티켓을 준비하세요."
     }
   ],
+  "visaTypes": [
+    {
+      "name": "워킹홀리데이비자",
+      "duration": "최대 1년",
+      "description": "한국-폴란드 워킹홀리데이 협정에 따라 만 18~30세 신청 가능. 연간 200명 쿼터.",
+      "fee": "EUR 60",
+      "processingTime": "약 2~4주",
+      "applicationUrl": "https://www.gov.pl/web/korea/ko"
+    },
+    {
+      "name": "취업비자",
+      "duration": "최대 3년 (갱신 가능)",
+      "description": "폴란드 고용주의 초청을 통한 국가 비자(D) 또는 임시 거주 허가 신청. 노동 허가(Zezwolenie na prace) 필요.",
+      "fee": "EUR 80",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://www.gov.pl/web/korea/ko"
+    },
+    {
+      "name": "유학비자",
+      "duration": "수학 기간",
+      "description": "폴란드 교육기관 입학 허가서를 기반으로 발급되는 국가 비자(D) 또는 임시 거주 허가.",
+      "fee": "EUR 60",
+      "processingTime": "약 2~6주",
+      "applicationUrl": "https://www.gov.pl/web/korea/ko"
+    }
+  ],
   "alerts": [
     "관광지 소매치기 주의 (크라쿠프, 바르샤바 구시가지)",
     "택시 이용 시 공인 택시 확인 필수",

@@ -46,6 +46,24 @@
     "티라나 시내 교통 혼잡 및 무질서한 운전 문화",
     "관광지 외 지역 카드 결제 어려움 (현금 준비 필수)"
   ],
+  "visaTypes": [
+    {
+      "name": "취업비자",
+      "duration": "고용 기간 (1년, 갱신 가능)",
+      "description": "현지 고용주의 초청 및 노동허가가 필요한 취업 비자",
+      "fee": "€50",
+      "processingTime": "약 2~4주",
+      "applicationUrl": "https://www.ambasadat.gov.al/south-korea/en"
+    },
+    {
+      "name": "유학비자",
+      "duration": "학업 기간",
+      "description": "알바니아 교육기관의 입학 허가서가 필요한 학생 비자",
+      "fee": "€50",
+      "processingTime": "약 2~4주",
+      "applicationUrl": "https://www.ambasadat.gov.al/south-korea/en"
+    }
+  ],
   "checklist": [
     "여권 사본 저장",
     "숙소 바우처",

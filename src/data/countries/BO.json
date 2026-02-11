@@ -12,7 +12,8 @@
       "name": "도착비자",
       "duration": "30일 (연간 최대 90일)",
       "description": "관광 목적 도착비자, 공항에서 발급 가능",
-      "fee": "무료"
+      "fee": "무료",
+      "processingTime": "현장 발급"
     }
   ],
   "importantNotes": [

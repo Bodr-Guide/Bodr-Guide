@@ -12,12 +12,15 @@
       "duration": "최대 90일 (1년 복수입국)",
       "description": "관광 목적의 전자비자. 온라인으로 신청하며 1년간 유효, 복수입국 가능.",
       "fee": "SAR 535 (약 $142, 의료보험 포함)",
+      "processingTime": "약 3~5영업일",
       "applicationUrl": "https://visa.visitsaudi.com/"
     },
     {
       "name": "상용방문비자",
       "duration": "방문 목적에 따라 상이",
-      "description": "비즈니스 목적 방문 비자. 사우디 측 초청장(초청 기업) 필요."
+      "description": "비즈니스 목적 방문 비자. 사우디 측 초청장(초청 기업) 필요.",
+      "processingTime": "약 1~2주",
+      "applicationUrl": "https://visa.visitsaudi.com/"
     }
   ],
   "entryRegistration": {

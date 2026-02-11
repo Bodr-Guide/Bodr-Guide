@@ -41,6 +41,32 @@
       "description": "기내에서 배부하는 입국 카드를 작성하고 입국 심사 시 여권과 함께 제출하세요."
     }
   ],
+  "visaTypes": [
+    {
+      "name": "취업비자",
+      "duration": "고용 계약 기간",
+      "description": "몽골 고용주의 초청장과 노동부 허가를 기반으로 발급. 현지 입국 후 체류증 발급 필요.",
+      "fee": "$70",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://consul.mn/"
+    },
+    {
+      "name": "유학비자",
+      "duration": "수학 기간",
+      "description": "몽골 교육기관의 입학 허가서를 기반으로 발급되는 학생 비자.",
+      "fee": "$50",
+      "processingTime": "약 2~6주",
+      "applicationUrl": "https://consul.mn/"
+    },
+    {
+      "name": "장기체류비자",
+      "duration": "최대 1년 (갱신 가능)",
+      "description": "30일 초과 체류 시 필요한 장기 체류 허가. 가족 결합, 투자 등 목적.",
+      "fee": "$70",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://consul.mn/"
+    }
+  ],
   "alerts": [
     "겨울(11~2월) 기온 영하 30도 이하 — 동상 위험 극심",
     "울란바토르 대기오염 심각(겨울철) — KF94 마스크 지참 권장",

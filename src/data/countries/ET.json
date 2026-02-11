@@ -13,6 +13,7 @@
       "duration": "30일",
       "description": "관광 목적 전자비자, 아디스아바바 볼레 국제공항 입국만 가능",
       "fee": "$82",
+      "processingTime": "약 3~5영업일",
       "applicationUrl": "https://www.evisa.gov.et/"
     },
     {
@@ -20,6 +21,7 @@
       "duration": "90일",
       "description": "관광 목적 장기 체류 전자비자, 아디스아바바 볼레 국제공항 입국만 가능",
       "fee": "$102",
+      "processingTime": "약 3~5영업일",
       "applicationUrl": "https://www.evisa.gov.et/"
     }
   ],

@@ -45,6 +45,32 @@
     "소매치기 주의 (부에노스아이레스)",
     "현금 USD 지참 권장"
   ],
+  "visaTypes": [
+    {
+      "name": "워킹홀리데이비자",
+      "duration": "최대 1년",
+      "description": "만 18~30세 대상, 취업과 여행을 병행할 수 있는 비자",
+      "fee": "$150",
+      "processingTime": "약 2~4주",
+      "applicationUrl": "https://www.cancilleria.gob.ar/en/services/visas"
+    },
+    {
+      "name": "취업비자",
+      "duration": "고용 기간 (1년, 갱신 가능)",
+      "description": "현지 고용주의 스폰서십이 필요한 취업 허가 비자",
+      "fee": "$100",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://www.cancilleria.gob.ar/en/services/visas"
+    },
+    {
+      "name": "유학비자",
+      "duration": "학업 기간",
+      "description": "아르헨티나 교육기관의 입학 허가서가 필요한 학생 비자",
+      "fee": "$100",
+      "processingTime": "약 2~6주",
+      "applicationUrl": "https://www.cancilleria.gob.ar/en/services/visas"
+    }
+  ],
   "checklist": [
     "여권 사본 저장",
     "숙소 바우처",

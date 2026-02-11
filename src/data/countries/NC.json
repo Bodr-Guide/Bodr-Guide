@@ -41,6 +41,32 @@
       "description": "여권, 귀국 항공권, 숙소 예약 확인서를 준비하세요."
     }
   ],
+  "visaTypes": [
+    {
+      "name": "취업비자",
+      "duration": "고용 계약 기간",
+      "description": "프랑스 해외영토 비자 체계 적용. 뉴칼레도니아 고용주의 초청과 현지 노동 허가 필요. 프랑스 대사관에서 장기 비자 신청.",
+      "fee": "EUR 99",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://france-visas.gouv.fr/"
+    },
+    {
+      "name": "유학비자",
+      "duration": "수학 기간",
+      "description": "프랑스 해외영토 비자 체계에 따라 프랑스 대사관에서 학생 장기 비자 신청. 뉴칼레도니아 교육기관 입학 허가서 필요.",
+      "fee": "EUR 50",
+      "processingTime": "약 2~6주",
+      "applicationUrl": "https://france-visas.gouv.fr/"
+    },
+    {
+      "name": "장기체류비자",
+      "duration": "최대 1년 (갱신 가능)",
+      "description": "90일 초과 체류 시 프랑스 대사관에서 장기 체류 비자 신청 필요. 가족 결합, 사업 등 목적.",
+      "fee": "EUR 99",
+      "processingTime": "약 1~3개월",
+      "applicationUrl": "https://france-visas.gouv.fr/"
+    }
+  ],
   "alerts": [
     "자외선 매우 강함, 선크림 필수",
     "사이클론 시즌(11~4월) 기상 확인",

@@ -12,6 +12,7 @@
       "duration": "10일",
       "description": "단기 관광 목적 전자비자",
       "fee": "OMR 5",
+      "processingTime": "약 1~3영업일",
       "applicationUrl": "https://evisa.rop.gov.om/"
     },
     {
@@ -19,6 +20,7 @@
       "duration": "30일",
       "description": "관광 목적 전자비자, 가장 일반적인 선택",
       "fee": "OMR 20",
+      "processingTime": "약 1~3영업일",
       "applicationUrl": "https://evisa.rop.gov.om/"
     },
     {
@@ -26,6 +28,7 @@
       "duration": "1년 (복수 입국)",
       "description": "1년간 복수 입국 가능한 관광 전자비자",
       "fee": "OMR 50",
+      "processingTime": "약 1~3영업일",
       "applicationUrl": "https://evisa.rop.gov.om/"
     }
   ],
