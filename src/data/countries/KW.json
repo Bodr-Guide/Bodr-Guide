@@ -7,6 +7,14 @@
   "visaStatus": "e_visa",
   "visaFreeStayDays": 30,
   "visaNote": "e-Visa 사전 신청 필수, 30일 체류",
+  "visaTypes": [
+    {
+      "name": "e-Visa 관광",
+      "duration": "최대 90일",
+      "description": "관광 목적 전자비자, 온라인 사전 신청 필수",
+      "fee": "KWD 3"
+    }
+  ],
   "importantNotes": [
     "이슬람 국가로 라마단 기간 공공장소 음식 섭취 및 흡연 금지",
     "주류 반입 및 음용 전면 금지 (면세점 포함 구매 불가)",

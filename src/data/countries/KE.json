@@ -6,6 +6,15 @@
   "flagEmoji": "🇰🇪",
   "visaStatus": "e_visa",
   "visaNote": "전자여행허가(eTA) 사전 신청 필수",
+  "visaTypes": [
+    {
+      "name": "eTA (전자여행허가)",
+      "duration": "최대 90일",
+      "description": "관광 및 단기 방문 목적의 전자여행허가. 출발 전 온라인 사전 신청 필수.",
+      "fee": "$30",
+      "applicationUrl": "https://www.etakenya.go.ke/"
+    }
+  ],
   "entryRegistration": {
     "required": true,
     "type": "eTA",

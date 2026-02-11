@@ -7,6 +7,26 @@
   "visaStatus": "visa_on_arrival",
   "visaFreeStayDays": 30,
   "visaNote": "대한민국 여권 소지자는 도착비자를 발급받아 체류할 수 있습니다. 30일($30), 90일($80) 옵션이 있으며, 공항 도착 시 현금(USD) 또는 카드로 결제 가능합니다.",
+  "visaTypes": [
+    {
+      "name": "도착비자 15일",
+      "duration": "15일",
+      "description": "관광 목적 단기 체류용 도착비자",
+      "fee": "$30"
+    },
+    {
+      "name": "도착비자 30일",
+      "duration": "30일",
+      "description": "관광 목적 도착비자, 가장 일반적인 선택",
+      "fee": "$50"
+    },
+    {
+      "name": "도착비자 90일",
+      "duration": "90일",
+      "description": "관광 목적 장기 체류용 도착비자",
+      "fee": "$125"
+    }
+  ],
   "importantNotes": [
     "도착비자 수수료는 USD 현금 준비 권장 (30일 $30, 90일 $80)",
     "트레킹 시 TIMS 카드 및 입산 허가증 별도 발급 필요",

@@ -7,6 +7,14 @@
   "visaStatus": "visa_on_arrival",
   "visaFreeStayDays": 30,
   "visaNote": "공항 도착 시 30일 입국 허가, 환경보전서약 필수 서명",
+  "visaTypes": [
+    {
+      "name": "무료 도착비자",
+      "duration": "30일",
+      "description": "관광 목적 무료 입국 허가, 환경보전서약(Palau Pledge) 서명 필수",
+      "fee": "무료"
+    }
+  ],
   "importantNotes": [
     "입국 시 여권에 환경보전서약(Palau Pledge) 스탬프 날인, 서명 필수",
     "산호초 유해 성분 포함 선크림 사용 금지 (reef-safe 선크림만 허용)",

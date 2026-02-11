@@ -7,6 +7,28 @@
   "visaStatus": "e_visa",
   "visaFreeStayDays": 30,
   "visaNote": "대한민국 여권 소지자는 ETA(전자여행허가)를 사전 신청하여 최대 30일간 체류할 수 있습니다.",
+  "visaTypes": [
+    {
+      "name": "ETA 관광비자",
+      "duration": "30일 (최대 90일까지 연장 가능)",
+      "description": "관광 목적의 전자여행허가. 온라인 사전 신청 필수.",
+      "fee": "$50",
+      "applicationUrl": "https://www.srilankaeta.gov.lk/"
+    },
+    {
+      "name": "ETA 상용비자",
+      "duration": "30일",
+      "description": "비즈니스 회의, 상담 등 상용 목적의 전자여행허가.",
+      "fee": "$50",
+      "applicationUrl": "https://www.srilankaeta.gov.lk/"
+    },
+    {
+      "name": "경유비자 (Transit ETA)",
+      "duration": "최대 2일",
+      "description": "스리랑카를 경유하여 제3국으로 이동하는 경우의 단기 경유 비자.",
+      "fee": "무료"
+    }
+  ],
   "entryRegistration": {
     "required": true,
     "type": "ETA",

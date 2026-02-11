@@ -177,6 +177,45 @@ export default async function CountryPage({
               )}
             </div>
 
+            {/* 비자 종류 카드 — visaTypes가 있는 국가만 표시 */}
+            {country.visaTypes && country.visaTypes.length > 0 && (
+              <div className="relative overflow-hidden rounded-2xl border border-slate-700/40 bg-gradient-to-br from-violet-950/30 via-slate-900/80 to-slate-900/80 p-5 sm:p-8">
+                {/* 제목 */}
+                <div className="flex items-center gap-3 mb-5 sm:mb-6">
+                  <div className="flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-violet-500/20">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-violet-400 sm:w-4 sm:h-4"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M7 15h0M2 9.5h20"/></svg>
+                  </div>
+                  <h2 className="text-sm sm:text-base font-semibold text-slate-200">Visa Types</h2>
+                </div>
+
+                {/* 비자 종류 목록 */}
+                <div className="flex flex-col gap-3 sm:gap-4">
+                  {country.visaTypes.map((visa, idx) => (
+                    <div key={idx} className="bg-slate-800/50 rounded-xl px-4 sm:px-5 py-3 sm:py-4">
+                      <div className="flex items-center justify-between mb-1.5">
+                        <h3 className="text-sm sm:text-base font-bold text-white">{visa.name}</h3>
+                        {visa.fee && (
+                          <span className="text-[11px] sm:text-xs font-semibold text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded-full">{visa.fee}</span>
+                        )}
+                      </div>
+                      <p className="text-[11px] sm:text-xs text-sky-400 font-medium mb-1.5">{visa.duration}</p>
+                      <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">{visa.description}</p>
+                      {visa.applicationUrl && (
+                        <a
+                          href={visa.applicationUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block mt-2.5 px-3 sm:px-4 py-1.5 bg-violet-500/15 hover:bg-violet-500/25 text-[11px] sm:text-xs font-medium text-violet-300 rounded-lg transition-colors"
+                        >
+                          신청하기 →
+                        </a>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {/* Timeline 카드 */}
             {country.timeline && country.timeline.length > 0 && (
               <div className="relative overflow-hidden rounded-2xl border border-slate-700/40 bg-gradient-to-br from-indigo-950/30 via-slate-900/80 to-slate-900/80 p-5 sm:p-8">

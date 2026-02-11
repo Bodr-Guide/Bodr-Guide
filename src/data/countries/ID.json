@@ -7,6 +7,19 @@
   "visaStatus": "visa_on_arrival",
   "visaFreeStayDays": 30,
   "visaNote": "도착비자(VOA) 30일, 공항에서 500,000 IDR(약 $35) 결제",
+  "visaTypes": [
+    {
+      "name": "도착비자 (VOA)",
+      "duration": "30일 (1회 연장 시 최대 60일)",
+      "description": "관광 목적으로 주요 국제공항 및 항구에서 발급 가능",
+      "fee": "IDR 500,000 (~$35)"
+    },
+    {
+      "name": "B211A 비자",
+      "duration": "60일 (연장 가능)",
+      "description": "사회문화 또는 비즈니스 목적으로 사전 신청 필요"
+    }
+  ],
   "importantNotes": [
     "도착비자는 주요 국제공항 및 항구에서 발급 가능",
     "도착비자 1회 연장 가능 (최대 60일 체류)",

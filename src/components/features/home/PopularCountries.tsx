@@ -3,7 +3,7 @@
 
 import { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
-import { Country, VisaStatus, Continent, CONTINENTS } from "@/lib/types";
+import { Country, Continent, CONTINENTS } from "@/lib/types";
 import { getCountryImage } from "@/lib/countryImages";
 
 // 연간 인기 여행지 9개국 (고정)
@@ -28,68 +28,65 @@ const SEASON_FILTERS: { value: Season | "all"; label: string }[] = [
 // 정렬 옵션
 type SortType = "default" | "name_asc" | "name_desc";
 
-// 비자 필터 옵션
-const VISA_FILTERS: { value: VisaStatus | "all"; label: string }[] = [
-  { value: "all", label: "전체" },
-  { value: "visa_free", label: "무비자" },
-  { value: "visa_on_arrival", label: "도착비자" },
-  { value: "e_visa", label: "전자비자" },
-  { value: "visa_required", label: "비자 필요" },
-];
 
 interface PopularCountriesProps {
   countries: Country[];
 }
 
-// 국가 데이터에서 필수항목 태그 생성
-function getRequirementTags(country: Country) {
-  const tags: { label: string; color: string }[] = [];
+// 국가 데이터에서 카드 표시 정보 생성
+function getCardInfo(country: Country) {
+  // 비자 상태 + 체류일수 통합 라벨
+  const days = country.visaFreeStayDays;
+  let visaLabel = "";
+  let visaColor = "";
 
-  // 비자 상태
   switch (country.visaStatus) {
     case "visa_free":
-      tags.push({ label: "무비자", color: "text-emerald-400 bg-emerald-500/15" });
-      break;
-    case "visa_required":
-      tags.push({ label: "비자 필요", color: "text-red-400 bg-red-500/15" });
+      visaLabel = days ? `무비자 ${days}일` : "무비자";
+      visaColor = "text-emerald-400 bg-emerald-500/15";
       break;
     case "visa_on_arrival":
-      tags.push({ label: "도착비자", color: "text-sky-400 bg-sky-500/15" });
+      visaLabel = days ? `도착비자 ${days}일` : "도착비자";
+      visaColor = "text-sky-400 bg-sky-500/15";
       break;
     case "e_visa":
-      tags.push({ label: "전자비자", color: "text-amber-400 bg-amber-500/15" });
+      visaLabel = "전자비자 필요";
+      visaColor = "text-amber-400 bg-amber-500/15";
+      break;
+    case "visa_required":
+      visaLabel = "비자 필요";
+      visaColor = "text-red-400 bg-red-500/15";
       break;
   }
 
-  // 입국 등록
+  // 입국 등록 요구사항 (ESTA, eTA 등)
+  let entryLabel = "";
+  let entryColor = "";
   if (country.entryRegistration) {
     const reg = country.entryRegistration;
-    tags.push({
-      label: reg.required ? `${reg.type} 필수` : `${reg.type} 권장`,
-      color: reg.required ? "text-red-400 bg-red-500/15" : "text-sky-400 bg-sky-500/15",
-    });
-  } else {
-    tags.push({ label: "사전등록 불필요", color: "text-slate-400 bg-slate-500/15" });
+    entryLabel = reg.required ? `${reg.type} 필수` : `${reg.type} 권장`;
+    entryColor = reg.required ? "text-orange-400 bg-orange-500/15" : "text-slate-400 bg-slate-500/15";
   }
 
   // 여권 유효기간
-  if (country.passportValidity) {
-    tags.push({
-      label: `여권 ${country.passportValidity.months}개월+`,
-      color: "text-slate-400 bg-slate-500/15",
-    });
-  }
+  const passportLabel = country.passportValidity
+    ? `여권 ${country.passportValidity.months}개월 이상`
+    : "";
 
-  return tags;
+  // 비자 종류 요약 (e_visa / visa_required 국가)
+  const visaTypesSummary = country.visaTypes && country.visaTypes.length > 0
+    ? country.visaTypes.slice(0, 2).map((v) => v.name).join(" · ")
+    : "";
+
+  return { visaLabel, visaColor, entryLabel, entryColor, passportLabel, visaTypesSummary };
 }
 
 export default function PopularCountries({ countries }: PopularCountriesProps) {
   const [searchQuery, setSearchQuery] = useState("");
   const [showAll, setShowAll] = useState(false);
   const [sortType, setSortType] = useState<SortType>("default");
-  const [continentFilter, setContinentFilter] = useState<Continent | "all">("all");
-  const [visaFilter, setVisaFilter] = useState<VisaStatus | "all">("all");
-  const [seasonFilter, setSeasonFilter] = useState<Season | "all">("all");
+  const [continentFilters, setContinentFilters] = useState<Set<Continent>>(new Set());
+  const [seasonFilters, setSeasonFilters] = useState<Set<Season>>(new Set());
 
   // 히어로 섹션 검색바 연동
   useEffect(() => {
@@ -101,15 +98,24 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
     return () => window.removeEventListener("hero-search", handleHeroSearch);
   }, []);
 
+  // 토글 헬퍼: Set에 값 추가/제거
+  const toggleSet = <T,>(setter: React.Dispatch<React.SetStateAction<Set<T>>>, value: T) => {
+    setter((prev) => {
+      const next = new Set(prev);
+      if (next.has(value)) next.delete(value);
+      else next.add(value);
+      return next;
+    });
+  };
+
   // 필터 초기화
   const resetFilters = () => {
     setSortType("default");
-    setContinentFilter("all");
-    setVisaFilter("all");
-    setSeasonFilter("all");
+    setContinentFilters(new Set());
+    setSeasonFilters(new Set());
   };
 
-  const hasActiveFilter = sortType !== "default" || continentFilter !== "all" || visaFilter !== "all" || seasonFilter !== "all";
+  const hasActiveFilter = sortType !== "default" || continentFilters.size > 0 || seasonFilters.size > 0;
 
   // 검색 중이면 전체 필터, 전체보기면 전체, 아니면 인기 9개국만
   const displayCountries = useMemo(() => {
@@ -146,20 +152,18 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
       return popular;
     }
 
-    // 대륙 필터
-    if (continentFilter !== "all") {
-      result = result.filter((c) => c.continent === continentFilter);
+    // 대륙 필터 (복수 선택)
+    if (continentFilters.size > 0) {
+      result = result.filter((c) => continentFilters.has(c.continent));
     }
 
-    // 비자 필터
-    if (visaFilter !== "all") {
-      result = result.filter((c) => c.visaStatus === visaFilter);
-    }
-
-    // 계절 필터
-    if (seasonFilter !== "all") {
-      const seasonSet = SEASON_COUNTRIES[seasonFilter];
-      result = result.filter((c) => seasonSet.has(c.id));
+    // 계절 필터 (복수 선택 — 합집합)
+    if (seasonFilters.size > 0) {
+      const merged = new Set<string>();
+      for (const s of seasonFilters) {
+        for (const id of SEASON_COUNTRIES[s]) merged.add(id);
+      }
+      result = result.filter((c) => merged.has(c.id));
     }
 
     // 정렬
@@ -170,7 +174,7 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
     }
 
     return result;
-  }, [countries, searchQuery, showAll, continentFilter, visaFilter, seasonFilter, sortType]);
+  }, [countries, searchQuery, showAll, continentFilters, seasonFilters, sortType]);
 
   const isSearching = searchQuery.trim().length > 0;
 
@@ -200,41 +204,29 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
         {/* 필터 바 — 전체보기 또는 검색 중일 때만 표시 */}
         {(showAll || isSearching) && (
           <div className="mb-4 flex flex-wrap items-center gap-2">
-            {/* 대륙 필터 */}
+            {/* 대륙 필터 (복수 선택) */}
             <div className="flex flex-wrap gap-1.5">
-              {[{ value: "all" as const, label: "전체" }, ...CONTINENTS.map((c) => ({ value: c, label: c }))].map(
-                (item) => (
-                  <button
-                    key={item.value}
-                    onClick={() => setContinentFilter(item.value)}
-                    className={`rounded-full px-3 py-1 text-[11px] font-medium transition-colors ${
-                      continentFilter === item.value
-                        ? "bg-white text-slate-900"
-                        : "bg-slate-800/60 text-slate-400 hover:bg-slate-700/60 hover:text-slate-300"
-                    }`}
-                  >
-                    {item.label}
-                  </button>
-                )
-              )}
-            </div>
-
-            {/* 구분선 */}
-            <div className="hidden sm:block h-4 w-px bg-slate-700" />
-
-            {/* 비자 필터 */}
-            <div className="flex flex-wrap gap-1.5">
-              {VISA_FILTERS.map((item) => (
+              <button
+                onClick={() => setContinentFilters(new Set())}
+                className={`rounded-full px-3 py-1 text-[11px] font-medium transition-colors ${
+                  continentFilters.size === 0
+                    ? "bg-white text-slate-900"
+                    : "bg-slate-800/60 text-slate-400 hover:bg-slate-700/60 hover:text-slate-300"
+                }`}
+              >
+                전체
+              </button>
+              {CONTINENTS.map((c) => (
                 <button
-                  key={item.value}
-                  onClick={() => setVisaFilter(item.value)}
+                  key={c}
+                  onClick={() => toggleSet(setContinentFilters, c)}
                   className={`rounded-full px-3 py-1 text-[11px] font-medium transition-colors ${
-                    visaFilter === item.value
+                    continentFilters.has(c)
                       ? "bg-white text-slate-900"
                       : "bg-slate-800/60 text-slate-400 hover:bg-slate-700/60 hover:text-slate-300"
                   }`}
                 >
-                  {item.label}
+                  {c}
                 </button>
               ))}
             </div>
@@ -242,14 +234,24 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
             {/* 구분선 */}
             <div className="hidden sm:block h-4 w-px bg-slate-700" />
 
-            {/* 계절 필터 */}
+            {/* 계절 필터 (복수 선택) */}
             <div className="flex flex-wrap gap-1.5">
-              {SEASON_FILTERS.map((item) => (
+              <button
+                onClick={() => setSeasonFilters(new Set())}
+                className={`rounded-full px-3 py-1 text-[11px] font-medium transition-colors ${
+                  seasonFilters.size === 0
+                    ? "bg-white text-slate-900"
+                    : "bg-slate-800/60 text-slate-400 hover:bg-slate-700/60 hover:text-slate-300"
+                }`}
+              >
+                전체
+              </button>
+              {SEASON_FILTERS.filter((f) => f.value !== "all").map((item) => (
                 <button
                   key={item.value}
-                  onClick={() => setSeasonFilter(item.value)}
+                  onClick={() => toggleSet(setSeasonFilters, item.value as Season)}
                   className={`rounded-full px-3 py-1 text-[11px] font-medium transition-colors ${
-                    seasonFilter === item.value
+                    seasonFilters.has(item.value as Season)
                       ? "bg-white text-slate-900"
                       : "bg-slate-800/60 text-slate-400 hover:bg-slate-700/60 hover:text-slate-300"
                   }`}
@@ -316,10 +318,10 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
   );
 }
 
-// 국가 카드 — 가로형 레이아웃 (왼쪽: 이미지+국가명, 오른쪽: 필수항목 태그)
+// 국가 카드 — 가로형 레이아웃 (왼쪽: 이미지+국가명, 오른쪽: 비자·입국 정보)
 function CountryCard({ country }: { country: Country }) {
   const imageUrl = getCountryImage(country.id);
-  const tags = getRequirementTags(country);
+  const info = getCardInfo(country);
 
   return (
     <Link
@@ -353,20 +355,31 @@ function CountryCard({ country }: { country: Country }) {
         </div>
       </div>
 
-      {/* 오른쪽: 필수항목 태그 */}
-      <div className="flex-1 flex flex-col justify-center gap-1.5 px-4 py-4">
-        {tags.map((tag, idx) => (
-          <span
-            key={idx}
-            className={`inline-flex items-center self-start rounded-md px-2 py-0.5 text-[11px] font-medium ${tag.color}`}
-          >
-            {tag.label}
+      {/* 오른쪽: 비자·입국 정보 */}
+      <div className="flex-1 flex flex-col justify-center gap-1.5 px-4 py-3">
+        {/* 비자 상태 + 체류일수 */}
+        <span className={`inline-flex items-center self-start rounded-md px-2 py-0.5 text-[11px] font-bold ${info.visaColor}`}>
+          {info.visaLabel}
+        </span>
+
+        {/* 입국 등록 요구사항 (ESTA, eTA 등) */}
+        {info.entryLabel && (
+          <span className={`inline-flex items-center self-start rounded-md px-2 py-0.5 text-[11px] font-medium ${info.entryColor}`}>
+            {info.entryLabel}
           </span>
-        ))}
-        {/* 체류일수 */}
-        {country.visaFreeStayDays && (
-          <span className="inline-flex items-center self-start text-[11px] text-slate-500 mt-0.5">
-            최대 {country.visaFreeStayDays}일 체류
+        )}
+
+        {/* 비자 종류 요약 (전자비자/비자필요 국가) */}
+        {info.visaTypesSummary && (
+          <span className="inline-flex items-center self-start text-[10px] text-violet-400 bg-violet-500/10 rounded-md px-2 py-0.5">
+            {info.visaTypesSummary}
+          </span>
+        )}
+
+        {/* 여권 유효기간 */}
+        {info.passportLabel && (
+          <span className="text-[10px] text-slate-500 mt-0.5">
+            {info.passportLabel}
           </span>
         )}
       </div>

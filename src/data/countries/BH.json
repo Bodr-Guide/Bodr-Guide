@@ -7,6 +7,22 @@
   "visaStatus": "e_visa",
   "visaFreeStayDays": 14,
   "visaNote": "e-Visa 사전 신청 필수, 14일 체류",
+  "visaTypes": [
+    {
+      "name": "e-Visa 단수",
+      "duration": "14일",
+      "description": "관광 목적 단수 입국 전자비자",
+      "fee": "BHD 9",
+      "applicationUrl": "https://www.evisa.gov.bh/"
+    },
+    {
+      "name": "e-Visa 복수",
+      "duration": "1년 (회당 최대 30일)",
+      "description": "1년간 복수 입국 가능, 1회 입국 시 최대 30일 체류",
+      "fee": "BHD 29",
+      "applicationUrl": "https://www.evisa.gov.bh/"
+    }
+  ],
   "entryRegistration": {
     "required": true,
     "type": "e-Visa",

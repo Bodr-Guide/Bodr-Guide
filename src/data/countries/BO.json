@@ -7,6 +7,14 @@
   "visaStatus": "visa_on_arrival",
   "visaFreeStayDays": 30,
   "visaNote": "도착비자 발급 가능, 30일 체류 ($52)",
+  "visaTypes": [
+    {
+      "name": "도착비자",
+      "duration": "30일 (연간 최대 90일)",
+      "description": "관광 목적 도착비자, 공항에서 발급 가능",
+      "fee": "무료"
+    }
+  ],
   "importantNotes": [
     "도착비자 수수료 $52 (현금 USD 준비 필수)",
     "우유니 사막(Salar de Uyuni) 투어가 주요 관광 목적, 건기(5~10월) 방문 권장",

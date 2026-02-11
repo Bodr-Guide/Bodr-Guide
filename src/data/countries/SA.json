@@ -6,6 +6,20 @@
   "flagEmoji": "🇸🇦",
   "visaStatus": "e_visa",
   "visaNote": "전자비자(e-Visa) 사전 신청 필수, 관광 90일 (1년 복수 입국)",
+  "visaTypes": [
+    {
+      "name": "전자관광비자 (e-Visa)",
+      "duration": "최대 90일 (1년 복수입국)",
+      "description": "관광 목적의 전자비자. 온라인으로 신청하며 1년간 유효, 복수입국 가능.",
+      "fee": "SAR 535 (약 $142, 의료보험 포함)",
+      "applicationUrl": "https://visa.visitsaudi.com/"
+    },
+    {
+      "name": "상용방문비자",
+      "duration": "방문 목적에 따라 상이",
+      "description": "비즈니스 목적 방문 비자. 사우디 측 초청장(초청 기업) 필요."
+    }
+  ],
   "entryRegistration": {
     "required": true,
     "type": "e-Visa",

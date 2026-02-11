@@ -7,6 +7,20 @@
   "visaStatus": "visa_on_arrival",
   "visaFreeStayDays": 30,
   "visaNote": "공항 도착 시 도착비자 발급, 30일 체류, 약 $37",
+  "visaTypes": [
+    {
+      "name": "도착비자 30일",
+      "duration": "30일",
+      "description": "관광 목적 도착비자, 공항에서 현금(유로/USD)으로 결제",
+      "fee": "€35"
+    },
+    {
+      "name": "도착비자 60일",
+      "duration": "60일",
+      "description": "관광 목적 장기 체류 도착비자",
+      "fee": "€40"
+    }
+  ],
   "importantNotes": [
     "도착비자 발급 시 현금(유로 또는 USD) 준비 필요",
     "말라리아 위험 지역이므로 예방약 복용 및 방충제 지참 권장",

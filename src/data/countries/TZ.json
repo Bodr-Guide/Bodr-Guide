@@ -7,6 +7,21 @@
   "visaStatus": "visa_on_arrival",
   "visaFreeStayDays": 90,
   "visaNote": "도착비자 발급 가능, 90일 체류, $50",
+  "visaTypes": [
+    {
+      "name": "도착비자",
+      "duration": "최대 90일",
+      "description": "관광 목적 도착비자, 킬리만자로, 다르에스살람 공항 등에서 발급 가능",
+      "fee": "$50"
+    },
+    {
+      "name": "e-Visa",
+      "duration": "최대 90일",
+      "description": "온라인 사전 신청 가능한 전자비자, 사전 승인 후 입국",
+      "fee": "$50",
+      "applicationUrl": "https://visa.immigration.go.tz"
+    }
+  ],
   "importantNotes": [
     "도착비자는 킬리만자로, 다르에스살람 공항 등에서 발급 가능",
     "황열병 예방접종 증명서(옐로카드) 지참 필수",

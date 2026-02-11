@@ -7,6 +7,21 @@
   "visaStatus": "visa_on_arrival",
   "visaFreeStayDays": 30,
   "visaNote": "공항 도착 시 도착비자 발급, 30일 체류, $25",
+  "visaTypes": [
+    {
+      "name": "도착비자",
+      "duration": "30일",
+      "description": "관광 목적으로 카이로, 룩소르 등 주요 국제공항에서 발급 가능",
+      "fee": "$25"
+    },
+    {
+      "name": "e-Visa",
+      "duration": "30일 (단수) / 90일 (복수)",
+      "description": "온라인 사전 신청 가능한 전자비자, 단수($25) 또는 복수($60) 선택",
+      "fee": "$25 (단수) / $60 (복수)",
+      "applicationUrl": "https://visa2egypt.gov.eg"
+    }
+  ],
   "importantNotes": [
     "도착비자는 카이로, 룩소르 등 주요 국제공항에서 발급 가능",
     "유적지 주변 호객꾼 및 바가지 요금 주의",

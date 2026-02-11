@@ -7,6 +7,19 @@
   "visaStatus": "visa_required",
   "visaFreeStayDays": 30,
   "visaNote": "관광카드(Tourist Card) 구매 필수, 30일 체류 가능 (1회 연장 가능)",
+  "visaTypes": [
+    {
+      "name": "투어리스트 카드 (Tourist Card)",
+      "duration": "30일 (현지에서 30일 연장 가능)",
+      "description": "관광 목적 방문 시 필요한 관광카드. 항공사 카운터, 여행사, 쿠바 대사관에서 구매 가능.",
+      "fee": "약 $50"
+    },
+    {
+      "name": "비즈니스비자",
+      "duration": "초청 기관에 따라 상이",
+      "description": "상용 목적 방문 비자. 쿠바 측 초청장 및 초청 기관의 승인 필요."
+    }
+  ],
   "importantNotes": [
     "관광카드(Tourist Card)는 항공사 카운터 또는 쿠바 대사관에서 구매 가능 ($50~$100)",
     "여행자보험 가입 필수 (미가입 시 입국 거부 가능, 공항에서 현장 가입 가능)",

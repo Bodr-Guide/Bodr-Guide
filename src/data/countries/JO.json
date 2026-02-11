@@ -7,6 +7,21 @@
   "visaStatus": "visa_on_arrival",
   "visaFreeStayDays": 30,
   "visaNote": "도착비자 발급, 30일 체류, 40 JOD (약 $56)",
+  "visaTypes": [
+    {
+      "name": "도착비자",
+      "duration": "30일",
+      "description": "관광 목적으로 공항에서 발급 가능",
+      "fee": "JOD 40"
+    },
+    {
+      "name": "Jordan Pass",
+      "duration": "30일",
+      "description": "관광비자 수수료 면제 + 페트라 등 40개 이상 유적지 입장 포함",
+      "fee": "JOD 70~80",
+      "applicationUrl": "https://www.jordanpass.jo"
+    }
+  ],
   "importantNotes": [
     "Jordan Pass 구매 시 비자 수수료 면제 및 주요 관광지 입장 포함",
     "페트라, 와디럼 등 사막 지역 방문 시 충분한 식수 준비",

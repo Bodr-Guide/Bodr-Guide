@@ -7,6 +7,14 @@
   "visaStatus": "visa_on_arrival",
   "visaFreeStayDays": 30,
   "visaNote": "대한민국 여권 소지자는 도착 시 무료 관광비자를 발급받아 최대 30일간 체류할 수 있습니다.",
+  "visaTypes": [
+    {
+      "name": "무료 도착비자",
+      "duration": "30일",
+      "description": "관광 목적 무료 발급, 리턴 티켓 및 숙소 예약 확인서 필수 제시",
+      "fee": "무료"
+    }
+  ],
   "importantNotes": [
     "입국 시 귀국 항공편 예약 확인서 및 숙소 예약 증빙 필수 제시",
     "주류 및 돼지고기 제품 반입 엄격 금지 (이슬람 국가)",

@@ -6,6 +6,36 @@
   "flagEmoji": "🇮🇳",
   "visaStatus": "e_visa",
   "visaNote": "전자비자(e-Visa) 사전 신청 필수, 관광 e-Visa 30일/1년/5년",
+  "visaTypes": [
+    {
+      "name": "e-Tourist Visa (30일)",
+      "duration": "30일 (단수입국)",
+      "description": "단기 관광 목적의 전자비자. 입국일로부터 30일간 체류 가능.",
+      "fee": "$25",
+      "applicationUrl": "https://indianvisaonline.gov.in/evisa/tvoa.html"
+    },
+    {
+      "name": "e-Tourist Visa (1년)",
+      "duration": "1년 복수입국 (회당 최대 90일)",
+      "description": "1년간 유효한 복수입국 관광 전자비자. 1회 체류 시 최대 90일.",
+      "fee": "$40",
+      "applicationUrl": "https://indianvisaonline.gov.in/evisa/tvoa.html"
+    },
+    {
+      "name": "e-Tourist Visa (5년)",
+      "duration": "5년 복수입국 (회당 최대 90일)",
+      "description": "5년간 유효한 복수입국 관광 전자비자. 1회 체류 시 최대 90일.",
+      "fee": "$80",
+      "applicationUrl": "https://indianvisaonline.gov.in/evisa/tvoa.html"
+    },
+    {
+      "name": "e-Business Visa",
+      "duration": "1년 복수입국 (회당 최대 180일)",
+      "description": "상용, 비즈니스 목적의 전자비자. 무역, 회의, 기술 협력 등.",
+      "fee": "$80",
+      "applicationUrl": "https://indianvisaonline.gov.in/evisa/tvoa.html"
+    }
+  ],
   "entryRegistration": {
     "required": true,
     "type": "e-Visa",

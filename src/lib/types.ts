@@ -34,6 +34,15 @@ export interface PassportValidity {
   months: number;
 }
 
+// 비자 종류 상세 정보
+export interface VisaTypeInfo {
+  name: string;
+  duration: string;
+  description: string;
+  fee?: string;
+  applicationUrl?: string;
+}
+
 // 국가 데이터 인터페이스
 export interface Country {
   id: string;
@@ -51,6 +60,7 @@ export interface Country {
   source: string;
   quickInfo?: QuickInfo;
   passportValidity?: PassportValidity;
+  visaTypes?: VisaTypeInfo[];
   timeline?: TimelineItem[];
   alerts?: string[];
   checklist?: string[];

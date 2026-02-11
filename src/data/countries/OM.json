@@ -6,6 +6,29 @@
   "flagEmoji": "🇴🇲",
   "visaStatus": "e_visa",
   "visaNote": "전자비자(e-Visa) 사전 신청 필수, 관광 30일",
+  "visaTypes": [
+    {
+      "name": "e-Visa 관광 (10일)",
+      "duration": "10일",
+      "description": "단기 관광 목적 전자비자",
+      "fee": "OMR 5",
+      "applicationUrl": "https://evisa.rop.gov.om/"
+    },
+    {
+      "name": "e-Visa 관광 (30일)",
+      "duration": "30일",
+      "description": "관광 목적 전자비자, 가장 일반적인 선택",
+      "fee": "OMR 20",
+      "applicationUrl": "https://evisa.rop.gov.om/"
+    },
+    {
+      "name": "e-Visa 관광 (1년 복수)",
+      "duration": "1년 (복수 입국)",
+      "description": "1년간 복수 입국 가능한 관광 전자비자",
+      "fee": "OMR 50",
+      "applicationUrl": "https://evisa.rop.gov.om/"
+    }
+  ],
   "entryRegistration": {
     "required": true,
     "type": "e-Visa",
