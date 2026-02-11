@@ -1,0 +1,63 @@
+{
+  "id": "BH",
+  "nameKo": "바레인",
+  "nameEn": "Bahrain",
+  "continent": "중동",
+  "flagEmoji": "🇧🇭",
+  "visaStatus": "e_visa",
+  "visaFreeStayDays": 14,
+  "visaNote": "e-Visa 사전 신청 필수, 14일 체류",
+  "entryRegistration": {
+    "required": true,
+    "type": "e-Visa",
+    "applicationUrl": "https://www.evisa.gov.bh/",
+    "description": "출발 전 e-Visa 온라인 신청 필수. 처리 기간 약 3영업일. 비용 약 29 BHD."
+  },
+  "importantNotes": [
+    "이슬람 국가로 라마단 기간 공공장소 음식 섭취 자제",
+    "주류는 허가된 호텔, 레스토랑에서만 음용 가능",
+    "공공장소에서 과도한 애정 표현 자제",
+    "여름(6~9월) 기온 45도 이상, 야외활동 시 탈수 주의"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-6시간",
+    "voltage": "230V",
+    "currency": "BHD (디나르)",
+    "flight": "약 10시간"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "timeline": [
+    {
+      "dDay": "D-14",
+      "title": "e-Visa 신청",
+      "description": "바레인 e-Visa를 온라인으로 신청하세요.",
+      "actionUrl": "https://www.evisa.gov.bh/",
+      "actionLabel": "신청하기"
+    },
+    {
+      "dDay": "D-7",
+      "title": "e-Visa 승인 확인",
+      "description": "이메일로 수신한 e-Visa를 출력하세요."
+    },
+    {
+      "dDay": "입국 당일",
+      "title": "e-Visa 출력본 준비",
+      "description": "e-Visa 출력본과 여권, 숙소 예약 확인서를 준비하세요."
+    }
+  ],
+  "alerts": [
+    "라마단 기간 공공 음식 섭취 자제",
+    "여름철 극심한 더위 (45도 이상)",
+    "복장 규정 주의 (모스크, 공공장소)"
+  ],
+  "checklist": [
+    "e-Visa 출력본",
+    "여권 사본 저장",
+    "숙소 바우처",
+    "리턴 티켓"
+  ]
+}

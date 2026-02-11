@@ -9,7 +9,7 @@
   "visaNote": "비자면제프로그램(VWP) 적용, ESTA 사전 승인 필수",
   "entryRegistration": {
     "required": true,
-    "type": "ESTA (Electronic System for Travel Authorization)",
+    "type": "ESTA",
     "applicationUrl": "https://esta.cbp.dhs.gov/",
     "description": "출발 최소 72시간 전 ESTA 신청 필수. 수수료 $21. 유효기간 2년, 복수 입국 가능."
   },

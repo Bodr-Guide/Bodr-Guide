@@ -1,0 +1,55 @@
+{
+  "id": "KW",
+  "nameKo": "쿠웨이트",
+  "nameEn": "Kuwait",
+  "continent": "중동",
+  "flagEmoji": "🇰🇼",
+  "visaStatus": "e_visa",
+  "visaFreeStayDays": 30,
+  "visaNote": "e-Visa 사전 신청 필수, 30일 체류",
+  "importantNotes": [
+    "이슬람 국가로 라마단 기간 공공장소 음식 섭취 및 흡연 금지",
+    "주류 반입 및 음용 전면 금지 (면세점 포함 구매 불가)",
+    "공공장소 촬영 시 주의 (군사시설, 정부건물 촬영 금지)",
+    "여름(6~9월) 기온 50도 이상, 장시간 야외활동 위험"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-6시간",
+    "voltage": "240V",
+    "currency": "KWD (디나르)",
+    "flight": "약 10시간"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "timeline": [
+    {
+      "dDay": "D-14",
+      "title": "e-Visa 신청",
+      "description": "쿠웨이트 e-Visa를 온라인으로 신청하세요."
+    },
+    {
+      "dDay": "D-7",
+      "title": "e-Visa 승인 확인",
+      "description": "이메일로 수신한 e-Visa를 출력하세요."
+    },
+    {
+      "dDay": "입국 당일",
+      "title": "e-Visa 출력본 준비",
+      "description": "e-Visa 출력본과 여권, 숙소 예약 확인서를 준비하세요."
+    }
+  ],
+  "alerts": [
+    "주류 전면 금지 (반입, 음용 모두 불가)",
+    "여름철 극심한 더위 (50도 이상)",
+    "군사시설 및 정부건물 촬영 금지"
+  ],
+  "checklist": [
+    "e-Visa 출력본",
+    "여권 사본 저장",
+    "숙소 바우처",
+    "리턴 티켓"
+  ]
+}

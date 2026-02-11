@@ -1,0 +1,55 @@
+{
+  "id": "CU",
+  "nameKo": "쿠바",
+  "nameEn": "Cuba",
+  "continent": "북미",
+  "flagEmoji": "🇨🇺",
+  "visaStatus": "visa_required",
+  "visaFreeStayDays": 30,
+  "visaNote": "관광카드(Tourist Card) 구매 필수, 30일 체류 가능 (1회 연장 가능)",
+  "importantNotes": [
+    "관광카드(Tourist Card)는 항공사 카운터 또는 쿠바 대사관에서 구매 가능 ($50~$100)",
+    "여행자보험 가입 필수 (미가입 시 입국 거부 가능, 공항에서 현장 가입 가능)",
+    "미국 경유 시 ESTA 및 쿠바 방문 사유 확인 필요 (미국 제재 관련)",
+    "인터넷 접속이 매우 제한적, ETECSA Wi-Fi 카드 별도 구매 필요"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-14시간",
+    "voltage": "110V/220V",
+    "currency": "CUP (페소)",
+    "flight": "약 18시간 (경유)"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "timeline": [
+    {
+      "dDay": "D-14",
+      "title": "관광카드 및 여행자보험 준비",
+      "description": "항공사 또는 대사관을 통해 관광카드를 구매하고, 쿠바 입국 요건에 맞는 여행자보험에 가입하세요."
+    },
+    {
+      "dDay": "D-7",
+      "title": "여권 유효기간 및 현금 준비",
+      "description": "여권 유효기간 6개월 이상 확인. 쿠바에서는 신용카드 사용이 제한되므로 EUR 또는 현금을 충분히 준비하세요."
+    },
+    {
+      "dDay": "입국 당일",
+      "title": "관광카드 및 보험증서 지참",
+      "description": "관광카드, 여행자보험 증명서, 숙소 예약 확인서를 준비하세요."
+    }
+  ],
+  "alerts": [
+    "미국 발행 신용카드 사용 불가, 현금(EUR) 준비 필수",
+    "인터넷 사용 매우 제한적 (Wi-Fi 카드 별도 구매)",
+    "수돗물 음용 금지, 생수 구매 필수"
+  ],
+  "checklist": [
+    "관광카드 (Tourist Card)",
+    "여행자보험 증명서",
+    "EUR 현금 준비",
+    "숙소 예약 확인서"
+  ]
+}

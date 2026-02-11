@@ -1,0 +1,63 @@
+{
+  "id": "RW",
+  "nameKo": "르완다",
+  "nameEn": "Rwanda",
+  "continent": "아프리카",
+  "flagEmoji": "🇷🇼",
+  "visaStatus": "e_visa",
+  "visaFreeStayDays": 30,
+  "visaNote": "e-Visa 사전 신청 또는 도착비자 발급 가능, 30일 체류",
+  "entryRegistration": {
+    "required": true,
+    "type": "e-Visa",
+    "applicationUrl": "https://irembo.gov.rw/",
+    "description": "출발 전 e-Visa 온라인 신청 권장. 도착비자도 가능하나 대기 시간 발생. 비용 $50."
+  },
+  "importantNotes": [
+    "비닐봉지 반입 및 사용 전면 금지 (공항에서 압수, 벌금 부과)",
+    "고릴라 트레킹 허가증은 사전 예약 필수 (비용 $1,500)",
+    "르완다는 아프리카에서 가장 청결한 국가, 거리 쓰레기 투기 시 벌금",
+    "고지대(키갈리 해발 1,500m)로 일교차 크므로 겉옷 준비"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-7시간",
+    "voltage": "230V",
+    "currency": "RWF (프랑)",
+    "flight": "약 16시간 (경유)"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "timeline": [
+    {
+      "dDay": "D-14",
+      "title": "e-Visa 신청",
+      "description": "르완다 e-Visa를 온라인으로 신청하세요.",
+      "actionUrl": "https://irembo.gov.rw/",
+      "actionLabel": "신청하기"
+    },
+    {
+      "dDay": "D-7",
+      "title": "e-Visa 승인 확인",
+      "description": "이메일로 수신한 e-Visa를 출력하세요. 비닐봉지 소지품 정리도 잊지 마세요."
+    },
+    {
+      "dDay": "입국 당일",
+      "title": "e-Visa 출력본 준비",
+      "description": "e-Visa 출력본과 여권을 준비하세요. 비닐봉지는 반드시 제거하세요."
+    }
+  ],
+  "alerts": [
+    "비닐봉지 반입 금지 (벌금 부과)",
+    "황열병 예방접종 권장",
+    "고릴라 트레킹 시 안전 규정 준수"
+  ],
+  "checklist": [
+    "e-Visa 출력본",
+    "여권 사본 저장",
+    "숙소 바우처",
+    "리턴 티켓"
+  ]
+}

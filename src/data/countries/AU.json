@@ -8,7 +8,7 @@
   "visaNote": "전자여행허가(ETA) 사전 승인 필수, 최대 90일 체류",
   "entryRegistration": {
     "required": true,
-    "type": "ETA (Electronic Travel Authority)",
+    "type": "ETA",
     "applicationUrl": "https://www.eta.homeaffairs.gov.au/",
     "description": "호주 ETA 앱을 통해 신청 필수. 수수료 AUD $20. 유효기간 1년, 복수 입국 가능."
   },

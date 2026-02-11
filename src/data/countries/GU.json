@@ -1,0 +1,63 @@
+{
+  "id": "GU",
+  "nameKo": "괌",
+  "nameEn": "Guam",
+  "continent": "오세아니아",
+  "flagEmoji": "🇬🇺",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 45,
+  "visaNote": "대한민국 여권 소지자는 괌-북마리아나 제도 비자 면제 프로그램(GCVWP)에 따라 최대 45일간 비자 없이 체류할 수 있습니다. 단, ESTA 승인이 필요합니다.",
+  "entryRegistration": {
+    "required": true,
+    "type": "ESTA",
+    "applicationUrl": "https://esta.cbp.dhs.gov/",
+    "description": "미국 전자여행허가제(ESTA) 사전 승인 필수. 수수료 $21, 2년간 유효."
+  },
+  "importantNotes": [
+    "ESTA 승인 없이는 탑승 자체가 거부될 수 있으므로 출발 최소 72시간 전 신청 권장",
+    "괌은 미국 영토이므로 미국 입국 규정이 적용됨",
+    "면세 한도 초과 물품(주류, 담배 등) 반입 시 세관 신고 필수",
+    "귀국 시 한국 세관 신고 기준 USD 800 초과분 과세 대상"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "+1시간",
+    "voltage": "120V",
+    "currency": "USD (달러)",
+    "flight": "약 4시간 30분"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "timeline": [
+    {
+      "dDay": "D-14",
+      "title": "ESTA 신청",
+      "description": "최소 출발 72시간 전까지 ESTA를 신청하세요. 여유 있게 2주 전 신청을 권장합니다.",
+      "actionUrl": "https://esta.cbp.dhs.gov/",
+      "actionLabel": "ESTA 신청하기"
+    },
+    {
+      "dDay": "D-7",
+      "title": "여권 유효기간 확인",
+      "description": "여권 잔여 유효기간이 6개월 이상인지 확인하세요."
+    },
+    {
+      "dDay": "입국 당일",
+      "title": "세관신고서 작성",
+      "description": "기내에서 배부하는 미국 세관신고서(CBP 6059B)를 사전 작성하세요."
+    }
+  ],
+  "alerts": [
+    "ESTA 미승인 시 탑승 불가 — 반드시 출발 전 승인 상태 확인",
+    "태풍 시즌(6~12월) 기상 상황 수시 확인 필요",
+    "산호초 보호구역에서 선크림 사용 제한 (환경 규제)"
+  ],
+  "checklist": [
+    "ESTA 승인 확인서 출력",
+    "여권 사본 저장",
+    "숙소 바우처",
+    "리턴 티켓"
+  ]
+}

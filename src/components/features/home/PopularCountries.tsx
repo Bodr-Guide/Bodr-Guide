@@ -6,8 +6,24 @@ import Link from "next/link";
 import { Country, VisaStatus, Continent, CONTINENTS } from "@/lib/types";
 import { getCountryImage } from "@/lib/countryImages";
 
-// 한국인 인기 여행지 9개국 (고정)
-const POPULAR_IDS = ["JP", "TH", "VN", "US", "FR", "TW", "SG", "AU", "GB"];
+// 연간 인기 여행지 9개국 (고정)
+const POPULAR_IDS = ["JP", "TH", "VN", "US", "FR", "IT", "TW", "ES", "GB"];
+
+// 계절별 추천 여행지 (전체보기 필터용)
+type Season = "봄" | "여름" | "가을" | "겨울";
+const SEASON_COUNTRIES: Record<Season, Set<string>> = {
+  봄: new Set(["JP", "TW", "TH", "FR", "ES", "IT", "VN", "GR", "HR", "NZ", "CH", "PT", "GB", "NL", "DE"]),
+  여름: new Set(["FR", "IT", "ES", "GR", "HR", "GB", "CH", "TR", "IS", "NO", "MN", "SE", "FI", "AT", "DE", "PT"]),
+  가을: new Set(["JP", "CA", "DE", "CZ", "AT", "CH", "UZ", "GE", "TR", "TW", "MN", "EG", "IT", "FR", "KR"]),
+  겨울: new Set(["TH", "VN", "PH", "AU", "MV", "SG", "GU", "JP", "FI", "NO", "IS", "DE", "AT", "CZ", "AE"]),
+};
+const SEASON_FILTERS: { value: Season | "all"; label: string }[] = [
+  { value: "all", label: "전체" },
+  { value: "봄", label: "봄 (3~5월)" },
+  { value: "여름", label: "여름 (6~8월)" },
+  { value: "가을", label: "가을 (9~11월)" },
+  { value: "겨울", label: "겨울 (12~2월)" },
+];
 
 // 정렬 옵션
 type SortType = "default" | "name_asc" | "name_desc";
@@ -73,6 +89,7 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
   const [sortType, setSortType] = useState<SortType>("default");
   const [continentFilter, setContinentFilter] = useState<Continent | "all">("all");
   const [visaFilter, setVisaFilter] = useState<VisaStatus | "all">("all");
+  const [seasonFilter, setSeasonFilter] = useState<Season | "all">("all");
 
   // 히어로 섹션 검색바 연동
   useEffect(() => {
@@ -89,9 +106,10 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
     setSortType("default");
     setContinentFilter("all");
     setVisaFilter("all");
+    setSeasonFilter("all");
   };
 
-  const hasActiveFilter = sortType !== "default" || continentFilter !== "all" || visaFilter !== "all";
+  const hasActiveFilter = sortType !== "default" || continentFilter !== "all" || visaFilter !== "all" || seasonFilter !== "all";
 
   // 검색 중이면 전체 필터, 전체보기면 전체, 아니면 인기 9개국만
   const displayCountries = useMemo(() => {
@@ -111,10 +129,21 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
     } else if (showAll) {
       result = [...countries];
     } else {
-      // 인기 9개국 순서 유지
-      return POPULAR_IDS
+      // 인기 여행지: 데이터가 있는 국가만 표시, 부족하면 나머지에서 채워 항상 9개 유지
+      const popular = POPULAR_IDS
         .map((id) => countries.find((c) => c.id === id))
         .filter(Boolean) as Country[];
+      if (popular.length < 9) {
+        const usedIds = new Set(popular.map((c) => c.id));
+        for (const c of countries) {
+          if (popular.length >= 9) break;
+          if (!usedIds.has(c.id)) {
+            popular.push(c);
+            usedIds.add(c.id);
+          }
+        }
+      }
+      return popular;
     }
 
     // 대륙 필터
@@ -127,6 +156,12 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
       result = result.filter((c) => c.visaStatus === visaFilter);
     }
 
+    // 계절 필터
+    if (seasonFilter !== "all") {
+      const seasonSet = SEASON_COUNTRIES[seasonFilter];
+      result = result.filter((c) => seasonSet.has(c.id));
+    }
+
     // 정렬
     if (sortType === "name_asc") {
       result.sort((a, b) => a.nameKo.localeCompare(b.nameKo, "ko"));
@@ -135,7 +170,7 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
     }
 
     return result;
-  }, [countries, searchQuery, showAll, continentFilter, visaFilter, sortType]);
+  }, [countries, searchQuery, showAll, continentFilter, visaFilter, seasonFilter, sortType]);
 
   const isSearching = searchQuery.trim().length > 0;
 
@@ -195,6 +230,26 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
                   onClick={() => setVisaFilter(item.value)}
                   className={`rounded-full px-3 py-1 text-[11px] font-medium transition-colors ${
                     visaFilter === item.value
+                      ? "bg-white text-slate-900"
+                      : "bg-slate-800/60 text-slate-400 hover:bg-slate-700/60 hover:text-slate-300"
+                  }`}
+                >
+                  {item.label}
+                </button>
+              ))}
+            </div>
+
+            {/* 구분선 */}
+            <div className="hidden sm:block h-4 w-px bg-slate-700" />
+
+            {/* 계절 필터 */}
+            <div className="flex flex-wrap gap-1.5">
+              {SEASON_FILTERS.map((item) => (
+                <button
+                  key={item.value}
+                  onClick={() => setSeasonFilter(item.value)}
+                  className={`rounded-full px-3 py-1 text-[11px] font-medium transition-colors ${
+                    seasonFilter === item.value
                       ? "bg-white text-slate-900"
                       : "bg-slate-800/60 text-slate-400 hover:bg-slate-700/60 hover:text-slate-300"
                   }`}
@@ -271,27 +326,28 @@ function CountryCard({ country }: { country: Country }) {
       href={`/country/${country.id}`}
       className="group flex items-stretch overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/60 hover:border-slate-700 hover:bg-slate-900 transition-all duration-200"
     >
-      {/* 왼쪽: 이미지 + 국가명 */}
-      <div className="relative w-28 sm:w-32 flex-shrink-0 overflow-hidden">
+      {/* 왼쪽: 이미지 + 국가명 (4:3 비율) */}
+      <div className="relative w-36 sm:w-40 aspect-[4/3] flex-shrink-0 overflow-hidden">
         {imageUrl ? (
           <img
             src={imageUrl}
             alt={country.nameKo}
             className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
             loading="lazy"
+            decoding="async"
           />
         ) : (
           <div className="absolute inset-0 bg-gradient-to-br from-slate-700 to-slate-800" />
         )}
-        {/* 이미지 위 그라데이션 */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent to-slate-900/40" />
+        {/* 이미지 위 그라데이션 — 하단 텍스트 가독성 확보 */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
         {/* 국가명 오버레이 */}
         <div className="relative z-10 flex flex-col justify-end h-full p-3">
-          <span className="text-[10px] text-white/50 uppercase tracking-wider leading-none">
+          <span className="text-xs text-white/70 uppercase tracking-wider leading-none drop-shadow-sm">
             {country.nameEn}
           </span>
-          <span className="text-sm font-bold text-white leading-tight mt-0.5">
+          <span className="text-base font-bold text-white leading-tight mt-1 drop-shadow-lg">
             {country.flagEmoji} {country.nameKo}
           </span>
         </div>

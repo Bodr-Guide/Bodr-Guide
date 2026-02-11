@@ -1,0 +1,55 @@
+{
+  "id": "TN",
+  "nameKo": "튀니지",
+  "nameEn": "Tunisia",
+  "continent": "아프리카",
+  "flagEmoji": "🇹🇳",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 90,
+  "visaNote": "관광 목적 90일 무비자 입국 가능",
+  "importantNotes": [
+    "이슬람 국가로 모스크 방문 시 복장 주의 (긴 소매, 긴 바지 권장)",
+    "라마단 기간 공공장소에서 음식 섭취 자제",
+    "남부 사하라 사막 근접 지역 여행 시 현지 가이드 동반 필수",
+    "관광지 호객꾼 주의, 사전에 가격 협의 후 서비스 이용"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-8시간",
+    "voltage": "230V",
+    "currency": "TND (디나르)",
+    "flight": "약 14시간 (경유)"
+  },
+  "passportValidity": {
+    "months": 3
+  },
+  "timeline": [
+    {
+      "dDay": "D-7",
+      "title": "여권 유효기간 확인",
+      "description": "입국 시 여권 유효기간 3개월 이상 필요합니다."
+    },
+    {
+      "dDay": "D-1",
+      "title": "숙소 예약 확인",
+      "description": "숙소 예약 확인서와 귀국 항공권을 준비하세요."
+    },
+    {
+      "dDay": "입국 당일",
+      "title": "입국카드 작성",
+      "description": "공항에서 입국카드를 작성하고 여권과 함께 제출하세요."
+    }
+  ],
+  "alerts": [
+    "국경 지역(리비아, 알제리 인접) 여행 자제",
+    "라마단 기간 공공 음식 섭취 자제",
+    "소매치기 주의 (메디나, 시장 지역)"
+  ],
+  "checklist": [
+    "여권 사본 저장",
+    "숙소 바우처",
+    "리턴 티켓",
+    "현금 (유로 또는 USD)"
+  ]
+}

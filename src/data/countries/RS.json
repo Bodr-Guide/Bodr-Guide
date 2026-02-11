@@ -1,0 +1,55 @@
+{
+  "id": "RS",
+  "nameKo": "세르비아",
+  "nameEn": "Serbia",
+  "continent": "유럽",
+  "flagEmoji": "🇷🇸",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 30,
+  "visaNote": "30일 무비자 체류 가능. 쉥겐 체류일과 별도 계산.",
+  "importantNotes": [
+    "쉥겐 비가입국으로 별도 입국 심사",
+    "여행자보험 가입 권장",
+    "코소보 경유 입국 시 입국 거부될 수 있음 (코소보 입국 스탬프 주의)",
+    "현지 통화(디나르) 사용, 일부 관광지에서 유로 병행"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-8시간",
+    "voltage": "230V",
+    "currency": "RSD (디나르)",
+    "flight": "약 13시간"
+  },
+  "passportValidity": {
+    "months": 3
+  },
+  "timeline": [
+    {
+      "dDay": "D-7",
+      "title": "여권 유효기간 확인",
+      "description": "입국일 기준 여권 유효기간이 체류 기간 이상 남아있어야 합니다."
+    },
+    {
+      "dDay": "D-3",
+      "title": "여행자 보험 가입",
+      "description": "의료비 대비 여행자 보험 가입을 권장합니다."
+    },
+    {
+      "dDay": "입국 당일",
+      "title": "입국심사 서류 준비",
+      "description": "숙소 예약 확인서, 리턴 티켓을 준비하세요."
+    }
+  ],
+  "alerts": [
+    "코소보 경유 입출국 시 세르비아 재입국 거부 가능성",
+    "베오그라드 시내 택시 미터기 확인 필수",
+    "시위/집회 지역 접근 자제"
+  ],
+  "checklist": [
+    "여권 사본 저장",
+    "숙소 바우처",
+    "리턴 티켓",
+    "여행자 보험"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "PA",
+  "nameKo": "파나마",
+  "nameEn": "Panama",
+  "continent": "북미",
+  "flagEmoji": "🇵🇦",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 180,
+  "visaNote": "관광 목적 180일 무비자 입국 가능",
+  "importantNotes": [
+    "입국 시 $500 이상 경제력 증명 또는 신용카드 제시 요구 가능",
+    "파나마 운하 관광은 미라플로레스 방문자센터 사전 예약 권장",
+    "콜론(Colon) 등 일부 지역 치안 취약, 관광지 외 이동 시 주의"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-14시간",
+    "voltage": "120V",
+    "currency": "USD/PAB (발보아)",
+    "flight": "약 18시간 (경유)"
+  },
+  "passportValidity": {
+    "months": 3
+  },
+  "timeline": [
+    {
+      "dDay": "D-7",
+      "title": "여권 유효기간 확인",
+      "description": "입국 시 여권 유효기간 3개월 이상 필요합니다."
+    },
+    {
+      "dDay": "D-3",
+      "title": "경제력 증명 서류 준비",
+      "description": "입국심사 시 $500 이상 현금 또는 신용카드를 준비하세요."
+    },
+    {
+      "dDay": "입국 당일",
+      "title": "입국심사 서류 준비",
+      "description": "여권, 리턴 티켓, 숙소 예약 확인서를 준비하세요."
+    }
+  ],
+  "alerts": [
+    "USD 통용 (별도 환전 불필요)",
+    "콜론 지역 치안 주의",
+    "우기(5~12월) 폭우 대비 필요"
+  ],
+  "checklist": [
+    "여권 사본 저장",
+    "숙소 바우처",
+    "리턴 티켓",
+    "USD 현금 ($500 이상 권장)"
+  ]
+}

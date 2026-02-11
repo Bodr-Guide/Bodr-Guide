@@ -1,0 +1,55 @@
+{
+  "id": "HU",
+  "nameKo": "헝가리",
+  "nameEn": "Hungary",
+  "continent": "유럽",
+  "flagEmoji": "🇭🇺",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 90,
+  "visaNote": "쉥겐 협약국으로 180일 중 최대 90일 무비자 체류 가능.",
+  "importantNotes": [
+    "쉥겐 지역 전체 체류일이 합산됨",
+    "여행자보험 가입 권장",
+    "부다페스트 대중교통 검표 철저 (무임승차 벌금 부과)",
+    "온천 방문 시 수영모 필수인 곳이 많음"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-8시간",
+    "voltage": "230V",
+    "currency": "HUF (포린트)",
+    "flight": "약 12시간"
+  },
+  "passportValidity": {
+    "months": 3
+  },
+  "timeline": [
+    {
+      "dDay": "D-7",
+      "title": "여권 유효기간 확인",
+      "description": "쉥겐 지역 출국일 기준 3개월 이상 유효해야 합니다."
+    },
+    {
+      "dDay": "D-3",
+      "title": "여행자 보험 가입",
+      "description": "쉥겐 지역 여행자 보험 가입을 권장합니다."
+    },
+    {
+      "dDay": "입국 당일",
+      "title": "입국심사 서류 준비",
+      "description": "숙소 예약 확인서, 리턴 티켓을 준비하세요."
+    }
+  ],
+  "alerts": [
+    "유로화 사용 불가, 현지 통화(포린트)만 사용",
+    "관광지 주변 환전소 환율 비교 필수",
+    "야간 택시 바가지요금 주의"
+  ],
+  "checklist": [
+    "여권 사본 저장",
+    "숙소 바우처",
+    "리턴 티켓",
+    "여행자 보험"
+  ]
+}

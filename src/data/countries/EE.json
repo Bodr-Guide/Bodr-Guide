@@ -1,0 +1,55 @@
+{
+  "id": "EE",
+  "nameKo": "에스토니아",
+  "nameEn": "Estonia",
+  "continent": "유럽",
+  "flagEmoji": "🇪🇪",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 90,
+  "visaNote": "쉥겐 협약국으로 180일 중 최대 90일 무비자 체류 가능.",
+  "importantNotes": [
+    "쉥겐 지역 전체 체류일이 합산됨",
+    "여행자보험 가입 권장",
+    "IT 선진국으로 무료 와이파이 보급률 높음",
+    "겨울철 일조 시간이 매우 짧아 방한 준비 필수"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-7시간",
+    "voltage": "230V",
+    "currency": "EUR (유로)",
+    "flight": "약 12시간"
+  },
+  "passportValidity": {
+    "months": 3
+  },
+  "timeline": [
+    {
+      "dDay": "D-7",
+      "title": "여권 유효기간 확인",
+      "description": "쉥겐 지역 출국일 기준 3개월 이상 유효해야 합니다."
+    },
+    {
+      "dDay": "D-3",
+      "title": "여행자 보험 가입",
+      "description": "쉥겐 지역 여행자 보험 가입을 권장합니다."
+    },
+    {
+      "dDay": "입국 당일",
+      "title": "입국심사 서류 준비",
+      "description": "숙소 예약 확인서, 리턴 티켓을 준비하세요."
+    }
+  ],
+  "alerts": [
+    "겨울철 영하 20도 이하 가능, 방한 장비 필수",
+    "탈린 구시가지 돌바닥 미끄러움 주의",
+    "러시아 국경 지역 이동 제한 확인"
+  ],
+  "checklist": [
+    "여권 사본 저장",
+    "숙소 바우처",
+    "리턴 티켓",
+    "여행자 보험"
+  ]
+}

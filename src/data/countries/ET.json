@@ -1,0 +1,63 @@
+{
+  "id": "ET",
+  "nameKo": "에티오피아",
+  "nameEn": "Ethiopia",
+  "continent": "아프리카",
+  "flagEmoji": "🇪🇹",
+  "visaStatus": "e_visa",
+  "visaFreeStayDays": 30,
+  "visaNote": "e-Visa 사전 신청 필수, 30일 또는 90일 선택 가능",
+  "entryRegistration": {
+    "required": true,
+    "type": "e-Visa",
+    "applicationUrl": "https://www.evisa.gov.et/",
+    "description": "출발 전 e-Visa 온라인 신청 필수. 처리 기간 약 3영업일. 30일($52) 또는 90일($72) 선택."
+  },
+  "importantNotes": [
+    "e-Visa 승인 후 출력본 지참 필수, 미소지 시 입국 거부 가능",
+    "에티오피아 달력은 그레고리력과 약 7~8년 차이 (현지 일정 확인 주의)",
+    "고지대(아디스아바바 해발 2,400m)이므로 고산병 주의",
+    "황열병 예방접종 증명서(옐로카드) 지참 권장"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-6시간",
+    "voltage": "220V",
+    "currency": "ETB (비르)",
+    "flight": "약 13시간"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "timeline": [
+    {
+      "dDay": "D-14",
+      "title": "e-Visa 신청",
+      "description": "에티오피아 e-Visa를 온라인으로 신청하세요.",
+      "actionUrl": "https://www.evisa.gov.et/",
+      "actionLabel": "신청하기"
+    },
+    {
+      "dDay": "D-7",
+      "title": "e-Visa 승인 확인",
+      "description": "이메일로 수신한 e-Visa를 출력하세요."
+    },
+    {
+      "dDay": "입국 당일",
+      "title": "e-Visa 출력본 준비",
+      "description": "e-Visa 출력본과 여권을 준비하세요. 입국은 아디스아바바 볼레 국제공항만 가능합니다."
+    }
+  ],
+  "alerts": [
+    "고산병 주의 (아디스아바바 해발 2,400m)",
+    "수돗물 음용 금지",
+    "소매치기 주의 (시장, 대중교통)"
+  ],
+  "checklist": [
+    "e-Visa 출력본",
+    "여권 사본 저장",
+    "숙소 바우처",
+    "리턴 티켓"
+  ]
+}

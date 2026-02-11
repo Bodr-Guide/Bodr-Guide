@@ -1,0 +1,63 @@
+{
+  "id": "SC",
+  "nameKo": "세이셸",
+  "nameEn": "Seychelles",
+  "continent": "아프리카",
+  "flagEmoji": "🇸🇨",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 30,
+  "visaNote": "무비자 입국 가능하나 출발 전 Travel Authorization 온라인 신청 필수",
+  "entryRegistration": {
+    "required": true,
+    "type": "Travel Authorization",
+    "applicationUrl": "https://seychelles.govtas.com/",
+    "description": "출발 전 Travel Authorization 온라인 신청 필수. 숙소 및 항공편 정보 입력 필요."
+  },
+  "importantNotes": [
+    "Travel Authorization 미승인 시 탑승 거부될 수 있으므로 출발 전 반드시 확인",
+    "해양 국립공원 내 산호초 및 해양생물 채취 엄격히 금지",
+    "거북이 등 보호 동물 접촉 및 먹이 주기 금지",
+    "우기(12~2월) 강수량 많으므로 방수 장비 준비 권장"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-5시간",
+    "voltage": "240V",
+    "currency": "SCR (루피)",
+    "flight": "약 14시간 (경유)"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "timeline": [
+    {
+      "dDay": "D-14",
+      "title": "Travel Authorization 신청",
+      "description": "세이셸 입국을 위한 Travel Authorization을 온라인으로 신청하세요.",
+      "actionUrl": "https://seychelles.govtas.com/",
+      "actionLabel": "신청하기"
+    },
+    {
+      "dDay": "D-7",
+      "title": "Travel Authorization 승인 확인",
+      "description": "이메일로 수신한 승인서를 출력하거나 저장하세요."
+    },
+    {
+      "dDay": "입국 당일",
+      "title": "승인서 및 여권 준비",
+      "description": "Travel Authorization 승인서와 여권, 숙소 예약 확인서를 준비하세요."
+    }
+  ],
+  "alerts": [
+    "자외선 매우 강함, 선크림 필수",
+    "해류 주의, 안전한 해변에서만 수영",
+    "모기 주의 (뎅기열)"
+  ],
+  "checklist": [
+    "Travel Authorization 승인서",
+    "여권 사본 저장",
+    "숙소 바우처",
+    "리턴 티켓"
+  ]
+}

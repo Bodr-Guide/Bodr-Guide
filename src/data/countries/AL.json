@@ -1,0 +1,55 @@
+{
+  "id": "AL",
+  "nameKo": "알바니아",
+  "nameEn": "Albania",
+  "continent": "유럽",
+  "flagEmoji": "🇦🇱",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 90,
+  "visaNote": "1년 중 최대 90일 무비자 체류 가능.",
+  "importantNotes": [
+    "쉥겐 비가입국으로 별도 입국 심사",
+    "여행자보험 가입 권장",
+    "현지 통화(레크) 사용, 유로도 일부 통용",
+    "도로 인프라가 열악한 구간 많아 운전 시 주의"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-8시간",
+    "voltage": "230V",
+    "currency": "ALL (레크)",
+    "flight": "약 14시간"
+  },
+  "passportValidity": {
+    "months": 3
+  },
+  "timeline": [
+    {
+      "dDay": "D-7",
+      "title": "여권 유효기간 확인",
+      "description": "입국일 기준 여권 유효기간이 3개월 이상 남아있어야 합니다."
+    },
+    {
+      "dDay": "D-3",
+      "title": "여행자 보험 가입",
+      "description": "의료 시설이 제한적이므로 여행자 보험 가입을 권장합니다."
+    },
+    {
+      "dDay": "입국 당일",
+      "title": "입국심사 서류 준비",
+      "description": "숙소 예약 확인서, 리턴 티켓을 준비하세요."
+    }
+  ],
+  "alerts": [
+    "도로 상태 불량 구간 많아 렌터카 이용 시 주의",
+    "티라나 시내 교통 혼잡 및 무질서한 운전 문화",
+    "관광지 외 지역 카드 결제 어려움 (현금 준비 필수)"
+  ],
+  "checklist": [
+    "여권 사본 저장",
+    "숙소 바우처",
+    "리턴 티켓",
+    "여행자 보험"
+  ]
+}

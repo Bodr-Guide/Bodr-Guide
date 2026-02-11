@@ -1,0 +1,63 @@
+{
+  "id": "LK",
+  "nameKo": "스리랑카",
+  "nameEn": "Sri Lanka",
+  "continent": "아시아",
+  "flagEmoji": "🇱🇰",
+  "visaStatus": "e_visa",
+  "visaFreeStayDays": 30,
+  "visaNote": "대한민국 여권 소지자는 ETA(전자여행허가)를 사전 신청하여 최대 30일간 체류할 수 있습니다.",
+  "entryRegistration": {
+    "required": true,
+    "type": "ETA",
+    "applicationUrl": "https://www.srilankaeta.gov.lk/",
+    "description": "전자여행허가(ETA) 사전 온라인 신청 필수. 승인까지 약 24~48시간 소요."
+  },
+  "importantNotes": [
+    "ETA 미승인 시 탑승 거부될 수 있으므로 출발 최소 1주 전 신청 권장",
+    "불교 유적지 방문 시 부처 문신, 불교 상징물 관련 복장 착용 금지 (입국 거부 사례 있음)",
+    "사원 방문 시 어깨와 무릎을 가리는 복장 필수, 신발 탈의",
+    "야생동물(코끼리 등) 접근 시 안전 거리 유지 필수"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-3시간 30분",
+    "voltage": "230V",
+    "currency": "LKR (루피)",
+    "flight": "약 9시간"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "timeline": [
+    {
+      "dDay": "D-14",
+      "title": "ETA 온라인 신청",
+      "description": "스리랑카 ETA 공식 사이트에서 전자여행허가를 신청하세요. 승인까지 최대 48시간 소요됩니다.",
+      "actionUrl": "https://www.srilankaeta.gov.lk/",
+      "actionLabel": "ETA 신청하기"
+    },
+    {
+      "dDay": "D-7",
+      "title": "ETA 승인 확인 및 여권 점검",
+      "description": "ETA 승인 이메일을 확인하고 출력하세요. 여권 잔여 유효기간 6개월 이상 확인."
+    },
+    {
+      "dDay": "입국 당일",
+      "title": "ETA 승인서 지참",
+      "description": "ETA 승인 확인서를 출력 또는 모바일 저장하여 입국 심사 시 제시하세요."
+    }
+  ],
+  "alerts": [
+    "몬순 시즌(5~9월 서남부, 10~1월 동북부) 폭우 및 홍수 주의",
+    "뎅기열 등 모기 매개 질병 주의 — 모기 기피제 필수 지참",
+    "툭툭(삼륜 택시) 이용 시 미터기 또는 사전 요금 협상 필수"
+  ],
+  "checklist": [
+    "ETA 승인 확인서 출력",
+    "여권 사본 저장",
+    "숙소 바우처",
+    "리턴 티켓"
+  ]
+}

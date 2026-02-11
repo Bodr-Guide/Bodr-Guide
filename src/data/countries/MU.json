@@ -1,0 +1,55 @@
+{
+  "id": "MU",
+  "nameKo": "모리셔스",
+  "nameEn": "Mauritius",
+  "continent": "아프리카",
+  "flagEmoji": "🇲🇺",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 60,
+  "visaNote": "관광 목적 60일 무비자 입국 가능",
+  "importantNotes": [
+    "입국 시 귀국 항공권 및 숙소 예약 확인서 제시 필요",
+    "산호초 보호 구역에서 해양생물 채취 및 접촉 금지",
+    "모기 매개 질병(뎅기열) 주의, 방충제 지참 권장",
+    "렌터카 이용 시 좌측통행 주의 (영국식 운전)"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-5시간",
+    "voltage": "230V",
+    "currency": "MUR (루피)",
+    "flight": "약 15시간 (경유)"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "timeline": [
+    {
+      "dDay": "D-7",
+      "title": "여권 유효기간 확인",
+      "description": "입국 시 여권 유효기간 6개월 이상 필요합니다."
+    },
+    {
+      "dDay": "D-1",
+      "title": "숙소 및 항공편 확인",
+      "description": "숙소 예약 확인서와 귀국 항공권을 출력하세요."
+    },
+    {
+      "dDay": "입국 당일",
+      "title": "입국카드 작성",
+      "description": "기내에서 입국카드를 작성하고 여권, 리턴 티켓을 준비하세요."
+    }
+  ],
+  "alerts": [
+    "해양 스포츠 시 안전장비 착용 필수",
+    "사이클론 시즌(1~3월) 기상 상황 확인",
+    "자외선 매우 강함, 선크림 필수"
+  ],
+  "checklist": [
+    "여권 사본 저장",
+    "숙소 바우처",
+    "리턴 티켓",
+    "방충제 및 선크림"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "CR",
+  "nameKo": "코스타리카",
+  "nameEn": "Costa Rica",
+  "continent": "북미",
+  "flagEmoji": "🇨🇷",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 90,
+  "visaNote": "관광 목적 90일 무비자 입국 가능",
+  "importantNotes": [
+    "출국 항공권(리턴 티켓) 제시 필수, 미소지 시 탑승 거부 가능",
+    "생태 관광 중심 국가로 국립공원 입장료 별도 ($10~$20)",
+    "우기(5~11월)에는 폭우가 잦으므로 방수 장비 준비 권장"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-15시간",
+    "voltage": "120V",
+    "currency": "CRC (콜론)",
+    "flight": "약 18시간 (경유)"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "timeline": [
+    {
+      "dDay": "D-7",
+      "title": "여권 유효기간 확인",
+      "description": "입국 시 여권 유효기간 6개월 이상 필요합니다."
+    },
+    {
+      "dDay": "D-3",
+      "title": "리턴 티켓 및 숙소 확인",
+      "description": "출국 항공권과 숙소 예약 확인서를 준비하세요. 입국심사 시 요구될 수 있습니다."
+    },
+    {
+      "dDay": "입국 당일",
+      "title": "입국심사 서류 준비",
+      "description": "여권, 리턴 티켓, 숙소 예약 확인서를 준비하세요."
+    }
+  ],
+  "alerts": [
+    "리턴 티켓 미소지 시 항공기 탑승 거부 가능",
+    "야생동물 접근 금지 (국립공원 규정 엄격)",
+    "소매치기 주의 (산호세 시내 관광지)"
+  ],
+  "checklist": [
+    "여권 사본 저장",
+    "숙소 바우처",
+    "리턴 티켓",
+    "방수 재킷 (우기 시)"
+  ]
+}

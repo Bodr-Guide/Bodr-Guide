@@ -1,0 +1,55 @@
+{
+  "id": "BA",
+  "nameKo": "보스니아 헤르체고비나",
+  "nameEn": "Bosnia and Herzegovina",
+  "continent": "유럽",
+  "flagEmoji": "🇧🇦",
+  "visaStatus": "visa_free",
+  "visaFreeStayDays": 90,
+  "visaNote": "180일 중 최대 90일 무비자 체류 가능.",
+  "importantNotes": [
+    "쉥겐 비가입국으로 별도 입국 심사",
+    "여행자보험 가입 권장",
+    "지뢰 미제거 지역 존재 (표시된 안전 경로 이탈 금지)",
+    "현지 통화(마르카) 사용, 유로화 일부 통용"
+  ],
+  "updatedAt": "2026-01-15",
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-8시간",
+    "voltage": "230V",
+    "currency": "BAM (마르카)",
+    "flight": "약 14시간"
+  },
+  "passportValidity": {
+    "months": 3
+  },
+  "timeline": [
+    {
+      "dDay": "D-7",
+      "title": "여권 유효기간 확인",
+      "description": "입국일 기준 여권 유효기간이 3개월 이상 남아있어야 합니다."
+    },
+    {
+      "dDay": "D-3",
+      "title": "여행자 보험 가입",
+      "description": "의료비 대비 여행자 보험 가입을 권장합니다."
+    },
+    {
+      "dDay": "입국 당일",
+      "title": "입국심사 서류 준비",
+      "description": "숙소 예약 확인서, 리턴 티켓을 준비하세요."
+    }
+  ],
+  "alerts": [
+    "지뢰 미제거 지역 절대 진입 금지 (시골/산악 지역)",
+    "사라예보 구시가지 소매치기 주의",
+    "도로 상태 불량 구간 존재 (야간 운전 자제)"
+  ],
+  "checklist": [
+    "여권 사본 저장",
+    "숙소 바우처",
+    "리턴 티켓",
+    "여행자 보험"
+  ]
+}
