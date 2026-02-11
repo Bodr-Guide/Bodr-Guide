@@ -18,5 +18,44 @@
     "유적지 앙코르와트 방문 시 노출이 심한 복장 제한"
   ],
   "updatedAt": "2026-01-15",
-  "source": "외교부 해외안전여행"
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-2시간",
+    "voltage": "230V (어댑터 필요)",
+    "currency": "USD/KHR (달러/리엘)",
+    "flight": "약 5시간 30분"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "timeline": [
+    {
+      "dDay": "D-14",
+      "title": "e-비자 신청",
+      "description": "온라인으로 캄보디아 e-비자를 신청하세요.",
+      "actionUrl": "https://www.evisa.gov.kh/",
+      "actionLabel": "신청하기"
+    },
+    {
+      "dDay": "D-7",
+      "title": "e-비자 승인 확인",
+      "description": "이메일로 도착한 e-비자를 출력하세요."
+    },
+    {
+      "dDay": "입국 당일",
+      "title": "e-비자 출력본 준비",
+      "description": "e-비자 출력본과 증명사진 1장을 준비하세요."
+    }
+  ],
+  "alerts": [
+    "USD 현금 결제가 일반적",
+    "앙코르와트 복장 규정 (어깨/무릎 가림)",
+    "수돗물 음용 금지"
+  ],
+  "checklist": [
+    "e-비자 출력본",
+    "여권 사본 저장",
+    "증명사진 1장",
+    "USD 현금"
+  ]
 }

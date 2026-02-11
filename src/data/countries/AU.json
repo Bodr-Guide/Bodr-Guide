@@ -18,5 +18,44 @@
     "자외선이 매우 강하므로 자외선 차단제 필수"
   ],
   "updatedAt": "2026-01-15",
-  "source": "외교부 해외안전여행"
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "+1시간 (시드니)",
+    "voltage": "230V (어댑터 필요)",
+    "currency": "AUD (호주 달러)",
+    "flight": "약 10시간"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "timeline": [
+    {
+      "dDay": "D-14",
+      "title": "ETA 신청",
+      "description": "호주 전자여행허가(ETA)를 앱으로 신청하세요.",
+      "actionUrl": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/electronic-travel-authority-601",
+      "actionLabel": "신청하기"
+    },
+    {
+      "dDay": "D-7",
+      "title": "ETA 승인 확인",
+      "description": "ETA 승인 이메일을 확인하세요."
+    },
+    {
+      "dDay": "입국 당일",
+      "title": "입국카드 작성",
+      "description": "기내에서 입국카드를 작성하세요. 식품/식물 반입 신고 필수."
+    }
+  ],
+  "alerts": [
+    "식품/동식물 반입 매우 엄격 (벌금 최대 AUD 66만)",
+    "자외선 매우 강함 (선크림 필수)",
+    "좌측통행"
+  ],
+  "checklist": [
+    "ETA 확인",
+    "여권 사본 저장",
+    "숙소 바우처",
+    "리턴 티켓"
+  ]
 }

@@ -13,5 +13,44 @@
     "여권 잔여 유효기간 6개월 이상 필요"
   ],
   "updatedAt": "2026-01-15",
-  "source": "외교부 해외안전여행"
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-7시간",
+    "voltage": "230V (어댑터 필요)",
+    "currency": "JOD (요르단 디나르)",
+    "flight": "약 12시간"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "timeline": [
+    {
+      "dDay": "D-7",
+      "title": "여권 유효기간 확인",
+      "description": "입국 시 여권 유효기간 6개월 이상 필요합니다."
+    },
+    {
+      "dDay": "D-1",
+      "title": "Jordan Pass 구매 권장",
+      "description": "페트라 입장료 + 비자비 포함. 사전 구매 시 절약 가능.",
+      "actionUrl": "https://www.jordanpass.jo/",
+      "actionLabel": "구매하기"
+    },
+    {
+      "dDay": "입국 당일",
+      "title": "도착비자 발급",
+      "description": "공항에서 도착비자를 발급받으세요 (JOD 40, Jordan Pass 소지 시 면제)."
+    }
+  ],
+  "alerts": [
+    "Jordan Pass 사전 구매 강력 권장",
+    "수돗물 음용 금지",
+    "페트라 일사병 주의 (물 충분히 지참)"
+  ],
+  "checklist": [
+    "Jordan Pass 확인",
+    "여권 사본 저장",
+    "숙소 바우처",
+    "리턴 티켓"
+  ]
 }

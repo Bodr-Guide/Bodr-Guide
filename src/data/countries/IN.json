@@ -19,5 +19,44 @@
     "인도 화폐(루피) 반출입 금지"
   ],
   "updatedAt": "2026-01-15",
-  "source": "외교부 해외안전여행"
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-3시간 30분",
+    "voltage": "230V (어댑터 필요)",
+    "currency": "INR (루피)",
+    "flight": "약 8시간"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "timeline": [
+    {
+      "dDay": "D-14",
+      "title": "e-비자 신청",
+      "description": "최소 4일 전 온라인으로 e-비자를 신청하세요.",
+      "actionUrl": "https://indianvisaonline.gov.in/",
+      "actionLabel": "신청하기"
+    },
+    {
+      "dDay": "D-7",
+      "title": "e-비자 승인 확인",
+      "description": "이메일로 도착한 e-비자 승인서를 출력하세요."
+    },
+    {
+      "dDay": "입국 당일",
+      "title": "e-비자 출력본 준비",
+      "description": "e-비자 승인서 출력본과 여권을 준비하세요."
+    }
+  ],
+  "alerts": [
+    "식수는 반드시 생수 구입",
+    "길거리 음식 위생 주의",
+    "소매치기 및 사기 주의"
+  ],
+  "checklist": [
+    "e-비자 출력본",
+    "여권 사본 저장",
+    "숙소 바우처",
+    "리턴 티켓"
+  ]
 }

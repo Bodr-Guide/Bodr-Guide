@@ -13,5 +13,40 @@
     "카지노 입장은 만 21세 이상만 가능"
   ],
   "updatedAt": "2026-01-15",
-  "source": "외교부 해외안전여행"
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-1시간",
+    "voltage": "220V (어댑터 필요)",
+    "currency": "MOP (파타카)",
+    "flight": "약 4시간"
+  },
+  "passportValidity": {
+    "months": 1
+  },
+  "timeline": [
+    {
+      "dDay": "D-7",
+      "title": "여권 유효기간 확인",
+      "description": "체류 기간 이상 여권 유효기간이 남아있어야 합니다."
+    },
+    {
+      "dDay": "D-1",
+      "title": "숙소 예약 확인",
+      "description": "숙소 예약 확인서를 준비하세요."
+    },
+    {
+      "dDay": "입국 당일",
+      "title": "입국카드 작성",
+      "description": "입국심사 시 입국카드를 작성하세요."
+    }
+  ],
+  "alerts": [
+    "홍콩 달러도 통용 가능",
+    "카지노 21세 이상만 출입 가능"
+  ],
+  "checklist": [
+    "여권 사본 저장",
+    "숙소 바우처",
+    "리턴 티켓"
+  ]
 }

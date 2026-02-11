@@ -18,5 +18,44 @@
     "사파리 투어 시 야생동물 접근 금지, 가이드 지시 준수"
   ],
   "updatedAt": "2026-01-15",
-  "source": "외교부 해외안전여행"
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-6시간",
+    "voltage": "240V (어댑터 필요)",
+    "currency": "KES (케냐 실링)",
+    "flight": "약 14시간"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "timeline": [
+    {
+      "dDay": "D-14",
+      "title": "e-비자 신청",
+      "description": "케냐 e-비자를 온라인으로 신청하세요.",
+      "actionUrl": "https://www.etakenya.go.ke/",
+      "actionLabel": "신청하기"
+    },
+    {
+      "dDay": "D-7",
+      "title": "e-비자 승인 확인",
+      "description": "이메일로 도착한 e-비자를 출력하세요."
+    },
+    {
+      "dDay": "입국 당일",
+      "title": "e-비자 출력본 준비",
+      "description": "e-비자 출력본과 여권을 준비하세요."
+    }
+  ],
+  "alerts": [
+    "황열병 예방접종 권장",
+    "사파리 시 가이드 지시 준수",
+    "수돗물 음용 금지"
+  ],
+  "checklist": [
+    "e-비자 출력본",
+    "여권 사본 저장",
+    "숙소 바우처",
+    "리턴 티켓"
+  ]
 }

@@ -19,5 +19,42 @@
     "NHS 의료 서비스는 관광객에게 유료, 여행자 보험 필수 권장"
   ],
   "updatedAt": "2026-01-15",
-  "source": "외교부 해외안전여행"
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-9시간",
+    "voltage": "230V (3핀 어댑터 필요)",
+    "currency": "GBP (파운드)",
+    "flight": "약 12시간"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "timeline": [
+    {
+      "dDay": "D-7",
+      "title": "여권 유효기간 확인",
+      "description": "체류 기간 동안 유효한 여권이 필요합니다."
+    },
+    {
+      "dDay": "D-2",
+      "title": "전자 입국 허가(ETA) 확인",
+      "description": "영국 ETA가 필요할 수 있습니다. 사전 확인하세요."
+    },
+    {
+      "dDay": "입국 당일",
+      "title": "e-Gate 이용",
+      "description": "한국 여권 소지자는 e-Gate 자동 입국심사 이용 가능합니다."
+    }
+  ],
+  "alerts": [
+    "좌측통행 (차량 주의)",
+    "영국식 3핀 플러그 어댑터 필수",
+    "NHS 의료비 유료 (여행자 보험 권장)"
+  ],
+  "checklist": [
+    "여권 사본 저장",
+    "숙소 바우처",
+    "리턴 티켓",
+    "여행자 보험"
+  ]
 }

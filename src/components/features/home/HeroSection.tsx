@@ -15,17 +15,10 @@ export default function HeroSection() {
       new CustomEvent("hero-search", { detail: value })
     );
 
-    // 검색어 입력 시 국가 목록 섹션으로 부드럽게 스크롤
-    if (value.length > 0) {
-      const section = document.getElementById("destinations");
-      if (section) {
-        section.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-    }
   };
 
   return (
-    <section className="relative overflow-hidden bg-slate-950 pb-12 pt-24">
+    <section className="relative overflow-hidden bg-slate-950 pb-5 pt-16">
       {/* 배경 그라데이션 효과 */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute left-1/4 top-1/4 h-96 w-96 rounded-full bg-emerald-500/5 blur-3xl" />
@@ -34,9 +27,9 @@ export default function HeroSection() {
 
       <div className="relative mx-auto flex max-w-7xl flex-col px-8 lg:flex-row lg:items-end lg:justify-between">
         {/* 좌측: 타이포그래피 영역 */}
-        <div className="mb-10 flex-1 lg:mb-0">
+        <div className="mb-6 flex-1 lg:mb-0">
           {/* 배지 */}
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-slate-700/60 bg-slate-800/30 px-4 py-1.5">
+          <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-slate-700/60 bg-slate-800/30 px-4 py-1.5">
             {/* 반짝임 아이콘 */}
             <svg
               width="14"
@@ -57,7 +50,7 @@ export default function HeroSection() {
           </div>
 
           {/* 메인 타이틀 */}
-          <h1 className="text-5xl font-bold leading-[1.1] tracking-tight sm:text-6xl lg:text-7xl">
+          <h1 className="text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
             <span className="block text-white">Travel</span>
             <span className="block text-white">
               Withou<span className="text-slate-500">t</span>
@@ -67,9 +60,9 @@ export default function HeroSection() {
         </div>
 
         {/* 우측: 설명 + 검색바 */}
-        <div className="flex-1 lg:max-w-md lg:pl-24 lg:pt-20">
+        <div className="flex-1 lg:max-w-md lg:pl-24 lg:pt-16">
           {/* 설명 텍스트 */}
-          <p className="mb-6 ml-6 text-[15px] leading-relaxed text-slate-400">
+          <p className="mb-4 ml-6 text-[15px] leading-relaxed text-slate-400">
             대한민국 여권으로 떠나는 가장 자유로운 여행.
             <br />
             전 세계 입국 규정을 한눈에 확인하세요.
@@ -100,7 +93,7 @@ export default function HeroSection() {
               value={searchQuery}
               onChange={(e) => handleSearch(e.target.value)}
               placeholder="Where to next?"
-              className="w-full rounded-2xl border border-slate-600/60 bg-slate-800/30 py-4 pl-13 pr-6 text-base text-white placeholder-slate-500 outline-none transition-all focus:border-slate-500 focus:ring-1 focus:ring-slate-500/30"
+              className="w-full rounded-2xl border border-slate-600/60 bg-slate-800/30 py-3 pl-13 pr-6 text-base text-white placeholder-slate-500 outline-none transition-all focus:border-slate-500 focus:ring-1 focus:ring-slate-500/30"
             />
           </div>
         </div>

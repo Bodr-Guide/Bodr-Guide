@@ -20,5 +20,44 @@
     "팁 문화: 레스토랑 15~20%, 택시 15% 정도가 관례"
   ],
   "updatedAt": "2026-01-15",
-  "source": "외교부 해외안전여행"
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-14시간 (동부)",
+    "voltage": "120V (돼지코 필수)",
+    "currency": "USD (달러)",
+    "flight": "약 14시간"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "timeline": [
+    {
+      "dDay": "D-72시간",
+      "title": "ESTA 신청",
+      "description": "출발 72시간 전까지 ESTA를 신청하세요. 유효기간 2년.",
+      "actionUrl": "https://esta.cbp.dhs.gov/",
+      "actionLabel": "신청하기"
+    },
+    {
+      "dDay": "D-7",
+      "title": "ESTA 승인 확인",
+      "description": "ESTA 승인 상태를 확인하고 출력하세요."
+    },
+    {
+      "dDay": "입국 당일",
+      "title": "세관신고서 작성",
+      "description": "기내에서 세관신고서를 작성하세요. 식품 반입 신고 필수."
+    }
+  ],
+  "alerts": [
+    "ESTA 미승인 시 입국 불가",
+    "팁 문화 (식당 15-20%, 택시 15%)",
+    "주마다 법률 상이 (음주, 흡연 등)"
+  ],
+  "checklist": [
+    "ESTA 출력본",
+    "여권 사본 저장",
+    "숙소 바우처",
+    "리턴 티켓"
+  ]
 }

@@ -19,5 +19,42 @@
     "여권 잔여 유효기간 6개월 이상 필요"
   ],
   "updatedAt": "2026-01-15",
-  "source": "외교부 해외안전여행"
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-1시간",
+    "voltage": "240V (어댑터 필요)",
+    "currency": "MYR (링깃)",
+    "flight": "약 6시간 30분"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "timeline": [
+    {
+      "dDay": "D-3",
+      "title": "MDAC 디지털 입국카드 등록",
+      "description": "말레이시아 입국 전 온라인 디지털 입국카드를 제출하세요.",
+      "actionUrl": "https://imigresen-online.imi.gov.my/mdac/main",
+      "actionLabel": "등록하기"
+    },
+    {
+      "dDay": "D-1",
+      "title": "숙소 예약 확인",
+      "description": "숙소 예약 확인서를 준비하세요."
+    },
+    {
+      "dDay": "입국 당일",
+      "title": "MDAC 확인서 준비",
+      "description": "MDAC 등록 확인 화면을 스크린샷으로 저장하세요."
+    }
+  ],
+  "alerts": [
+    "이슬람 문화 존중 (모스크 방문 시 복장 주의)",
+    "마약 소지 시 사형 가능"
+  ],
+  "checklist": [
+    "여권 사본 저장",
+    "숙소 바우처",
+    "리턴 티켓"
+  ]
 }

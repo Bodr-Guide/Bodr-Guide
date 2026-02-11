@@ -13,5 +13,40 @@
     "전자담배 반입 및 사용 전면 금지"
   ],
   "updatedAt": "2026-01-15",
-  "source": "외교부 해외안전여행"
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-1시간",
+    "voltage": "220V (어댑터 필요)",
+    "currency": "HKD (홍콩 달러)",
+    "flight": "약 3시간 30분"
+  },
+  "passportValidity": {
+    "months": 1
+  },
+  "timeline": [
+    {
+      "dDay": "D-7",
+      "title": "여권 유효기간 확인",
+      "description": "체류 기간 이상 여권 유효기간이 남아있어야 합니다."
+    },
+    {
+      "dDay": "D-1",
+      "title": "숙소 예약 확인",
+      "description": "숙소 예약 확인서를 준비하세요."
+    },
+    {
+      "dDay": "입국 당일",
+      "title": "e-도착카드 작성",
+      "description": "입국심사 시 전자 도착카드가 자동 발급됩니다."
+    }
+  ],
+  "alerts": [
+    "옥토퍼스 카드 구입 권장 (교통/결제)",
+    "영국식 3핀 플러그 사용"
+  ],
+  "checklist": [
+    "여권 사본 저장",
+    "숙소 바우처",
+    "리턴 티켓"
+  ]
 }

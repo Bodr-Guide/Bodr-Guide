@@ -12,6 +12,28 @@ export interface EntryRegistration {
   description: string;
 }
 
+// 빠른 정보 (시차, 전압, 통화, 비행시간)
+export interface QuickInfo {
+  timeDiff: string;
+  voltage: string;
+  currency: string;
+  flight: string;
+}
+
+// 타임라인 항목
+export interface TimelineItem {
+  dDay: string;
+  title: string;
+  description: string;
+  actionUrl?: string;
+  actionLabel?: string;
+}
+
+// 여권 유효기간 요건
+export interface PassportValidity {
+  months: number;
+}
+
 // 국가 데이터 인터페이스
 export interface Country {
   id: string;
@@ -27,6 +49,11 @@ export interface Country {
   importantNotes: string[];
   updatedAt: string;
   source: string;
+  quickInfo?: QuickInfo;
+  passportValidity?: PassportValidity;
+  timeline?: TimelineItem[];
+  alerts?: string[];
+  checklist?: string[];
 }
 
 // 비자 상태 라벨 및 색상 매핑

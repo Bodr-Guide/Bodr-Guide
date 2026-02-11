@@ -19,5 +19,44 @@
     "겨울철 극한 추위 대비 필수, 방한용품 준비 권장"
   ],
   "updatedAt": "2026-01-15",
-  "source": "외교부 해외안전여행"
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-14시간 (동부)",
+    "voltage": "120V (돼지코 필수)",
+    "currency": "CAD (캐나다 달러)",
+    "flight": "약 12시간"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "timeline": [
+    {
+      "dDay": "D-7",
+      "title": "eTA 신청",
+      "description": "캐나다 전자여행허가(eTA)를 온라인으로 신청하세요.",
+      "actionUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/eta.html",
+      "actionLabel": "신청하기"
+    },
+    {
+      "dDay": "D-3",
+      "title": "eTA 승인 확인",
+      "description": "이메일로 eTA 승인을 확인하세요."
+    },
+    {
+      "dDay": "입국 당일",
+      "title": "세관신고서 작성",
+      "description": "ArriveCAN 앱 또는 기내에서 세관신고서를 작성하세요."
+    }
+  ],
+  "alerts": [
+    "eTA 미승인 시 탑승 불가",
+    "겨울 극한 추위 대비 필요",
+    "팁 문화 (15-20%)"
+  ],
+  "checklist": [
+    "eTA 확인",
+    "여권 사본 저장",
+    "숙소 바우처",
+    "리턴 티켓"
+  ]
 }

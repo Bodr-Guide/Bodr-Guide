@@ -19,5 +19,43 @@
     "입국 시 전자 입국카드(SG Arrival Card) 사전 작성 필수"
   ],
   "updatedAt": "2026-01-15",
-  "source": "외교부 해외안전여행"
+  "source": "외교부 해외안전여행",
+  "quickInfo": {
+    "timeDiff": "-1시간",
+    "voltage": "230V (어댑터 필요)",
+    "currency": "SGD (싱가포르 달러)",
+    "flight": "약 6시간 30분"
+  },
+  "passportValidity": {
+    "months": 6
+  },
+  "timeline": [
+    {
+      "dDay": "D-3",
+      "title": "SG 입국카드 온라인 제출",
+      "description": "입국 3일 전부터 온라인으로 전자 입국카드를 제출할 수 있습니다.",
+      "actionUrl": "https://eservices.ica.gov.sg/sgarrivalcard/",
+      "actionLabel": "제출하기"
+    },
+    {
+      "dDay": "D-1",
+      "title": "숙소 예약 확인",
+      "description": "숙소 예약 확인서를 출력 또는 저장하세요."
+    },
+    {
+      "dDay": "입국 당일",
+      "title": "전자 입국카드 QR 준비",
+      "description": "제출 완료 확인 이메일의 QR 코드를 준비하세요."
+    }
+  ],
+  "alerts": [
+    "껌 반입 금지 (벌금 부과)",
+    "공공장소 흡연 시 벌금",
+    "쓰레기 무단투기 시 고액 벌금"
+  ],
+  "checklist": [
+    "여권 사본 저장",
+    "숙소 바우처",
+    "리턴 티켓"
+  ]
 }
