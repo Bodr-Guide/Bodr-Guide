@@ -4,7 +4,7 @@ import { useState } from "react";
 
 interface AccordionItemProps {
   title: string;
-  icon?: JSX.Element;
+  icon?: React.ReactElement;
   badge?: string;
   children: React.ReactNode;
   defaultOpen?: boolean;
