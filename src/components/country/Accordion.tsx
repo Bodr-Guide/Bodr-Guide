@@ -6,11 +6,12 @@ interface AccordionItemProps {
   title: string;
   icon?: React.ReactElement;
   badge?: string;
+  badgeColor?: string;
   children: React.ReactNode;
   defaultOpen?: boolean;
 }
 
-export function AccordionItem({ title, icon, badge, children, defaultOpen = false }: AccordionItemProps) {
+export function AccordionItem({ title, icon, badge, badgeColor = "bg-emerald-500/20 text-emerald-700 dark:text-emerald-400", children, defaultOpen = false }: AccordionItemProps) {
   const [isOpen, setIsOpen] = useState(defaultOpen);
 
   return (
@@ -23,7 +24,7 @@ export function AccordionItem({ title, icon, badge, children, defaultOpen = fals
           {icon && <span className="w-5 h-5 text-slate-600 dark:text-slate-400">{icon}</span>}
           <span className="text-sm font-semibold text-slate-900 dark:text-white">{title}</span>
           {badge && (
-            <span className="px-2 py-0.5 text-xs font-medium rounded-full bg-emerald-500/20 text-emerald-700 dark:text-emerald-400">
+            <span className={`px-2 py-0.5 text-xs font-medium rounded-full ${badgeColor}`}>
               {badge}
             </span>
           )}

@@ -1,7 +1,5 @@
 "use client";
 
-import { useState } from "react";
-
 interface Tab {
   id: string;
   label: string;
@@ -15,6 +13,19 @@ interface TabNavigationProps {
 }
 
 export default function TabNavigation({ tabs, activeTab, onTabChange }: TabNavigationProps) {
+  const handleTabClick = (tabId: string) => {
+    // 현재 스크롤 위치 저장
+    const currentScrollY = window.scrollY;
+
+    // 탭 변경
+    onTabChange(tabId);
+
+    // 다음 렌더링 후 스크롤 복원
+    requestAnimationFrame(() => {
+      window.scrollTo(0, currentScrollY);
+    });
+  };
+
   return (
     <div className="sticky top-16 z-40 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
       <div className="max-w-6xl mx-auto px-5 sm:px-8">
@@ -22,7 +33,7 @@ export default function TabNavigation({ tabs, activeTab, onTabChange }: TabNavig
           {tabs.map((tab) => (
             <button
               key={tab.id}
-              onClick={() => onTabChange(tab.id)}
+              onClick={() => handleTabClick(tab.id)}
               className={`flex items-center gap-2 px-4 py-3 text-sm font-medium whitespace-nowrap transition-all ${
                 activeTab === tab.id
                   ? "text-slate-900 dark:text-white border-b-2 border-slate-900 dark:border-white"

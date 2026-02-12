@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Country } from "@/lib/types";
 import { getCountryImage, getFlagUrl } from "@/lib/countryImages";
+import { getAllCountries } from "@/lib/data";
 import TabNavigation from "./TabNavigation";
 import { Accordion, AccordionItem } from "./Accordion";
 
@@ -12,8 +13,10 @@ interface JapanDetailPageProps {
 
 export default function JapanDetailPage({ country }: JapanDetailPageProps) {
   const [activeTab, setActiveTab] = useState("entry");
+  const [userPassport, setUserPassport] = useState<string | null>(null);
   const heroImage = getCountryImage(country.id);
   const quickInfo = country.quickInfo;
+  const allCountries = getAllCountries();
 
   const tabs = [
     {
@@ -66,6 +69,39 @@ export default function JapanDetailPage({ country }: JapanDetailPageProps) {
           />
         )}
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60" />
+
+        {/* 여권 선택 드롭다운 */}
+        <div className="absolute top-6 left-0 right-0 z-20">
+          <div className="max-w-6xl mx-auto px-5 sm:px-8">
+            <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-4 py-3">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <path d="M2 10h20"/>
+              </svg>
+              <span className="text-sm text-white/80 font-medium">내 여권:</span>
+              <select
+                value={userPassport || ""}
+                onChange={(e) => setUserPassport(e.target.value || null)}
+                className="bg-white/20 text-white border-0 rounded-lg px-3 py-1.5 text-sm font-medium cursor-pointer focus:outline-none focus:ring-2 focus:ring-white/30"
+                aria-label="여권 국가 선택"
+              >
+                <option value="" className="text-slate-900">선택하세요</option>
+                <optgroup label="자주 사용" className="text-slate-900">
+                  <option value="KR">🇰🇷 대한민국</option>
+                  <option value="US">🇺🇸 미국</option>
+                  <option value="JP">🇯🇵 일본</option>
+                </optgroup>
+                <optgroup label="전체 국가" className="text-slate-900">
+                  {allCountries.map(c => (
+                    <option key={c.id} value={c.id}>
+                      {c.flagEmoji} {c.nameKo}
+                    </option>
+                  ))}
+                </optgroup>
+              </select>
+            </div>
+          </div>
+        </div>
 
         {/* Hero Content */}
         <div className="relative z-10 flex flex-col justify-end h-full max-w-6xl mx-auto px-5 sm:px-8 pb-12">
@@ -128,7 +164,7 @@ export default function JapanDetailPage({ country }: JapanDetailPageProps) {
 
       {/* Tab Content */}
       <section className="max-w-6xl mx-auto px-5 sm:px-8 py-8">
-        {activeTab === "entry" && <EntryContent country={country} />}
+        {activeTab === "entry" && <EntryContent country={country} userPassport={userPassport} />}
         {activeTab === "preparation" && <PreparationContent />}
         {activeTab === "safety" && <SafetyContent />}
         {activeTab === "cities" && <CitiesContent />}
@@ -137,14 +173,62 @@ export default function JapanDetailPage({ country }: JapanDetailPageProps) {
   );
 }
 
+// 사용자 여권에 따라 각 절차의 우선순위 계산
+function calculateRequirementLevel(
+  country: Country,
+  userPassport: string | null,
+  sectionType: "visa" | "entry_registration" | "insurance" | "license"
+): "required" | "recommended" | "optional" | null {
+  if (!userPassport) return null;
+
+  // 한국 여권 기준
+  if (userPassport === "KR") {
+    if (sectionType === "visa") {
+      return country.visaStatus === "visa_required" ? "required" : null;
+    }
+    if (sectionType === "entry_registration") {
+      if (!country.entryRegistration) return null;
+      return country.entryRegistration.required ? "required" : "recommended";
+    }
+    if (sectionType === "insurance") {
+      return "recommended";
+    }
+    if (sectionType === "license") {
+      return country.drivingLicense ? "optional" : null;
+    }
+  }
+
+  return null;
+}
+
+// 배지 스타일 반환
+function getBadgeStyle(level: "required" | "recommended" | "optional" | null) {
+  if (!level) return null;
+  const styles = {
+    required: { text: "필수", color: "bg-rose-500/20 text-rose-700 dark:text-rose-400" },
+    recommended: { text: "권장", color: "bg-amber-500/20 text-amber-700 dark:text-amber-400" },
+    optional: { text: "선택", color: "bg-slate-500/20 text-slate-700 dark:text-slate-400" },
+  };
+  return styles[level];
+}
+
 // 출입국 탭 컨텐츠
-function EntryContent({ country }: { country: Country }) {
+function EntryContent({ country, userPassport }: { country: Country; userPassport: string | null }) {
+  // 우선순위 계산
+  const visaLevel = calculateRequirementLevel(country, userPassport, "visa");
+  const entryRegLevel = calculateRequirementLevel(country, userPassport, "entry_registration");
+  const licenseLevel = calculateRequirementLevel(country, userPassport, "license");
+
+  const visaBadge = getBadgeStyle(visaLevel);
+  const entryBadge = getBadgeStyle(entryRegLevel);
+  const licenseBadge = getBadgeStyle(licenseLevel);
   return (
     <Accordion>
       <AccordionItem
         title="비자 요건"
-        badge={country.visaStatus === "visa_free" ? "무비자" : undefined}
-        defaultOpen={true}
+        badge={visaBadge?.text || (country.visaStatus === "visa_free" ? "무비자" : undefined)}
+        badgeColor={visaBadge?.color}
+        defaultOpen={visaLevel === "required" || true}
         icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 11l3 3L22 4"/></svg>}
       >
         <div className="space-y-4">
@@ -170,11 +254,29 @@ function EntryContent({ country }: { country: Country }) {
       {country.entryRegistration && (
         <AccordionItem
           title={`전자여행허가 (${country.entryRegistration.type})`}
-          badge={country.entryRegistration.required ? "필수" : "권장"}
+          badge={entryBadge?.text || (country.entryRegistration.required ? "필수" : "권장")}
+          badgeColor={entryBadge?.color}
+          defaultOpen={entryRegLevel === "required"}
           icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="4" width="20" height="16" rx="2"/></svg>}
         >
           <div className="space-y-4">
-            <p>일본 방문 전 온라인 사전 등록이 {country.entryRegistration.required ? "필수" : "권장"}됩니다.</p>
+            <p>{country.entryRegistration.description || `일본 방문 전 온라인 사전 등록이 ${country.entryRegistration.required ? "필수" : "권장"}됩니다.`}</p>
+
+            {/* 신청 링크 버튼 */}
+            <a
+              href={country.entryRegistration.applicationUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2.5 bg-sky-600 hover:bg-sky-700 dark:bg-sky-500 dark:hover:bg-sky-600 text-white rounded-lg font-medium transition-colors shadow-sm"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                <polyline points="15 3 21 3 21 9"/>
+                <line x1="10" y1="14" x2="21" y2="3"/>
+              </svg>
+              {country.entryRegistration.type} 신청하기
+            </a>
+
             <div className="bg-sky-50 dark:bg-sky-950/30 border border-sky-200 dark:border-sky-800 rounded-lg p-4">
               <h4 className="font-semibold text-slate-900 dark:text-white mb-2">신청 방법</h4>
               <ol className="list-decimal list-inside space-y-1 text-sm">
@@ -202,6 +304,8 @@ function EntryContent({ country }: { country: Country }) {
 
       <AccordionItem
         title="운전면허 상호인정"
+        badge={licenseBadge?.text}
+        badgeColor={licenseBadge?.color}
         icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>}
       >
         <p>한국 운전면허증으로 일본에서 운전하려면 <strong>국제운전면허증(IDP)</strong> 또는 <strong>일본어 번역본</strong>이 필요합니다.</p>

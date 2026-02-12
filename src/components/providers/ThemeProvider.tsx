@@ -27,15 +27,10 @@ export default function ThemeProvider({
   const [theme, setTheme] = useState<Theme>("dark");
   const [mounted, setMounted] = useState(false);
 
-  // 초기 테마 결정: localStorage > 시스템 설정
+  // 초기 테마 결정: localStorage > 기본값(dark)
   useEffect(() => {
     const saved = localStorage.getItem("theme") as Theme | null;
-    if (saved) {
-      setTheme(saved);
-    } else {
-      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      setTheme(prefersDark ? "dark" : "light");
-    }
+    setTheme(saved || "dark"); // 저장된 값이 없으면 무조건 dark
     setMounted(true);
   }, []);
 
