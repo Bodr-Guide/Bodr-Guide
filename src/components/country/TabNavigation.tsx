@@ -20,9 +20,13 @@ export default function TabNavigation({ tabs, activeTab, onTabChange }: TabNavig
     // 탭 변경
     onTabChange(tabId);
 
-    // 다음 렌더링 후 스크롤 복원
+    // 콘텐츠 렌더링 완료 후 스크롤 복원 (여러 프레임 대기)
     requestAnimationFrame(() => {
-      window.scrollTo(0, currentScrollY);
+      requestAnimationFrame(() => {
+        setTimeout(() => {
+          window.scrollTo({ top: currentScrollY, behavior: 'instant' });
+        }, 0);
+      });
     });
   };
 

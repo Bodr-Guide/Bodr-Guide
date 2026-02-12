@@ -480,7 +480,7 @@ function PreparationContent() {
       </AccordionItem>
 
       <AccordionItem
-        title="통신 (유심/eSIM)"
+        title="통신 (유심/eSIM/로밍)"
         icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>}
       >
         <div className="space-y-4">
@@ -495,6 +495,14 @@ function PreparationContent() {
               <p className="font-semibold text-slate-900 dark:text-white mb-1">현지 유심</p>
               <p className="text-sm mb-2">공항 또는 편의점에서 구매 가능</p>
               <p className="text-xs text-slate-500">가격: 7일 무제한 기준 약 25,000원</p>
+            </div>
+            <div className="border border-slate-200 dark:border-slate-700 rounded-lg p-4">
+              <p className="font-semibold text-slate-900 dark:text-white mb-1">국제 로밍</p>
+              <p className="text-sm mb-2">별도 설정 필요 없이 즉시 사용 가능</p>
+              <p className="text-xs text-slate-500">가격: 통신사별 상이 (1일 9,900원~)</p>
+              <div className="mt-3 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-lg p-3">
+                <p className="text-xs text-amber-900 dark:text-amber-200">💡 주요 통신사: SKT, KT, LG U+ 앱에서 신청</p>
+              </div>
             </div>
           </div>
         </div>
