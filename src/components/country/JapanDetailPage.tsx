@@ -13,10 +13,9 @@ interface JapanDetailPageProps {
 
 export default function JapanDetailPage({ country }: JapanDetailPageProps) {
   const [activeTab, setActiveTab] = useState("entry");
-  const [userPassport, setUserPassport] = useState<string | null>(null);
+  const [travelPurpose, setTravelPurpose] = useState<string | null>(null);
   const heroImage = getCountryImage(country.id);
   const quickInfo = country.quickInfo;
-  const allCountries = getAllCountries();
 
   const tabs = [
     {
@@ -134,9 +133,8 @@ export default function JapanDetailPage({ country }: JapanDetailPageProps) {
         {activeTab === "entry" && (
           <EntryContent
             country={country}
-            userPassport={userPassport}
-            onPassportChange={setUserPassport}
-            allCountries={allCountries}
+            travelPurpose={travelPurpose}
+            onPurposeChange={setTravelPurpose}
           />
         )}
         {activeTab === "preparation" && <PreparationContent />}
@@ -147,28 +145,92 @@ export default function JapanDetailPage({ country }: JapanDetailPageProps) {
   );
 }
 
-// 사용자 여권에 따라 각 절차의 우선순위 계산
+// 여행 목적에 따라 각 절차의 우선순위 계산 (일본 기준)
 function calculateRequirementLevel(
   country: Country,
-  userPassport: string | null,
+  travelPurpose: string | null,
   sectionType: "visa" | "entry_registration" | "insurance" | "license"
 ): "required" | "recommended" | "optional" | null {
-  if (!userPassport) return null;
+  if (!travelPurpose) return null;
 
-  // 한국 여권 기준
-  if (userPassport === "KR") {
+  // 여행/관광 목적
+  if (travelPurpose === "tourism") {
     if (sectionType === "visa") {
-      return country.visaStatus === "visa_required" ? "required" : null;
+      return null; // 90일 무비자이므로 비자 불필요
     }
     if (sectionType === "entry_registration") {
       if (!country.entryRegistration) return null;
-      return country.entryRegistration.required ? "required" : "recommended";
+      return "recommended"; // Visit Japan Web 권장
     }
     if (sectionType === "insurance") {
       return "recommended";
     }
     if (sectionType === "license") {
-      return country.drivingLicense ? "optional" : null;
+      return "optional";
+    }
+  }
+
+  // 출장/비즈니스 목적
+  if (travelPurpose === "business") {
+    if (sectionType === "visa") {
+      return null; // 단기 출장은 무비자 가능
+    }
+    if (sectionType === "entry_registration") {
+      return "recommended";
+    }
+    if (sectionType === "insurance") {
+      return "required"; // 비즈니스는 보험 필수
+    }
+    if (sectionType === "license") {
+      return "optional";
+    }
+  }
+
+  // 유학/어학연수 목적
+  if (travelPurpose === "study") {
+    if (sectionType === "visa") {
+      return "required"; // 유학 비자 필수
+    }
+    if (sectionType === "entry_registration") {
+      return null;
+    }
+    if (sectionType === "insurance") {
+      return "required";
+    }
+    if (sectionType === "license") {
+      return "optional";
+    }
+  }
+
+  // 취업/일 목적
+  if (travelPurpose === "work") {
+    if (sectionType === "visa") {
+      return "required"; // 취업 비자 필수
+    }
+    if (sectionType === "entry_registration") {
+      return null;
+    }
+    if (sectionType === "insurance") {
+      return "required";
+    }
+    if (sectionType === "license") {
+      return "optional";
+    }
+  }
+
+  // 워킹홀리데이 목적
+  if (travelPurpose === "working_holiday") {
+    if (sectionType === "visa") {
+      return "required"; // 워킹홀리데이 비자 필수
+    }
+    if (sectionType === "entry_registration") {
+      return null;
+    }
+    if (sectionType === "insurance") {
+      return "required";
+    }
+    if (sectionType === "license") {
+      return "optional";
     }
   }
 
@@ -189,19 +251,17 @@ function getBadgeStyle(level: "required" | "recommended" | "optional" | null) {
 // 출입국 탭 컨텐츠
 function EntryContent({
   country,
-  userPassport,
-  onPassportChange,
-  allCountries,
+  travelPurpose,
+  onPurposeChange,
 }: {
   country: Country;
-  userPassport: string | null;
-  onPassportChange: (passport: string | null) => void;
-  allCountries: Country[];
+  travelPurpose: string | null;
+  onPurposeChange: (purpose: string | null) => void;
 }) {
   // 우선순위 계산
-  const visaLevel = calculateRequirementLevel(country, userPassport, "visa");
-  const entryRegLevel = calculateRequirementLevel(country, userPassport, "entry_registration");
-  const licenseLevel = calculateRequirementLevel(country, userPassport, "license");
+  const visaLevel = calculateRequirementLevel(country, travelPurpose, "visa");
+  const entryRegLevel = calculateRequirementLevel(country, travelPurpose, "entry_registration");
+  const licenseLevel = calculateRequirementLevel(country, travelPurpose, "license");
 
   const visaBadge = getBadgeStyle(visaLevel);
   const entryBadge = getBadgeStyle(entryRegLevel);
@@ -209,68 +269,97 @@ function EntryContent({
 
   return (
     <div className="space-y-6">
-      {/* 여권 선택 섹션 */}
-      <div className="bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700 rounded-xl p-5">
+      {/* 여행 목적 선택 섹션 */}
+      <div className="bg-gradient-to-r from-sky-50 to-emerald-50 dark:from-sky-950/30 dark:to-emerald-950/30 border border-sky-200 dark:border-sky-800 rounded-xl p-5">
         <div className="flex items-center gap-3 mb-3">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-slate-600 dark:text-slate-400">
-            <rect x="2" y="4" width="20" height="16" rx="2"/>
-            <path d="M2 10h20"/>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-sky-600 dark:text-sky-400">
+            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
           </svg>
-          <h3 className="text-sm font-semibold text-slate-900 dark:text-white">내 여권 국가</h3>
+          <h3 className="text-sm font-semibold text-slate-900 dark:text-white">여행 목적</h3>
         </div>
         <p className="text-sm text-slate-600 dark:text-slate-400 mb-3">
-          여권을 선택하면 필요한 절차만 확인할 수 있습니다
+          방문 목적에 따라 필요한 절차가 달라집니다
         </p>
         <select
-          value={userPassport || ""}
-          onChange={(e) => onPassportChange(e.target.value || null)}
+          value={travelPurpose || ""}
+          onChange={(e) => onPurposeChange(e.target.value || null)}
           className="w-full sm:w-auto bg-white dark:bg-slate-800 text-slate-900 dark:text-white border border-slate-300 dark:border-slate-600 rounded-lg px-4 py-2.5 text-sm font-medium cursor-pointer focus:outline-none focus:ring-2 focus:ring-sky-500 dark:focus:ring-sky-400 focus:border-transparent"
-          aria-label="여권 국가 선택"
+          aria-label="여행 목적 선택"
         >
           <option value="">선택하세요</option>
-          <optgroup label="자주 사용">
-            <option value="KR">🇰🇷 대한민국</option>
-            <option value="US">🇺🇸 미국</option>
-            <option value="JP">🇯🇵 일본</option>
-          </optgroup>
-          <optgroup label="전체 국가">
-            {allCountries.map(c => (
-              <option key={c.id} value={c.id}>
-                {c.flagEmoji} {c.nameKo}
-              </option>
-            ))}
-          </optgroup>
+          <option value="tourism">🏖️ 여행/관광</option>
+          <option value="business">💼 출장/비즈니스</option>
+          <option value="study">📚 유학/어학연수</option>
+          <option value="work">💻 취업/일</option>
+          <option value="working_holiday">🌏 워킹홀리데이</option>
         </select>
       </div>
 
       {/* 아코디언 섹션 */}
       <Accordion>
-      <AccordionItem
-        title="비자 요건"
-        badge={visaBadge?.text || (country.visaStatus === "visa_free" ? "무비자" : undefined)}
-        badgeColor={visaBadge?.color}
-        defaultOpen={visaLevel === "required" || true}
-        icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 11l3 3L22 4"/></svg>}
-      >
-        <div className="space-y-4">
-          <div>
-            <h4 className="font-semibold text-slate-900 dark:text-white mb-2">비자 상태</h4>
-            <p>{country.visaNote}</p>
+      {/* 비자 요건 - 비자가 필요한 목적일 때만 표시 */}
+      {visaLevel === "required" && (
+        <AccordionItem
+          title="비자 요건"
+          badge={visaBadge?.text}
+          badgeColor={visaBadge?.color}
+          defaultOpen={true}
+          icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 11l3 3L22 4"/></svg>}
+        >
+          <div className="space-y-4">
+            <div className="bg-rose-50 dark:bg-rose-950/30 border border-rose-200 dark:border-rose-800 rounded-lg p-4">
+              <h4 className="font-semibold text-rose-900 dark:text-rose-200 mb-2">⚠️ 비자 필수</h4>
+              <p className="text-sm text-rose-800 dark:text-rose-300">
+                {travelPurpose === "work" && "취업 목적으로 입국하려면 취업 비자가 필요합니다."}
+                {travelPurpose === "study" && "유학 목적으로 입국하려면 유학 비자가 필요합니다."}
+                {travelPurpose === "working_holiday" && "워킹홀리데이 비자가 필요합니다."}
+              </p>
+            </div>
+            <div>
+              <h4 className="font-semibold text-slate-900 dark:text-white mb-2">비자 신청 절차</h4>
+              <ol className="list-decimal list-inside space-y-1 text-sm">
+                <li>주한 일본 대사관/영사관 방문</li>
+                <li>필요 서류 제출 (재직증명서, 입학허가서 등)</li>
+                <li>심사 대기 (약 5-10일)</li>
+                <li>비자 발급 및 수령</li>
+              </ol>
+            </div>
+            {country.passportValidity && (
+              <div>
+                <h4 className="font-semibold text-slate-900 dark:text-white mb-2">여권 유효기간 요건</h4>
+                <p>입국일 기준 최소 <span className="font-semibold text-sky-600 dark:text-sky-400">{country.passportValidity.months}개월</span> 이상</p>
+              </div>
+            )}
           </div>
-          {country.visaFreeStayDays && (
-            <div>
-              <h4 className="font-semibold text-slate-900 dark:text-white mb-2">무비자 체류 기간</h4>
-              <p className="text-emerald-600 dark:text-emerald-400 font-bold">{country.visaFreeStayDays}일</p>
+        </AccordionItem>
+      )}
+
+      {/* 무비자 안내 - 여행/출장 목적일 때만 표시 */}
+      {(travelPurpose === "tourism" || travelPurpose === "business") && (
+        <AccordionItem
+          title="무비자 입국"
+          badge="무비자"
+          badgeColor="bg-emerald-500/20 text-emerald-700 dark:text-emerald-400"
+          defaultOpen={true}
+          icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 11l3 3L22 4"/></svg>}
+        >
+          <div className="space-y-4">
+            <div className="bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 rounded-lg p-4">
+              <h4 className="font-semibold text-emerald-900 dark:text-emerald-200 mb-2">✅ 비자 불필요</h4>
+              <p className="text-sm text-emerald-800 dark:text-emerald-300">
+                한국 여권 소지자는 관광/출장 목적으로 최대 90일간 무비자 체류가 가능합니다.
+              </p>
             </div>
-          )}
-          {country.passportValidity && (
-            <div>
-              <h4 className="font-semibold text-slate-900 dark:text-white mb-2">여권 유효기간 요건</h4>
-              <p>입국일 기준 최소 <span className="font-semibold text-sky-600 dark:text-sky-400">{country.passportValidity.months}개월</span> 이상</p>
-            </div>
-          )}
-        </div>
-      </AccordionItem>
+            {country.passportValidity && (
+              <div>
+                <h4 className="font-semibold text-slate-900 dark:text-white mb-2">여권 유효기간 요건</h4>
+                <p>입국일 기준 최소 <span className="font-semibold text-sky-600 dark:text-sky-400">{country.passportValidity.months}개월</span> 이상</p>
+              </div>
+            )}
+          </div>
+        </AccordionItem>
+      )}
 
       {country.entryRegistration && (
         <AccordionItem
