@@ -70,39 +70,6 @@ export default function JapanDetailPage({ country }: JapanDetailPageProps) {
         )}
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60" />
 
-        {/* 여권 선택 드롭다운 */}
-        <div className="absolute top-6 left-0 right-0 z-20">
-          <div className="max-w-6xl mx-auto px-5 sm:px-8">
-            <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-4 py-3">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <rect x="2" y="4" width="20" height="16" rx="2"/>
-                <path d="M2 10h20"/>
-              </svg>
-              <span className="text-sm text-white/80 font-medium">내 여권:</span>
-              <select
-                value={userPassport || ""}
-                onChange={(e) => setUserPassport(e.target.value || null)}
-                className="bg-white/20 text-white border-0 rounded-lg px-3 py-1.5 text-sm font-medium cursor-pointer focus:outline-none focus:ring-2 focus:ring-white/30"
-                aria-label="여권 국가 선택"
-              >
-                <option value="" className="text-slate-900">선택하세요</option>
-                <optgroup label="자주 사용" className="text-slate-900">
-                  <option value="KR">🇰🇷 대한민국</option>
-                  <option value="US">🇺🇸 미국</option>
-                  <option value="JP">🇯🇵 일본</option>
-                </optgroup>
-                <optgroup label="전체 국가" className="text-slate-900">
-                  {allCountries.map(c => (
-                    <option key={c.id} value={c.id}>
-                      {c.flagEmoji} {c.nameKo}
-                    </option>
-                  ))}
-                </optgroup>
-              </select>
-            </div>
-          </div>
-        </div>
-
         {/* Hero Content */}
         <div className="relative z-10 flex flex-col justify-end h-full max-w-6xl mx-auto px-5 sm:px-8 pb-12">
           <h1 className="text-5xl sm:text-7xl font-bold text-white mb-2 flex items-center gap-4">
@@ -164,7 +131,14 @@ export default function JapanDetailPage({ country }: JapanDetailPageProps) {
 
       {/* Tab Content */}
       <section className="max-w-6xl mx-auto px-5 sm:px-8 py-8">
-        {activeTab === "entry" && <EntryContent country={country} userPassport={userPassport} />}
+        {activeTab === "entry" && (
+          <EntryContent
+            country={country}
+            userPassport={userPassport}
+            onPassportChange={setUserPassport}
+            allCountries={allCountries}
+          />
+        )}
         {activeTab === "preparation" && <PreparationContent />}
         {activeTab === "safety" && <SafetyContent />}
         {activeTab === "cities" && <CitiesContent />}
@@ -213,7 +187,17 @@ function getBadgeStyle(level: "required" | "recommended" | "optional" | null) {
 }
 
 // 출입국 탭 컨텐츠
-function EntryContent({ country, userPassport }: { country: Country; userPassport: string | null }) {
+function EntryContent({
+  country,
+  userPassport,
+  onPassportChange,
+  allCountries,
+}: {
+  country: Country;
+  userPassport: string | null;
+  onPassportChange: (passport: string | null) => void;
+  allCountries: Country[];
+}) {
   // 우선순위 계산
   const visaLevel = calculateRequirementLevel(country, userPassport, "visa");
   const entryRegLevel = calculateRequirementLevel(country, userPassport, "entry_registration");
@@ -222,8 +206,45 @@ function EntryContent({ country, userPassport }: { country: Country; userPasspor
   const visaBadge = getBadgeStyle(visaLevel);
   const entryBadge = getBadgeStyle(entryRegLevel);
   const licenseBadge = getBadgeStyle(licenseLevel);
+
   return (
-    <Accordion>
+    <div className="space-y-6">
+      {/* 여권 선택 섹션 */}
+      <div className="bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700 rounded-xl p-5">
+        <div className="flex items-center gap-3 mb-3">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-slate-600 dark:text-slate-400">
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <path d="M2 10h20"/>
+          </svg>
+          <h3 className="text-sm font-semibold text-slate-900 dark:text-white">내 여권 국가</h3>
+        </div>
+        <p className="text-sm text-slate-600 dark:text-slate-400 mb-3">
+          여권을 선택하면 필요한 절차만 확인할 수 있습니다
+        </p>
+        <select
+          value={userPassport || ""}
+          onChange={(e) => onPassportChange(e.target.value || null)}
+          className="w-full sm:w-auto bg-white dark:bg-slate-800 text-slate-900 dark:text-white border border-slate-300 dark:border-slate-600 rounded-lg px-4 py-2.5 text-sm font-medium cursor-pointer focus:outline-none focus:ring-2 focus:ring-sky-500 dark:focus:ring-sky-400 focus:border-transparent"
+          aria-label="여권 국가 선택"
+        >
+          <option value="">선택하세요</option>
+          <optgroup label="자주 사용">
+            <option value="KR">🇰🇷 대한민국</option>
+            <option value="US">🇺🇸 미국</option>
+            <option value="JP">🇯🇵 일본</option>
+          </optgroup>
+          <optgroup label="전체 국가">
+            {allCountries.map(c => (
+              <option key={c.id} value={c.id}>
+                {c.flagEmoji} {c.nameKo}
+              </option>
+            ))}
+          </optgroup>
+        </select>
+      </div>
+
+      {/* 아코디언 섹션 */}
+      <Accordion>
       <AccordionItem
         title="비자 요건"
         badge={visaBadge?.text || (country.visaStatus === "visa_free" ? "무비자" : undefined)}
@@ -318,6 +339,7 @@ function EntryContent({ country, userPassport }: { country: Country; userPasspor
         </div>
       </AccordionItem>
     </Accordion>
+    </div>
   );
 }
 
