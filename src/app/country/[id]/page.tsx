@@ -5,6 +5,7 @@ import { getCountryById, getAllCountries } from "@/lib/data";
 import { getCountryImage, getFlagUrl } from "@/lib/countryImages";
 import { VISA_STATUS_MAP } from "@/lib/types";
 import Header from "@/components/layout/Header";
+import JapanDetailPage from "@/components/country/JapanDetailPage";
 
 // SSG: 빌드 시 모든 국가 경로를 사전 생성
 export async function generateStaticParams() {
@@ -57,6 +58,16 @@ export default async function CountryPage({
     visa_on_arrival: "VISA ON ARRIVAL",
     e_visa: "E-VISA",
   };
+
+  // 일본일 경우 새로운 레이아웃 사용
+  if (id === "JP") {
+    return (
+      <>
+        <Header />
+        <JapanDetailPage country={country} />
+      </>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-white dark:bg-[#0a0a0f] transition-colors duration-300">
