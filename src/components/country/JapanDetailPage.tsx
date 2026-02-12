@@ -316,10 +316,26 @@ function EntryContent({
                 {travelPurpose === "working_holiday" && "워킹홀리데이 비자가 필요합니다."}
               </p>
             </div>
+
+            {/* 비자 신청 링크 버튼 */}
+            <a
+              href="https://www.kr.emb-japan.go.jp/itpr_ko/visa.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2.5 bg-rose-600 hover:bg-rose-700 dark:bg-rose-500 dark:hover:bg-rose-600 text-white rounded-lg font-medium transition-colors shadow-sm"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                <polyline points="15 3 21 3 21 9"/>
+                <line x1="10" y1="14" x2="21" y2="3"/>
+              </svg>
+              주한일본대사관 비자 정보
+            </a>
+
             <div>
               <h4 className="font-semibold text-slate-900 dark:text-white mb-2">비자 신청 절차</h4>
               <ol className="list-decimal list-inside space-y-1 text-sm">
-                <li>주한 일본 대사관/영사관 방문</li>
+                <li>주한 일본 대사관/영사관 방문 또는 온라인 사전 신청</li>
                 <li>필요 서류 제출 (재직증명서, 입학허가서 등)</li>
                 <li>심사 대기 (약 5-10일)</li>
                 <li>비자 발급 및 수령</li>
