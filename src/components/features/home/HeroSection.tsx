@@ -19,11 +19,11 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-slate-950 pb-5 pt-16">
+    <section className="relative overflow-hidden bg-slate-50 dark:bg-slate-950 pb-5 pt-16 transition-colors duration-300">
       {/* 배경 그라데이션 효과 */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-1/4 top-1/4 h-96 w-96 rounded-full bg-emerald-500/5 blur-3xl" />
-        <div className="absolute right-1/4 bottom-1/4 h-96 w-96 rounded-full bg-sky-500/5 blur-3xl" />
+        <div className="absolute left-1/4 top-1/4 h-96 w-96 rounded-full bg-emerald-500/10 dark:bg-emerald-500/5 blur-3xl" />
+        <div className="absolute right-1/4 bottom-1/4 h-96 w-96 rounded-full bg-sky-500/10 dark:bg-sky-500/5 blur-3xl" />
       </div>
 
       <div className="relative mx-auto flex max-w-7xl flex-col px-8 lg:flex-row lg:items-end lg:justify-between">
@@ -32,7 +32,7 @@ export default function HeroSection() {
           {/* 배지 — 클릭 시 비자 가이드 페이지 이동 */}
           <Link
             href="/visa-guide"
-            className="mb-3 inline-flex items-center gap-2 rounded-full border border-slate-700/60 bg-slate-800/30 px-4 py-1.5 hover:border-emerald-500/40 hover:bg-emerald-500/10 transition-all"
+            className="mb-3 inline-flex items-center gap-2 rounded-full border border-slate-200 dark:border-slate-700/60 bg-slate-100 dark:bg-slate-800/30 px-4 py-1.5 hover:border-emerald-500/40 hover:bg-emerald-50 dark:hover:bg-emerald-500/10 transition-all"
           >
             {/* 반짝임 아이콘 */}
             <svg
@@ -41,36 +41,36 @@ export default function HeroSection() {
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="text-emerald-400"
+              className="text-emerald-600 dark:text-emerald-400"
             >
               <path
                 d="M12 2L14.09 8.26L20 9.27L15.55 13.97L16.91 20L12 16.9L7.09 20L8.45 13.97L4 9.27L9.91 8.26L12 2Z"
                 fill="currentColor"
               />
             </svg>
-            <span className="text-xs font-medium tracking-wider text-slate-300">
+            <span className="text-xs font-medium tracking-wider text-slate-600 dark:text-slate-300">
               2026 VISA GUIDE
             </span>
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-slate-500"><path d="m9 18 6-6-6-6"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-slate-400 dark:text-slate-500"><path d="m9 18 6-6-6-6"/></svg>
           </Link>
 
           {/* 메인 타이틀 */}
           <h1 className="text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
-            <span className="block text-white">Travel</span>
-            <span className="block text-white">
-              Withou<span className="text-slate-500">t</span>
+            <span className="block text-slate-900 dark:text-white">Travel</span>
+            <span className="block text-slate-900 dark:text-white">
+              Withou<span className="text-slate-300 dark:text-slate-500">t</span>
             </span>
-            <span className="block text-white">Borders.</span>
+            <span className="block text-slate-900 dark:text-white">Borders.</span>
           </h1>
         </div>
 
         {/* 우측: 설명 + 검색바 */}
         <div className="flex-1 lg:max-w-md lg:pl-24 lg:pt-16">
           {/* 설명 텍스트 */}
-          <p className="mb-4 ml-6 text-[15px] leading-relaxed text-slate-400">
-            대한민국 여권으로 떠나는 가장 자유로운 여행.
+          <p className="mb-4 ml-6 text-[15px] leading-relaxed text-slate-700 dark:text-slate-400">
+            흩어진 여행 정보, 여기서 끝.
             <br />
-            전 세계 입국 규정을 한눈에 확인하세요.
+            출입국, 교통, 숙소, 맛집까지 한 곳에서.
           </p>
 
           {/* 검색바 */}
@@ -97,8 +97,8 @@ export default function HeroSection() {
               type="text"
               value={searchQuery}
               onChange={(e) => handleSearch(e.target.value)}
-              placeholder="Where to next?"
-              className="w-full rounded-2xl border border-slate-600/60 bg-slate-800/30 py-3 pl-13 pr-6 text-base text-white placeholder-slate-500 outline-none transition-all focus:border-slate-500 focus:ring-1 focus:ring-slate-500/30"
+              placeholder="어디로 떠나볼까요?"
+              className="w-full rounded-2xl border border-slate-300 dark:border-slate-600/60 bg-white dark:bg-slate-800/30 py-3 pl-13 pr-6 text-base text-slate-900 dark:text-white placeholder-slate-500 dark:placeholder-slate-500 outline-none transition-all focus:border-slate-400 dark:focus:border-slate-500 focus:ring-1 focus:ring-slate-300/30 dark:focus:ring-slate-500/30"
             />
           </div>
         </div>

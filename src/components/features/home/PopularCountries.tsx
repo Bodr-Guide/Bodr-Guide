@@ -4,7 +4,7 @@
 import { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
 import { Country, Continent, CONTINENTS } from "@/lib/types";
-import { getCountryImage } from "@/lib/countryImages";
+import { getCountryImage, getFlagUrl } from "@/lib/countryImages";
 
 // 연간 인기 여행지 9개국 (고정)
 const POPULAR_IDS = ["JP", "TH", "VN", "US", "FR", "IT", "TW", "ES", "GB"];
@@ -28,6 +28,9 @@ const SEASON_FILTERS: { value: Season | "all"; label: string }[] = [
 // 정렬 옵션
 type SortType = "default" | "name_asc" | "name_desc";
 
+// 필터 버튼 공통 스타일
+const FILTER_ACTIVE = "bg-slate-900 text-white dark:bg-white dark:text-slate-900";
+const FILTER_INACTIVE = "bg-slate-100 text-slate-500 hover:bg-slate-200 hover:text-slate-700 dark:bg-slate-800/60 dark:text-slate-400 dark:hover:bg-slate-700/60 dark:hover:text-slate-300";
 
 interface PopularCountriesProps {
   countries: Country[];
@@ -43,19 +46,19 @@ function getCardInfo(country: Country) {
   switch (country.visaStatus) {
     case "visa_free":
       visaLabel = days ? `무비자 ${days}일` : "무비자";
-      visaColor = "text-emerald-400 bg-emerald-500/15";
+      visaColor = "text-emerald-700 bg-emerald-500/20 dark:text-emerald-400 dark:bg-emerald-500/15";
       break;
     case "visa_on_arrival":
       visaLabel = days ? `도착비자 ${days}일` : "도착비자";
-      visaColor = "text-sky-400 bg-sky-500/15";
+      visaColor = "text-sky-700 bg-sky-500/20 dark:text-sky-400 dark:bg-sky-500/15";
       break;
     case "e_visa":
       visaLabel = "전자비자 필요";
-      visaColor = "text-amber-400 bg-amber-500/15";
+      visaColor = "text-amber-700 bg-amber-500/20 dark:text-amber-400 dark:bg-amber-500/15";
       break;
     case "visa_required":
       visaLabel = "비자 필요";
-      visaColor = "text-red-400 bg-red-500/15";
+      visaColor = "text-red-700 bg-red-500/20 dark:text-red-400 dark:bg-red-500/15";
       break;
   }
 
@@ -65,7 +68,7 @@ function getCardInfo(country: Country) {
   if (country.entryRegistration) {
     const reg = country.entryRegistration;
     entryLabel = reg.required ? `${reg.type} 필수` : `${reg.type} 권장`;
-    entryColor = reg.required ? "text-orange-400 bg-orange-500/15" : "text-slate-400 bg-slate-500/15";
+    entryColor = reg.required ? "text-orange-700 bg-orange-500/20 dark:text-orange-400 dark:bg-orange-500/15" : "text-slate-600 bg-slate-500/20 dark:text-slate-400 dark:bg-slate-500/15";
   }
 
   // 여권 유효기간
@@ -204,12 +207,12 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
   const isSearching = searchQuery.trim().length > 0;
 
   return (
-    <section id="destinations" className="relative bg-slate-950 px-5 sm:px-8 pt-2 pb-8">
+    <section id="destinations" className="relative bg-white dark:bg-slate-950 px-5 sm:px-8 pt-2 pb-8 transition-colors duration-300">
       <div className="mx-auto max-w-7xl">
         {/* 섹션 헤더 */}
         <div className="mb-3 flex items-center justify-between">
           <div>
-            <h2 className="text-lg sm:text-xl font-bold text-white">
+            <h2 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">
               {isSearching ? "검색 결과" : showAll ? "전체 여행지" : "인기 여행지"}
             </h2>
             <p className="text-xs sm:text-sm text-slate-500 mt-0.5">
@@ -219,7 +222,7 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
           {!isSearching && (
             <button
               onClick={() => { setShowAll(!showAll); resetFilters(); }}
-              className="text-xs text-slate-400 hover:text-white transition-colors"
+              className="text-xs text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors"
             >
               {showAll ? "인기 여행지만 ←" : "전체 보기 →"}
             </button>
@@ -234,9 +237,7 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
               <button
                 onClick={() => setContinentFilters(new Set())}
                 className={`rounded-full px-3 py-1 text-[11px] font-medium transition-colors ${
-                  continentFilters.size === 0
-                    ? "bg-white text-slate-900"
-                    : "bg-slate-800/60 text-slate-400 hover:bg-slate-700/60 hover:text-slate-300"
+                  continentFilters.size === 0 ? FILTER_ACTIVE : FILTER_INACTIVE
                 }`}
               >
                 전체
@@ -246,9 +247,7 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
                   key={c}
                   onClick={() => toggleSet(setContinentFilters, c)}
                   className={`rounded-full px-3 py-1 text-[11px] font-medium transition-colors ${
-                    continentFilters.has(c)
-                      ? "bg-white text-slate-900"
-                      : "bg-slate-800/60 text-slate-400 hover:bg-slate-700/60 hover:text-slate-300"
+                    continentFilters.has(c) ? FILTER_ACTIVE : FILTER_INACTIVE
                   }`}
                 >
                   {c}
@@ -257,16 +256,14 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
             </div>
 
             {/* 구분선 */}
-            <div className="hidden sm:block h-4 w-px bg-slate-700" />
+            <div className="hidden sm:block h-4 w-px bg-slate-300 dark:bg-slate-700" />
 
             {/* 계절 필터 (복수 선택) */}
             <div className="flex flex-wrap gap-1.5">
               <button
                 onClick={() => setSeasonFilters(new Set())}
                 className={`rounded-full px-3 py-1 text-[11px] font-medium transition-colors ${
-                  seasonFilters.size === 0
-                    ? "bg-white text-slate-900"
-                    : "bg-slate-800/60 text-slate-400 hover:bg-slate-700/60 hover:text-slate-300"
+                  seasonFilters.size === 0 ? FILTER_ACTIVE : FILTER_INACTIVE
                 }`}
               >
                 전체
@@ -276,9 +273,7 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
                   key={item.value}
                   onClick={() => toggleSet(setSeasonFilters, item.value as Season)}
                   className={`rounded-full px-3 py-1 text-[11px] font-medium transition-colors ${
-                    seasonFilters.has(item.value as Season)
-                      ? "bg-white text-slate-900"
-                      : "bg-slate-800/60 text-slate-400 hover:bg-slate-700/60 hover:text-slate-300"
+                    seasonFilters.has(item.value as Season) ? FILTER_ACTIVE : FILTER_INACTIVE
                   }`}
                 >
                   {item.label}
@@ -287,16 +282,14 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
             </div>
 
             {/* 구분선 */}
-            <div className="hidden sm:block h-4 w-px bg-slate-700" />
+            <div className="hidden sm:block h-4 w-px bg-slate-300 dark:bg-slate-700" />
 
             {/* 정렬 */}
             <div className="flex gap-1.5">
               <button
                 onClick={() => setSortType(sortType === "name_asc" ? "default" : "name_asc")}
                 className={`rounded-full px-3 py-1 text-[11px] font-medium transition-colors ${
-                  sortType === "name_asc"
-                    ? "bg-white text-slate-900"
-                    : "bg-slate-800/60 text-slate-400 hover:bg-slate-700/60 hover:text-slate-300"
+                  sortType === "name_asc" ? FILTER_ACTIVE : FILTER_INACTIVE
                 }`}
               >
                 가나다순
@@ -304,9 +297,7 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
               <button
                 onClick={() => setSortType(sortType === "name_desc" ? "default" : "name_desc")}
                 className={`rounded-full px-3 py-1 text-[11px] font-medium transition-colors ${
-                  sortType === "name_desc"
-                    ? "bg-white text-slate-900"
-                    : "bg-slate-800/60 text-slate-400 hover:bg-slate-700/60 hover:text-slate-300"
+                  sortType === "name_desc" ? FILTER_ACTIVE : FILTER_INACTIVE
                 }`}
               >
                 역순
@@ -338,9 +329,7 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
                   key={n}
                   onClick={() => setPerPage(n)}
                   className={`rounded-md px-2 py-0.5 text-[11px] font-medium transition-colors ${
-                    perPage === n
-                      ? "bg-white text-slate-900"
-                      : "bg-slate-800/60 text-slate-400 hover:bg-slate-700/60 hover:text-slate-300"
+                    perPage === n ? FILTER_ACTIVE : FILTER_INACTIVE
                   }`}
                 >
                   {n}개
@@ -371,7 +360,7 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
             <button
               onClick={() => goToPage(Math.max(1, currentPage - 1))}
               disabled={currentPage === 1}
-              className="rounded-lg px-2.5 py-1.5 text-xs text-slate-400 hover:bg-slate-800 hover:text-white transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+              className="rounded-lg px-2.5 py-1.5 text-xs text-slate-500 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-white transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6"/></svg>
             </button>
@@ -392,15 +381,15 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
               }
               return pages.map((p, idx) =>
                 p === "..." ? (
-                  <span key={`dots-${idx}`} className="px-1.5 text-xs text-slate-600">…</span>
+                  <span key={`dots-${idx}`} className="px-1.5 text-xs text-slate-400 dark:text-slate-600">…</span>
                 ) : (
                   <button
                     key={p}
                     onClick={() => goToPage(p)}
                     className={`min-w-[28px] rounded-lg px-2 py-1.5 text-xs font-medium transition-colors ${
                       currentPage === p
-                        ? "bg-white text-slate-900"
-                        : "text-slate-400 hover:bg-slate-800 hover:text-white"
+                        ? FILTER_ACTIVE
+                        : "text-slate-500 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-white"
                     }`}
                   >
                     {p}
@@ -413,7 +402,7 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
             <button
               onClick={() => goToPage(Math.min(totalPages, currentPage + 1))}
               disabled={currentPage === totalPages}
-              className="rounded-lg px-2.5 py-1.5 text-xs text-slate-400 hover:bg-slate-800 hover:text-white transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+              className="rounded-lg px-2.5 py-1.5 text-xs text-slate-500 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-white transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
             </button>
@@ -432,7 +421,7 @@ function CountryCard({ country }: { country: Country }) {
   return (
     <Link
       href={`/country/${country.id}`}
-      className="group flex items-stretch overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/60 hover:border-slate-700 hover:bg-slate-900 transition-all duration-200"
+      className="group flex items-stretch overflow-hidden rounded-2xl border border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-900/60 dark:hover:border-slate-700 dark:hover:bg-slate-900 transition-all duration-200"
     >
       {/* 왼쪽: 이미지 + 국가명 (4:3 비율) */}
       <div className="relative w-36 sm:w-40 aspect-[4/3] flex-shrink-0 overflow-hidden">
@@ -445,7 +434,7 @@ function CountryCard({ country }: { country: Country }) {
             decoding="async"
           />
         ) : (
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-700 to-slate-800" />
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-800" />
         )}
         {/* 이미지 위 그라데이션 — 하단 텍스트 가독성 확보 */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
@@ -455,8 +444,9 @@ function CountryCard({ country }: { country: Country }) {
           <span className="text-xs text-white/70 uppercase tracking-wider leading-none drop-shadow-sm">
             {country.nameEn}
           </span>
-          <span className="text-base font-bold text-white leading-tight mt-1 drop-shadow-lg">
-            {country.flagEmoji} {country.nameKo}
+          <span className="text-base font-bold text-white leading-tight mt-1 drop-shadow-lg flex items-center gap-1.5">
+            <img src={getFlagUrl(country.id, 40)} alt="" className="w-5 h-auto rounded-[2px] shadow-sm" loading="lazy" />
+            {country.nameKo}
           </span>
         </div>
       </div>
@@ -477,14 +467,14 @@ function CountryCard({ country }: { country: Country }) {
 
         {/* 비자 종류 요약 (전자비자/비자필요 국가) */}
         {info.visaTypesSummary && (
-          <span className="inline-flex items-center self-start text-[10px] text-violet-400 bg-violet-500/10 rounded-md px-2 py-0.5">
+          <span className="inline-flex items-center self-start text-[10px] text-violet-700 bg-violet-500/15 dark:text-violet-400 dark:bg-violet-500/10 rounded-md px-2 py-0.5">
             {info.visaTypesSummary}
           </span>
         )}
 
         {/* 여권 유효기간 */}
         {info.passportLabel && (
-          <span className="text-[10px] text-slate-500 mt-0.5">
+          <span className="text-[10px] text-slate-600 dark:text-slate-500 mt-0.5">
             {info.passportLabel}
           </span>
         )}
@@ -492,7 +482,7 @@ function CountryCard({ country }: { country: Country }) {
 
       {/* 화살표 */}
       <div className="flex items-center pr-4">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-slate-600 group-hover:text-slate-400 transition-colors">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-slate-300 group-hover:text-slate-500 dark:text-slate-600 dark:group-hover:text-slate-400 transition-colors">
           <path d="m9 18 6-6-6-6"/>
         </svg>
       </div>

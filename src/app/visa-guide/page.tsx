@@ -5,7 +5,7 @@ import { Country, VisaStatus, VISA_STATUS_MAP } from "@/lib/types";
 import Header from "@/components/layout/Header";
 
 export const metadata: Metadata = {
-  title: "비자 가이드 — BodrGuide",
+  title: "비자 가이드 — BorderWiki",
   description:
     "대한민국 여권 기준 전 세계 비자 종류별 가이드. 무비자, 도착비자, 전자비자, 비자 필요 국가를 한눈에 확인하세요.",
 };
@@ -16,28 +16,28 @@ const STATUS_STYLE: Record<
   { bg: string; border: string; text: string; accent: string; icon: string }
 > = {
   visa_free: {
-    bg: "from-emerald-950/40 via-slate-900/80 to-slate-900/80",
+    bg: "from-emerald-50/60 via-white/80 to-white/80 dark:from-emerald-950/40 dark:via-slate-900/80 dark:to-slate-900/80",
     border: "border-emerald-500/30",
     text: "text-emerald-400",
     accent: "bg-emerald-500/15 text-emerald-300",
     icon: "M20 6 9 17l-5-5",
   },
   visa_on_arrival: {
-    bg: "from-sky-950/40 via-slate-900/80 to-slate-900/80",
+    bg: "from-sky-50/60 via-white/80 to-white/80 dark:from-sky-950/40 dark:via-slate-900/80 dark:to-slate-900/80",
     border: "border-sky-500/30",
     text: "text-sky-400",
     accent: "bg-sky-500/15 text-sky-300",
     icon: "M2 12h10M9 4l3 3-3 3",
   },
   e_visa: {
-    bg: "from-amber-950/40 via-slate-900/80 to-slate-900/80",
+    bg: "from-amber-50/60 via-white/80 to-white/80 dark:from-amber-950/40 dark:via-slate-900/80 dark:to-slate-900/80",
     border: "border-amber-500/30",
     text: "text-amber-400",
     accent: "bg-amber-500/15 text-amber-300",
     icon: "M2 4h20v16H2zM2 9.5h20",
   },
   visa_required: {
-    bg: "from-red-950/40 via-slate-900/80 to-slate-900/80",
+    bg: "from-red-50/60 via-white/80 to-white/80 dark:from-red-950/40 dark:via-slate-900/80 dark:to-slate-900/80",
     border: "border-red-500/30",
     text: "text-red-400",
     accent: "bg-red-500/15 text-red-300",
@@ -120,7 +120,7 @@ export default function VisaGuidePage() {
   );
 
   return (
-    <div className="min-h-screen bg-[#0a0a0f]">
+    <div className="min-h-screen bg-white dark:bg-[#0a0a0f] transition-colors duration-300">
       <Header />
 
       {/* 히어로 */}
@@ -133,10 +133,10 @@ export default function VisaGuidePage() {
           <p className="text-[11px] sm:text-xs font-medium text-violet-400 uppercase tracking-widest mb-2">
             Visa Guide
           </p>
-          <h1 className="text-3xl sm:text-5xl font-extrabold text-white leading-tight mb-3">
+          <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white leading-tight mb-3">
             비자 가이드
           </h1>
-          <p className="text-sm sm:text-base text-slate-400 leading-relaxed max-w-2xl">
+          <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 leading-relaxed max-w-2xl">
             대한민국 여권 기준, 전 세계 {countries.length}개국의 비자 요건을
             한눈에 확인하세요. 무비자부터 워킹홀리데이, 디지털노마드비자까지
             필요한 모든 정보를 제공합니다.
@@ -155,7 +155,7 @@ export default function VisaGuidePage() {
                   <p className={`text-2xl sm:text-3xl font-extrabold ${style.text}`}>
                     {groups[status].length}
                   </p>
-                  <p className="text-[11px] sm:text-xs text-slate-400 mt-1">
+                  <p className="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 mt-1">
                     {info.label}
                   </p>
                 </div>
@@ -167,25 +167,25 @@ export default function VisaGuidePage() {
 
       {/* 비자 종류별 가이드 */}
       <section className="max-w-6xl mx-auto px-5 sm:px-8 py-8 sm:py-12">
-        <h2 className="text-xl sm:text-2xl font-bold text-white mb-6">
+        <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-6">
           비자 종류별 가이드
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {VISA_CATEGORIES.map((cat) => (
             <div
               key={cat.name}
-              className="rounded-2xl border border-slate-700/40 bg-slate-900/60 p-5 hover:border-slate-600/60 transition-colors"
+              className="rounded-2xl border border-slate-200 dark:border-slate-700/40 bg-slate-50/60 dark:bg-slate-900/60 p-5 hover:border-slate-300 dark:hover:border-slate-600/60 transition-colors"
             >
               <div className="flex items-center gap-3 mb-3">
                 <span className="text-2xl">{cat.emoji}</span>
-                <h3 className="text-sm sm:text-base font-bold text-white">
+                <h3 className="text-sm sm:text-base font-bold text-slate-900 dark:text-white">
                   {cat.name}
                 </h3>
               </div>
-              <p className="text-xs sm:text-sm text-slate-400 leading-relaxed mb-3">
+              <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-3">
                 {cat.desc}
               </p>
-              <div className="bg-slate-800/50 rounded-lg px-3 py-2">
+              <div className="bg-slate-100/50 dark:bg-slate-800/50 rounded-lg px-3 py-2">
                 <p className="text-[11px] sm:text-xs text-violet-300 leading-relaxed">
                   <span className="font-semibold text-violet-400">TIP</span>{" "}
                   {cat.tip}
@@ -199,7 +199,7 @@ export default function VisaGuidePage() {
       {/* 워킹홀리데이 협정국 */}
       {whCountries.length > 0 && (
         <section className="max-w-6xl mx-auto px-5 sm:px-8 pb-8 sm:pb-12">
-          <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">
+          <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-2">
             워킹홀리데이 협정국
           </h2>
           <p className="text-xs sm:text-sm text-slate-500 mb-5">
@@ -210,7 +210,7 @@ export default function VisaGuidePage() {
               <Link
                 key={c.id}
                 href={`/country/${c.id}`}
-                className="inline-flex items-center gap-1.5 rounded-lg border border-slate-700/50 bg-slate-800/40 px-3 py-1.5 text-xs sm:text-sm text-slate-300 hover:border-violet-500/40 hover:text-white transition-colors"
+                className="inline-flex items-center gap-1.5 rounded-lg border border-slate-200 dark:border-slate-700/50 bg-slate-100/40 dark:bg-slate-800/40 px-3 py-1.5 text-xs sm:text-sm text-slate-600 dark:text-slate-300 hover:border-violet-500/40 hover:text-slate-900 dark:hover:text-white transition-colors"
               >
                 <span>{c.flagEmoji}</span>
                 <span>{c.nameKo}</span>
@@ -222,7 +222,7 @@ export default function VisaGuidePage() {
 
       {/* 비자 상태별 국가 목록 */}
       <section className="max-w-6xl mx-auto px-5 sm:px-8 pb-20">
-        <h2 className="text-xl sm:text-2xl font-bold text-white mb-6">
+        <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-6">
           비자 상태별 국가 목록
         </h2>
         <div className="flex flex-col gap-6">
@@ -269,11 +269,11 @@ export default function VisaGuidePage() {
                     <Link
                       key={c.id}
                       href={`/country/${c.id}`}
-                      className="flex items-center gap-2 rounded-lg bg-slate-800/40 px-3 py-2 hover:bg-slate-700/40 transition-colors group"
+                      className="flex items-center gap-2 rounded-lg bg-slate-100/40 dark:bg-slate-800/40 px-3 py-2 hover:bg-slate-200/40 dark:hover:bg-slate-700/40 transition-colors group"
                     >
                       <span className="text-base">{c.flagEmoji}</span>
                       <div className="flex-1 min-w-0">
-                        <p className="text-xs sm:text-sm font-medium text-slate-200 group-hover:text-white truncate">
+                        <p className="text-xs sm:text-sm font-medium text-slate-700 dark:text-slate-200 group-hover:text-slate-900 dark:group-hover:text-white truncate">
                           {c.nameKo}
                         </p>
                         {c.visaFreeStayDays && (

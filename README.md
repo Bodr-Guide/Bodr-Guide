@@ -1,4 +1,4 @@
-# BodrGuide
+# BorderWiki
 
 > Travel Without Borders. — 대한민국 여권으로 떠나는 가장 자유로운 여행.
 
