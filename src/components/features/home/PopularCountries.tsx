@@ -76,12 +76,7 @@ function getCardInfo(country: Country) {
     ? `여권 ${country.passportValidity.months}개월 이상`
     : "";
 
-  // 비자 종류 요약 (e_visa / visa_required 국가)
-  const visaTypesSummary = country.visaTypes && country.visaTypes.length > 0
-    ? country.visaTypes.slice(0, 2).map((v) => v.name).join(" · ")
-    : "";
-
-  return { visaLabel, visaColor, entryLabel, entryColor, passportLabel, visaTypesSummary };
+  return { visaLabel, visaColor, entryLabel, entryColor, passportLabel };
 }
 
 // 페이지당 표시 개수 옵션
@@ -462,13 +457,6 @@ function CountryCard({ country }: { country: Country }) {
         {info.entryLabel && (
           <span className={`inline-flex items-center self-start rounded-md px-2 py-0.5 text-[11px] font-medium ${info.entryColor}`}>
             {info.entryLabel}
-          </span>
-        )}
-
-        {/* 비자 종류 요약 (전자비자/비자필요 국가) */}
-        {info.visaTypesSummary && (
-          <span className="inline-flex items-center self-start text-[10px] text-violet-700 bg-violet-500/15 dark:text-violet-400 dark:bg-violet-500/10 rounded-md px-2 py-0.5">
-            {info.visaTypesSummary}
           </span>
         )}
 

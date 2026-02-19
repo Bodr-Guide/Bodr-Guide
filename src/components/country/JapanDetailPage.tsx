@@ -12,22 +12,12 @@ interface JapanDetailPageProps {
 }
 
 export default function JapanDetailPage({ country }: JapanDetailPageProps) {
-  const [activeTab, setActiveTab] = useState("entry");
-  const [travelPurpose, setTravelPurpose] = useState<string | null>(null);
+  const [activeTab, setActiveTab] = useState("preparation");
+  const [travelPurpose, setTravelPurpose] = useState<string | null>("tourism");
   const heroImage = getCountryImage(country.id);
   const quickInfo = country.quickInfo;
 
   const tabs = [
-    {
-      id: "entry",
-      label: "출입국",
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M9 11l3 3L22 4" />
-          <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" />
-        </svg>
-      ),
-    },
     {
       id: "preparation",
       label: "여행 준비",
@@ -129,15 +119,14 @@ export default function JapanDetailPage({ country }: JapanDetailPageProps) {
       <TabNavigation tabs={tabs} activeTab={activeTab} onTabChange={setActiveTab} />
 
       {/* Tab Content */}
-      <section className="max-w-6xl mx-auto px-5 sm:px-8 py-8">
-        {activeTab === "entry" && (
-          <EntryContent
+      <section className="max-w-6xl mx-auto px-5 sm:px-8 py-8 pb-16">
+        {activeTab === "preparation" && (
+          <PreparationContent
             country={country}
             travelPurpose={travelPurpose}
             onPurposeChange={setTravelPurpose}
           />
         )}
-        {activeTab === "preparation" && <PreparationContent />}
         {activeTab === "safety" && <SafetyContent />}
         {activeTab === "cities" && <CitiesContent />}
       </section>
@@ -248,8 +237,9 @@ function getBadgeStyle(level: "required" | "recommended" | "optional" | null) {
   return styles[level];
 }
 
-// 출입국 탭 컨텐츠
-function EntryContent({
+
+// 여행 준비 탭 컨텐츠 (출입국 + 여행준비 통합)
+function PreparationContent({
   country,
   travelPurpose,
   onPurposeChange,
@@ -287,7 +277,6 @@ function EntryContent({
           className="w-full sm:w-auto bg-white dark:bg-slate-800 text-slate-900 dark:text-white border border-slate-300 dark:border-slate-600 rounded-lg px-4 py-2.5 text-sm font-medium cursor-pointer focus:outline-none focus:ring-2 focus:ring-sky-500 dark:focus:ring-sky-400 focus:border-transparent"
           aria-label="여행 목적 선택"
         >
-          <option value="">선택하세요</option>
           <option value="tourism">🏖️ 여행/관광</option>
           <option value="business">💼 출장/비즈니스</option>
           <option value="study">📚 유학/어학연수</option>
@@ -296,7 +285,7 @@ function EntryContent({
         </select>
       </div>
 
-      {/* 아코디언 섹션 */}
+      {/* 아코디언 섹션 - 출입국 + 여행준비 통합 */}
       <Accordion>
       {/* 비자 요건 - 비자가 필요한 목적일 때만 표시 */}
       {visaLevel === "required" && (
@@ -382,7 +371,7 @@ function EntryContent({
           title={`전자여행허가 (${country.entryRegistration.type})`}
           badge={entryBadge?.text || (country.entryRegistration.required ? "필수" : "권장")}
           badgeColor={entryBadge?.color}
-          defaultOpen={entryRegLevel === "required"}
+          defaultOpen={true}
           icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="4" width="20" height="16" rx="2"/></svg>}
         >
           <div className="space-y-4">
@@ -418,6 +407,7 @@ function EntryContent({
 
       <AccordionItem
         title="입국카드 작성법"
+        defaultOpen={true}
         icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>}
       >
         <div className="space-y-3">
@@ -432,6 +422,7 @@ function EntryContent({
         title="운전면허 상호인정"
         badge={licenseBadge?.text}
         badgeColor={licenseBadge?.color}
+        defaultOpen={true}
         icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>}
       >
         <p>한국 운전면허증으로 일본에서 운전하려면 <strong>국제운전면허증(IDP)</strong> 또는 <strong>일본어 번역본</strong>이 필요합니다.</p>
@@ -443,18 +434,11 @@ function EntryContent({
           </ul>
         </div>
       </AccordionItem>
-    </Accordion>
-    </div>
-  );
-}
 
-// 여행 준비 탭 컨텐츠
-function PreparationContent() {
-  return (
-    <Accordion>
       <AccordionItem
         title="보험"
         badge="권장"
+        defaultOpen={true}
         icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>}
       >
         <div className="space-y-4">
@@ -481,6 +465,7 @@ function PreparationContent() {
 
       <AccordionItem
         title="통신 (유심/eSIM/로밍)"
+        defaultOpen={true}
         icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>}
       >
         <div className="space-y-4">
@@ -510,6 +495,7 @@ function PreparationContent() {
 
       <AccordionItem
         title="돈 준비 (환율/환전)"
+        defaultOpen={true}
         icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>}
       >
         <div className="space-y-4">
@@ -533,6 +519,7 @@ function PreparationContent() {
 
       <AccordionItem
         title="출국 체크리스트"
+        defaultOpen={true}
         icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 6L9 17l-5-5"/></svg>}
       >
         <div className="space-y-2">
@@ -545,6 +532,51 @@ function PreparationContent() {
         </div>
       </AccordionItem>
     </Accordion>
+
+    {/* 보험 광고 섹션 */}
+    <div className="mt-8 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 border border-blue-200 dark:border-blue-800 rounded-xl p-6">
+      <div className="flex items-start gap-4">
+        <div className="flex-shrink-0">
+          <div className="w-12 h-12 bg-blue-500 dark:bg-blue-600 rounded-lg flex items-center justify-center">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+        </div>
+        <div className="flex-1">
+          <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">
+            추천 여행자 보험 (광고)
+          </h3>
+          <p className="text-sm text-slate-600 dark:text-slate-400 mb-4">
+            일본 여행에 최적화된 보험 상품을 비교하고 가입하세요
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
+            <a
+              href="#"
+              className="flex items-center justify-between p-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg hover:border-blue-500 dark:hover:border-blue-500 transition-colors group"
+            >
+              <span className="text-sm font-medium text-slate-900 dark:text-white">삼성화재 해외여행보험</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-slate-400 group-hover:text-blue-500">
+                <path d="m9 18 6-6-6-6"/>
+              </svg>
+            </a>
+            <a
+              href="#"
+              className="flex items-center justify-between p-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg hover:border-blue-500 dark:hover:border-blue-500 transition-colors group"
+            >
+              <span className="text-sm font-medium text-slate-900 dark:text-white">현대해상 해외여행보험</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-slate-400 group-hover:text-blue-500">
+                <path d="m9 18 6-6-6-6"/>
+              </svg>
+            </a>
+          </div>
+          <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+            <strong className="text-slate-600 dark:text-slate-300">단서 조항:</strong> 본 서비스는 보험 상품을 직접 판매하지 않으며, 제휴 플랫폼의 광고를 제공합니다. 보험 가입 및 보장과 관련한 모든 책임은 해당 보험사에 있습니다.
+          </p>
+        </div>
+      </div>
+    </div>
+    </div>
   );
 }
 
