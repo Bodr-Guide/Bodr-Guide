@@ -26,8 +26,15 @@ export default function Header() {
         }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-8 py-5">
-        {/* 로고 */}
-        <Link href="/" className="text-lg font-semibold italic tracking-tight text-slate-900 dark:text-white">
+        {/* 로고 — 메인 페이지에서는 초기 화면(인기 여행지)으로 리셋 */}
+        <Link
+          href="/"
+          onClick={() => {
+            window.dispatchEvent(new CustomEvent("reset-view"));
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+          className="text-lg font-semibold italic tracking-tight text-slate-900 dark:text-white"
+        >
           BorderWiki.
         </Link>
 

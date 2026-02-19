@@ -86,6 +86,17 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
     return () => window.removeEventListener("hero-search", handleHeroSearch);
   }, []);
 
+  // 로고 클릭 시 초기 화면(인기 여행지)으로 리셋
+  useEffect(() => {
+    const handleReset = () => {
+      setShowAll(false);
+      setSearchQuery("");
+      resetFilters();
+    };
+    window.addEventListener("reset-view", handleReset);
+    return () => window.removeEventListener("reset-view", handleReset);
+  }, []);
+
   // 토글 헬퍼: Set에 값 추가/제거
   const toggleSet = <T,>(setter: React.Dispatch<React.SetStateAction<Set<T>>>, value: T) => {
     setter((prev) => {
