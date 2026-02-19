@@ -161,6 +161,14 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
       result.sort((a, b) => a.nameKo.localeCompare(b.nameKo, "ko"));
     } else if (sortType === "name_desc") {
       result.sort((a, b) => b.nameKo.localeCompare(a.nameKo, "ko"));
+    } else {
+      // 기본: 인기순 (POPULAR_IDS 먼저, 나머지는 원래 순서)
+      const popularIndex = new Map(POPULAR_IDS.map((id, i) => [id, i]));
+      result.sort((a, b) => {
+        const ai = popularIndex.get(a.id) ?? POPULAR_IDS.length;
+        const bi = popularIndex.get(b.id) ?? POPULAR_IDS.length;
+        return ai - bi;
+      });
     }
 
     return result;
