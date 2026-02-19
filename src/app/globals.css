@@ -59,6 +59,13 @@
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
   }
+
+  /* 모든 클릭 가능 요소에 pointer 커서 */
+  a, button, [role="button"], select, label[for], summary,
+  input[type="button"], input[type="submit"], input[type="reset"],
+  input[type="checkbox"], input[type="radio"] {
+    cursor: pointer;
+  }
 }
 
 /* ========================================

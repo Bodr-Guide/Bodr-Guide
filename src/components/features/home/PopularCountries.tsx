@@ -376,7 +376,7 @@ function CountryCard({ country }: { country: Country }) {
   return (
     <Link
       href={`/country/${country.id}`}
-      className="group flex items-stretch overflow-hidden rounded-2xl border border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-900/60 dark:hover:border-slate-700 dark:hover:bg-slate-900 transition-all duration-200 cursor-pointer"
+      className="group flex items-stretch overflow-hidden rounded-2xl border border-slate-200 bg-white hover:border-sky-300 hover:bg-sky-50/30 hover:shadow-md dark:border-slate-800 dark:bg-slate-900/60 dark:hover:border-sky-700 dark:hover:bg-sky-950/20 dark:hover:shadow-sky-950/30 transition-all duration-200"
     >
       {/* 왼쪽: 이미지 + 국가명 (4:3 비율) */}
       <div className="relative w-36 sm:w-40 aspect-[4/3] flex-shrink-0 overflow-hidden">
