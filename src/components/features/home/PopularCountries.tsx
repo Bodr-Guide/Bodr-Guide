@@ -9,22 +9,6 @@ import { getCountryImage, getFlagUrl, isAiGeneratedImage } from "@/lib/countryIm
 // 연간 인기 여행지 9개국 (고정)
 const POPULAR_IDS = ["JP", "TH", "VN", "US", "FR", "IT", "TW", "ES", "GB"];
 
-// 계절별 추천 여행지 (전체보기 필터용)
-type Season = "봄" | "여름" | "가을" | "겨울";
-const SEASON_COUNTRIES: Record<Season, Set<string>> = {
-  봄: new Set(["JP", "TW", "TH", "FR", "ES", "IT", "VN", "GR", "HR", "NZ", "CH", "PT", "GB", "NL", "DE"]),
-  여름: new Set(["FR", "IT", "ES", "GR", "HR", "GB", "CH", "TR", "IS", "NO", "MN", "SE", "FI", "AT", "DE", "PT"]),
-  가을: new Set(["JP", "CA", "DE", "CZ", "AT", "CH", "UZ", "GE", "TR", "TW", "MN", "EG", "IT", "FR", "KR"]),
-  겨울: new Set(["TH", "VN", "PH", "AU", "MV", "SG", "GU", "JP", "FI", "NO", "IS", "DE", "AT", "CZ", "AE"]),
-};
-const SEASON_FILTERS: { value: Season | "all"; label: string }[] = [
-  { value: "all", label: "전체" },
-  { value: "봄", label: "봄 (3~5월)" },
-  { value: "여름", label: "여름 (6~8월)" },
-  { value: "가을", label: "가을 (9~11월)" },
-  { value: "겨울", label: "겨울 (12~2월)" },
-];
-
 // 정렬 옵션
 type SortType = "default" | "name_asc" | "name_desc";
 
@@ -88,7 +72,7 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
   const [showAll, setShowAll] = useState(false);
   const [sortType, setSortType] = useState<SortType>("default");
   const [continentFilters, setContinentFilters] = useState<Set<Continent>>(new Set());
-  const [seasonFilters, setSeasonFilters] = useState<Set<Season>>(new Set());
+
   const [perPage, setPerPage] = useState<PerPage>(30);
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -116,11 +100,10 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
   const resetFilters = () => {
     setSortType("default");
     setContinentFilters(new Set());
-    setSeasonFilters(new Set());
     setCurrentPage(1);
   };
 
-  const hasActiveFilter = sortType !== "default" || continentFilters.size > 0 || seasonFilters.size > 0;
+  const hasActiveFilter = sortType !== "default" || continentFilters.size > 0;
 
   // 검색 중이면 전체 필터, 전체보기면 전체, 아니면 인기 9개국만
   const displayCountries = useMemo(() => {
@@ -162,15 +145,6 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
       result = result.filter((c) => continentFilters.has(c.continent));
     }
 
-    // 계절 필터 (복수 선택 — 합집합)
-    if (seasonFilters.size > 0) {
-      const merged = new Set<string>();
-      for (const s of seasonFilters) {
-        for (const id of SEASON_COUNTRIES[s]) merged.add(id);
-      }
-      result = result.filter((c) => merged.has(c.id));
-    }
-
     // 정렬
     if (sortType === "name_asc") {
       result.sort((a, b) => a.nameKo.localeCompare(b.nameKo, "ko"));
@@ -179,12 +153,12 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
     }
 
     return result;
-  }, [countries, searchQuery, showAll, continentFilters, seasonFilters, sortType]);
+  }, [countries, searchQuery, showAll, continentFilters, sortType]);
 
   // 필터/검색/정렬 변경 시 페이지 리셋
   useEffect(() => {
     setCurrentPage(1);
-  }, [searchQuery, continentFilters, seasonFilters, sortType, perPage]);
+  }, [searchQuery, continentFilters, sortType, perPage]);
 
   // 페이지네이션 계산 (전체보기 또는 검색 중일 때만 적용)
   const needsPagination = (showAll || searchQuery.trim().length > 0) && displayCountries.length > perPage;
@@ -246,32 +220,6 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
                   }`}
                 >
                   {c}
-                </button>
-              ))}
-            </div>
-
-            {/* 구분선 */}
-            <div className="hidden sm:block h-4 w-px bg-slate-300 dark:bg-slate-700" />
-
-            {/* 계절 필터 (복수 선택) */}
-            <div className="flex flex-wrap gap-1.5">
-              <button
-                onClick={() => setSeasonFilters(new Set())}
-                className={`rounded-full px-3 py-1 text-[11px] font-medium transition-colors ${
-                  seasonFilters.size === 0 ? FILTER_ACTIVE : FILTER_INACTIVE
-                }`}
-              >
-                전체
-              </button>
-              {SEASON_FILTERS.filter((f) => f.value !== "all").map((item) => (
-                <button
-                  key={item.value}
-                  onClick={() => toggleSet(setSeasonFilters, item.value as Season)}
-                  className={`rounded-full px-3 py-1 text-[11px] font-medium transition-colors ${
-                    seasonFilters.has(item.value as Season) ? FILTER_ACTIVE : FILTER_INACTIVE
-                  }`}
-                >
-                  {item.label}
                 </button>
               ))}
             </div>
