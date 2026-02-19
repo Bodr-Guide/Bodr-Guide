@@ -50,7 +50,7 @@ export default function JapanDetailPage({ country }: JapanDetailPageProps) {
   return (
     <div className="min-h-screen bg-white dark:bg-slate-950 transition-colors duration-300">
       {/* Hero Section */}
-      <section className="relative h-[70vh] overflow-hidden">
+      <section className="relative h-[55vh] sm:h-[50vh] lg:h-[45vh] overflow-hidden">
         {heroImage && (
           <div
             className="absolute inset-0 bg-cover bg-center"
@@ -60,55 +60,57 @@ export default function JapanDetailPage({ country }: JapanDetailPageProps) {
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60" />
 
         {/* Hero Content */}
-        <div className="relative z-10 flex flex-col justify-end h-full max-w-6xl mx-auto px-5 sm:px-8 pb-12">
-          <h1 className="text-5xl sm:text-7xl font-bold text-white mb-2 flex items-center gap-4">
+        <div className="relative z-10 flex flex-col justify-end h-full max-w-4xl mx-auto px-5 sm:px-8 pb-8 lg:pb-10">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-2 flex items-center gap-3">
             <img src={getFlagUrl(country.id, 80)} alt="" className="w-16 h-auto rounded shadow-lg" />
             {country.nameKo}
           </h1>
-          <p className="text-lg sm:text-xl text-white/80 uppercase tracking-wider mb-6">
+          <p className="text-base sm:text-lg text-white/80 uppercase tracking-wider mb-4">
             {country.nameEn}
           </p>
 
-          {/* Quick Info Cards */}
+          {/* 퀵 인포 스트립 */}
           {quickInfo && (
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-4xl">
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4">
-                <div className="flex items-center gap-2 mb-1">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <circle cx="12" cy="12" r="10" />
-                    <polyline points="12 6 12 12 16 14" />
-                  </svg>
-                  <span className="text-xs text-white/70 uppercase tracking-wider">시차</span>
+            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl max-w-3xl overflow-hidden">
+              <div className="grid grid-cols-2 sm:grid-cols-4 sm:divide-x divide-white/15">
+                <div className="p-3 sm:p-4 border-r border-b sm:border-b-0 border-white/15">
+                  <div className="flex items-center gap-2 mb-1.5">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-white/60">
+                      <circle cx="12" cy="12" r="10" />
+                      <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                    <span className="text-[11px] text-white/60 font-medium uppercase tracking-wider">시차</span>
+                  </div>
+                  <p className="text-base sm:text-lg font-bold text-white leading-tight">{quickInfo.timeDiff}</p>
                 </div>
-                <p className="text-lg font-bold text-white">{quickInfo.timeDiff}</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4">
-                <div className="flex items-center gap-2 mb-1">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <line x1="12" y1="1" x2="12" y2="23" />
-                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
-                  <span className="text-xs text-white/70 uppercase tracking-wider">통화</span>
+                <div className="p-3 sm:p-4 border-b sm:border-b-0 border-white/15">
+                  <div className="flex items-center gap-2 mb-1.5">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-white/60">
+                      <line x1="12" y1="1" x2="12" y2="23" />
+                      <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                    </svg>
+                    <span className="text-[11px] text-white/60 font-medium uppercase tracking-wider">통화</span>
+                  </div>
+                  <p className="text-base sm:text-lg font-bold text-white leading-tight">{quickInfo.currency}</p>
                 </div>
-                <p className="text-lg font-bold text-white">{quickInfo.currency}</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4">
-                <div className="flex items-center gap-2 mb-1">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-                  </svg>
-                  <span className="text-xs text-white/70 uppercase tracking-wider">전압</span>
+                <div className="p-3 sm:p-4 border-r sm:border-r-0 border-white/15">
+                  <div className="flex items-center gap-2 mb-1.5">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-white/60">
+                      <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                    </svg>
+                    <span className="text-[11px] text-white/60 font-medium uppercase tracking-wider">전압</span>
+                  </div>
+                  <p className="text-base sm:text-lg font-bold text-white leading-tight">{quickInfo.voltage}</p>
                 </div>
-                <p className="text-lg font-bold text-white">{quickInfo.voltage}</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4">
-                <div className="flex items-center gap-2 mb-1">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z" />
-                  </svg>
-                  <span className="text-xs text-white/70 uppercase tracking-wider">비행시간</span>
+                <div className="p-3 sm:p-4">
+                  <div className="flex items-center gap-2 mb-1.5">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-white/60">
+                      <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z" />
+                    </svg>
+                    <span className="text-[11px] text-white/60 font-medium uppercase tracking-wider">비행시간</span>
+                  </div>
+                  <p className="text-base sm:text-lg font-bold text-white leading-tight">{quickInfo.flight}</p>
                 </div>
-                <p className="text-lg font-bold text-white">{quickInfo.flight}</p>
               </div>
             </div>
           )}
@@ -119,7 +121,7 @@ export default function JapanDetailPage({ country }: JapanDetailPageProps) {
       <TabNavigation tabs={tabs} activeTab={activeTab} onTabChange={setActiveTab} />
 
       {/* Tab Content */}
-      <section className="max-w-6xl mx-auto px-5 sm:px-8 py-8 pb-16">
+      <section className="max-w-4xl mx-auto px-5 sm:px-8 py-6 pb-16">
         {activeTab === "preparation" && (
           <PreparationContent
             country={country}
@@ -259,22 +261,20 @@ function PreparationContent({
 
   return (
     <div className="space-y-6">
-      {/* 여행 목적 선택 섹션 */}
-      <div className="bg-gradient-to-r from-sky-50 to-emerald-50 dark:from-sky-950/30 dark:to-emerald-950/30 border border-sky-200 dark:border-sky-800 rounded-xl p-5">
-        <div className="flex items-center gap-3 mb-3">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-sky-600 dark:text-sky-400">
+      {/* 여행 목적 선택기 (컴팩트) */}
+      <div className="flex flex-col sm:flex-row sm:items-center gap-3 bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3">
+        <div className="flex items-center gap-2 flex-shrink-0">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-sky-600 dark:text-sky-400">
             <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
             <polyline points="9 22 9 12 15 12 15 22"/>
           </svg>
-          <h3 className="text-sm font-semibold text-slate-900 dark:text-white">여행 목적</h3>
+          <span className="text-sm font-semibold text-slate-900 dark:text-white">여행 목적</span>
         </div>
-        <p className="text-sm text-slate-600 dark:text-slate-400 mb-3">
-          방문 목적에 따라 필요한 절차가 달라집니다
-        </p>
+        <p className="text-xs text-slate-500 dark:text-slate-400 hidden sm:block">방문 목적에 따라 필요한 절차가 달라집니다</p>
         <select
           value={travelPurpose || ""}
           onChange={(e) => onPurposeChange(e.target.value || null)}
-          className="w-full sm:w-auto bg-white dark:bg-slate-800 text-slate-900 dark:text-white border border-slate-300 dark:border-slate-600 rounded-lg px-4 py-2.5 text-sm font-medium cursor-pointer focus:outline-none focus:ring-2 focus:ring-sky-500 dark:focus:ring-sky-400 focus:border-transparent"
+          className="sm:ml-auto bg-white dark:bg-slate-800 text-slate-900 dark:text-white border border-slate-300 dark:border-slate-600 rounded-lg px-3 py-2 text-sm font-medium cursor-pointer focus:outline-none focus:ring-2 focus:ring-sky-500 dark:focus:ring-sky-400 focus:border-transparent"
           aria-label="여행 목적 선택"
         >
           <option value="tourism">🏖️ 여행/관광</option>
@@ -285,7 +285,12 @@ function PreparationContent({
         </select>
       </div>
 
-      {/* 아코디언 섹션 - 출입국 + 여행준비 통합 */}
+      {/* 입출국 섹션 */}
+      <div className="flex items-center gap-2 pt-1">
+        <span className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider">입출국</span>
+        <div className="flex-1 h-px bg-slate-200 dark:bg-slate-800" />
+      </div>
+
       <Accordion>
       {/* 비자 요건 - 비자가 필요한 목적일 때만 표시 */}
       {visaLevel === "required" && (
@@ -371,7 +376,7 @@ function PreparationContent({
           title={`전자여행허가 (${country.entryRegistration.type})`}
           badge={entryBadge?.text || (country.entryRegistration.required ? "필수" : "권장")}
           badgeColor={entryBadge?.color}
-          defaultOpen={true}
+          defaultOpen={false}
           icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="4" width="20" height="16" rx="2"/></svg>}
         >
           <div className="space-y-4">
@@ -407,7 +412,7 @@ function PreparationContent({
 
       <AccordionItem
         title="입국카드 작성법"
-        defaultOpen={true}
+        defaultOpen={false}
         icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>}
       >
         <div className="space-y-3">
@@ -417,12 +422,20 @@ function PreparationContent({
           </div>
         </div>
       </AccordionItem>
+    </Accordion>
 
+      {/* 여행 준비 섹션 */}
+      <div className="flex items-center gap-2 pt-1">
+        <span className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider">여행 준비</span>
+        <div className="flex-1 h-px bg-slate-200 dark:bg-slate-800" />
+      </div>
+
+    <Accordion>
       <AccordionItem
         title="운전면허 상호인정"
         badge={licenseBadge?.text}
         badgeColor={licenseBadge?.color}
-        defaultOpen={true}
+        defaultOpen={false}
         icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>}
       >
         <p>한국 운전면허증으로 일본에서 운전하려면 <strong>국제운전면허증(IDP)</strong> 또는 <strong>일본어 번역본</strong>이 필요합니다.</p>
@@ -438,7 +451,7 @@ function PreparationContent({
       <AccordionItem
         title="보험"
         badge="권장"
-        defaultOpen={true}
+        defaultOpen={false}
         icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>}
       >
         <div className="space-y-4">
@@ -465,7 +478,7 @@ function PreparationContent({
 
       <AccordionItem
         title="통신 (유심/eSIM/로밍)"
-        defaultOpen={true}
+        defaultOpen={false}
         icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>}
       >
         <div className="space-y-4">
@@ -495,7 +508,7 @@ function PreparationContent({
 
       <AccordionItem
         title="돈 준비 (환율/환전)"
-        defaultOpen={true}
+        defaultOpen={false}
         icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>}
       >
         <div className="space-y-4">

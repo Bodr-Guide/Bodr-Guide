@@ -75,8 +75,5 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. 좌측통행 국가. 야생동물이 도로에 출현할 수 있으므로 야간 운전 자제 권장."
-  },
-  "thumbnailUrl": "/images/countries/BW.jpg",
-  "heroImageUrl": "/images/countries/BW.jpg",
-  "galleryImages": []
+  }
 }

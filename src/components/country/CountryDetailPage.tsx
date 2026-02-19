@@ -48,7 +48,7 @@ export default function CountryDetailPage({ country }: CountryDetailPageProps) {
   return (
     <div className="min-h-screen bg-white dark:bg-slate-950 transition-colors duration-300">
       {/* 히어로 섹션 */}
-      <section className="relative h-[70vh] overflow-hidden">
+      <section className="relative h-[55vh] sm:h-[50vh] lg:h-[45vh] overflow-hidden">
         {heroImage && (
           <div
             className="absolute inset-0 bg-cover bg-center"
@@ -58,55 +58,57 @@ export default function CountryDetailPage({ country }: CountryDetailPageProps) {
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60" />
 
         {/* 히어로 콘텐츠 */}
-        <div className="relative z-10 flex flex-col justify-end h-full max-w-6xl mx-auto px-5 sm:px-8 pb-12">
-          <h1 className="text-5xl sm:text-7xl font-bold text-white mb-2 flex items-center gap-4">
+        <div className="relative z-10 flex flex-col justify-end h-full max-w-4xl mx-auto px-5 sm:px-8 pb-8 lg:pb-10">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-2 flex items-center gap-3">
             <img src={getFlagUrl(country.id, 80)} alt="" className="w-16 h-auto rounded shadow-lg" />
             {country.nameKo}
           </h1>
-          <p className="text-lg sm:text-xl text-white/80 uppercase tracking-wider mb-6">
+          <p className="text-base sm:text-lg text-white/80 uppercase tracking-wider mb-4">
             {country.nameEn}
           </p>
 
-          {/* 퀵 인포 카드 */}
+          {/* 퀵 인포 스트립 */}
           {quickInfo && (
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-4xl">
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4">
-                <div className="flex items-center gap-2 mb-1">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-white/70">
-                    <circle cx="12" cy="12" r="10" />
-                    <polyline points="12 6 12 12 16 14" />
-                  </svg>
-                  <span className="text-xs text-white/70 uppercase tracking-wider">시차</span>
+            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl max-w-3xl overflow-hidden">
+              <div className="grid grid-cols-2 sm:grid-cols-4 sm:divide-x divide-white/15">
+                <div className="p-3 sm:p-4 border-r border-b sm:border-b-0 border-white/15">
+                  <div className="flex items-center gap-2 mb-1.5">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-white/60">
+                      <circle cx="12" cy="12" r="10" />
+                      <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                    <span className="text-[11px] text-white/60 font-medium uppercase tracking-wider">시차</span>
+                  </div>
+                  <p className="text-base sm:text-lg font-bold text-white leading-tight">{quickInfo.timeDiff}</p>
                 </div>
-                <p className="text-lg font-bold text-white">{quickInfo.timeDiff}</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4">
-                <div className="flex items-center gap-2 mb-1">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-white/70">
-                    <line x1="12" y1="1" x2="12" y2="23" />
-                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
-                  <span className="text-xs text-white/70 uppercase tracking-wider">통화</span>
+                <div className="p-3 sm:p-4 border-b sm:border-b-0 border-white/15">
+                  <div className="flex items-center gap-2 mb-1.5">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-white/60">
+                      <line x1="12" y1="1" x2="12" y2="23" />
+                      <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                    </svg>
+                    <span className="text-[11px] text-white/60 font-medium uppercase tracking-wider">통화</span>
+                  </div>
+                  <p className="text-base sm:text-lg font-bold text-white leading-tight">{quickInfo.currency}</p>
                 </div>
-                <p className="text-lg font-bold text-white">{quickInfo.currency}</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4">
-                <div className="flex items-center gap-2 mb-1">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-white/70">
-                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-                  </svg>
-                  <span className="text-xs text-white/70 uppercase tracking-wider">전압</span>
+                <div className="p-3 sm:p-4 border-r sm:border-r-0 border-white/15">
+                  <div className="flex items-center gap-2 mb-1.5">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-white/60">
+                      <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                    </svg>
+                    <span className="text-[11px] text-white/60 font-medium uppercase tracking-wider">전압</span>
+                  </div>
+                  <p className="text-base sm:text-lg font-bold text-white leading-tight">{quickInfo.voltage}</p>
                 </div>
-                <p className="text-lg font-bold text-white">{quickInfo.voltage}</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4">
-                <div className="flex items-center gap-2 mb-1">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-white/70">
-                    <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z" />
-                  </svg>
-                  <span className="text-xs text-white/70 uppercase tracking-wider">비행시간</span>
+                <div className="p-3 sm:p-4">
+                  <div className="flex items-center gap-2 mb-1.5">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-white/60">
+                      <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z" />
+                    </svg>
+                    <span className="text-[11px] text-white/60 font-medium uppercase tracking-wider">비행시간</span>
+                  </div>
+                  <p className="text-base sm:text-lg font-bold text-white leading-tight">{quickInfo.flight}</p>
                 </div>
-                <p className="text-lg font-bold text-white">{quickInfo.flight}</p>
               </div>
             </div>
           )}
@@ -117,7 +119,7 @@ export default function CountryDetailPage({ country }: CountryDetailPageProps) {
       <TabNavigation tabs={tabs} activeTab={activeTab} onTabChange={setActiveTab} />
 
       {/* 탭 콘텐츠 */}
-      <section className="max-w-6xl mx-auto px-5 sm:px-8 py-8 pb-16">
+      <section className="max-w-4xl mx-auto px-5 sm:px-8 py-6 pb-16">
         {activeTab === "preparation" && <PreparationTab country={country} />}
         {activeTab === "safety" && <SafetyTab country={country} />}
       </section>
@@ -133,7 +135,35 @@ function PreparationTab({ country }: { country: Country }) {
   const visaLabelEn = VISA_LABEL_EN[country.visaStatus] || visaInfo.label;
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-4">
+      {/* 여행 목적 선택기 (컴팩트) */}
+      <div className="flex flex-col sm:flex-row sm:items-center gap-3 bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3">
+        <div className="flex items-center gap-2 flex-shrink-0">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-sky-600 dark:text-sky-400">
+            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+          <span className="text-sm font-semibold text-slate-900 dark:text-white">여행 목적</span>
+        </div>
+        <p className="text-xs text-slate-500 dark:text-slate-400 hidden sm:block">방문 목적에 따라 필요한 절차가 달라집니다</p>
+        <select
+          className="sm:ml-auto bg-white dark:bg-slate-800 text-slate-900 dark:text-white border border-slate-300 dark:border-slate-600 rounded-lg px-3 py-2 text-sm font-medium cursor-pointer focus:outline-none focus:ring-2 focus:ring-sky-500 dark:focus:ring-sky-400 focus:border-transparent"
+          aria-label="여행 목적 선택"
+          defaultValue="tourism"
+        >
+          <option value="tourism">🏖️ 여행/관광</option>
+          <option value="business">💼 출장/비즈니스</option>
+          <option value="study">📚 유학/어학연수</option>
+          <option value="work">💻 취업/일</option>
+        </select>
+      </div>
+
+      {/* 입출국 섹션 */}
+      <div className="flex items-center gap-2 pt-1">
+        <span className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider">입출국</span>
+        <div className="flex-1 h-px bg-slate-200 dark:bg-slate-800" />
+      </div>
+
       <Accordion>
         {/* 비자 요건 */}
         <AccordionItem
@@ -230,7 +260,7 @@ function PreparationTab({ country }: { country: Country }) {
                 ? "bg-rose-500/20 text-rose-700 dark:text-rose-400"
                 : "bg-amber-500/20 text-amber-700 dark:text-amber-400"
             }
-            defaultOpen={true}
+            defaultOpen={false}
             icon={
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <rect x="2" y="4" width="20" height="16" rx="2" />
@@ -260,7 +290,7 @@ function PreparationTab({ country }: { country: Country }) {
         {country.visaTypes && country.visaTypes.length > 0 && (
           <AccordionItem
             title="비자 종류"
-            defaultOpen={true}
+            defaultOpen={false}
             icon={
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <rect x="2" y="4" width="20" height="16" rx="2" />
@@ -310,6 +340,15 @@ function PreparationTab({ country }: { country: Country }) {
           </AccordionItem>
         )}
 
+      </Accordion>
+
+      {/* 여행 준비 섹션 */}
+      <div className="flex items-center gap-2 pt-1">
+        <span className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider">여행 준비</span>
+        <div className="flex-1 h-px bg-slate-200 dark:bg-slate-800" />
+      </div>
+
+      <Accordion>
         {/* 준비 타임라인 */}
         {country.timeline && country.timeline.length > 0 && (
           <AccordionItem
@@ -349,6 +388,98 @@ function PreparationTab({ country }: { country: Country }) {
                     </div>
                   </div>
                 ))}
+              </div>
+            </div>
+          </AccordionItem>
+        )}
+
+        {/* 보험 */}
+        <AccordionItem
+          title="보험"
+          badge="권장"
+          defaultOpen={false}
+          icon={
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+          }
+        >
+          <div className="space-y-4">
+            <p>해외 의료비는 높은 편이므로 여행자 보험 가입을 권장합니다.</p>
+            <div className="bg-slate-100 dark:bg-slate-800 rounded-lg p-4">
+              <h4 className="font-semibold mb-3 text-slate-900 dark:text-white">추천 보장 항목</h4>
+              <ul className="space-y-2 text-sm">
+                <li className="flex items-start gap-2">
+                  <span className="text-emerald-500 mt-0.5">✓</span>
+                  <span>의료비 보장 (최소 3천만원 이상)</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-emerald-500 mt-0.5">✓</span>
+                  <span>휴대품 손해 (분실/도난)</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-emerald-500 mt-0.5">✓</span>
+                  <span>항공기 지연 보상</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </AccordionItem>
+
+        {/* 통신 */}
+        <AccordionItem
+          title="통신 (유심/eSIM/로밍)"
+          defaultOpen={false}
+          icon={
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <rect x="5" y="2" width="14" height="20" rx="2" />
+              <path d="M12 18h.01" />
+            </svg>
+          }
+        >
+          <div className="space-y-4">
+            <h4 className="font-semibold text-slate-900 dark:text-white">추천 옵션</h4>
+            <div className="grid gap-3">
+              <div className="border border-slate-200 dark:border-slate-700 rounded-lg p-4">
+                <p className="font-semibold text-slate-900 dark:text-white mb-1">eSIM (추천)</p>
+                <p className="text-sm">출국 전 구매 후 현지 도착 즉시 활성화. 유심 교체 불필요.</p>
+              </div>
+              <div className="border border-slate-200 dark:border-slate-700 rounded-lg p-4">
+                <p className="font-semibold text-slate-900 dark:text-white mb-1">현지 유심</p>
+                <p className="text-sm">공항 또는 현지 매장에서 구매 가능. 데이터 전용 유심 다수.</p>
+              </div>
+              <div className="border border-slate-200 dark:border-slate-700 rounded-lg p-4">
+                <p className="font-semibold text-slate-900 dark:text-white mb-1">국제 로밍</p>
+                <p className="text-sm">별도 설정 필요 없이 즉시 사용 가능. 통신사 앱에서 신청.</p>
+              </div>
+            </div>
+          </div>
+        </AccordionItem>
+
+        {/* 환전 */}
+        {country.quickInfo && (
+          <AccordionItem
+            title="돈 준비 (환전)"
+            defaultOpen={false}
+            icon={
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <line x1="12" y1="1" x2="12" y2="23" />
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+              </svg>
+            }
+          >
+            <div className="space-y-4">
+              <div className="bg-slate-100/60 dark:bg-slate-800/60 rounded-lg px-4 py-3">
+                <span className="text-xs font-medium text-slate-500 uppercase tracking-wider">현지 통화</span>
+                <p className="text-lg font-bold text-slate-900 dark:text-white mt-1">{country.quickInfo.currency}</p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-slate-900 dark:text-white mb-2">환전 팁</h4>
+                <ul className="list-disc list-inside space-y-1 text-sm">
+                  <li>한국 시내 은행에서 미리 환전하면 환율 우대</li>
+                  <li>현지 ATM에서 직접 인출도 가능 (수수료 확인)</li>
+                  <li>신용카드 해외결제 가능 여부 출국 전 확인</li>
+                </ul>
               </div>
             </div>
           </AccordionItem>

@@ -33,7 +33,7 @@ export default function TabNavigation({ tabs, activeTab, onTabChange }: TabNavig
   return (
     <div className="sticky top-16 z-40 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
       <div className="max-w-6xl mx-auto px-5 sm:px-8">
-        <div className="flex gap-1 overflow-x-auto scrollbar-hide">
+        <div className="flex justify-center gap-1 overflow-x-auto scrollbar-hide">
           {tabs.map((tab) => (
             <button
               key={tab.id}

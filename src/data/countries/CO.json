@@ -81,8 +81,5 @@
     "directRecognition": false,
     "minimumAge": 16,
     "note": "국제운전면허증(IDP) 필요. 관광 목적으로 체류 기간 동안 사용 가능. 보고타 등 대도시 교통 혼잡 주의."
-  },
-  "thumbnailUrl": "/images/countries/CO.jpg",
-  "heroImageUrl": "/images/countries/CO.jpg",
-  "galleryImages": []
+  }
 }

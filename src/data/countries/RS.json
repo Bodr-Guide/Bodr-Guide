@@ -83,8 +83,5 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. 세르비아 고속도로는 유료이며, 겨울철 스노우 타이어 장착 의무."
-  },
-  "thumbnailUrl": "/images/countries/RS.jpg",
-  "heroImageUrl": "/images/countries/RS.jpg",
-  "galleryImages": []
+  }
 }
