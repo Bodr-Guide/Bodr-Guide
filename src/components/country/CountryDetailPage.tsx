@@ -171,7 +171,7 @@ function PreparationTab({ country }: { country: Country }) {
     {
       id: "visa",
       icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="text-sky-500"><path d="M9 12l2 2 4-4"/><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18"/></svg>,
-      title: country.visaStatus === "visa_free" ? "무비자" : visaInfo.label,
+      title: country.visaStatus === "visa_free" ? "비자" : visaInfo.label,
       summary: country.visaFreeStayDays ? `${country.visaFreeStayDays}일 무비자 체류` : (country.visaNote || ""),
       badge: country.visaStatus === "visa_free"
         ? { text: "불필요", color: "bg-emerald-500/20 text-emerald-700 dark:text-emerald-400" }
@@ -258,10 +258,10 @@ function PreparationTab({ country }: { country: Country }) {
       id: "license",
       icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="text-slate-500"><rect x="1" y="6" width="22" height="12" rx="2"/><circle cx="7" cy="15" r="1.5"/><circle cx="17" cy="15" r="1.5"/><path d="M5 6V4a1 1 0 011-1h4l2 3"/></svg>,
       title: "운전면허",
-      summary: country.drivingLicense.idpAccepted ? "IDP 인정" : "IDP 불인정",
+      summary: country.drivingLicense.idpAccepted ? "국제운전면허증 인정" : "국제운전면허증 불인정",
       badge: country.drivingLicense.idpAccepted
-        ? { text: "IDP 인정", color: "bg-emerald-500/20 text-emerald-700 dark:text-emerald-400" }
-        : { text: "IDP 불인정", color: "bg-rose-500/20 text-rose-700 dark:text-rose-400" },
+        ? { text: "국제운전면허증 인정", color: "bg-emerald-500/20 text-emerald-700 dark:text-emerald-400" }
+        : { text: "국제운전면허증 불인정", color: "bg-rose-500/20 text-rose-700 dark:text-rose-400" },
       detail: (
         <div className="space-y-2 text-sm">
           <p>{country.drivingLicense.note}</p>

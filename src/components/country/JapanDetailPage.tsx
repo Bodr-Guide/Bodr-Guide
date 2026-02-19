@@ -289,7 +289,7 @@ function PreparationContent({
     {
       id: "visa",
       icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="text-sky-500"><path d="M9 12l2 2 4-4"/><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18"/></svg>,
-      title: visaLevel === "required" ? "비자" : "무비자",
+      title: "비자",
       summary: visaLevel === "required"
         ? (travelPurpose === "work" ? "취업비자 필요" : travelPurpose === "study" ? "유학비자 필요" : "워홀비자 필요")
         : "90일 무비자 체류",
@@ -376,7 +376,7 @@ function PreparationContent({
       id: "license",
       icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="text-slate-500"><rect x="1" y="6" width="22" height="12" rx="2"/><circle cx="7" cy="15" r="1.5"/><circle cx="17" cy="15" r="1.5"/><path d="M5 6V4a1 1 0 011-1h4l2 3"/></svg>,
       title: "운전면허",
-      summary: "IDP 또는 JAF 번역본",
+      summary: "국제운전면허증 또는 JAF 번역본",
       badge: licenseBadge || undefined,
       detail: (
         <div className="space-y-2 text-sm">
@@ -392,7 +392,7 @@ function PreparationContent({
       id: "entry",
       icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="text-teal-500"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>,
       title: "입국카드",
-      summary: "VJW 사용 시 불필요",
+      summary: "Visit Japan Web 사용 시 불필요",
       detail: (
         <div className="text-sm space-y-2">
           <p>Visit Japan Web 사용 시 자동 입력되어 별도 작성이 불필요합니다.</p>
