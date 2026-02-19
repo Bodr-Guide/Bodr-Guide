@@ -83,5 +83,8 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. 도로 인프라가 열악하고 야간 운전이 위험하므로 현지 운전 시 각별한 주의 필요."
-  }
+  },
+  "thumbnailUrl": "/images/countries/ET.jpg",
+  "heroImageUrl": "/images/countries/ET.jpg",
+  "galleryImages": []
 }

@@ -83,5 +83,8 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. EU/EEA 회원국으로 유럽 교통 규칙 적용. 고속도로 유료 구간 있으며 겨울철 스노우 타이어 필수."
-  }
+  },
+  "thumbnailUrl": "/images/countries/PL.jpg",
+  "heroImageUrl": "/images/countries/PL.jpg",
+  "galleryImages": []
 }

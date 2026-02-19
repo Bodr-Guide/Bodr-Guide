@@ -41,5 +41,8 @@
     "숙소 예약 확인서",
     "리턴 티켓",
     "여행자 보험 (의료 후송 포함 권장)"
-  ]
+  ],
+  "thumbnailUrl": "/images/countries/TV.jpg",
+  "heroImageUrl": "/images/countries/TV.jpg",
+  "galleryImages": []
 }

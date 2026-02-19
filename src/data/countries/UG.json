@@ -21,7 +21,9 @@
     "currency": "UGX (우간다 실링)",
     "flight": "약 16시간 (경유)"
   },
-  "passportValidity": { "months": 6 },
+  "passportValidity": {
+    "months": 6
+  },
   "drivingLicense": {
     "idpAccepted": true,
     "directRecognition": false,
@@ -38,5 +40,8 @@
     "e-Visa 출력본",
     "황열병 예방접종 증명서",
     "숙소 바우처"
-  ]
+  ],
+  "thumbnailUrl": "/images/countries/UG.jpg",
+  "heroImageUrl": "/images/countries/UG.jpg",
+  "galleryImages": []
 }

@@ -21,7 +21,9 @@
     "currency": "ZMW (잠비아 콰차)",
     "flight": "약 18시간 (경유)"
   },
-  "passportValidity": { "months": 6 },
+  "passportValidity": {
+    "months": 6
+  },
   "drivingLicense": {
     "idpAccepted": true,
     "directRecognition": false,
@@ -36,5 +38,8 @@
     "항공권",
     "숙소 바우처",
     "황열병 예방접종 증명서"
-  ]
+  ],
+  "thumbnailUrl": "/images/countries/ZM.jpg",
+  "heroImageUrl": "/images/countries/ZM.jpg",
+  "galleryImages": []
 }

@@ -80,5 +80,8 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. 도시 외곽 도로 상태가 좋지 않을 수 있으며, 남부 사막 지역 운전 시 4WD 차량 권장."
-  }
+  },
+  "thumbnailUrl": "/images/countries/TN.jpg",
+  "heroImageUrl": "/images/countries/TN.jpg",
+  "galleryImages": []
 }

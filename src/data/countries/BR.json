@@ -82,5 +82,8 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. 관광 목적으로 최대 180일 사용 가능. 대도시 교통 혼잡 및 치안 주의."
-  }
+  },
+  "thumbnailUrl": "/images/countries/BR.jpg",
+  "heroImageUrl": "/images/countries/BR.jpg",
+  "galleryImages": []
 }

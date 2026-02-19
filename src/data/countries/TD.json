@@ -21,7 +21,9 @@
     "currency": "XAF (중앙아프리카 CFA 프랑)",
     "flight": "약 20시간 (경유)"
   },
-  "passportValidity": { "months": 6 },
+  "passportValidity": {
+    "months": 6
+  },
   "drivingLicense": {
     "idpAccepted": true,
     "directRecognition": false,
@@ -38,5 +40,8 @@
     "e-Visa 출력본",
     "황열병 예방접종 증명서",
     "충분한 생수"
-  ]
+  ],
+  "thumbnailUrl": "/images/countries/TD.jpg",
+  "heroImageUrl": "/images/countries/TD.jpg",
+  "galleryImages": []
 }

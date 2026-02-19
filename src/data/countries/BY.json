@@ -40,5 +40,8 @@
     "의료보험 증명서 (최소 10,000 EUR 보장)",
     "숙소 예약 확인서",
     "여행자 보험"
-  ]
+  ],
+  "thumbnailUrl": "/images/countries/BY.jpg",
+  "heroImageUrl": "/images/countries/BY.jpg",
+  "galleryImages": []
 }
