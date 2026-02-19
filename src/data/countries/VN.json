@@ -81,5 +81,11 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "베트남은 한국 IDP를 인정하지 않음. 50cc 이하 오토바이만 외국인 면허 없이 이용 가능. 자동차 운전은 베트남 면허 필요."
-  }
+  },
+  "cities": [
+    { "name": "호치민", "nameEn": "Ho Chi Minh City", "image": "https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=800&h=600&fit=crop" },
+    { "name": "하노이", "nameEn": "Hanoi", "image": "https://images.unsplash.com/photo-1509030450996-dd1a26dda07a?w=800&h=600&fit=crop" },
+    { "name": "다낭", "nameEn": "Da Nang", "image": "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=800&h=600&fit=crop" },
+    { "name": "나트랑", "nameEn": "Nha Trang", "image": "https://images.unsplash.com/photo-1573790387438-4da905039392?w=800&h=600&fit=crop" }
+  ]
 }

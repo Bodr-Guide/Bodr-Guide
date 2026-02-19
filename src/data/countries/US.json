@@ -123,5 +123,11 @@
     "directRecognition": true,
     "minimumAge": 16,
     "note": "대부분의 주에서 한국 운전면허 + IDP로 운전 가능. 일부 주(조지아, 플로리다 등)에서 한국 면허 직접 인정. 주별로 규정이 다르므로 방문 주의 규정 확인 필요."
-  }
+  },
+  "cities": [
+    { "name": "뉴욕", "nameEn": "New York", "image": "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=800&h=600&fit=crop" },
+    { "name": "로스앤젤레스", "nameEn": "Los Angeles", "image": "https://images.unsplash.com/photo-1534190760961-74e8c1c5c3da?w=800&h=600&fit=crop" },
+    { "name": "샌프란시스코", "nameEn": "San Francisco", "image": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800&h=600&fit=crop" },
+    { "name": "하와이", "nameEn": "Hawaii", "image": "https://images.unsplash.com/photo-1507876466758-bc54f384809c?w=800&h=600&fit=crop" }
+  ]
 }

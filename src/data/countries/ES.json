@@ -90,5 +90,11 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. 6개월까지 IDP + 한국 면허증으로 운전 가능. 고속도로 톨게이트 및 도심 제한구역(ZBE) 주의."
-  }
+  },
+  "cities": [
+    { "name": "바르셀로나", "nameEn": "Barcelona", "image": "https://images.unsplash.com/photo-1583422409516-2895a77efded?w=800&h=600&fit=crop" },
+    { "name": "마드리드", "nameEn": "Madrid", "image": "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=800&h=600&fit=crop" },
+    { "name": "세비야", "nameEn": "Seville", "image": "https://images.unsplash.com/photo-1515443961218-a51367888e4b?w=800&h=600&fit=crop" },
+    { "name": "그라나다", "nameEn": "Granada", "image": "https://images.unsplash.com/photo-1509030450996-dd1a26dda07a?w=800&h=600&fit=crop" }
+  ]
 }

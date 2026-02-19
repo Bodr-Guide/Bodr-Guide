@@ -43,12 +43,41 @@ export default function CountryDetailPage({ country }: CountryDetailPageProps) {
         </svg>
       ),
     },
+    ...(country.visaTypes && country.visaTypes.length > 0
+      ? [
+          {
+            id: "visaTypes",
+            label: "비자 종류",
+            icon: (
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <path d="M7 15h0M2 9.5h20" />
+              </svg>
+            ),
+          },
+        ]
+      : []),
+    ...(country.cities && country.cities.length > 0
+      ? [
+          {
+            id: "cities",
+            label: "도시 정보",
+            icon: (
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <rect x="1" y="6" width="6" height="14" rx="1" />
+                <rect x="9" y="2" width="6" height="18" rx="1" />
+                <rect x="17" y="8" width="6" height="12" rx="1" />
+              </svg>
+            ),
+          },
+        ]
+      : []),
   ];
 
   return (
     <div className="min-h-screen bg-white dark:bg-slate-950 transition-colors duration-300">
       {/* 히어로 섹션 */}
-      <section className="relative h-[55vh] sm:h-[50vh] lg:h-[45vh] overflow-hidden">
+      <section className="relative h-[44vh] sm:h-[40vh] lg:h-[36vh] overflow-hidden">
         {heroImage && (
           <div
             className="absolute inset-0 bg-cover bg-center"
@@ -58,7 +87,7 @@ export default function CountryDetailPage({ country }: CountryDetailPageProps) {
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60" />
 
         {/* 히어로 콘텐츠 */}
-        <div className="relative z-10 flex flex-col justify-end h-full max-w-4xl mx-auto px-5 sm:px-8 pb-8 lg:pb-10">
+        <div className="relative z-10 flex flex-col justify-end h-full max-w-4xl mx-auto px-5 sm:px-8 pb-5 lg:pb-6">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-2 flex items-center gap-3">
             <img src={getFlagUrl(country.id, 80)} alt="" className="w-16 h-auto rounded shadow-lg" />
             {country.nameKo}
@@ -122,6 +151,8 @@ export default function CountryDetailPage({ country }: CountryDetailPageProps) {
       <section className="max-w-4xl mx-auto px-5 sm:px-8 py-6 pb-16">
         {activeTab === "preparation" && <PreparationTab country={country} />}
         {activeTab === "safety" && <SafetyTab country={country} />}
+        {activeTab === "visaTypes" && country.visaTypes && <VisaTypesTab visaTypes={country.visaTypes} />}
+        {activeTab === "cities" && country.cities && <CitiesTab cities={country.cities} />}
       </section>
     </div>
   );
@@ -137,188 +168,144 @@ function PreparationTab({ country }: { country: Country }) {
 }
 
 // ──────────────────────────────────────
-// B. 한 줄 체크리스트 레이아웃 (태국)
+// B. 세로 1열 카드 레이아웃 (태국)
 // ──────────────────────────────────────
 function ChecklistLayout({ country }: { country: Country }) {
-  const [expandedItem, setExpandedItem] = useState<string | null>(null);
+  const [selectedCard, setSelectedCard] = useState<string>("visa");
   const visaInfo = VISA_STATUS_MAP[country.visaStatus];
 
-  const toggle = (id: string) => setExpandedItem(expandedItem === id ? null : id);
-
-  // 체크리스트 항목 정의
-  interface CheckItem {
+  interface CardItem {
     id: string;
-    emoji: string;
+    icon: React.ReactNode;
     title: string;
-    status: string;
-    statusColor: string;
-    section: "entry" | "prep";
+    summary: string;
+    badge?: { text: string; color: string };
     detail: React.ReactNode;
   }
 
-  const items: CheckItem[] = [
+  const cards: CardItem[] = [
     {
-      id: "visa", emoji: "📋", title: "비자", section: "entry",
-      status: visaInfo.label,
-      statusColor: country.visaStatus === "visa_free" ? "text-emerald-600 dark:text-emerald-400" : "text-rose-600 dark:text-rose-400",
+      id: "visa", icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="text-sky-500"><path d="M9 12l2 2 4-4"/><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18"/></svg>,
+      title: country.visaStatus === "visa_free" ? "무비자" : visaInfo.label,
+      summary: country.visaFreeStayDays ? `${country.visaFreeStayDays}일 무비자 체류` : (country.visaNote || ""),
+      badge: country.visaStatus === "visa_free"
+        ? { text: "불필요", color: "bg-emerald-500/20 text-emerald-700 dark:text-emerald-400" }
+        : { text: "필수", color: "bg-rose-500/20 text-rose-700 dark:text-rose-400" },
+      detail: (
+        <div className="space-y-3 text-sm">
+          {country.visaNote && <p className="text-slate-700 dark:text-slate-300">{country.visaNote}</p>}
+          {country.passportValidity && <p className="text-slate-700 dark:text-slate-300">여권 유효기간: 최소 <strong className="text-sky-600 dark:text-sky-400">{country.passportValidity.months}개월</strong> 이상</p>}
+          {country.visaFreeStayDays && (
+            <div className="bg-white/60 dark:bg-slate-800 rounded-lg px-3 py-2">
+              <span className="text-xs text-slate-500">최대 체류</span>
+              <p className="text-lg font-bold text-slate-900 dark:text-white">{country.visaFreeStayDays}일</p>
+            </div>
+          )}
+          {country.importantNotes && country.importantNotes.length > 0 && (
+            <div className="space-y-1.5 pt-1">
+              {country.importantNotes.map((note, i) => (
+                <p key={i} className="text-xs text-amber-700 dark:text-amber-300 flex gap-1.5">
+                  <span>⚠️</span><span>{note}</span>
+                </p>
+              ))}
+            </div>
+          )}
+        </div>
+      ),
+    },
+    {
+      id: "insurance", icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="text-emerald-500"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>,
+      title: "보험",
+      summary: "여행자 보험 가입 추천",
+      badge: { text: "권장", color: "bg-amber-500/20 text-amber-700 dark:text-amber-400" },
       detail: (
         <div className="space-y-2 text-sm">
-          {country.visaNote && <p>{country.visaNote}</p>}
-          {country.passportValidity && <p>여권 유효기간: 최소 <strong>{country.passportValidity.months}개월</strong> 이상</p>}
-          {country.visaFreeStayDays && <p>최대 체류: <strong>{country.visaFreeStayDays}일</strong></p>}
+          <p className="text-slate-700 dark:text-slate-300">태국은 의료비가 높은 편이므로 여행자 보험 가입을 권장합니다.</p>
+          <ul className="space-y-1.5 pt-1">
+            <li className="flex gap-2"><span className="text-emerald-500">✓</span><span className="text-slate-700 dark:text-slate-300">의료비 보장 (최소 3천만원)</span></li>
+            <li className="flex gap-2"><span className="text-emerald-500">✓</span><span className="text-slate-700 dark:text-slate-300">휴대품 손해 (분실/도난)</span></li>
+            <li className="flex gap-2"><span className="text-emerald-500">✓</span><span className="text-slate-700 dark:text-slate-300">항공기 지연 보상</span></li>
+          </ul>
         </div>
       ),
     },
-    ...(country.entryRegistration ? [{
-      id: "entry_reg", emoji: "🌐", title: `전자여행허가 (${country.entryRegistration.type})`, section: "entry" as const,
-      status: country.entryRegistration.required ? "필수" : "권장",
-      statusColor: country.entryRegistration.required ? "text-rose-600 dark:text-rose-400" : "text-amber-600 dark:text-amber-400",
+    {
+      id: "comm", icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="text-blue-500"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M8.53 16.11a6 6 0 016.95 0"/><circle cx="12" cy="20" r="1"/></svg>,
+      title: "통신",
+      summary: "eSIM 추천",
       detail: (
         <div className="space-y-2 text-sm">
-          <p>{country.entryRegistration.description}</p>
-          <a href={country.entryRegistration.applicationUrl} target="_blank" rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 px-3 py-1.5 bg-sky-600 text-white rounded-lg text-xs font-medium">
-            신청하기 →
-          </a>
-        </div>
-      ),
-    }] as CheckItem[] : []),
-    ...(country.visaTypes && country.visaTypes.length > 0 ? [{
-      id: "visa_types", emoji: "📄", title: "비자 종류", section: "entry" as const,
-      status: `${country.visaTypes.length}개 종류`,
-      statusColor: "text-slate-500 dark:text-slate-400",
-      detail: (
-        <div className="space-y-2">
-          {country.visaTypes.map((v, i) => (
-            <div key={i} className="flex items-center justify-between py-1.5 text-sm border-b border-slate-100 dark:border-slate-800 last:border-0">
-              <span className="font-medium text-slate-900 dark:text-white">{v.name}</span>
-              <span className="text-xs text-slate-500">{v.duration}</span>
-            </div>
-          ))}
-        </div>
-      ),
-    }] as CheckItem[] : []),
-    ...(country.timeline && country.timeline.length > 0 ? [{
-      id: "timeline", emoji: "📅", title: "준비 타임라인", section: "prep" as const,
-      status: `${country.timeline.length}단계`,
-      statusColor: "text-sky-600 dark:text-sky-400",
-      detail: (
-        <div className="space-y-2">
-          {country.timeline.map((t, i) => (
-            <div key={i} className="flex gap-3 text-sm">
-              <span className="text-xs font-bold text-sky-500 whitespace-nowrap mt-0.5">{t.dDay}</span>
-              <div><p className="font-medium text-slate-900 dark:text-white">{t.title}</p><p className="text-xs text-slate-500">{t.description}</p></div>
-            </div>
-          ))}
-        </div>
-      ),
-    }] as CheckItem[] : []),
-    {
-      id: "insurance", emoji: "🛡", title: "보험", section: "prep",
-      status: "권장", statusColor: "text-amber-600 dark:text-amber-400",
-      detail: (
-        <div className="text-sm space-y-1">
-          <p>해외 의료비는 높은 편이므로 여행자 보험 가입을 권장합니다.</p>
-          <ul className="space-y-0.5"><li>✓ 의료비 보장 (최소 3천만원)</li><li>✓ 휴대품 손해</li><li>✓ 항공기 지연 보상</li></ul>
+          <div className="flex justify-between items-center p-2.5 bg-sky-50/80 dark:bg-sky-950/30 rounded-lg border border-sky-100 dark:border-sky-900">
+            <span className="font-medium text-slate-900 dark:text-white">eSIM (추천)</span><span className="text-xs text-slate-500">출국 전 구매</span>
+          </div>
+          <div className="flex justify-between items-center p-2.5 bg-white/60 dark:bg-slate-800 rounded-lg border border-slate-100 dark:border-slate-700">
+            <span className="font-medium text-slate-900 dark:text-white">현지 유심</span><span className="text-xs text-slate-500">공항/매장 구매</span>
+          </div>
+          <div className="flex justify-between items-center p-2.5 bg-white/60 dark:bg-slate-800 rounded-lg border border-slate-100 dark:border-slate-700">
+            <span className="font-medium text-slate-900 dark:text-white">국제 로밍</span><span className="text-xs text-slate-500">통신사 앱 신청</span>
+          </div>
         </div>
       ),
     },
-    {
-      id: "comm", emoji: "📱", title: "통신", section: "prep",
-      status: "eSIM 추천", statusColor: "text-slate-500 dark:text-slate-400",
-      detail: (
-        <div className="text-sm space-y-1">
-          <p><strong>eSIM</strong> — 출국 전 구매, 현지 즉시 활성화</p>
-          <p><strong>현지 유심</strong> — 공항/매장에서 구매</p>
-          <p><strong>국제 로밍</strong> — 통신사 앱에서 신청</p>
-        </div>
-      ),
-    },
-    ...(country.quickInfo ? [{
-      id: "money", emoji: "💰", title: "환전", section: "prep" as const,
-      status: country.quickInfo.currency,
-      statusColor: "text-slate-500 dark:text-slate-400",
-      detail: (
-        <div className="text-sm space-y-1">
-          <p>한국 시내 은행에서 미리 환전하면 환율 우대</p>
-          <p>현지 ATM 인출 가능 (수수료 확인)</p>
-          <p>신용카드 해외결제 가능 여부 확인</p>
-        </div>
-      ),
-    }] as CheckItem[] : []),
     ...(country.drivingLicense ? [{
-      id: "license", emoji: "🚗", title: "운전면허", section: "prep" as const,
-      status: country.drivingLicense.idpAccepted ? "IDP 인정" : "IDP 불인정",
-      statusColor: country.drivingLicense.idpAccepted ? "text-emerald-600 dark:text-emerald-400" : "text-rose-600 dark:text-rose-400",
-      detail: <p className="text-sm">{country.drivingLicense.note}</p>,
-    }] as CheckItem[] : []),
-    ...(country.checklist && country.checklist.length > 0 ? [{
-      id: "checklist", emoji: "✅", title: "출국 체크리스트", section: "prep" as const,
-      status: `${country.checklist.length}항목`,
-      statusColor: "text-slate-500 dark:text-slate-400",
+      id: "license", icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="text-slate-500"><rect x="1" y="6" width="22" height="12" rx="2"/><circle cx="7" cy="15" r="1.5"/><circle cx="17" cy="15" r="1.5"/><path d="M5 6V4a1 1 0 011-1h4l2 3"/></svg>,
+      title: "운전면허",
+      summary: country.drivingLicense.idpAccepted ? "IDP 인정" : "IDP 불인정",
+      badge: country.drivingLicense.idpAccepted
+        ? { text: "IDP 인정", color: "bg-emerald-500/20 text-emerald-700 dark:text-emerald-400" }
+        : { text: "IDP 불인정", color: "bg-rose-500/20 text-rose-700 dark:text-rose-400" },
       detail: (
-        <div className="space-y-1">
-          {country.checklist.map((c, i) => (
-            <label key={i} className="flex items-center gap-2 py-1 cursor-pointer">
-              <input type="checkbox" className="w-3.5 h-3.5 rounded" />
-              <span className="text-sm">{c}</span>
-            </label>
-          ))}
+        <div className="space-y-2 text-sm">
+          <p className="text-slate-700 dark:text-slate-300">{country.drivingLicense.note}</p>
+          {country.drivingLicense.minimumAge && (
+            <p className="text-xs text-slate-500">최소 운전 연령: {country.drivingLicense.minimumAge}세</p>
+          )}
         </div>
       ),
-    }] as CheckItem[] : []),
+    }] as CardItem[] : []),
   ];
 
-  const entryItems = items.filter(i => i.section === "entry");
-  const prepItems = items.filter(i => i.section === "prep");
-
-  const renderItem = (item: CheckItem) => (
-    <div key={item.id}>
-      <button
-        onClick={() => toggle(item.id)}
-        className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all ${
-          expandedItem === item.id
-            ? "bg-sky-50 dark:bg-sky-950/20"
-            : "hover:bg-slate-50 dark:hover:bg-slate-900/40"
-        }`}
-      >
-        <span className="text-base leading-none">{item.emoji}</span>
-        <span className="text-sm font-medium text-slate-900 dark:text-white">{item.title}</span>
-        <span className="flex-1 border-b border-dotted border-slate-300 dark:border-slate-700 mx-1" />
-        <span className={`text-xs font-semibold whitespace-nowrap ${item.statusColor}`}>{item.status}</span>
-        <svg
-          width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
-          className={`text-slate-400 transition-transform flex-shrink-0 ${expandedItem === item.id ? "rotate-180" : ""}`}
-        >
-          <polyline points="6 9 12 15 18 9" />
-        </svg>
-      </button>
-      {expandedItem === item.id && (
-        <div className="px-3 pb-3 pt-1 ml-8">
-          {item.detail}
-        </div>
-      )}
-    </div>
-  );
+  const selectedItem = cards.find(c => c.id === selectedCard) || cards[0];
 
   return (
-    <div className="space-y-3">
-      {/* 입출국 섹션 */}
-      <div className="flex items-center gap-2">
-        <span className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider">입출국</span>
-        <div className="flex-1 h-px bg-slate-200 dark:bg-slate-800" />
-      </div>
-      <div className="bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-xl divide-y divide-slate-100 dark:divide-slate-800/50 overflow-hidden">
-        {entryItems.map(renderItem)}
+    <div className="flex flex-col sm:flex-row gap-3">
+      {/* 왼쪽: 컴팩트 카드 목록 */}
+      <div className="flex sm:flex-col gap-2 overflow-x-auto sm:overflow-visible pb-2 sm:pb-0 sm:w-44 flex-shrink-0">
+        {cards.map((card) => (
+          <button
+            key={card.id}
+            onClick={() => setSelectedCard(card.id)}
+            className={`flex items-center gap-2.5 px-3 py-2.5 rounded-xl border text-left flex-shrink-0 transition-all duration-200 min-w-[120px] sm:min-w-0 sm:w-full ${
+              selectedCard === card.id
+                ? "border-sky-400 dark:border-sky-600 bg-sky-50 dark:bg-sky-950/40 ring-1 ring-sky-200 dark:ring-sky-800 shadow-sm"
+                : "border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 hover:border-slate-300 dark:hover:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-900"
+            }`}
+          >
+            <span className="leading-none">{card.icon}</span>
+            <div className="min-w-0 flex-1">
+              <p className={`text-xs font-bold truncate ${selectedCard === card.id ? "text-sky-700 dark:text-sky-300" : "text-slate-900 dark:text-white"}`}>{card.title}</p>
+            </div>
+            {card.badge && (
+              <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded-full flex-shrink-0 hidden sm:inline ${card.badge.color}`}>
+                {card.badge.text}
+              </span>
+            )}
+          </button>
+        ))}
       </div>
 
-      {/* 여행 준비 섹션 */}
-      <div className="flex items-center gap-2 pt-1">
-        <span className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider">여행 준비</span>
-        <div className="flex-1 h-px bg-slate-200 dark:bg-slate-800" />
-      </div>
-      <div className="bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-xl divide-y divide-slate-100 dark:divide-slate-800/50 overflow-hidden">
-        {prepItems.map(renderItem)}
+      {/* 오른쪽: 상세 패널 */}
+      <div className="flex-1 bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-xl p-5 min-h-[280px]">
+        <div className="flex items-center gap-2.5 mb-4 pb-3 border-b border-slate-200 dark:border-slate-700">
+          <span className="text-xl">{selectedItem.icon}</span>
+          <h3 className="text-base font-bold text-slate-900 dark:text-white">{selectedItem.title}</h3>
+          {selectedItem.badge && (
+            <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${selectedItem.badge.color}`}>
+              {selectedItem.badge.text}
+            </span>
+          )}
+        </div>
+        {selectedItem.detail}
       </div>
     </div>
   );
@@ -335,7 +322,7 @@ function SwipeLayout({ country }: { country: Country }) {
   // 슬라이드 정의
   interface Slide {
     id: string;
-    emoji: string;
+    icon: React.ReactNode;
     title: string;
     badge?: string;
     badgeColor?: string;
@@ -344,7 +331,7 @@ function SwipeLayout({ country }: { country: Country }) {
 
   const slides: Slide[] = [
     {
-      id: "visa", emoji: "📋", title: "비자 요건",
+      id: "visa", icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="text-sky-500"><path d="M9 12l2 2 4-4"/><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18"/></svg>, title: "비자 요건",
       badge: visaInfo.label,
       badgeColor: country.visaStatus === "visa_free" ? "bg-emerald-500/20 text-emerald-700 dark:text-emerald-400" : "bg-rose-500/20 text-rose-700 dark:text-rose-400",
       content: (
@@ -361,7 +348,7 @@ function SwipeLayout({ country }: { country: Country }) {
       ),
     },
     ...(country.visaTypes && country.visaTypes.length > 0 ? [{
-      id: "visa_types", emoji: "📄", title: "비자 종류",
+      id: "visa_types", icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="text-violet-500"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M7 15h0M2 9.5h20"/></svg>, title: "비자 종류",
       badge: `${country.visaTypes.length}종`,
       badgeColor: "bg-violet-500/20 text-violet-700 dark:text-violet-400",
       content: (
@@ -380,7 +367,7 @@ function SwipeLayout({ country }: { country: Country }) {
       ),
     }] as Slide[] : []),
     ...(country.timeline && country.timeline.length > 0 ? [{
-      id: "timeline", emoji: "📅", title: "준비 타임라인",
+      id: "timeline", icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="text-sky-500"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>, title: "준비 타임라인",
       badge: `${country.timeline.length}단계`,
       badgeColor: "bg-sky-500/20 text-sky-700 dark:text-sky-400",
       content: (
@@ -400,26 +387,26 @@ function SwipeLayout({ country }: { country: Country }) {
       ),
     }] as Slide[] : []),
     {
-      id: "essentials", emoji: "🎒", title: "여행 필수 준비",
+      id: "essentials", icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="text-slate-500"><path d="M6 20h12a2 2 0 002-2V8a2 2 0 00-2-2H6a2 2 0 00-2 2v10a2 2 0 002 2z"/><path d="M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2"/></svg>, title: "여행 필수 준비",
       content: (
         <div className="space-y-4 text-sm">
           <div>
-            <h4 className="font-bold text-slate-900 dark:text-white mb-1.5">🛡 보험</h4>
+            <h4 className="font-bold text-slate-900 dark:text-white mb-1.5 flex items-center gap-1.5"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-emerald-500"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> 보험</h4>
             <p className="text-slate-600 dark:text-slate-400">여행자 보험 가입 권장 (의료비, 휴대품 손해, 항공기 지연)</p>
           </div>
           <div>
-            <h4 className="font-bold text-slate-900 dark:text-white mb-1.5">📱 통신</h4>
+            <h4 className="font-bold text-slate-900 dark:text-white mb-1.5 flex items-center gap-1.5"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-blue-500"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><circle cx="12" cy="20" r="1"/></svg> 통신</h4>
             <p className="text-slate-600 dark:text-slate-400">eSIM 추천 — 출국 전 구매, 현지 도착 즉시 활성화</p>
           </div>
           {country.quickInfo && (
             <div>
-              <h4 className="font-bold text-slate-900 dark:text-white mb-1.5">💰 환전</h4>
+              <h4 className="font-bold text-slate-900 dark:text-white mb-1.5 flex items-center gap-1.5"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-amber-500"><circle cx="12" cy="12" r="8"/><path d="M12 8v8"/></svg> 환전</h4>
               <p className="text-slate-600 dark:text-slate-400">현지 통화: {country.quickInfo.currency}. 한국 은행 사전 환전 추천</p>
             </div>
           )}
           {country.drivingLicense && (
             <div>
-              <h4 className="font-bold text-slate-900 dark:text-white mb-1.5">🚗 운전면허</h4>
+              <h4 className="font-bold text-slate-900 dark:text-white mb-1.5 flex items-center gap-1.5"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-slate-500"><rect x="1" y="6" width="22" height="12" rx="2"/><circle cx="7" cy="15" r="1.5"/><circle cx="17" cy="15" r="1.5"/></svg> 운전면허</h4>
               <p className="text-slate-600 dark:text-slate-400">{country.drivingLicense.note}</p>
             </div>
           )}
@@ -427,7 +414,7 @@ function SwipeLayout({ country }: { country: Country }) {
       ),
     },
     ...(country.checklist && country.checklist.length > 0 ? [{
-      id: "checklist", emoji: "✅", title: "출국 체크리스트",
+      id: "checklist", icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="text-emerald-500"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>, title: "출국 체크리스트",
       badge: `${country.checklist.length}항목`,
       badgeColor: "bg-emerald-500/20 text-emerald-700 dark:text-emerald-400",
       content: (
@@ -483,7 +470,7 @@ function SwipeLayout({ country }: { country: Country }) {
           >
             {/* 카드 헤더 */}
             <div className="flex items-center gap-2 mb-3">
-              <span className="text-lg">{slide.emoji}</span>
+              <span className="leading-none">{slide.icon}</span>
               <h3 className="text-sm font-bold text-slate-900 dark:text-white">{slide.title}</h3>
               {slide.badge && (
                 <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded-full ml-auto ${slide.badgeColor}`}>
@@ -533,9 +520,11 @@ function AccordionLayout({ country }: { country: Country }) {
       {/* 여행 목적 선택기 (컴팩트) */}
       <div className="flex flex-col sm:flex-row sm:items-center gap-3 bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3">
         <div className="flex items-center gap-2 flex-shrink-0">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-sky-600 dark:text-sky-400">
-            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
-            <polyline points="9 22 9 12 15 12 15 22"/>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="text-sky-600 dark:text-sky-400">
+            <path d="M6 20h12a2 2 0 002-2V8a2 2 0 00-2-2H6a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            <path d="M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2"/>
+            <line x1="12" y1="11" x2="12" y2="15"/>
+            <line x1="10" y1="13" x2="14" y2="13"/>
           </svg>
           <span className="text-sm font-semibold text-slate-900 dark:text-white">여행 목적</span>
         </div>
@@ -545,10 +534,10 @@ function AccordionLayout({ country }: { country: Country }) {
           aria-label="여행 목적 선택"
           defaultValue="tourism"
         >
-          <option value="tourism">🏖️ 여행/관광</option>
-          <option value="business">💼 출장/비즈니스</option>
-          <option value="study">📚 유학/어학연수</option>
-          <option value="work">💻 취업/일</option>
+          <option value="tourism">여행 / 관광</option>
+          <option value="business">출장 / 비즈니스</option>
+          <option value="study">유학 / 어학연수</option>
+          <option value="work">취업 / 일</option>
         </select>
       </div>
 
@@ -754,6 +743,68 @@ function AccordionLayout({ country }: { country: Country }) {
           </AccordionItem>
         )}
       </Accordion>
+    </div>
+  );
+}
+
+// ──────────────────────────────────────
+// 비자 종류 탭 (태국 전용)
+// ──────────────────────────────────────
+function VisaTypesTab({ visaTypes }: { visaTypes: NonNullable<Country["visaTypes"]> }) {
+  return (
+    <div>
+      <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-1">비자 종류</h3>
+      <p className="text-sm text-slate-500 dark:text-slate-400 mb-4">장기 체류 및 특수 목적에 필요한 비자 정보입니다.</p>
+      <div className="flex flex-col gap-3">
+        {visaTypes.map((visa, idx) => (
+          <div key={idx} className="bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 rounded-xl px-5 py-4 hover:border-slate-300 dark:hover:border-slate-700 transition-colors">
+            <div className="flex items-center justify-between mb-2">
+              <h4 className="text-sm font-bold text-slate-900 dark:text-white">{visa.name}</h4>
+              {visa.fee && (
+                <span className="text-xs font-semibold text-amber-600 dark:text-amber-400 bg-amber-500/10 px-2.5 py-0.5 rounded-full">{visa.fee}</span>
+              )}
+            </div>
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mb-2">
+              <p className="text-xs text-sky-600 dark:text-sky-400 font-medium">{visa.duration}</p>
+              {visa.processingTime && <p className="text-xs text-slate-500">심사 {visa.processingTime}</p>}
+            </div>
+            <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">{visa.description}</p>
+            {visa.applicationUrl && (
+              <a href={visa.applicationUrl} target="_blank" rel="noopener noreferrer"
+                className="inline-block mt-3 px-3 py-1.5 bg-violet-500/15 hover:bg-violet-500/25 text-xs font-medium text-violet-600 dark:text-violet-300 rounded-lg transition-colors">
+                신청하기 →
+              </a>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ──────────────────────────────────────
+// 도시 정보 탭
+// ──────────────────────────────────────
+function CitiesTab({ cities }: { cities: { name: string; nameEn: string; image: string }[] }) {
+  return (
+    <div>
+      <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-4">인기 도시</h3>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {cities.map((city, idx) => (
+          <div key={idx} className="group relative aspect-[4/3] rounded-xl overflow-hidden cursor-pointer shadow-lg hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)] transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02]">
+            <img src={city.image} alt={city.name} className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-125 group-hover:brightness-110 group-hover:saturate-[1.2]" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent transition-all duration-500 group-hover:from-sky-900/80 group-hover:via-sky-900/20 group-hover:to-transparent" />
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ring-2 ring-inset ring-white/40 rounded-xl" />
+            <div className="relative z-10 flex flex-col justify-end h-full p-5">
+              <p className="text-sm text-white/50 uppercase tracking-wider mb-1 transition-all duration-400 group-hover:text-sky-200 group-hover:tracking-[0.2em]">{city.nameEn}</p>
+              <h4 className="text-2xl font-bold text-white transition-all duration-400 group-hover:translate-y-[-4px] group-hover:text-3xl group-hover:drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">{city.name}</h4>
+            </div>
+          </div>
+        ))}
+      </div>
+      <p className="mt-6 text-sm text-slate-500 dark:text-slate-400 text-center">
+        도시별 상세 정보는 곧 업데이트됩니다.
+      </p>
     </div>
   );
 }

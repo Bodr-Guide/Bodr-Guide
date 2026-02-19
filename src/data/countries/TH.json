@@ -89,5 +89,11 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. 태국에서 오토바이 렌트 시에도 IDP 필수. 무면허 운전 시 보험 적용 불가."
-  }
+  },
+  "cities": [
+    { "name": "방콕", "nameEn": "Bangkok", "image": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=800&h=600&fit=crop" },
+    { "name": "치앙마이", "nameEn": "Chiang Mai", "image": "https://images.unsplash.com/photo-1598935898639-81586f7d2129?w=800&h=600&fit=crop" },
+    { "name": "푸켓", "nameEn": "Phuket", "image": "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&h=600&fit=crop" },
+    { "name": "파타야", "nameEn": "Pattaya", "image": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=800&h=600&fit=crop" }
+  ]
 }

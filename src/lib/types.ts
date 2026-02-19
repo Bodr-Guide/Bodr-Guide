@@ -44,6 +44,13 @@ export interface VisaTypeInfo {
   applicationUrl?: string;
 }
 
+// 도시 정보
+export interface CityInfo {
+  name: string;
+  nameEn: string;
+  image: string;
+}
+
 // 운전면허 정보
 export interface DrivingLicenseInfo {
   idpAccepted: boolean;          // 국제운전면허증(IDP) 인정 여부
@@ -74,6 +81,7 @@ export interface Country {
   alerts?: string[];
   checklist?: string[];
   drivingLicense?: DrivingLicenseInfo;
+  cities?: CityInfo[];
 }
 
 // 비자 상태 라벨 및 색상 매핑

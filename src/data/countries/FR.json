@@ -82,5 +82,11 @@
     "directRecognition": true,
     "minimumAge": 18,
     "note": "한국 운전면허 직접 인정 (상호인정 협정). 1년까지 한국 면허 + IDP로 운전 가능. 장기 체류 시 프랑스 면허로 교환 가능 (시험 면제)."
-  }
+  },
+  "cities": [
+    { "name": "파리", "nameEn": "Paris", "image": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&h=600&fit=crop" },
+    { "name": "니스", "nameEn": "Nice", "image": "https://images.unsplash.com/photo-1491166617655-0723a0999cfc?w=800&h=600&fit=crop" },
+    { "name": "리옹", "nameEn": "Lyon", "image": "https://images.unsplash.com/photo-1524484485831-a92ffc0de03f?w=800&h=600&fit=crop" },
+    { "name": "마르세유", "nameEn": "Marseille", "image": "https://images.unsplash.com/photo-1589810264340-0ce27bfbf751?w=800&h=600&fit=crop" }
+  ]
 }

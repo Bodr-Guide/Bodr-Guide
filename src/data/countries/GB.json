@@ -88,5 +88,11 @@
     "directRecognition": true,
     "minimumAge": 17,
     "note": "한국 운전면허 직접 인정. 12개월까지 한국 면허로 운전 가능. 장기 체류 시 영국 면허 취득 필요."
-  }
+  },
+  "cities": [
+    { "name": "런던", "nameEn": "London", "image": "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&h=600&fit=crop" },
+    { "name": "에든버러", "nameEn": "Edinburgh", "image": "https://images.unsplash.com/photo-1506377585622-bedcbb027afc?w=800&h=600&fit=crop" },
+    { "name": "맨체스터", "nameEn": "Manchester", "image": "https://images.unsplash.com/photo-1515586838455-8f8f940d6853?w=800&h=600&fit=crop" },
+    { "name": "리버풀", "nameEn": "Liverpool", "image": "https://images.unsplash.com/photo-1560969184-10fe8719e047?w=800&h=600&fit=crop" }
+  ]
 }

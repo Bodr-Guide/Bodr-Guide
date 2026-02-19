@@ -88,5 +88,11 @@
     "directRecognition": true,
     "minimumAge": 18,
     "note": "한국 운전면허 직접 인정 (상호인정 협정). 일본 JAF에서 한국 면허 공식 번역문을 발급받으면 1년간 운전 가능."
-  }
+  },
+  "cities": [
+    { "name": "도쿄", "nameEn": "Tokyo", "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&h=600&fit=crop" },
+    { "name": "오사카", "nameEn": "Osaka", "image": "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&h=600&fit=crop" },
+    { "name": "교토", "nameEn": "Kyoto", "image": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&h=600&fit=crop" },
+    { "name": "후쿠오카", "nameEn": "Fukuoka", "image": "https://images.unsplash.com/photo-1578469645742-27e177a732f6?w=800&h=600&fit=crop" }
+  ]
 }
