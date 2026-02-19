@@ -332,7 +332,7 @@ function PreparationTab({ country }: { country: Country }) {
           <button
             key={card.id}
             onClick={() => toggleCard(card.id)}
-            className={`text-left p-3 rounded-xl border transition-all ${
+            className={`text-left p-3 rounded-xl border transition-all cursor-pointer ${
               expandedCard === card.id
                 ? "border-sky-300 dark:border-sky-600 bg-sky-50/50 dark:bg-sky-950/20 ring-1 ring-sky-200 dark:ring-sky-800"
                 : "border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 hover:border-slate-300 dark:hover:border-slate-700"
