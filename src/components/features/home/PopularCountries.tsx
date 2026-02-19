@@ -6,8 +6,43 @@ import Link from "next/link";
 import { Country, Continent, CONTINENTS } from "@/lib/types";
 import { getCountryImage, getFlagUrl, isAiGeneratedImage } from "@/lib/countryImages";
 
-// 연간 인기 여행지 9개국 (고정)
+// 연간 인기 여행지 9개국 (고정 — 메인 화면용)
 const POPULAR_IDS = ["JP", "TH", "VN", "US", "FR", "IT", "TW", "ES", "GB"];
+
+// 한국인 여행자 기준 전체 국가 인기도 순위 (전체보기 기본 정렬용)
+const POPULARITY_RANK: Record<string, number> = (() => {
+  const ids = [
+    // Tier 1: 최인기 여행지
+    "JP", "TH", "VN", "US", "TW", "FR", "IT", "ES", "GB", "PH",
+    // Tier 2: 인기 여행지
+    "SG", "CN", "HK", "MO", "AU", "MY", "ID", "DE", "CH", "GU",
+    // Tier 3: 준인기 여행지
+    "NZ", "CA", "TR", "CZ", "HR", "GR", "AT", "HU", "MV", "NL",
+    // Tier 4: 주요 여행지
+    "PT", "IN", "EG", "KH", "LA", "MX", "FI", "NO", "SE", "DK",
+    "PL", "BE", "IE", "IS", "RU", "AE", "MM", "LK", "NP", "MN",
+    // Tier 5: 일반 여행지
+    "MA", "PE", "BR", "AR", "CL", "GE", "UZ", "IL", "JO", "SA",
+    "KZ", "QA", "KW", "BH", "OM", "RO", "BG", "RS", "BA", "ME",
+    "SI", "SK", "LT", "LV", "EE", "CY", "MT", "LU", "MC", "LI",
+    "SM", "VA", "XK", "MK", "AL", "UA", "BY", "MD", "PW", "FJ",
+    // Tier 6: 기타
+    "CR", "CU", "PA", "CO", "EC", "BO", "PY", "UY", "NC", "PF",
+    "SC", "MU", "ZA", "KE", "TZ", "ET", "GH", "NG", "SN", "CI",
+    "BN", "TJ", "KG", "AM", "AZ", "BT", "TL", "KI", "TO", "WS",
+    "VU", "SB", "MH", "NR", "TV", "FM", "PG", "DM", "GD", "KN",
+    "LC", "VC", "AG", "BB", "BS", "JM", "TT", "DO", "HT", "HN",
+    "GT", "SV", "NI", "BZ", "GY", "SR", "TN", "DZ", "LY", "LB",
+    "IQ", "IR", "PK", "BD", "AF", "SY", "YE",
+    "MG", "MZ", "MW", "ZM", "ZW", "BW", "NA", "LS", "SZ", "AO",
+    "CD", "CG", "GA", "GQ", "CM", "CF", "TD", "ML", "BF", "NE",
+    "BJ", "TG", "GN", "GW", "GM", "SL", "LR", "MR", "DJ", "BI",
+    "RW", "UG", "SD", "SS", "ER", "SO", "KM", "CV", "ST",
+  ];
+  const map: Record<string, number> = {};
+  ids.forEach((id, i) => { map[id] = i; });
+  return map;
+})();
 
 // 정렬 옵션
 type SortType = "default" | "name_asc" | "name_desc";
@@ -162,13 +197,9 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
     } else if (sortType === "name_desc") {
       result.sort((a, b) => b.nameKo.localeCompare(a.nameKo, "ko"));
     } else {
-      // 기본: 인기순 (POPULAR_IDS 먼저, 나머지는 원래 순서)
-      const popularIndex = new Map(POPULAR_IDS.map((id, i) => [id, i]));
-      result.sort((a, b) => {
-        const ai = popularIndex.get(a.id) ?? POPULAR_IDS.length;
-        const bi = popularIndex.get(b.id) ?? POPULAR_IDS.length;
-        return ai - bi;
-      });
+      // 기본: 인기순 (전체 195개국 인기도 순위)
+      const fallback = Object.keys(POPULARITY_RANK).length;
+      result.sort((a, b) => (POPULARITY_RANK[a.id] ?? fallback) - (POPULARITY_RANK[b.id] ?? fallback));
     }
 
     return result;
