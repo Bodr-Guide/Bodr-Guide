@@ -1,7 +1,7 @@
 // 국가별 갤러리 이미지 데이터
 // 패럴랙스 갤러리에서 사용하는 고화질 Unsplash 이미지
 
-import { COUNTRY_IMAGES } from "./countryImages";
+import { getCountryImage } from "./countryImages";
 
 export interface GalleryImage {
   url: string;
@@ -181,22 +181,11 @@ export function getGalleryImages(countryId: string): GalleryImage[] {
     return GALLERY_IMAGES[countryId];
   }
 
-  // fallback: countryImages.ts의 단일 이미지를 사용
-  const fallbackUrl = COUNTRY_IMAGES[countryId];
-  if (fallbackUrl) {
-    // 단일 이미지의 해상도를 높여서 5장 반복
-    const highResUrl = fallbackUrl.replace("w=600&h=800", "w=1920&h=1080").replace("fit=crop", "q=80&auto=format&fit=crop");
-    return Array.from({ length: 5 }, (_, idx) => ({
-      url: highResUrl,
-      alt: `${countryId} 풍경 ${idx + 1}`,
-      caption: `풍경 ${idx + 1}`,
-    }));
-  }
-
-  // 이미지 자체가 없는 경우 기본 placeholder
-  return [{
-    url: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=1920&auto=format&fit=crop",
-    alt: "여행 풍경",
-    caption: "여행지",
-  }];
+  // fallback: 자체 호스팅 랜드마크/풍경 이미지를 사용
+  const fallbackUrl = getCountryImage(countryId);
+  return Array.from({ length: 5 }, (_, idx) => ({
+    url: fallbackUrl,
+    alt: `${countryId} 풍경 ${idx + 1}`,
+    caption: `풍경 ${idx + 1}`,
+  }));
 }

@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { Country } from "@/lib/types";
-import { getCountryImage } from "@/lib/countryImages";
+import { getCountryImage, isAiGeneratedImage } from "@/lib/countryImages";
 import VisaBadge from "@/components/ui/VisaBadge";
 
 interface CountryNavigationBarProps {
@@ -95,17 +95,13 @@ export default function CountryNavigationBar({
                   `}
                 >
                 {/* 배경 이미지 */}
-                {getCountryImage(country.id) ? (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    src={getCountryImage(country.id)!}
-                    alt={country.nameKo}
-                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    loading="lazy"
-                  />
-                ) : (
-                  <div className="absolute inset-0 bg-gradient-to-br from-slate-700 via-slate-800 to-slate-900" />
-                )}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={getCountryImage(country.id)}
+                  alt={country.nameKo}
+                  className={`absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 ${isAiGeneratedImage(country.id) ? "blur-[1px] brightness-75" : ""}`}
+                  loading="lazy"
+                />
 
                 {/* 그라데이션 오버레이 */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />

@@ -4,7 +4,7 @@
 import { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
 import { Country, Continent, CONTINENTS } from "@/lib/types";
-import { getCountryImage, getFlagUrl } from "@/lib/countryImages";
+import { getCountryImage, getFlagUrl, isAiGeneratedImage } from "@/lib/countryImages";
 
 // 연간 인기 여행지 9개국 (고정)
 const POPULAR_IDS = ["JP", "TH", "VN", "US", "FR", "IT", "TW", "ES", "GB"];
@@ -411,6 +411,7 @@ export default function PopularCountries({ countries }: PopularCountriesProps) {
 // 국가 카드 — 가로형 레이아웃 (왼쪽: 이미지+국가명, 오른쪽: 비자·입국 정보)
 function CountryCard({ country }: { country: Country }) {
   const imageUrl = getCountryImage(country.id);
+  const aiGenerated = isAiGeneratedImage(country.id);
   const info = getCardInfo(country);
 
   return (
@@ -420,16 +421,18 @@ function CountryCard({ country }: { country: Country }) {
     >
       {/* 왼쪽: 이미지 + 국가명 (4:3 비율) */}
       <div className="relative w-36 sm:w-40 aspect-[4/3] flex-shrink-0 overflow-hidden">
-        {imageUrl ? (
-          <img
-            src={imageUrl}
-            alt={country.nameKo}
-            className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-            loading="lazy"
-            decoding="async"
-          />
-        ) : (
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-800" />
+        <img
+          src={imageUrl}
+          alt={country.nameKo}
+          className={`absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 ${aiGenerated ? "blur-[2px] brightness-75" : ""}`}
+          loading="lazy"
+          decoding="async"
+        />
+        {/* AI 생성 이미지 배지 */}
+        {aiGenerated && (
+          <span className="absolute top-1.5 left-1.5 z-20 rounded bg-black/50 px-1.5 py-0.5 text-[9px] text-white/70">
+            AI 생성
+          </span>
         )}
         {/* 이미지 위 그라데이션 — 하단 텍스트 가독성 확보 */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
