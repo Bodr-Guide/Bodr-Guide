@@ -39,5 +39,22 @@
     "전자비자 출력본",
     "황열병 예방접종 증명서",
     "숙소 바우처"
+  ],
+  "cities": [
+    {
+      "name": "와가두구",
+      "nameEn": "Ouagadougou",
+      "image": "https://images.unsplash.com/photo-1645531635989-2102135314c3?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "보보디울라소",
+      "nameEn": "Bobo-Dioulasso",
+      "image": "https://images.unsplash.com/photo-1645531635989-2102135314c3?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "쿠두구",
+      "nameEn": "Koudougou",
+      "image": "https://images.unsplash.com/photo-1645531635989-2102135314c3?w=800&h=600&fit=crop"
+    }
   ]
 }

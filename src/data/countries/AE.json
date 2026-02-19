@@ -82,5 +82,11 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. 관광 목적으로 최대 6개월 사용 가능."
-  }
+  },
+  "cities": [
+    { "name": "두바이", "nameEn": "Dubai", "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&h=600&fit=crop" },
+    { "name": "아부다비", "nameEn": "Abu Dhabi", "image": "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=800&h=600&fit=crop" },
+    { "name": "샤르자", "nameEn": "Sharjah", "image": "https://images.unsplash.com/photo-1559113202-c916b8e44d8b?w=800&h=600&fit=crop" },
+    { "name": "라스알카이마", "nameEn": "Ras Al Khaimah", "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop" }
+  ]
 }

@@ -81,5 +81,11 @@
     "directRecognition": false,
     "minimumAge": 16,
     "note": "국제운전면허증(IDP) 필요. 관광 목적으로 체류 기간 동안 사용 가능. 보고타 등 대도시 교통 혼잡 주의."
-  }
+  },
+  "cities": [
+    { "name": "보고타", "nameEn": "Bogota", "image": "https://images.unsplash.com/photo-1568402102990-bc541580b59f?w=800&h=600&fit=crop" },
+    { "name": "메데인", "nameEn": "Medellin", "image": "https://images.unsplash.com/photo-1551244072-5d12893278ab?w=800&h=600&fit=crop" },
+    { "name": "카르타헤나", "nameEn": "Cartagena", "image": "https://images.unsplash.com/photo-1570299437522-25e4c4094e1e?w=800&h=600&fit=crop" },
+    { "name": "칼리", "nameEn": "Cali", "image": "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?w=800&h=600&fit=crop" }
+  ]
 }

@@ -41,5 +41,22 @@
     "USD 현금 (도착비자 비용)",
     "여행자 보험 증서 (긴급 의료 후송 포함)",
     "숙소 바우처"
+  ],
+  "cities": [
+    {
+      "name": "모가디슈",
+      "nameEn": "Mogadishu",
+      "image": "https://images.unsplash.com/photo-AXToRjMXfkg?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "하르게이사",
+      "nameEn": "Hargeisa",
+      "image": "https://images.unsplash.com/photo-bsNmj6oZDbg?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "보사소",
+      "nameEn": "Bosaso",
+      "image": "https://images.unsplash.com/photo-oW3N0cQ0QRs?w=800&h=600&fit=crop"
+    }
   ]
 }

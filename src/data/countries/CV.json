@@ -36,5 +36,22 @@
     "항공권",
     "숙소 바우처",
     "USD 현금 (도착비자)"
+  ],
+  "cities": [
+    {
+      "name": "프라이아",
+      "nameEn": "Praia",
+      "image": "https://images.unsplash.com/photo-GxHQlEm0OFA?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "민델루",
+      "nameEn": "Mindelo",
+      "image": "https://images.unsplash.com/photo-p2zlP9aydfo?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "산타마리아",
+      "nameEn": "Santa Maria",
+      "image": "https://images.unsplash.com/photo-4BNLArlwQZA?w=800&h=600&fit=crop"
+    }
   ]
 }

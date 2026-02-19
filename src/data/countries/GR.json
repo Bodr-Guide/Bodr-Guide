@@ -81,5 +81,11 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. EU 회원국으로 IDP 소지 시 체류 기간 동안 운전 가능. 섬 지역 렌터카 이용 시 IDP 필수."
-  }
+  },
+  "cities": [
+    { "name": "아테네", "nameEn": "Athens", "image": "https://images.unsplash.com/photo-1555993539-1732b0258235?w=800&h=600&fit=crop" },
+    { "name": "산토리니", "nameEn": "Santorini", "image": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&h=600&fit=crop" },
+    { "name": "미코노스", "nameEn": "Mykonos", "image": "https://images.unsplash.com/photo-1601581875309-fafbf2d3ed3a?w=800&h=600&fit=crop" },
+    { "name": "크레타", "nameEn": "Crete", "image": "https://images.unsplash.com/photo-1586861635167-e5223aadc9fe?w=800&h=600&fit=crop" }
+  ]
 }

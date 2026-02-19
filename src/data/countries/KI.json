@@ -42,5 +42,22 @@
     "리턴 티켓",
     "여행자 보험 (의료 후송 포함 권장)",
     "생수 및 자외선 차단제"
+  ],
+  "cities": [
+    {
+      "name": "타라와",
+      "nameEn": "Tarawa",
+      "image": "https://images.unsplash.com/photo-nR9Jqm5IrOI?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "사우스타라와",
+      "nameEn": "South Tarawa",
+      "image": "https://images.unsplash.com/photo-Cbaq5YOFrHE?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "베티오",
+      "nameEn": "Betio",
+      "image": "https://images.unsplash.com/photo-NSha3at9fbE?w=800&h=600&fit=crop"
+    }
   ]
 }

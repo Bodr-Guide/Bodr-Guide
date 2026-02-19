@@ -39,5 +39,11 @@
     "숙소 예약 확인서",
     "여행자 보험",
     "방한용품 (겨울철)"
+  ],
+  "cities": [
+    { "name": "알마티", "nameEn": "Almaty", "image": "https://images.unsplash.com/photo-1565008576549-57569a49371d?w=800&h=600&fit=crop" },
+    { "name": "누르술탄", "nameEn": "Astana", "image": "https://images.unsplash.com/photo-1570366583862-f91883984fde?w=800&h=600&fit=crop" },
+    { "name": "심켄트", "nameEn": "Shymkent", "image": "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?w=800&h=600&fit=crop" },
+    { "name": "투르키스탄", "nameEn": "Turkistan", "image": "https://images.unsplash.com/photo-1551244072-5d12893278ab?w=800&h=600&fit=crop" }
   ]
 }

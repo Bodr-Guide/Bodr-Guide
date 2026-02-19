@@ -37,5 +37,22 @@
     "항공권",
     "숙소 바우처",
     "USD 현금 (도착비자)"
+  ],
+  "cities": [
+    {
+      "name": "지부티시티",
+      "nameEn": "Djibouti City",
+      "image": "https://images.unsplash.com/photo-5s3IN1MZgo8?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "타주라",
+      "nameEn": "Tadjoura",
+      "image": "https://images.unsplash.com/photo-QGEqzZ7VWqs?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "알리사비에",
+      "nameEn": "Ali Sabieh",
+      "image": "https://images.unsplash.com/photo-nepjrgVSfIY?w=800&h=600&fit=crop"
+    }
   ]
 }

@@ -38,5 +38,22 @@
     "항공권",
     "비자",
     "숙소 바우처"
+  ],
+  "cities": [
+    {
+      "name": "아스마라",
+      "nameEn": "Asmara",
+      "image": "https://images.unsplash.com/photo-HQrVVAjES_Y?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "마사와",
+      "nameEn": "Massawa",
+      "image": "https://images.unsplash.com/photo-6tvkMz8XgLQ?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "케렌",
+      "nameEn": "Keren",
+      "image": "https://images.unsplash.com/photo-t85pKpB5Zf4?w=800&h=600&fit=crop"
+    }
   ]
 }

@@ -83,5 +83,22 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. 프랑스 해외영토로 우측통행. 누메아 시내 외 도로는 비포장 구간이 있을 수 있음."
-  }
+  },
+  "cities": [
+    {
+      "name": "누메아",
+      "nameEn": "Nouméa",
+      "image": "https://images.unsplash.com/photo-W_dSrC3lNNs?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "브루",
+      "nameEn": "Bourail",
+      "image": "https://images.unsplash.com/photo-ddC7ffYjJmQ?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "일데팽",
+      "nameEn": "Île des Pins",
+      "image": "https://images.unsplash.com/photo-siiECFo1SEA?w=800&h=600&fit=crop"
+    }
+  ]
 }

@@ -42,5 +42,27 @@
     "숙소 예약 확인서",
     "리턴 티켓",
     "여행자 보험"
+  ],
+  "cities": [
+    {
+      "name": "이슬라마바드",
+      "nameEn": "Islamabad",
+      "image": "https://images.unsplash.com/photo-gIZRcGU-Tmg?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "라호르",
+      "nameEn": "Lahore",
+      "image": "https://images.unsplash.com/photo-bYs6aNwdLag?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "카라치",
+      "nameEn": "Karachi",
+      "image": "https://images.unsplash.com/photo-JbH_ityJpk8?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "훈자",
+      "nameEn": "Hunza",
+      "image": "https://images.unsplash.com/photo-XHdHhsN8kqE?w=800&h=600&fit=crop"
+    }
   ]
 }

@@ -83,5 +83,11 @@
     "directRecognition": false,
     "minimumAge": 16,
     "note": "국제운전면허증(IDP) 인정. 미국 영토로 IDP 소지 시 관광 기간 동안 운전 가능. 한국 면허증 원본도 함께 지참 필요."
-  }
+  },
+  "cities": [
+    { "name": "투몬", "nameEn": "Tumon", "image": "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=800&h=600&fit=crop" },
+    { "name": "하갓냐", "nameEn": "Hagatna", "image": "https://images.unsplash.com/photo-1580060839134-75a5edca2e99?w=800&h=600&fit=crop" },
+    { "name": "이나라잔", "nameEn": "Inarajan", "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop" },
+    { "name": "데데도", "nameEn": "Dededo", "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop" }
+  ]
 }

@@ -39,5 +39,27 @@
     "e-Visa 또는 도착비자 수수료 (USD 현금)",
     "숙소 예약 확인서",
     "여행자 보험"
+  ],
+  "cities": [
+    {
+      "name": "바쿠",
+      "nameEn": "Baku",
+      "image": "https://images.unsplash.com/photo-1603486756547-63d16a7b4106?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "셰키",
+      "nameEn": "Sheki",
+      "image": "https://images.unsplash.com/photo-1601579112934-17ac2aa86292?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "가발라",
+      "nameEn": "Gabala",
+      "image": "https://images.unsplash.com/photo-1609342931890-514af7036b5e?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "간자",
+      "nameEn": "Ganja",
+      "image": "https://images.unsplash.com/photo-1609342931943-5f26f8e3797d?w=800&h=600&fit=crop"
+    }
   ]
 }

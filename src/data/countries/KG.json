@@ -39,5 +39,22 @@
     "숙소 예약 확인서",
     "여행자 보험",
     "고산병 예방약"
+  ],
+  "cities": [
+    {
+      "name": "비슈케크",
+      "nameEn": "Bishkek",
+      "image": "https://images.unsplash.com/photo-RKAvOHFXdTo?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "카라콜",
+      "nameEn": "Karakol",
+      "image": "https://images.unsplash.com/photo-viSI_rKOVnE?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "오시",
+      "nameEn": "Osh",
+      "image": "https://images.unsplash.com/photo--lqcVE_o0vE?w=800&h=600&fit=crop"
+    }
   ]
 }

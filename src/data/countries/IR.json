@@ -22,7 +22,9 @@
     "currency": "IRR (이란 리알)",
     "flight": "약 10시간"
   },
-  "passportValidity": { "months": 6 },
+  "passportValidity": {
+    "months": 6
+  },
   "drivingLicense": {
     "idpAccepted": true,
     "directRecognition": false,
@@ -39,5 +41,32 @@
     "EUR 현금 (환전용)",
     "숙소 바우처",
     "히잡 (여성)"
+  ],
+  "cities": [
+    {
+      "name": "테헤란",
+      "nameEn": "Tehran",
+      "image": "https://images.unsplash.com/photo-X_4KrM4DH_U?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "이스파한",
+      "nameEn": "Isfahan",
+      "image": "https://images.unsplash.com/photo-KEiEZ5Hmtnc?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "시라즈",
+      "nameEn": "Shiraz",
+      "image": "https://images.unsplash.com/photo-yEJWo2OOkTc?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "야즈드",
+      "nameEn": "Yazd",
+      "image": "https://images.unsplash.com/photo-zgUj5rbtShM?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "타브리즈",
+      "nameEn": "Tabriz",
+      "image": "https://images.unsplash.com/photo-ma96Ke8gDew?w=800&h=600&fit=crop"
+    }
   ]
 }

@@ -21,7 +21,9 @@
     "currency": "STN (상투메 도브라)",
     "flight": "약 22시간 (경유)"
   },
-  "passportValidity": { "months": 6 },
+  "passportValidity": {
+    "months": 6
+  },
   "drivingLicense": {
     "idpAccepted": true,
     "directRecognition": false,
@@ -36,5 +38,22 @@
     "항공권",
     "숙소 바우처",
     "현금 (EUR 또는 USD)"
+  ],
+  "cities": [
+    {
+      "name": "상투메",
+      "nameEn": "São Tomé",
+      "image": "https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "트린다데",
+      "nameEn": "Trindade",
+      "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "산토아마로",
+      "nameEn": "Santo Amaro",
+      "image": "https://images.unsplash.com/photo-1500259571355-332da5cb07aa?w=800&h=600&fit=crop"
+    }
   ]
 }

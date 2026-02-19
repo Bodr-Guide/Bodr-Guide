@@ -39,5 +39,22 @@
     "바티칸 박물관 사전 예약",
     "복장 준비 (어깨·무릎 노출 금지)",
     "여행자 보험"
+  ],
+  "cities": [
+    {
+      "name": "바티칸시국",
+      "nameEn": "Vatican City",
+      "image": "https://images.unsplash.com/photo-1531572753322-ad063cecc140?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "성베드로광장",
+      "nameEn": "St. Peter's Square",
+      "image": "https://images.unsplash.com/photo-1563789031959-4c02bcb41319?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "시스티나성당",
+      "nameEn": "Sistine Chapel",
+      "image": "https://images.unsplash.com/photo-1567425349036-a0688ae7a19a?w=800&h=600&fit=crop"
+    }
   ]
 }

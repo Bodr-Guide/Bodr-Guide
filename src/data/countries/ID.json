@@ -74,5 +74,11 @@
     "directRecognition": false,
     "minimumAge": 17,
     "note": "국제운전면허증(IDP) 필요. 발리, 자카르타 등에서 렌터카 이용 시 IDP 필수. 오토바이도 IDP 필요."
-  }
+  },
+  "cities": [
+    { "name": "발리", "nameEn": "Bali", "image": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&h=600&fit=crop" },
+    { "name": "자카르타", "nameEn": "Jakarta", "image": "https://images.unsplash.com/photo-1555899434-94d1368aa7af?w=800&h=600&fit=crop" },
+    { "name": "족자카르타", "nameEn": "Yogyakarta", "image": "https://images.unsplash.com/photo-1584810359583-e30e2e0a8f96?w=800&h=600&fit=crop" },
+    { "name": "롬복", "nameEn": "Lombok", "image": "https://images.unsplash.com/photo-1570789210967-2cac24834b5a?w=800&h=600&fit=crop" }
+  ]
 }

@@ -39,5 +39,22 @@
     "숙소 예약 확인서",
     "리턴 티켓",
     "여행자 보험"
+  ],
+  "cities": [
+    {
+      "name": "아순시온",
+      "nameEn": "Asunción",
+      "image": "https://images.unsplash.com/photo-QzgfRECeygA?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "시우다드델에스테",
+      "nameEn": "Ciudad del Este",
+      "image": "https://images.unsplash.com/photo-ZtvnYYFlm4c?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "엔카르나시온",
+      "nameEn": "Encarnación",
+      "image": "https://images.unsplash.com/photo-yDwMtbziMbU?w=800&h=600&fit=crop"
+    }
   ]
 }

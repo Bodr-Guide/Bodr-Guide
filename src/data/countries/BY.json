@@ -40,5 +40,22 @@
     "의료보험 증명서 (최소 10,000 EUR 보장)",
     "숙소 예약 확인서",
     "여행자 보험"
+  ],
+  "cities": [
+    {
+      "name": "민스크",
+      "nameEn": "Minsk",
+      "image": "https://images.unsplash.com/photo-1565013488937-75e8a6e8e845?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "브레스트",
+      "nameEn": "Brest",
+      "image": "https://images.unsplash.com/photo-1673734760386-0ba4437e427e?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "흐로드나",
+      "nameEn": "Hrodna",
+      "image": "https://images.unsplash.com/photo-1673734760386-0ba4437e427e?w=800&h=600&fit=crop"
+    }
   ]
 }

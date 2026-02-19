@@ -66,5 +66,27 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. 우유니 사막 등 비포장 도로가 많아 4WD 차량 권장. 고산 지역 운전 시 고산병 주의."
-  }
+  },
+  "cities": [
+    {
+      "name": "라파스",
+      "nameEn": "La Paz",
+      "image": "https://images.unsplash.com/photo-1591198936750-16d8e15edb9e?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "수크레",
+      "nameEn": "Sucre",
+      "image": "https://images.unsplash.com/photo-1591199737490-230ab43a8a4b?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "우유니",
+      "nameEn": "Uyuni",
+      "image": "https://images.unsplash.com/photo-1670593102356-3ff212d2d5a6?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "코차밤바",
+      "nameEn": "Cochabamba",
+      "image": "https://images.unsplash.com/photo-1591198936750-16d8e15edb9e?w=800&h=600&fit=crop"
+    }
+  ]
 }

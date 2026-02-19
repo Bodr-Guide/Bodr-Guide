@@ -39,5 +39,22 @@
     "숙소 예약 확인서",
     "리턴 티켓",
     "여행자 보험"
+  ],
+  "cities": [
+    {
+      "name": "반다르스리브가완",
+      "nameEn": "Bandar Seri Begawan",
+      "image": "https://images.unsplash.com/photo-1709808972524-a4ad69939bb2?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "투퐁",
+      "nameEn": "Tutong",
+      "image": "https://images.unsplash.com/photo-1609766857041-ed402ea8069a?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "테르부롱",
+      "nameEn": "Temburong",
+      "image": "https://images.unsplash.com/photo-1578469550956-0e16b69c6a3d?w=800&h=600&fit=crop"
+    }
   ]
 }

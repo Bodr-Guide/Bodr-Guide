@@ -40,5 +40,27 @@
     "리턴 티켓",
     "여행자 보험",
     "관광카드 구매비 USD $10"
+  ],
+  "cities": [
+    {
+      "name": "마나과",
+      "nameEn": "Managua",
+      "image": "https://images.unsplash.com/photo-Qra38JXyG_A?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "그라나다",
+      "nameEn": "Granada",
+      "image": "https://images.unsplash.com/photo-qwGeeZFZcN8?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "레온",
+      "nameEn": "León",
+      "image": "https://images.unsplash.com/photo-5hyo9L-qQLE?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "산후안델수르",
+      "nameEn": "San Juan del Sur",
+      "image": "https://images.unsplash.com/photo-nv1pgY_ecnE?w=800&h=600&fit=crop"
+    }
   ]
 }

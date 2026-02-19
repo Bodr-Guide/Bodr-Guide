@@ -36,5 +36,22 @@
     "여권 (유효기간 6개월 이상)",
     "항공권",
     "숙소 바우처"
+  ],
+  "cities": [
+    {
+      "name": "마세루",
+      "nameEn": "Maseru",
+      "image": "https://images.unsplash.com/photo-y3l8gDa1xI8?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "테야테야넹",
+      "nameEn": "Teyateyaneng",
+      "image": "https://images.unsplash.com/photo-6GbPaRG_sXQ?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "말레아레아",
+      "nameEn": "Malealea",
+      "image": "https://images.unsplash.com/photo-GFtlqMDuVXw?w=800&h=600&fit=crop"
+    }
   ]
 }

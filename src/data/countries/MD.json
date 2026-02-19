@@ -38,5 +38,22 @@
     "항공권",
     "숙소 예약 확인서",
     "여행자 보험"
+  ],
+  "cities": [
+    {
+      "name": "키시나우",
+      "nameEn": "Chisinau",
+      "image": "https://images.unsplash.com/photo--plAoepaa3s?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "오르헤이",
+      "nameEn": "Orhei",
+      "image": "https://images.unsplash.com/photo-Y4aQJ4Fin7w?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "소로카",
+      "nameEn": "Soroca",
+      "image": "https://images.unsplash.com/photo-gboctNDIoUg?w=800&h=600&fit=crop"
+    }
   ]
 }

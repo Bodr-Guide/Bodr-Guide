@@ -20,7 +20,9 @@
     "currency": "SSP (남수단 파운드)",
     "flight": "약 18시간 (경유)"
   },
-  "passportValidity": { "months": 6 },
+  "passportValidity": {
+    "months": 6
+  },
   "drivingLicense": {
     "idpAccepted": true,
     "directRecognition": false,
@@ -38,5 +40,22 @@
     "비자 발급 확인서",
     "여행자 보험 증서 (긴급 의료 후송 포함)",
     "숙소 바우처"
+  ],
+  "cities": [
+    {
+      "name": "주바",
+      "nameEn": "Juba",
+      "image": "https://images.unsplash.com/photo-woUg2fXU2EU?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "와우",
+      "nameEn": "Wau",
+      "image": "https://images.unsplash.com/photo-f7BY8P7CIkc?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "말라칼",
+      "nameEn": "Malakal",
+      "image": "https://images.unsplash.com/photo-7MXH1282qaM?w=800&h=600&fit=crop"
+    }
   ]
 }

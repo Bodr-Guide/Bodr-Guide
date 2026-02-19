@@ -38,5 +38,22 @@
     "항공권",
     "숙소 바우처",
     "황열병 예방접종 증명서"
+  ],
+  "cities": [
+    {
+      "name": "루사카",
+      "nameEn": "Lusaka",
+      "image": "https://images.unsplash.com/photo-1612457891982-4a395cfa9e11?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "리빙스톤",
+      "nameEn": "Livingstone",
+      "image": "https://images.unsplash.com/photo-1568454537842-d933259bb258?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "시아볼라",
+      "nameEn": "Siavonga",
+      "image": "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=800&h=600&fit=crop"
+    }
   ]
 }

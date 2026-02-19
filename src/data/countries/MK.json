@@ -38,5 +38,22 @@
     "항공권",
     "숙소 예약 확인서",
     "여행자 보험"
+  ],
+  "cities": [
+    {
+      "name": "스코페",
+      "nameEn": "Skopje",
+      "image": "https://images.unsplash.com/photo-PbXIQpU8kqk?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "오흐리드",
+      "nameEn": "Ohrid",
+      "image": "https://images.unsplash.com/photo-frXwKjPpuxA?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "비톨라",
+      "nameEn": "Bitola",
+      "image": "https://images.unsplash.com/photo-lfso35homz0?w=800&h=600&fit=crop"
+    }
   ]
 }

@@ -80,5 +80,27 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. 나미비아는 좌측통행 국가. 비포장 도로가 많아 4WD 차량 렌트 필수. 야생동물 도로 출현에 주의."
-  }
+  },
+  "cities": [
+    {
+      "name": "빈트후크",
+      "nameEn": "Windhoek",
+      "image": "https://images.unsplash.com/photo-ibu9zUnkLFw?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "스와코프문트",
+      "nameEn": "Swakopmund",
+      "image": "https://images.unsplash.com/photo-z8b3_BBox9A?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "월비스베이",
+      "nameEn": "Walvis Bay",
+      "image": "https://images.unsplash.com/photo-LonBLfEIKOc?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "소수스블레이",
+      "nameEn": "Sossusvlei",
+      "image": "https://images.unsplash.com/photo-z65MXnGI35k?w=800&h=600&fit=crop"
+    }
+  ]
 }

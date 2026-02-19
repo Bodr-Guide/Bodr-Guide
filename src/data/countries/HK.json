@@ -80,5 +80,27 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. 좌측통행 국가이므로 운전 시 주의. 도심 주차가 매우 어렵고 대중교통이 편리하여 렌터카보다 대중교통 이용 권장."
-  }
+  },
+  "cities": [
+    {
+      "name": "홍콩섬",
+      "nameEn": "Hong Kong Island",
+      "image": "https://images.unsplash.com/photo-1536599018102-9f803c140fc1?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "구룡",
+      "nameEn": "Kowloon",
+      "image": "https://images.unsplash.com/photo-1563362965-023e22be7bfb?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "란타우",
+      "nameEn": "Lantau",
+      "image": "https://images.unsplash.com/photo-1576788903459-ff7e0c4ddce6?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "침사추이",
+      "nameEn": "Tsim Sha Tsui",
+      "image": "https://images.unsplash.com/photo-1594973782943-3b23b8702f16?w=800&h=600&fit=crop"
+    }
+  ]
 }

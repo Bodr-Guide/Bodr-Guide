@@ -40,5 +40,22 @@
     "리턴 티켓",
     "여행자 보험",
     "말라리아 예방약 (필요 시)"
+  ],
+  "cities": [
+    {
+      "name": "조지타운",
+      "nameEn": "Georgetown",
+      "image": "https://images.unsplash.com/photo-HYzvNRYwZ10?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "바르티카",
+      "nameEn": "Bartica",
+      "image": "https://images.unsplash.com/photo-3Gnadp4B8n8?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "카이에투르",
+      "nameEn": "Kaieteur",
+      "image": "https://images.unsplash.com/photo-wQywJvCVwLo?w=800&h=600&fit=crop"
+    }
   ]
 }

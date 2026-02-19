@@ -38,5 +38,11 @@
     "항공권",
     "숙소 예약 확인서",
     "여행자 보험"
+  ],
+  "cities": [
+    { "name": "니코시아", "nameEn": "Nicosia", "image": "https://images.unsplash.com/photo-1558271736-cd043ef2e855?w=800&h=600&fit=crop" },
+    { "name": "리마솔", "nameEn": "Limassol", "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop" },
+    { "name": "파포스", "nameEn": "Paphos", "image": "https://images.unsplash.com/photo-1568752520160-e39e54175a72?w=800&h=600&fit=crop" },
+    { "name": "아야나파", "nameEn": "Ayia Napa", "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop" }
   ]
 }

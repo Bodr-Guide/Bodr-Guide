@@ -82,5 +82,11 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. 모리셔스는 좌측통행 국가(영국식). 해안 도로가 잘 정비되어 있으나 산악 지역 도로 주의."
-  }
+  },
+  "cities": [
+    { "name": "포트루이스", "nameEn": "Port Louis", "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop" },
+    { "name": "그랑바이", "nameEn": "Grand Baie", "image": "https://images.unsplash.com/photo-1540202404-a2f29016b523?w=800&h=600&fit=crop" },
+    { "name": "플릭엔플락", "nameEn": "Flic en Flac", "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop" },
+    { "name": "샤마렐", "nameEn": "Chamarel", "image": "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=800&h=600&fit=crop" }
+  ]
 }

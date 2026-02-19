@@ -39,5 +39,22 @@
     "숙소 예약 확인서",
     "리턴 티켓",
     "여행자 보험"
+  ],
+  "cities": [
+    {
+      "name": "나소",
+      "nameEn": "Nassau",
+      "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "프리포트",
+      "nameEn": "Freeport",
+      "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "엘루서라",
+      "nameEn": "Eleuthera",
+      "image": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&h=600&fit=crop"
+    }
   ]
 }

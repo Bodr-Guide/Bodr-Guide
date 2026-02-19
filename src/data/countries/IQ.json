@@ -21,7 +21,9 @@
     "currency": "IQD (이라크 디나르)",
     "flight": "약 12시간 (경유)"
   },
-  "passportValidity": { "months": 6 },
+  "passportValidity": {
+    "months": 6
+  },
   "drivingLicense": {
     "idpAccepted": true,
     "directRecognition": false,
@@ -38,5 +40,27 @@
     "USD 현금 (도착비자 비용)",
     "여행자 보험 증서 (긴급 의료 후송 포함)",
     "숙소 바우처"
+  ],
+  "cities": [
+    {
+      "name": "바그다드",
+      "nameEn": "Baghdad",
+      "image": "https://images.unsplash.com/photo-Kn4D0uFGvTw?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "아르빌",
+      "nameEn": "Erbil",
+      "image": "https://images.unsplash.com/photo-1FsTIa1WEZ4?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "바스라",
+      "nameEn": "Basra",
+      "image": "https://images.unsplash.com/photo-Ok-OG23zasU?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "나자프",
+      "nameEn": "Najaf",
+      "image": "https://images.unsplash.com/photo-9zwyqyVXnfQ?w=800&h=600&fit=crop"
+    }
   ]
 }

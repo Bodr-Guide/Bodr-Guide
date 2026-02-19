@@ -37,5 +37,27 @@
     "항공권",
     "비자",
     "숙소 바우처"
+  ],
+  "cities": [
+    {
+      "name": "알제",
+      "nameEn": "Algiers",
+      "image": "https://images.unsplash.com/photo-H8FGSIfTs_Q?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "오랑",
+      "nameEn": "Oran",
+      "image": "https://images.unsplash.com/photo-Q_9r-fvJ_Xc?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "콩스탄틴",
+      "nameEn": "Constantine",
+      "image": "https://images.unsplash.com/photo-L8h1vLv8ju8?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "가르다이아",
+      "nameEn": "Ghardaia",
+      "image": "https://images.unsplash.com/photo-ntVY3Oh2jRM?w=800&h=600&fit=crop"
+    }
   ]
 }

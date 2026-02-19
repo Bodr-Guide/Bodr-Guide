@@ -41,5 +41,11 @@
     "여행자 보험",
     "방한용품 (겨울철)",
     "국제운전면허증 (렌터카 이용 시)"
+  ],
+  "cities": [
+    { "name": "오슬로", "nameEn": "Oslo", "image": "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=800&h=600&fit=crop" },
+    { "name": "베르겐", "nameEn": "Bergen", "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&h=600&fit=crop" },
+    { "name": "트롬쇠", "nameEn": "Tromso", "image": "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=800&h=600&fit=crop" },
+    { "name": "스타방에르", "nameEn": "Stavanger", "image": "https://images.unsplash.com/photo-1507272931001-fc06c17866e0?w=800&h=600&fit=crop" }
   ]
 }

@@ -90,5 +90,27 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "중국은 국제운전면허증(IDP)을 인정하지 않음. 외국인은 임시 중국 운전면허를 별도로 취득해야 함."
-  }
+  },
+  "cities": [
+    {
+      "name": "베이징",
+      "nameEn": "Beijing",
+      "image": "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "상하이",
+      "nameEn": "Shanghai",
+      "image": "https://images.unsplash.com/photo-1537531088710-91e6ec58ba6c?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "광저우",
+      "nameEn": "Guangzhou",
+      "image": "https://images.unsplash.com/photo-1583475020662-56d8ed78a32e?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "청두",
+      "nameEn": "Chengdu",
+      "image": "https://images.unsplash.com/photo-1533552889578-e4e056089a4d?w=800&h=600&fit=crop"
+    }
+  ]
 }

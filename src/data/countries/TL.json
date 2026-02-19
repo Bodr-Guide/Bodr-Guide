@@ -42,5 +42,22 @@
     "비자 수수료 USD $30",
     "리턴 티켓",
     "여행자 보험 (의료 후송 포함 권장)"
+  ],
+  "cities": [
+    {
+      "name": "딜리",
+      "nameEn": "Dili",
+      "image": "https://images.unsplash.com/photo-1573455494060-c5595004fb6c?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "바우카우",
+      "nameEn": "Baucau",
+      "image": "https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "아타우로",
+      "nameEn": "Atauro",
+      "image": "https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?w=800&h=600&fit=crop"
+    }
   ]
 }

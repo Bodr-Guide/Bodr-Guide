@@ -82,5 +82,11 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. 관광 목적으로 최대 90일 사용 가능. 비포장 도로가 많으므로 4WD 차량 권장."
-  }
+  },
+  "cities": [
+    { "name": "산호세", "nameEn": "San Jose", "image": "https://images.unsplash.com/photo-1568402102990-bc541580b59f?w=800&h=600&fit=crop" },
+    { "name": "라포르투나", "nameEn": "La Fortuna", "image": "https://images.unsplash.com/photo-1551244072-5d12893278ab?w=800&h=600&fit=crop" },
+    { "name": "마누엘안토니오", "nameEn": "Manuel Antonio", "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop" },
+    { "name": "몬테베르데", "nameEn": "Monteverde", "image": "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?w=800&h=600&fit=crop" }
+  ]
 }

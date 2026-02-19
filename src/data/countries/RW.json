@@ -75,5 +75,22 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. 르완다는 우측통행이며, 도로 상태가 양호한 편이나 시골 지역은 비포장도로 주의."
-  }
+  },
+  "cities": [
+    {
+      "name": "키갈리",
+      "nameEn": "Kigali",
+      "image": "https://images.unsplash.com/photo-RIM_zSW0KuU?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "무산제",
+      "nameEn": "Musanze",
+      "image": "https://images.unsplash.com/photo-pEpeAiBzhAE?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "부타레",
+      "nameEn": "Butare",
+      "image": "https://images.unsplash.com/photo-HaTHPFVior8?w=800&h=600&fit=crop"
+    }
+  ]
 }

@@ -38,5 +38,22 @@
     "항공권 (이탈리아 입국)",
     "숙소 예약 확인서",
     "여행자 보험"
+  ],
+  "cities": [
+    {
+      "name": "산마리노시",
+      "nameEn": "San Marino City",
+      "image": "https://images.unsplash.com/photo-LjMhM4eMGdM?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "보르고마조레",
+      "nameEn": "Borgo Maggiore",
+      "image": "https://images.unsplash.com/photo-g9bDa0Tmk-M?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "세라발레",
+      "nameEn": "Serravalle",
+      "image": "https://images.unsplash.com/photo-DdS2jMPKMQ0?w=800&h=600&fit=crop"
+    }
   ]
 }

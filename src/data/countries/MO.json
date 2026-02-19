@@ -80,5 +80,27 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP)으로 운전 가능. 마카오는 도로가 좁고 교통 체증이 심할 수 있음."
-  }
+  },
+  "cities": [
+    {
+      "name": "마카오 반도",
+      "nameEn": "Macau Peninsula",
+      "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "타이파",
+      "nameEn": "Taipa",
+      "image": "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "코타이",
+      "nameEn": "Cotai",
+      "image": "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "콜로안",
+      "nameEn": "Coloane",
+      "image": "https://images.unsplash.com/photo-1625898003403-3ff6f3f5a217?w=800&h=600&fit=crop"
+    }
+  ]
 }

@@ -20,7 +20,9 @@
     "currency": "XOF (서아프리카 CFA 프랑)",
     "flight": "약 20시간 (경유)"
   },
-  "passportValidity": { "months": 6 },
+  "passportValidity": {
+    "months": 6
+  },
   "drivingLicense": {
     "idpAccepted": true,
     "directRecognition": false,
@@ -38,5 +40,22 @@
     "비자 발급 확인서",
     "황열병 예방접종 증명서",
     "숙소 바우처"
+  ],
+  "cities": [
+    {
+      "name": "니아메",
+      "nameEn": "Niamey",
+      "image": "https://images.unsplash.com/photo-PTjy1Sv7TBw?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "아가데즈",
+      "nameEn": "Agadez",
+      "image": "https://images.unsplash.com/photo-Uy15QjxQ0qc?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "진더",
+      "nameEn": "Zinder",
+      "image": "https://images.unsplash.com/photo-oosrKe_BcbQ?w=800&h=600&fit=crop"
+    }
   ]
 }

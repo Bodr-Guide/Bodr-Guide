@@ -83,5 +83,11 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. 도시 간 장거리 이동 시 도로 상태가 고르지 않을 수 있으며, 현지 교통 법규 준수 필수."
-  }
+  },
+  "cities": [
+    { "name": "사마르칸트", "nameEn": "Samarkand", "image": "https://images.unsplash.com/photo-1565008576549-57569a49371d?w=800&h=600&fit=crop" },
+    { "name": "타슈켄트", "nameEn": "Tashkent", "image": "https://images.unsplash.com/photo-1570366583862-f91883984fde?w=800&h=600&fit=crop" },
+    { "name": "부하라", "nameEn": "Bukhara", "image": "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?w=800&h=600&fit=crop" },
+    { "name": "히바", "nameEn": "Khiva", "image": "https://images.unsplash.com/photo-1551244072-5d12893278ab?w=800&h=600&fit=crop" }
+  ]
 }

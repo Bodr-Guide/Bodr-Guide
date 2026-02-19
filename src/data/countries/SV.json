@@ -39,5 +39,27 @@
     "숙소 예약 확인서",
     "리턴 티켓",
     "여행자 보험"
+  ],
+  "cities": [
+    {
+      "name": "산살바도르",
+      "nameEn": "San Salvador",
+      "image": "https://images.unsplash.com/photo-1592895792095-85fa785192a9?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "산타아나",
+      "nameEn": "Santa Ana",
+      "image": "https://images.unsplash.com/photo-1608236415053-3691791bbffe?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "수치토토",
+      "nameEn": "Suchitoto",
+      "image": "https://images.unsplash.com/photo-1600107363560-a2b09f4b2cec?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "라리베르타드",
+      "nameEn": "La Libertad",
+      "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop"
+    }
   ]
 }

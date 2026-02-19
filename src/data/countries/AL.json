@@ -75,5 +75,27 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. 도로 인프라가 열악한 구간이 많으므로 운전 시 각별히 주의 필요."
-  }
+  },
+  "cities": [
+    {
+      "name": "티라나",
+      "nameEn": "Tirana",
+      "image": "https://images.unsplash.com/photo-1565426873118-a17ed65d74b9?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "사란다",
+      "nameEn": "Saranda",
+      "image": "https://images.unsplash.com/photo-1583422409516-2895a77efded?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "베라트",
+      "nameEn": "Berat",
+      "image": "https://images.unsplash.com/photo-1580745089072-cffcb4d44938?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "지로카스터",
+      "nameEn": "Gjirokastër",
+      "image": "https://images.unsplash.com/photo-1596303898177-c0a0b8c0e750?w=800&h=600&fit=crop"
+    }
+  ]
 }

@@ -82,5 +82,11 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP)으로 90일간 운전 가능. 파나마시티 교통 체증이 심하며, 우기 시 도로 침수 주의."
-  }
+  },
+  "cities": [
+    { "name": "파나마시티", "nameEn": "Panama City", "image": "https://images.unsplash.com/photo-1568402102990-bc541580b59f?w=800&h=600&fit=crop" },
+    { "name": "보카스델토로", "nameEn": "Bocas del Toro", "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop" },
+    { "name": "산블라스", "nameEn": "San Blas", "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop" },
+    { "name": "보케테", "nameEn": "Boquete", "image": "https://images.unsplash.com/photo-1551244072-5d12893278ab?w=800&h=600&fit=crop" }
+  ]
 }

@@ -38,5 +38,22 @@
     "항공권 (니스 공항)",
     "숙소 예약 확인서",
     "여행자 보험"
+  ],
+  "cities": [
+    {
+      "name": "몬테카를로",
+      "nameEn": "Monte Carlo",
+      "image": "https://images.unsplash.com/photo-sb9nfWeSuxA?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "모나코빌",
+      "nameEn": "Monaco-Ville",
+      "image": "https://images.unsplash.com/photo-N_uEbYBk4pA?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "라콩다민",
+      "nameEn": "La Condamine",
+      "image": "https://images.unsplash.com/photo-YrZYBjSN76k?w=800&h=600&fit=crop"
+    }
   ]
 }

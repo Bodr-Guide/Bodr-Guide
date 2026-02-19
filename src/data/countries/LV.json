@@ -83,5 +83,11 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. EU 회원국으로 도로 인프라 양호. 겨울철 도로 결빙 주의, 겨울 타이어 장착 의무(12~3월)."
-  }
+  },
+  "cities": [
+    { "name": "리가", "nameEn": "Riga", "image": "https://images.unsplash.com/photo-1558271736-cd043ef2e855?w=800&h=600&fit=crop" },
+    { "name": "유르말라", "nameEn": "Jurmala", "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop" },
+    { "name": "시굴다", "nameEn": "Sigulda", "image": "https://images.unsplash.com/photo-1551244072-5d12893278ab?w=800&h=600&fit=crop" },
+    { "name": "체시스", "nameEn": "Cesis", "image": "https://images.unsplash.com/photo-1571847140471-1d7766e227a7?w=800&h=600&fit=crop" }
+  ]
 }

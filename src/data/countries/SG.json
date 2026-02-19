@@ -89,5 +89,27 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. 싱가포르는 좌측통행 국가이므로 주의 필요."
-  }
+  },
+  "cities": [
+    {
+      "name": "싱가포르 시내",
+      "nameEn": "Singapore City",
+      "image": "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "센토사",
+      "nameEn": "Sentosa",
+      "image": "https://images.unsplash.com/photo-1569288063643-5d29ad64df09?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "차이나타운",
+      "nameEn": "Chinatown",
+      "image": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "마리나베이",
+      "nameEn": "Marina Bay",
+      "image": "https://images.unsplash.com/photo-1496939376851-89342e90adcd?w=800&h=600&fit=crop"
+    }
+  ]
 }

@@ -40,5 +40,27 @@
     "e-Visa 출력본",
     "황열병 예방접종 증명서",
     "숙소 바우처"
+  ],
+  "cities": [
+    {
+      "name": "캄팔라",
+      "nameEn": "Kampala",
+      "image": "https://images.unsplash.com/photo-1619112078498-b1d50a6e7834?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "엔테베",
+      "nameEn": "Entebbe",
+      "image": "https://images.unsplash.com/photo-1621360841013-c7683c659ec6?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "진자",
+      "nameEn": "Jinja",
+      "image": "https://images.unsplash.com/photo-1621328102181-34a74c7ae1a9?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "포트포탈",
+      "nameEn": "Fort Portal",
+      "image": "https://images.unsplash.com/photo-1612457891982-4a395cfa9e11?w=800&h=600&fit=crop"
+    }
   ]
 }

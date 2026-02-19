@@ -42,5 +42,11 @@
     "여행자 보험",
     "방풍·방수 의류",
     "국제운전면허증 (렌터카 이용 시)"
+  ],
+  "cities": [
+    { "name": "레이캬비크", "nameEn": "Reykjavik", "image": "https://images.unsplash.com/photo-1504829857797-ddff29c27927?w=800&h=600&fit=crop" },
+    { "name": "아쿠레이리", "nameEn": "Akureyri", "image": "https://images.unsplash.com/photo-1520769669658-f07657f5a307?w=800&h=600&fit=crop" },
+    { "name": "비크", "nameEn": "Vik", "image": "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=800&h=600&fit=crop" },
+    { "name": "후사빅", "nameEn": "Husavik", "image": "https://images.unsplash.com/photo-1509356843151-3e7d96241e11?w=800&h=600&fit=crop" }
   ]
 }

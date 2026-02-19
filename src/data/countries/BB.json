@@ -38,5 +38,22 @@
     "숙소 예약 확인서",
     "리턴 티켓",
     "여행자 보험"
+  ],
+  "cities": [
+    {
+      "name": "브리지타운",
+      "nameEn": "Bridgetown",
+      "image": "https://images.unsplash.com/photo-1674578354363-51a30824a0d7?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "홀타운",
+      "nameEn": "Holetown",
+      "image": "https://images.unsplash.com/photo-1666275006302-198082104568?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "오이스틴스",
+      "nameEn": "Oistins",
+      "image": "https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?w=800&h=600&fit=crop"
+    }
   ]
 }

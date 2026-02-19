@@ -39,5 +39,22 @@
     "숙소 예약 확인서",
     "리턴 티켓",
     "여행자 보험 (의료 후송 포함 권장)"
+  ],
+  "cities": [
+    {
+      "name": "팔리키르",
+      "nameEn": "Palikir",
+      "image": "https://images.unsplash.com/photo-r04AOrXate0?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "콜로니아",
+      "nameEn": "Kolonia",
+      "image": "https://images.unsplash.com/photo-g18MsEMgdNY?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "웨노",
+      "nameEn": "Weno",
+      "image": "https://images.unsplash.com/photo-UDaZtmB3njg?w=800&h=600&fit=crop"
+    }
   ]
 }

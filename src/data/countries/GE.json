@@ -83,5 +83,11 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. 조지아 산악 도로는 험준하므로 운전 경험이 충분한 경우에만 렌터카 이용 권장. 음주운전 혈중 알코올 0.0% 기준 엄격 적용."
-  }
+  },
+  "cities": [
+    { "name": "트빌리시", "nameEn": "Tbilisi", "image": "https://images.unsplash.com/photo-1565008576549-57569a49371d?w=800&h=600&fit=crop" },
+    { "name": "바투미", "nameEn": "Batumi", "image": "https://images.unsplash.com/photo-1570366583862-f91883984fde?w=800&h=600&fit=crop" },
+    { "name": "므츠헤타", "nameEn": "Mtskheta", "image": "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?w=800&h=600&fit=crop" },
+    { "name": "카즈베기", "nameEn": "Kazbegi", "image": "https://images.unsplash.com/photo-1551244072-5d12893278ab?w=800&h=600&fit=crop" }
+  ]
 }

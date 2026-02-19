@@ -81,5 +81,11 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. 사우디아라비아 교통 법규가 엄격하며, 속도 제한 준수 필수."
-  }
+  },
+  "cities": [
+    { "name": "리야드", "nameEn": "Riyadh", "image": "https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?w=800&h=600&fit=crop" },
+    { "name": "제다", "nameEn": "Jeddah", "image": "https://images.unsplash.com/photo-1559113202-c916b8e44d8b?w=800&h=600&fit=crop" },
+    { "name": "메디나", "nameEn": "Medina", "image": "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=800&h=600&fit=crop" },
+    { "name": "알울라", "nameEn": "AlUla", "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop" }
+  ]
 }

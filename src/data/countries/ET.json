@@ -83,5 +83,27 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. 도로 인프라가 열악하고 야간 운전이 위험하므로 현지 운전 시 각별한 주의 필요."
-  }
+  },
+  "cities": [
+    {
+      "name": "아디스아바바",
+      "nameEn": "Addis Ababa",
+      "image": "https://images.unsplash.com/photo-9Db4NECUv8U?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "랄리벨라",
+      "nameEn": "Lalibela",
+      "image": "https://images.unsplash.com/photo-6SgfEwkA02Y?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "곤다르",
+      "nameEn": "Gondar",
+      "image": "https://images.unsplash.com/photo-WZ17xM5kLuQ?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "악숨",
+      "nameEn": "Axum",
+      "image": "https://images.unsplash.com/photo-kUzXgJ3-ThA?w=800&h=600&fit=crop"
+    }
+  ]
 }

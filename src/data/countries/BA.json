@@ -75,5 +75,11 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. 도로 상태가 불량한 구간이 있으며, 지뢰 미제거 지역 근처 비포장도로 운전 시 각별히 주의 필요."
-  }
+  },
+  "cities": [
+    { "name": "사라예보", "nameEn": "Sarajevo", "image": "https://images.unsplash.com/photo-1558271736-cd043ef2e855?w=800&h=600&fit=crop" },
+    { "name": "모스타르", "nameEn": "Mostar", "image": "https://images.unsplash.com/photo-1568752520160-e39e54175a72?w=800&h=600&fit=crop" },
+    { "name": "트라브니크", "nameEn": "Travnik", "image": "https://images.unsplash.com/photo-1565711561500-49678a10a63f?w=800&h=600&fit=crop" },
+    { "name": "바냐루카", "nameEn": "Banja Luka", "image": "https://images.unsplash.com/photo-1571847140471-1d7766e227a7?w=800&h=600&fit=crop" }
+  ]
 }

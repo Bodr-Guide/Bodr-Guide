@@ -73,5 +73,22 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. 마다가스카르 도로 인프라가 매우 열악하여 4WD 차량 필수. 장거리 이동 시 국내선 이용 권장."
-  }
+  },
+  "cities": [
+    {
+      "name": "안타나나리보",
+      "nameEn": "Antananarivo",
+      "image": "https://images.unsplash.com/photo-9NkRPZHp94E?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "노시베",
+      "nameEn": "Nosy Be",
+      "image": "https://images.unsplash.com/photo-OA-wqcqob6k?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "앙치라나나",
+      "nameEn": "Antsirabe",
+      "image": "https://images.unsplash.com/photo-oRemtpJOEIQ?w=800&h=600&fit=crop"
+    }
+  ]
 }

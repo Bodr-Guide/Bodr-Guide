@@ -83,5 +83,11 @@
     "directRecognition": false,
     "minimumAge": 17,
     "note": "국제운전면허증(IDP) 필요. IDP 소지 시 입국 후 1년간 운전 가능. 안식일(금~토) 일부 도로 통제 가능."
-  }
+  },
+  "cities": [
+    { "name": "텔아비브", "nameEn": "Tel Aviv", "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop" },
+    { "name": "예루살렘", "nameEn": "Jerusalem", "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800&h=600&fit=crop" },
+    { "name": "하이파", "nameEn": "Haifa", "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop" },
+    { "name": "에일라트", "nameEn": "Eilat", "image": "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=800&h=600&fit=crop" }
+  ]
 }

@@ -21,7 +21,9 @@
     "currency": "SLE (시에라리온 레온)",
     "flight": "약 20시간 (경유)"
   },
-  "passportValidity": { "months": 6 },
+  "passportValidity": {
+    "months": 6
+  },
   "drivingLicense": {
     "idpAccepted": true,
     "directRecognition": false,
@@ -38,5 +40,22 @@
     "USD 현금 (도착비자 비용)",
     "황열병 예방접종 증명서",
     "여행자 보험 증서"
+  ],
+  "cities": [
+    {
+      "name": "프리타운",
+      "nameEn": "Freetown",
+      "image": "https://images.unsplash.com/photo-bWi9_5rpk1c?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "보",
+      "nameEn": "Bo",
+      "image": "https://images.unsplash.com/photo--XQi9anWU2E?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "케네마",
+      "nameEn": "Kenema",
+      "image": "https://images.unsplash.com/photo-5v_rsYMuxek?w=800&h=600&fit=crop"
+    }
   ]
 }

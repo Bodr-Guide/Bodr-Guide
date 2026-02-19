@@ -75,5 +75,11 @@
     "directRecognition": true,
     "minimumAge": 18,
     "note": "한국 운전면허 직접 인정 (상호인정 협정). 6개월까지 한국 면허로 운전 가능. 장기 체류 시 벨기에 면허로 교환 가능."
-  }
+  },
+  "cities": [
+    { "name": "브뤼셀", "nameEn": "Brussels", "image": "https://images.unsplash.com/photo-1559113202-c916b8e44d8b?w=800&h=600&fit=crop" },
+    { "name": "브뤼헤", "nameEn": "Bruges", "image": "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&h=600&fit=crop" },
+    { "name": "앤트워프", "nameEn": "Antwerp", "image": "https://images.unsplash.com/photo-1543872084-c7bd3822856f?w=800&h=600&fit=crop" },
+    { "name": "겐트", "nameEn": "Ghent", "image": "https://images.unsplash.com/photo-1560930950-5f9c95501be8?w=800&h=600&fit=crop" }
+  ]
 }

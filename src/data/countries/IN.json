@@ -98,5 +98,11 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. 인도 교통 사정이 복잡하므로 현지 운전 시 각별한 주의 필요."
-  }
+  },
+  "cities": [
+    { "name": "뉴델리", "nameEn": "New Delhi", "image": "https://images.unsplash.com/photo-1587474260584-136574528ed5?w=800&h=600&fit=crop" },
+    { "name": "뭄바이", "nameEn": "Mumbai", "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=800&h=600&fit=crop" },
+    { "name": "자이푸르", "nameEn": "Jaipur", "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800&h=600&fit=crop" },
+    { "name": "아그라", "nameEn": "Agra", "image": "https://images.unsplash.com/photo-1564507592333-c60657eea523?w=800&h=600&fit=crop" }
+  ]
 }

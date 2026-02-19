@@ -73,5 +73,11 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. 탄자니아는 좌측통행 국가이며, 도로 상태가 열악한 구간이 많아 4WD 차량 권장. 사파리 지역은 현지 드라이버 고용 추천."
-  }
+  },
+  "cities": [
+    { "name": "다르에스살람", "nameEn": "Dar es Salaam", "image": "https://images.unsplash.com/photo-1580060839134-75a5edca2e99?w=800&h=600&fit=crop" },
+    { "name": "잔지바르", "nameEn": "Zanzibar", "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop" },
+    { "name": "세렝게티", "nameEn": "Serengeti", "image": "https://images.unsplash.com/photo-1551244072-5d12893278ab?w=800&h=600&fit=crop" },
+    { "name": "킬리만자로", "nameEn": "Kilimanjaro", "image": "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?w=800&h=600&fit=crop" }
+  ]
 }

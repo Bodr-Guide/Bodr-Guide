@@ -38,5 +38,22 @@
     "숙소 예약 확인서",
     "리턴 티켓",
     "여행자 보험"
+  ],
+  "cities": [
+    {
+      "name": "세인트존스",
+      "nameEn": "St. John's",
+      "image": "https://images.unsplash.com/photo-1654043621928-c29594c13336?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "잉글리시 하버",
+      "nameEn": "English Harbour",
+      "image": "https://images.unsplash.com/photo-1680815065140-0adb64cadeb5?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "졸리 하버",
+      "nameEn": "Jolly Harbour",
+      "image": "https://images.unsplash.com/photo-1548041347-390744c58da4?w=800&h=600&fit=crop"
+    }
   ]
 }

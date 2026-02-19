@@ -42,5 +42,22 @@
     "여행자 보험 (의료 후송 포함 필수)",
     "리턴 티켓",
     "USD 현금 (소액 준비)"
+  ],
+  "cities": [
+    {
+      "name": "포르토프랭스",
+      "nameEn": "Port-au-Prince",
+      "image": "https://images.unsplash.com/photo-CkCV7vTmmz4?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "카프아이티앵",
+      "nameEn": "Cap-Haïtien",
+      "image": "https://images.unsplash.com/photo-HlseIzr_6fI?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "자크멜",
+      "nameEn": "Jacmel",
+      "image": "https://images.unsplash.com/photo-Jrj7neV48oI?w=800&h=600&fit=crop"
+    }
   ]
 }

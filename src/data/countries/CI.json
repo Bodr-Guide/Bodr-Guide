@@ -39,5 +39,22 @@
     "전자비자 출력본",
     "황열병 예방접종 증명서",
     "숙소 바우처"
+  ],
+  "cities": [
+    {
+      "name": "아비장",
+      "nameEn": "Abidjan",
+      "image": "https://images.unsplash.com/photo-EurgMrSDQAo?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "야무수크로",
+      "nameEn": "Yamoussoukro",
+      "image": "https://images.unsplash.com/photo-5YdLNHzwux4?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "부아케",
+      "nameEn": "Bouaké",
+      "image": "https://images.unsplash.com/photo-WWRgheXEAg0?w=800&h=600&fit=crop"
+    }
   ]
 }

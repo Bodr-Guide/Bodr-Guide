@@ -39,5 +39,22 @@
     "숙소 예약 확인서",
     "리턴 티켓",
     "여행자 보험"
+  ],
+  "cities": [
+    {
+      "name": "파페에테",
+      "nameEn": "Papeete",
+      "image": "https://images.unsplash.com/photo-hMXZwS4_LcY?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "모레아",
+      "nameEn": "Moorea",
+      "image": "https://images.unsplash.com/photo-96YBK3fn9uM?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "보라보라",
+      "nameEn": "Bora Bora",
+      "image": "https://images.unsplash.com/photo-PzFT3RRKias?w=800&h=600&fit=crop"
+    }
   ]
 }

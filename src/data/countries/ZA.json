@@ -82,5 +82,11 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. 남아공은 좌측통행 국가이며, 야간 운전 시 보안에 주의 필요."
-  }
+  },
+  "cities": [
+    { "name": "케이프타운", "nameEn": "Cape Town", "image": "https://images.unsplash.com/photo-1580060839134-75a5edca2e99?w=800&h=600&fit=crop" },
+    { "name": "요하네스버그", "nameEn": "Johannesburg", "image": "https://images.unsplash.com/photo-1577948000111-9c970dfe3743?w=800&h=600&fit=crop" },
+    { "name": "더반", "nameEn": "Durban", "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop" },
+    { "name": "크루거", "nameEn": "Kruger", "image": "https://images.unsplash.com/photo-1551244072-5d12893278ab?w=800&h=600&fit=crop" }
+  ]
 }

@@ -81,5 +81,11 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. 리마 시내 교통이 혼잡하며, 산악 지역 도로는 비포장 구간이 많아 운전 경험이 필요."
-  }
+  },
+  "cities": [
+    { "name": "리마", "nameEn": "Lima", "image": "https://images.unsplash.com/photo-1526392060635-9d6019884377?w=800&h=600&fit=crop" },
+    { "name": "쿠스코", "nameEn": "Cusco", "image": "https://images.unsplash.com/photo-1526392060635-9d6019884377?w=800&h=600&fit=crop" },
+    { "name": "마추픽추", "nameEn": "Machu Picchu", "image": "https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=800&h=600&fit=crop" },
+    { "name": "아레키파", "nameEn": "Arequipa", "image": "https://images.unsplash.com/photo-1580619305218-8423a7ef79b4?w=800&h=600&fit=crop" }
+  ]
 }

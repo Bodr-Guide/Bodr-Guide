@@ -75,5 +75,11 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. EU 회원국이나 한국과 상호인정 협정 없음. 관광 기간 동안 IDP로 운전 가능."
-  }
+  },
+  "cities": [
+    { "name": "소피아", "nameEn": "Sofia", "image": "https://images.unsplash.com/photo-1558271736-cd043ef2e855?w=800&h=600&fit=crop" },
+    { "name": "플로브디프", "nameEn": "Plovdiv", "image": "https://images.unsplash.com/photo-1568752520160-e39e54175a72?w=800&h=600&fit=crop" },
+    { "name": "벨리코투르노보", "nameEn": "Veliko Tarnovo", "image": "https://images.unsplash.com/photo-1565711561500-49678a10a63f?w=800&h=600&fit=crop" },
+    { "name": "네세바르", "nameEn": "Nessebar", "image": "https://images.unsplash.com/photo-1571847140471-1d7766e227a7?w=800&h=600&fit=crop" }
+  ]
 }

@@ -39,5 +39,22 @@
     "숙소 예약 확인서",
     "리턴 티켓",
     "여행자 보험"
+  ],
+  "cities": [
+    {
+      "name": "포트오브스페인",
+      "nameEn": "Port of Spain",
+      "image": "https://images.unsplash.com/photo-1590257003876-2fa11da20cde?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "스카보로",
+      "nameEn": "Scarborough",
+      "image": "https://images.unsplash.com/photo-1596005554384-d293674c91d7?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "샤기마스",
+      "nameEn": "Chaguanas",
+      "image": "https://images.unsplash.com/photo-1580541631950-7282082b04f5?w=800&h=600&fit=crop"
+    }
   ]
 }

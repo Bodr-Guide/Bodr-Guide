@@ -41,5 +41,22 @@
     "여행사 투어 확인서",
     "여행자 보험",
     "고산병 예방약 (필요 시)"
+  ],
+  "cities": [
+    {
+      "name": "팀부",
+      "nameEn": "Thimphu",
+      "image": "https://images.unsplash.com/photo-1553856622-d1b352e9a211?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "파로",
+      "nameEn": "Paro",
+      "image": "https://images.unsplash.com/photo-1553856622-d1b352e9a211?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "푸나카",
+      "nameEn": "Punakha",
+      "image": "https://images.unsplash.com/photo-1553856622-d1b352e9a211?w=800&h=600&fit=crop"
+    }
   ]
 }

@@ -37,5 +37,22 @@
     "숙소 예약 확인서",
     "리턴 티켓",
     "여행자 보험"
+  ],
+  "cities": [
+    {
+      "name": "바스테르",
+      "nameEn": "Basseterre",
+      "image": "https://images.unsplash.com/photo-3m1WZA5PJ50?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "찰스타운",
+      "nameEn": "Charlestown",
+      "image": "https://images.unsplash.com/photo-OWxeIPIKwrY?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "프리깃베이",
+      "nameEn": "Frigate Bay",
+      "image": "https://images.unsplash.com/photo-I2o_sUtLj7Y?w=800&h=600&fit=crop"
+    }
   ]
 }

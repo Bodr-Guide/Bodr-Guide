@@ -72,5 +72,27 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. 좌측통행 국가이므로 운전 시 주의. 도로 상태가 고르지 않으며 야간 운전은 자제 권장."
-  }
+  },
+  "cities": [
+    {
+      "name": "킹스턴",
+      "nameEn": "Kingston",
+      "image": "https://images.unsplash.com/photo-LoREprgqzCI?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "몬테고베이",
+      "nameEn": "Montego Bay",
+      "image": "https://images.unsplash.com/photo-exd0nMSWtn0?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "오초리오스",
+      "nameEn": "Ocho Rios",
+      "image": "https://images.unsplash.com/photo-IRuCYpxeUDg?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "네그릴",
+      "nameEn": "Negril",
+      "image": "https://images.unsplash.com/photo-4akYHCtM1ks?w=800&h=600&fit=crop"
+    }
+  ]
 }

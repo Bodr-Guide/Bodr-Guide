@@ -20,7 +20,9 @@
     "currency": "MWK (말라위 콰차)",
     "flight": "약 18시간 (경유)"
   },
-  "passportValidity": { "months": 6 },
+  "passportValidity": {
+    "months": 6
+  },
   "drivingLicense": {
     "idpAccepted": true,
     "directRecognition": false,
@@ -36,5 +38,22 @@
     "USD 현금 (도착비자 비용)",
     "숙소 바우처",
     "황열병 예방접종 증명서"
+  ],
+  "cities": [
+    {
+      "name": "릴롱궤",
+      "nameEn": "Lilongwe",
+      "image": "https://images.unsplash.com/photo-U7iucrGnIRE?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "블랜타이어",
+      "nameEn": "Blantyre",
+      "image": "https://images.unsplash.com/photo-IxDPTuaRN74?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "좀바",
+      "nameEn": "Zomba",
+      "image": "https://images.unsplash.com/photo-1DVJ59oVnfg?w=800&h=600&fit=crop"
+    }
   ]
 }

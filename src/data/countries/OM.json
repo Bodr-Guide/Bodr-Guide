@@ -89,5 +89,11 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. 사막 지역 운전 시 4WD 차량 필수이며, 도로 상태가 좋지 않은 구간이 있으므로 주의 필요."
-  }
+  },
+  "cities": [
+    { "name": "무스카트", "nameEn": "Muscat", "image": "https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?w=800&h=600&fit=crop" },
+    { "name": "살랄라", "nameEn": "Salalah", "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop" },
+    { "name": "니즈와", "nameEn": "Nizwa", "image": "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?w=800&h=600&fit=crop" },
+    { "name": "수르", "nameEn": "Sur", "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop" }
+  ]
 }

@@ -89,5 +89,11 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. EU 회원국으로 유럽 교통 규칙 적용. 고속도로 전자 톨게이트(Via Verde) 이용 시 사전 등록 필요."
-  }
+  },
+  "cities": [
+    { "name": "리스본", "nameEn": "Lisbon", "image": "https://images.unsplash.com/photo-1585208798174-6cedd86e019a?w=800&h=600&fit=crop" },
+    { "name": "포르투", "nameEn": "Porto", "image": "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=800&h=600&fit=crop" },
+    { "name": "신트라", "nameEn": "Sintra", "image": "https://images.unsplash.com/photo-1548092372-0d1bd40894a3?w=800&h=600&fit=crop" },
+    { "name": "파루", "nameEn": "Faro", "image": "https://images.unsplash.com/photo-1570299437522-25e4c4094e1e?w=800&h=600&fit=crop" }
+  ]
 }

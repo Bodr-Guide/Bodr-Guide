@@ -21,7 +21,9 @@
     "currency": "XOF (서아프리카 CFA 프랑)",
     "flight": "약 18시간 (경유)"
   },
-  "passportValidity": { "months": 6 },
+  "passportValidity": {
+    "months": 6
+  },
   "drivingLicense": {
     "idpAccepted": true,
     "directRecognition": false,
@@ -36,5 +38,22 @@
     "항공권",
     "황열병 예방접종 증명서",
     "숙소 바우처"
+  ],
+  "cities": [
+    {
+      "name": "다카르",
+      "nameEn": "Dakar",
+      "image": "https://images.unsplash.com/photo-5s3IN1MZgo8?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "생루이",
+      "nameEn": "Saint-Louis",
+      "image": "https://images.unsplash.com/photo-QCXuSuJjj5A?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "지겐쇼르",
+      "nameEn": "Ziguinchor",
+      "image": "https://images.unsplash.com/photo-rXza6NslwvI?w=800&h=600&fit=crop"
+    }
   ]
 }

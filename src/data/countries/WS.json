@@ -40,5 +40,22 @@
     "숙소 예약 확인서",
     "리턴 티켓",
     "여행자 보험"
+  ],
+  "cities": [
+    {
+      "name": "아피아",
+      "nameEn": "Apia",
+      "image": "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "사바이이",
+      "nameEn": "Savai'i",
+      "image": "https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "팔레올로",
+      "nameEn": "Faleolo",
+      "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop"
+    }
   ]
 }

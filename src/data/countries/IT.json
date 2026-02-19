@@ -90,5 +90,32 @@
     "directRecognition": true,
     "minimumAge": 18,
     "note": "한국 운전면허 직접 인정 (상호인정 협정). 1년까지 한국 면허 + IDP로 운전 가능. 장기 체류 시 이탈리아 면허 교환 가능."
-  }
+  },
+  "cities": [
+    {
+      "name": "로마",
+      "nameEn": "Rome",
+      "image": "https://images.unsplash.com/photo-utAikln8Ry8?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "베네치아",
+      "nameEn": "Venice",
+      "image": "https://images.unsplash.com/photo-4wgJsJZJs8g?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "피렌체",
+      "nameEn": "Florence",
+      "image": "https://images.unsplash.com/photo-K2I-4q0CPb8?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "밀라노",
+      "nameEn": "Milan",
+      "image": "https://images.unsplash.com/photo-or4tGafcJ-0?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "나폴리",
+      "nameEn": "Naples",
+      "image": "https://images.unsplash.com/photo-Z26-ltiL8ww?w=800&h=600&fit=crop"
+    }
+  ]
 }

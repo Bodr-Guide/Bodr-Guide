@@ -83,5 +83,11 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. EU 회원국으로 유럽 교통 규칙 적용. 고속도로 이용 시 비네트(통행료 스티커) 구매 필수."
-  }
+  },
+  "cities": [
+    { "name": "류블랴나", "nameEn": "Ljubljana", "image": "https://images.unsplash.com/photo-1558271736-cd043ef2e855?w=800&h=600&fit=crop" },
+    { "name": "블레드", "nameEn": "Bled", "image": "https://images.unsplash.com/photo-1568752520160-e39e54175a72?w=800&h=600&fit=crop" },
+    { "name": "피란", "nameEn": "Piran", "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop" },
+    { "name": "포스토이나", "nameEn": "Postojna", "image": "https://images.unsplash.com/photo-1551244072-5d12893278ab?w=800&h=600&fit=crop" }
+  ]
 }

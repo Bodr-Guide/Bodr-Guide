@@ -39,5 +39,22 @@
     "숙소 예약 확인서",
     "리턴 티켓",
     "여행자 보험"
+  ],
+  "cities": [
+    {
+      "name": "킹스타운",
+      "nameEn": "Kingstown",
+      "image": "https://images.unsplash.com/photo-1580541631950-7282082b04f5?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "베키아",
+      "nameEn": "Bequia",
+      "image": "https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "머스티크",
+      "nameEn": "Mustique",
+      "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop"
+    }
   ]
 }

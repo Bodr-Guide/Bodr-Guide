@@ -67,5 +67,11 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. 쿠웨이트에서 렌터카 이용 시 IDP 필수. 여름철 극심한 더위로 차량 에어컨 필수 확인."
-  }
+  },
+  "cities": [
+    { "name": "쿠웨이트시티", "nameEn": "Kuwait City", "image": "https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?w=800&h=600&fit=crop" },
+    { "name": "알아흐마디", "nameEn": "Ahmadi", "image": "https://images.unsplash.com/photo-1559113202-c916b8e44d8b?w=800&h=600&fit=crop" },
+    { "name": "파르와니야", "nameEn": "Farwaniya", "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop" },
+    { "name": "잘라", "nameEn": "Jahra", "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop" }
+  ]
 }

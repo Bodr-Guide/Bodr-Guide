@@ -83,5 +83,11 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. EU 회원국으로 유럽 교통 규칙 적용. 고속도로 이용 시 전자 비네트 구매 필수."
-  }
+  },
+  "cities": [
+    { "name": "브라티슬라바", "nameEn": "Bratislava", "image": "https://images.unsplash.com/photo-1558271736-cd043ef2e855?w=800&h=600&fit=crop" },
+    { "name": "코시체", "nameEn": "Kosice", "image": "https://images.unsplash.com/photo-1565711561500-49678a10a63f?w=800&h=600&fit=crop" },
+    { "name": "타트라", "nameEn": "High Tatras", "image": "https://images.unsplash.com/photo-1551244072-5d12893278ab?w=800&h=600&fit=crop" },
+    { "name": "반스카비스트리차", "nameEn": "Banska Bystrica", "image": "https://images.unsplash.com/photo-1571847140471-1d7766e227a7?w=800&h=600&fit=crop" }
+  ]
 }

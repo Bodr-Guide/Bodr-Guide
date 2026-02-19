@@ -82,5 +82,11 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. 네덜란드는 자전거 교통이 매우 발달하여 자전거 전용도로 주의. 암스테르담 시내는 주차 요금이 매우 비쌈."
-  }
+  },
+  "cities": [
+    { "name": "암스테르담", "nameEn": "Amsterdam", "image": "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?w=800&h=600&fit=crop" },
+    { "name": "로테르담", "nameEn": "Rotterdam", "image": "https://images.unsplash.com/photo-1543872084-c7bd3822856f?w=800&h=600&fit=crop" },
+    { "name": "헤이그", "nameEn": "The Hague", "image": "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&h=600&fit=crop" },
+    { "name": "유트레흐트", "nameEn": "Utrecht", "image": "https://images.unsplash.com/photo-1560930950-5f9c95501be8?w=800&h=600&fit=crop" }
+  ]
 }

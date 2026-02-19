@@ -37,5 +37,22 @@
     "항공권",
     "황열병 예방접종 증명서",
     "숙소 바우처"
+  ],
+  "cities": [
+    {
+      "name": "루안다",
+      "nameEn": "Luanda",
+      "image": "https://images.unsplash.com/photo-1611417832080-5c4e4b1e8f2e?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "벵겔라",
+      "nameEn": "Benguela",
+      "image": "https://images.unsplash.com/photo-1675865393243-fe7ecc9c2d4a?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "루방고",
+      "nameEn": "Lubango",
+      "image": "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=800&h=600&fit=crop"
+    }
   ]
 }

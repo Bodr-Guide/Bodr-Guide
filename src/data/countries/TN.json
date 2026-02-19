@@ -80,5 +80,27 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. 도시 외곽 도로 상태가 좋지 않을 수 있으며, 남부 사막 지역 운전 시 4WD 차량 권장."
-  }
+  },
+  "cities": [
+    {
+      "name": "튀니스",
+      "nameEn": "Tunis",
+      "image": "https://images.unsplash.com/photo-1590074072786-a66914d668f1?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "시디부사이드",
+      "nameEn": "Sidi Bou Said",
+      "image": "https://images.unsplash.com/photo-1568454537842-d933259bb258?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "카르타고",
+      "nameEn": "Carthage",
+      "image": "https://images.unsplash.com/photo-1572204292164-b35ba943fca7?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "수스",
+      "nameEn": "Sousse",
+      "image": "https://images.unsplash.com/photo-1558551649-e44c8f992010?w=800&h=600&fit=crop"
+    }
+  ]
 }

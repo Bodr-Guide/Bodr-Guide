@@ -40,5 +40,22 @@
     "전자비자 출력본",
     "황열병 예방접종 증명서",
     "숙소 바우처"
+  ],
+  "cities": [
+    {
+      "name": "야운데",
+      "nameEn": "Yaoundé",
+      "image": "https://images.unsplash.com/photo-xppHOgQBNwU?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "두알라",
+      "nameEn": "Douala",
+      "image": "https://images.unsplash.com/photo-mlj82dSqYI0?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "바멘다",
+      "nameEn": "Bamenda",
+      "image": "https://images.unsplash.com/photo-HV_TYd3KAQA?w=800&h=600&fit=crop"
+    }
   ]
 }

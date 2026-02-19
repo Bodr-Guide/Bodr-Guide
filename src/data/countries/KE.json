@@ -73,5 +73,11 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. 케냐는 좌측통행 국가이며, 사파리 지역에서는 4WD 차량 권장. 나이로비 시내 교통 혼잡 주의."
-  }
+  },
+  "cities": [
+    { "name": "나이로비", "nameEn": "Nairobi", "image": "https://images.unsplash.com/photo-1580060839134-75a5edca2e99?w=800&h=600&fit=crop" },
+    { "name": "몸바사", "nameEn": "Mombasa", "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop" },
+    { "name": "마사이마라", "nameEn": "Masai Mara", "image": "https://images.unsplash.com/photo-1551244072-5d12893278ab?w=800&h=600&fit=crop" },
+    { "name": "나쿠루", "nameEn": "Nakuru", "image": "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?w=800&h=600&fit=crop" }
+  ]
 }

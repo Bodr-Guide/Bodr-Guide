@@ -66,5 +66,11 @@
     "directRecognition": false,
     "minimumAge": 21,
     "note": "국제운전면허증(IDP) 또는 한국 면허 + 영문 번역본으로 운전 가능. 팔라우 현지 임시면허 발급도 가능."
-  }
+  },
+  "cities": [
+    { "name": "코로르", "nameEn": "Koror", "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop" },
+    { "name": "바벨다옵", "nameEn": "Babeldaob", "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop" },
+    { "name": "젤리피시호수", "nameEn": "Jellyfish Lake", "image": "https://images.unsplash.com/photo-1540202404-a2f29016b523?w=800&h=600&fit=crop" },
+    { "name": "록아일랜드", "nameEn": "Rock Islands", "image": "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=800&h=600&fit=crop" }
+  ]
 }

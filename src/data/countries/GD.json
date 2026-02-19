@@ -38,5 +38,22 @@
     "숙소 예약 확인서",
     "리턴 티켓",
     "여행자 보험"
+  ],
+  "cities": [
+    {
+      "name": "세인트조지스",
+      "nameEn": "St. George's",
+      "image": "https://images.unsplash.com/photo-Mps2gZoSPXk?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "그랜드앤스",
+      "nameEn": "Grand Anse",
+      "image": "https://images.unsplash.com/photo-dCybWJjUPuA?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "구야브",
+      "nameEn": "Gouyave",
+      "image": "https://images.unsplash.com/photo-XVDAqsOF8HQ?w=800&h=600&fit=crop"
+    }
   ]
 }

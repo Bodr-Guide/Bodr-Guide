@@ -83,5 +83,11 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. 세르비아 고속도로는 유료이며, 겨울철 스노우 타이어 장착 의무."
-  }
+  },
+  "cities": [
+    { "name": "베오그라드", "nameEn": "Belgrade", "image": "https://images.unsplash.com/photo-1558271736-cd043ef2e855?w=800&h=600&fit=crop" },
+    { "name": "노비사드", "nameEn": "Novi Sad", "image": "https://images.unsplash.com/photo-1565711561500-49678a10a63f?w=800&h=600&fit=crop" },
+    { "name": "니시", "nameEn": "Nis", "image": "https://images.unsplash.com/photo-1571847140471-1d7766e227a7?w=800&h=600&fit=crop" },
+    { "name": "수보티차", "nameEn": "Subotica", "image": "https://images.unsplash.com/photo-1560930950-5f9c95501be8?w=800&h=600&fit=crop" }
+  ]
 }

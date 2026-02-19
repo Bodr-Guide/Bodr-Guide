@@ -42,5 +42,27 @@
     "숙소 예약 확인서",
     "리턴 티켓",
     "여행자 보험"
+  ],
+  "cities": [
+    {
+      "name": "다카",
+      "nameEn": "Dhaka",
+      "image": "https://images.unsplash.com/photo-1587474260584-136574528ed5?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "치타공",
+      "nameEn": "Chittagong",
+      "image": "https://images.unsplash.com/photo-1569624947489-b445819da9c8?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "실렛",
+      "nameEn": "Sylhet",
+      "image": "https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "콕스바자르",
+      "nameEn": "Cox's Bazar",
+      "image": "https://images.unsplash.com/photo-1634018232540-0313a1a8459e?w=800&h=600&fit=crop"
+    }
   ]
 }

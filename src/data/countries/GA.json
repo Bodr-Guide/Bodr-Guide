@@ -38,5 +38,22 @@
     "전자비자 출력본",
     "황열병 예방접종 증명서",
     "숙소 바우처"
+  ],
+  "cities": [
+    {
+      "name": "리브르빌",
+      "nameEn": "Libreville",
+      "image": "https://images.unsplash.com/photo-517xErH36Fc?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "포르장틸",
+      "nameEn": "Port-Gentil",
+      "image": "https://images.unsplash.com/photo-uera03TNDmg?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "프랑스빌",
+      "nameEn": "Franceville",
+      "image": "https://images.unsplash.com/photo-iSJItZoM1iM?w=800&h=600&fit=crop"
+    }
   ]
 }

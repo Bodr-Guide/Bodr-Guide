@@ -74,5 +74,27 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. 관광 목적으로 최대 90일 사용 가능. 도로 상태가 불량한 구간이 있으며, 야간 운전 자제 권장."
-  }
+  },
+  "cities": [
+    {
+      "name": "산토도밍고",
+      "nameEn": "Santo Domingo",
+      "image": "https://images.unsplash.com/photo-4aH3c64eqX8?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "푼타카나",
+      "nameEn": "Punta Cana",
+      "image": "https://images.unsplash.com/photo-89fsxfVveZs?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "산티아고",
+      "nameEn": "Santiago",
+      "image": "https://images.unsplash.com/photo-igwC6S_Br4w?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "라로마나",
+      "nameEn": "La Romana",
+      "image": "https://images.unsplash.com/photo-c3a-Tr6CM1Q?w=800&h=600&fit=crop"
+    }
+  ]
 }

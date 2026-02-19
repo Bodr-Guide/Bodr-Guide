@@ -38,5 +38,22 @@
     "숙소 예약 확인서",
     "리턴 티켓",
     "여행자 보험"
+  ],
+  "cities": [
+    {
+      "name": "로조",
+      "nameEn": "Roseau",
+      "image": "https://images.unsplash.com/photo-xQmCJOklax4?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "포츠머스",
+      "nameEn": "Portsmouth",
+      "image": "https://images.unsplash.com/photo-JXPeoPmAZgo?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "칼리비시에",
+      "nameEn": "Calibishie",
+      "image": "https://images.unsplash.com/photo-2hnf0hkeAp4?w=800&h=600&fit=crop"
+    }
   ]
 }

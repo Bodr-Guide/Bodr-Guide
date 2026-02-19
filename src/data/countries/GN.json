@@ -40,5 +40,22 @@
     "전자비자 출력본",
     "황열병 예방접종 증명서",
     "숙소 바우처"
+  ],
+  "cities": [
+    {
+      "name": "코나크리",
+      "nameEn": "Conakry",
+      "image": "https://images.unsplash.com/photo-TQ--SdURIuQ?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "킨디아",
+      "nameEn": "Kindia",
+      "image": "https://images.unsplash.com/photo-5Hy1HNPJjcU?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "은제레코레",
+      "nameEn": "Nzerekore",
+      "image": "https://images.unsplash.com/photo-HdDw9foglbo?w=800&h=600&fit=crop"
+    }
   ]
 }

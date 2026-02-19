@@ -21,7 +21,9 @@
     "currency": "MZN (모잠비크 메티칼)",
     "flight": "약 18시간 (경유)"
   },
-  "passportValidity": { "months": 6 },
+  "passportValidity": {
+    "months": 6
+  },
   "drivingLicense": {
     "idpAccepted": true,
     "directRecognition": false,
@@ -36,5 +38,22 @@
     "항공권",
     "숙소 바우처",
     "황열병 예방접종 증명서"
+  ],
+  "cities": [
+    {
+      "name": "마푸투",
+      "nameEn": "Maputo",
+      "image": "https://images.unsplash.com/photo-Hr6kw_MeGHw?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "빌란쿨루스",
+      "nameEn": "Vilankulo",
+      "image": "https://images.unsplash.com/photo-WcRzNj-BUvI?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "일라데모잠비크",
+      "nameEn": "Ilha de Moçambique",
+      "image": "https://images.unsplash.com/photo-zwfoM0PBB5g?w=800&h=600&fit=crop"
+    }
   ]
 }

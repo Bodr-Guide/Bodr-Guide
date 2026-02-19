@@ -38,5 +38,22 @@
     "항공권",
     "숙소 바우처",
     "USD/EUR 현금 (도착비자)"
+  ],
+  "cities": [
+    {
+      "name": "누악쇼트",
+      "nameEn": "Nouakchott",
+      "image": "https://images.unsplash.com/photo-AqCyaVmr_7I?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "누아디부",
+      "nameEn": "Nouadhibou",
+      "image": "https://images.unsplash.com/photo-e2PHCH56sOs?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "아타르",
+      "nameEn": "Atar",
+      "image": "https://images.unsplash.com/photo-HNZfi-Qvh9s?w=800&h=600&fit=crop"
+    }
   ]
 }

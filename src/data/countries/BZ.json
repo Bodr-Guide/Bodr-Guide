@@ -39,5 +39,22 @@
     "숙소 예약 확인서",
     "리턴 티켓",
     "여행자 보험"
+  ],
+  "cities": [
+    {
+      "name": "벨리즈시티",
+      "nameEn": "Belize City",
+      "image": "https://images.unsplash.com/photo-1580223530509-849e0ad1a563?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "산페드로",
+      "nameEn": "San Pedro",
+      "image": "https://images.unsplash.com/photo-1640556292354-b761738e4bc0?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "산이그나시오",
+      "nameEn": "San Ignacio",
+      "image": "https://images.unsplash.com/photo-1580223530509-849e0ad1a563?w=800&h=600&fit=crop"
+    }
   ]
 }

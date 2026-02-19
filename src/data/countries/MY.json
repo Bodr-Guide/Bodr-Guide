@@ -88,5 +88,11 @@
     "directRecognition": false,
     "minimumAge": 17,
     "note": "국제운전면허증(IDP) 필요. 말레이시아에서 렌터카 이용 시 IDP 필수."
-  }
+  },
+  "cities": [
+    { "name": "쿠알라룸푸르", "nameEn": "Kuala Lumpur", "image": "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=800&h=600&fit=crop" },
+    { "name": "페낭", "nameEn": "Penang", "image": "https://images.unsplash.com/photo-1592364395653-83e648b20cc2?w=800&h=600&fit=crop" },
+    { "name": "랑카위", "nameEn": "Langkawi", "image": "https://images.unsplash.com/photo-1560707303-4e980ce172a0?w=800&h=600&fit=crop" },
+    { "name": "코타키나발루", "nameEn": "Kota Kinabalu", "image": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&h=600&fit=crop" }
+  ]
 }

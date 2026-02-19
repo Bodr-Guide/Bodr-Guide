@@ -39,5 +39,22 @@
     "숙소 예약 확인서",
     "여행자 보험",
     "솅겐 지역 체류 일수 확인"
+  ],
+  "cities": [
+    {
+      "name": "안도라라벨라",
+      "nameEn": "Andorra la Vella",
+      "image": "https://images.unsplash.com/photo-1611917436955-d21c1999520c?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "에스칼데스-엥고르다니",
+      "nameEn": "Escaldes-Engordany",
+      "image": "https://images.unsplash.com/photo-1695337370223-39b7778cd501?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "엔캄프",
+      "nameEn": "Encamp",
+      "image": "https://images.unsplash.com/photo-1600808062921-bd24b67a1248?w=800&h=600&fit=crop"
+    }
   ]
 }

@@ -74,5 +74,11 @@
     "directRecognition": true,
     "minimumAge": 18,
     "note": "한국 운전면허 직접 인정 (상호인정 협정). 12개월까지 한국 면허로 운전 가능. 장기 체류 시 스위스 면허로 교환 가능 (실기시험 면제). 산악 도로 운전 시 주의 필요."
-  }
+  },
+  "cities": [
+    { "name": "취리히", "nameEn": "Zurich", "image": "https://images.unsplash.com/photo-1515488764276-beab0607c1e6?w=800&h=600&fit=crop" },
+    { "name": "루체른", "nameEn": "Lucerne", "image": "https://images.unsplash.com/photo-1527668752968-14dc70a27c95?w=800&h=600&fit=crop" },
+    { "name": "인터라켄", "nameEn": "Interlaken", "image": "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?w=800&h=600&fit=crop" },
+    { "name": "제네바", "nameEn": "Geneva", "image": "https://images.unsplash.com/photo-1573108037329-37aa135a142e?w=800&h=600&fit=crop" }
+  ]
 }

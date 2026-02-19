@@ -39,5 +39,11 @@
     "숙소 예약 확인서",
     "여행자 보험",
     "방한용품 (겨울철)"
+  ],
+  "cities": [
+    { "name": "헬싱키", "nameEn": "Helsinki", "image": "https://images.unsplash.com/photo-1538332576228-eb5b4c4de6f5?w=800&h=600&fit=crop" },
+    { "name": "로바니에미", "nameEn": "Rovaniemi", "image": "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=800&h=600&fit=crop" },
+    { "name": "투르쿠", "nameEn": "Turku", "image": "https://images.unsplash.com/photo-1565711561500-49678a10a63f?w=800&h=600&fit=crop" },
+    { "name": "탐페레", "nameEn": "Tampere", "image": "https://images.unsplash.com/photo-1571847140471-1d7766e227a7?w=800&h=600&fit=crop" }
   ]
 }

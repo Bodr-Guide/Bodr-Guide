@@ -21,7 +21,9 @@
     "currency": "LBP (레바논 파운드) / USD 통용",
     "flight": "약 12시간 (경유)"
   },
-  "passportValidity": { "months": 6 },
+  "passportValidity": {
+    "months": 6
+  },
   "drivingLicense": {
     "idpAccepted": true,
     "directRecognition": false,
@@ -38,5 +40,27 @@
     "USD 현금",
     "숙소 바우처",
     "여행자 보험 증서"
+  ],
+  "cities": [
+    {
+      "name": "베이루트",
+      "nameEn": "Beirut",
+      "image": "https://images.unsplash.com/photo-V5jxkMKxv_0?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "비블로스",
+      "nameEn": "Byblos",
+      "image": "https://images.unsplash.com/photo-1YADBuYGkf0?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "트리폴리",
+      "nameEn": "Tripoli",
+      "image": "https://images.unsplash.com/photo-LQLXA8ljseg?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "바알베크",
+      "nameEn": "Baalbek",
+      "image": "https://images.unsplash.com/photo-Oryqe1oRI6U?w=800&h=600&fit=crop"
+    }
   ]
 }

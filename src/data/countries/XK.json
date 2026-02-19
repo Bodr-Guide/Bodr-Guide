@@ -40,5 +40,22 @@
     "숙소 예약 확인서",
     "여행자 보험",
     "세르비아 방문 계획 시 이동 경로 사전 확인"
+  ],
+  "cities": [
+    {
+      "name": "프리슈티나",
+      "nameEn": "Pristina",
+      "image": "https://images.unsplash.com/photo-1601204712919-903e1eef088e?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "프리즈렌",
+      "nameEn": "Prizren",
+      "image": "https://images.unsplash.com/photo-1592002818021-2a34f4ea8576?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "페차",
+      "nameEn": "Peć",
+      "image": "https://images.unsplash.com/photo-1596005554384-d293674c91d7?w=800&h=600&fit=crop"
+    }
   ]
 }

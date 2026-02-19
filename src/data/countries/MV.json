@@ -65,5 +65,11 @@
     "idpAccepted": false,
     "directRecognition": false,
     "note": "몰디브는 관광객 운전이 허용되지 않음. 리조트 섬에서는 자체 교통수단 이용."
-  }
+  },
+  "cities": [
+    { "name": "말레", "nameEn": "Male", "image": "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=800&h=600&fit=crop" },
+    { "name": "마푸시", "nameEn": "Maafushi", "image": "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&h=600&fit=crop" },
+    { "name": "아리아톨", "nameEn": "Ari Atoll", "image": "https://images.unsplash.com/photo-1540202404-a2f29016b523?w=800&h=600&fit=crop" },
+    { "name": "바아아톨", "nameEn": "Baa Atoll", "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop" }
+  ]
 }

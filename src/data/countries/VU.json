@@ -40,5 +40,22 @@
     "숙소 예약 확인서",
     "리턴 티켓",
     "여행자 보험"
+  ],
+  "cities": [
+    {
+      "name": "포트빌라",
+      "nameEn": "Port Vila",
+      "image": "https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "루간빌",
+      "nameEn": "Luganville",
+      "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "타나",
+      "nameEn": "Tanna",
+      "image": "https://images.unsplash.com/photo-1540202404-a2f29016b523?w=800&h=600&fit=crop"
+    }
   ]
 }

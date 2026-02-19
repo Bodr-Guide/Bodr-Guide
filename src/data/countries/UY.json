@@ -79,5 +79,22 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. 우루과이 도로 상태는 양호하며, 고속도로 톨게이트 현금 결제 가능."
-  }
+  },
+  "cities": [
+    {
+      "name": "몬테비데오",
+      "nameEn": "Montevideo",
+      "image": "https://images.unsplash.com/photo-1597528380214-aa94f1b19c4c?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "푼타델에스테",
+      "nameEn": "Punta del Este",
+      "image": "https://images.unsplash.com/photo-1585160603498-ee0e9c489628?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "콜로니아델사크라멘토",
+      "nameEn": "Colonia del Sacramento",
+      "image": "https://images.unsplash.com/photo-1609862401955-59c0fbe27511?w=800&h=600&fit=crop"
+    }
+  ]
 }

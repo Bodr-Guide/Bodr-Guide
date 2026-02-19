@@ -38,5 +38,11 @@
     "항공권",
     "숙소 예약 확인서",
     "여행자 보험"
+  ],
+  "cities": [
+    { "name": "룩셈부르크시", "nameEn": "Luxembourg City", "image": "https://images.unsplash.com/photo-1558271736-cd043ef2e855?w=800&h=600&fit=crop" },
+    { "name": "비앙덴", "nameEn": "Vianden", "image": "https://images.unsplash.com/photo-1568752520160-e39e54175a72?w=800&h=600&fit=crop" },
+    { "name": "에히터나흐", "nameEn": "Echternach", "image": "https://images.unsplash.com/photo-1551244072-5d12893278ab?w=800&h=600&fit=crop" },
+    { "name": "레미히", "nameEn": "Remich", "image": "https://images.unsplash.com/photo-1571847140471-1d7766e227a7?w=800&h=600&fit=crop" }
   ]
 }

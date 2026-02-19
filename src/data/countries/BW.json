@@ -75,5 +75,22 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. 좌측통행 국가. 야생동물이 도로에 출현할 수 있으므로 야간 운전 자제 권장."
-  }
+  },
+  "cities": [
+    {
+      "name": "가보로네",
+      "nameEn": "Gaborone",
+      "image": "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "마운",
+      "nameEn": "Maun",
+      "image": "https://images.unsplash.com/photo-1652778287834-d626affb8eff?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "카사네",
+      "nameEn": "Kasane",
+      "image": "https://images.unsplash.com/photo-1516426122078-c23e76319801?w=800&h=600&fit=crop"
+    }
+  ]
 }

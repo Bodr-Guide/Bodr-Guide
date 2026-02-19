@@ -82,5 +82,11 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. 고속도로 이용 시 비네트(Vignette) 스티커 구매 필수. 시내 주차 구역 규정 엄격."
-  }
+  },
+  "cities": [
+    { "name": "프라하", "nameEn": "Prague", "image": "https://images.unsplash.com/photo-1519677100203-a0e668c92439?w=800&h=600&fit=crop" },
+    { "name": "체스키크룸로프", "nameEn": "Cesky Krumlov", "image": "https://images.unsplash.com/photo-1560969184-10fe8719e047?w=800&h=600&fit=crop" },
+    { "name": "카를로비바리", "nameEn": "Karlovy Vary", "image": "https://images.unsplash.com/photo-1571847140471-1d7766e227a7?w=800&h=600&fit=crop" },
+    { "name": "브르노", "nameEn": "Brno", "image": "https://images.unsplash.com/photo-1555990538-1e6e9a144e1b?w=800&h=600&fit=crop" }
+  ]
 }

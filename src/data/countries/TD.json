@@ -40,5 +40,22 @@
     "e-Visa 출력본",
     "황열병 예방접종 증명서",
     "충분한 생수"
+  ],
+  "cities": [
+    {
+      "name": "은자메나",
+      "nameEn": "N'Djamena",
+      "image": "https://images.unsplash.com/photo-1596005554384-d293674c91d7?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "문두",
+      "nameEn": "Moundou",
+      "image": "https://images.unsplash.com/photo-1489493887464-892be6d1daae?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "사르",
+      "nameEn": "Sarh",
+      "image": "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=800&h=600&fit=crop"
+    }
   ]
 }

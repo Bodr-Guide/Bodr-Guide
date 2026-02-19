@@ -80,5 +80,11 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. 해안 절벽 도로와 산악 도로가 많아 운전 시 주의 필요. 여름 성수기 교통 혼잡."
-  }
+  },
+  "cities": [
+    { "name": "포드고리차", "nameEn": "Podgorica", "image": "https://images.unsplash.com/photo-1558271736-cd043ef2e855?w=800&h=600&fit=crop" },
+    { "name": "코토르", "nameEn": "Kotor", "image": "https://images.unsplash.com/photo-1568752520160-e39e54175a72?w=800&h=600&fit=crop" },
+    { "name": "부드바", "nameEn": "Budva", "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop" },
+    { "name": "두르미토르", "nameEn": "Durmitor", "image": "https://images.unsplash.com/photo-1551244072-5d12893278ab?w=800&h=600&fit=crop" }
+  ]
 }

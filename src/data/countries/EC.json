@@ -75,5 +75,11 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. 에콰도르에서 운전 시 IDP와 한국 면허증 원본을 함께 지참해야 합니다."
-  }
+  },
+  "cities": [
+    { "name": "키토", "nameEn": "Quito", "image": "https://images.unsplash.com/photo-1568402102990-bc541580b59f?w=800&h=600&fit=crop" },
+    { "name": "과야킬", "nameEn": "Guayaquil", "image": "https://images.unsplash.com/photo-1551244072-5d12893278ab?w=800&h=600&fit=crop" },
+    { "name": "갈라파고스", "nameEn": "Galapagos", "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop" },
+    { "name": "쿠엥카", "nameEn": "Cuenca", "image": "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?w=800&h=600&fit=crop" }
+  ]
 }

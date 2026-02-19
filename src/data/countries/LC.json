@@ -38,5 +38,22 @@
     "숙소 예약 확인서",
     "리턴 티켓",
     "여행자 보험"
+  ],
+  "cities": [
+    {
+      "name": "캐스트리스",
+      "nameEn": "Castries",
+      "image": "https://images.unsplash.com/photo-ZNb0fUMNZlE?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "수프리에르",
+      "nameEn": "Soufriere",
+      "image": "https://images.unsplash.com/photo-n9g1FsLp8PQ?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "그로스아일렛",
+      "nameEn": "Gros Islet",
+      "image": "https://images.unsplash.com/photo-qKvWD7NCVvM?w=800&h=600&fit=crop"
+    }
   ]
 }

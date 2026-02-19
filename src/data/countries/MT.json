@@ -91,5 +91,11 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "국제운전면허증(IDP) 필요. 몰타는 좌측통행 국가(영국식). 도로가 좁고 주차 공간이 제한적이므로 소형 차량 렌트 권장."
-  }
+  },
+  "cities": [
+    { "name": "발레타", "nameEn": "Valletta", "image": "https://images.unsplash.com/photo-1558271736-cd043ef2e855?w=800&h=600&fit=crop" },
+    { "name": "엠디나", "nameEn": "Mdina", "image": "https://images.unsplash.com/photo-1568752520160-e39e54175a72?w=800&h=600&fit=crop" },
+    { "name": "슬리에마", "nameEn": "Sliema", "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop" },
+    { "name": "고조", "nameEn": "Gozo", "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop" }
+  ]
 }

@@ -42,5 +42,27 @@
     "여행자 보험 (의료 후송 포함 권장)",
     "리턴 티켓",
     "USD 현금 (충분히 준비)"
+  ],
+  "cities": [
+    {
+      "name": "카라카스",
+      "nameEn": "Caracas",
+      "image": "https://images.unsplash.com/photo-1577587230708-187fdbef4d91?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "마르가리타섬",
+      "nameEn": "Isla Margarita",
+      "image": "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "메리다",
+      "nameEn": "Mérida",
+      "image": "https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "로스로케스",
+      "nameEn": "Los Roques",
+      "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop"
+    }
   ]
 }

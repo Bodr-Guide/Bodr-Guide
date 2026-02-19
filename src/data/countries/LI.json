@@ -38,5 +38,22 @@
     "항공권 (스위스 또는 오스트리아 경유)",
     "숙소 예약 확인서",
     "여행자 보험"
+  ],
+  "cities": [
+    {
+      "name": "파두츠",
+      "nameEn": "Vaduz",
+      "image": "https://images.unsplash.com/photo-wiiC2pgneys?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "샤안",
+      "nameEn": "Schaan",
+      "image": "https://images.unsplash.com/photo-24ptRJ9z5cA?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "발저스",
+      "nameEn": "Balzers",
+      "image": "https://images.unsplash.com/photo-ObtZoKxjvtk?w=800&h=600&fit=crop"
+    }
   ]
 }

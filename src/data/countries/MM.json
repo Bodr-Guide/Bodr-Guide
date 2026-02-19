@@ -81,5 +81,11 @@
     "directRecognition": false,
     "minimumAge": 18,
     "note": "미얀마는 외국인 관광객의 자가 운전을 허용하지 않음. 현지 운전기사 동반 필요."
-  }
+  },
+  "cities": [
+    { "name": "양곤", "nameEn": "Yangon", "image": "https://images.unsplash.com/photo-1558862319-fb5c6de1db8e?w=800&h=600&fit=crop" },
+    { "name": "바간", "nameEn": "Bagan", "image": "https://images.unsplash.com/photo-1569862979255-0c22b7b5be6a?w=800&h=600&fit=crop" },
+    { "name": "만달레이", "nameEn": "Mandalay", "image": "https://images.unsplash.com/photo-1570366583862-f91883984fde?w=800&h=600&fit=crop" },
+    { "name": "인레호수", "nameEn": "Inle Lake", "image": "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?w=800&h=600&fit=crop" }
+  ]
 }
