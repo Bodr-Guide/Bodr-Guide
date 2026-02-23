@@ -65,12 +65,10 @@ export default function HeroSection() {
         </div>
 
         {/* 우측: 설명 + 검색바 */}
-        <div className="flex-1 lg:max-w-md lg:pl-24 lg:pt-16">
+        <div className="flex-1 ml-auto max-w-sm sm:max-w-md lg:max-w-md lg:pl-24 lg:pt-16">
           {/* 설명 텍스트 */}
-          <p className="mb-4 ml-6 text-[15px] leading-relaxed text-slate-700 dark:text-slate-400">
-            흩어진 여행 정보, 여기서 끝.
-            <br />
-            출입국, 교통, 숙소, 맛집까지 한 곳에서.
+          <p className="mb-4 text-[15px] text-right lg:text-left leading-relaxed text-slate-700 dark:text-slate-400">
+            흩어진 여행 정보, 여기서 준비하세요.
           </p>
 
           {/* 검색바 */}

@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import { getAllCountries } from "@/lib/countries";
 import { Country, Continent, VisaStatus, VISA_STATUS_MAP } from "@/lib/types";
 import Header from "@/components/layout/Header";
+import ScrollToTop from "@/components/layout/ScrollToTop";
 
 export const metadata: Metadata = {
   title: "비자 가이드 — BorderWiki",
@@ -368,6 +369,8 @@ export default function VisaGuidePage() {
           })}
         </div>
       </section>
+
+      <ScrollToTop />
     </div>
   );
 }
