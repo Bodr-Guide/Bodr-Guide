@@ -85,9 +85,25 @@
     "note": "국제운전면허증(IDP) 필요. EU 회원국으로 IDP 소지 시 체류 기간 동안 운전 가능. 고속도로 이용 시 e-비넷(전자 통행권) 사전 구매 필요."
   },
   "cities": [
-    { "name": "부다페스트", "nameEn": "Budapest", "image": "https://images.unsplash.com/photo-1551867633-194f125bddfa?w=800&h=600&fit=crop" },
-    { "name": "에게르", "nameEn": "Eger", "image": "https://images.unsplash.com/photo-1558271736-cd043ef2e855?w=800&h=600&fit=crop" },
-    { "name": "데브레첸", "nameEn": "Debrecen", "image": "https://images.unsplash.com/photo-1565711561500-49678a10a63f?w=800&h=600&fit=crop" },
-    { "name": "발라톤", "nameEn": "Balaton", "image": "https://images.unsplash.com/photo-1571847140471-1d7766e227a7?w=800&h=600&fit=crop" }
+    {
+      "name": "부다페스트",
+      "nameEn": "Budapest",
+      "image": "https://images.unsplash.com/photo-1551867633-194f125bddfa?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "에게르",
+      "nameEn": "Eger",
+      "image": "https://images.unsplash.com/photo-1558271736-cd043ef2e855?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "데브레첸",
+      "nameEn": "Debrecen",
+      "image": "https://images.unsplash.com/photo-1565711561500-49678a10a63f?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "발라톤",
+      "nameEn": "Balaton",
+      "image": "https://plus.unsplash.com/premium_photo-1667338341609-829a2fb99bfc?w=800&h=600&fit=crop"
+    }
   ]
 }

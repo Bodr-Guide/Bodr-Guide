@@ -85,9 +85,25 @@
     "note": "국제운전면허증(IDP) 필요. 좌측통행 국가이므로 운전 시 주의. 렌터카 이용 시 만 25세 이상 권장 (25세 미만 추가 요금)."
   },
   "cities": [
-    { "name": "더블린", "nameEn": "Dublin", "image": "https://images.unsplash.com/photo-1549918864-48ac978761a4?w=800&h=600&fit=crop" },
-    { "name": "골웨이", "nameEn": "Galway", "image": "https://images.unsplash.com/photo-1564580610657-50e8e8bc5d82?w=800&h=600&fit=crop" },
-    { "name": "코크", "nameEn": "Cork", "image": "https://images.unsplash.com/photo-1555990538-1e6e9a144e1b?w=800&h=600&fit=crop" },
-    { "name": "킬라니", "nameEn": "Killarney", "image": "https://images.unsplash.com/photo-1568752520160-e39e54175a72?w=800&h=600&fit=crop" }
+    {
+      "name": "더블린",
+      "nameEn": "Dublin",
+      "image": "https://images.unsplash.com/photo-1549918864-48ac978761a4?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "골웨이",
+      "nameEn": "Galway",
+      "image": "https://images.unsplash.com/photo-1770890132688-7cab8fc5fba7?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "코크",
+      "nameEn": "Cork",
+      "image": "https://plus.unsplash.com/premium_photo-1696694227695-a166340f133b?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "킬라니",
+      "nameEn": "Killarney",
+      "image": "https://images.unsplash.com/photo-1659298694458-49909f1bbc34?w=800&h=600&fit=crop"
+    }
   ]
 }

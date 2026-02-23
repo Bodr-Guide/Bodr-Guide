@@ -40,9 +40,25 @@
     "여행자 보험"
   ],
   "cities": [
-    { "name": "룩셈부르크시", "nameEn": "Luxembourg City", "image": "https://images.unsplash.com/photo-1558271736-cd043ef2e855?w=800&h=600&fit=crop" },
-    { "name": "비앙덴", "nameEn": "Vianden", "image": "https://images.unsplash.com/photo-1568752520160-e39e54175a72?w=800&h=600&fit=crop" },
-    { "name": "에히터나흐", "nameEn": "Echternach", "image": "https://images.unsplash.com/photo-1551244072-5d12893278ab?w=800&h=600&fit=crop" },
-    { "name": "레미히", "nameEn": "Remich", "image": "https://images.unsplash.com/photo-1571847140471-1d7766e227a7?w=800&h=600&fit=crop" }
+    {
+      "name": "룩셈부르크시",
+      "nameEn": "Luxembourg City",
+      "image": "https://images.unsplash.com/photo-1558271736-cd043ef2e855?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "비앙덴",
+      "nameEn": "Vianden",
+      "image": "https://plus.unsplash.com/premium_photo-1742457788948-cf35b9b2666a?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "에히터나흐",
+      "nameEn": "Echternach",
+      "image": "https://images.unsplash.com/photo-1551244072-5d12893278ab?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "레미히",
+      "nameEn": "Remich",
+      "image": "https://images.unsplash.com/photo-1600263643371-71db2e9ac0ec?w=800&h=600&fit=crop"
+    }
   ]
 }

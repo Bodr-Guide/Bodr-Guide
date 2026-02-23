@@ -73,9 +73,25 @@
     "note": "국제운전면허증(IDP) 필요. 라오스 도로 사정이 열악하고 비포장 도로가 많아 운전 시 각별한 주의 필요. 야간 운전 자제 권장."
   },
   "cities": [
-    { "name": "비엔티안", "nameEn": "Vientiane", "image": "https://images.unsplash.com/photo-1570366583862-f91883984fde?w=800&h=600&fit=crop" },
-    { "name": "루앙프라방", "nameEn": "Luang Prabang", "image": "https://images.unsplash.com/photo-1583219025235-0386f777e8a4?w=800&h=600&fit=crop" },
-    { "name": "방비엥", "nameEn": "Vang Vieng", "image": "https://images.unsplash.com/photo-1551244072-5d12893278ab?w=800&h=600&fit=crop" },
-    { "name": "팍세", "nameEn": "Pakse", "image": "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?w=800&h=600&fit=crop" }
+    {
+      "name": "비엔티안",
+      "nameEn": "Vientiane",
+      "image": "https://images.unsplash.com/photo-1570366583862-f91883984fde?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "루앙프라방",
+      "nameEn": "Luang Prabang",
+      "image": "https://images.unsplash.com/photo-1594708764147-9739e5dcd385?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "방비엥",
+      "nameEn": "Vang Vieng",
+      "image": "https://images.unsplash.com/photo-1551244072-5d12893278ab?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "팍세",
+      "nameEn": "Pakse",
+      "image": "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?w=800&h=600&fit=crop"
+    }
   ]
 }

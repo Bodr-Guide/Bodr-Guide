@@ -84,9 +84,25 @@
     "note": "국제운전면허증(IDP) 필요. 관광 목적으로 최대 180일 사용 가능. 대도시 교통 혼잡 및 치안 주의."
   },
   "cities": [
-    { "name": "리우데자네이루", "nameEn": "Rio de Janeiro", "image": "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=800&h=600&fit=crop" },
-    { "name": "상파울루", "nameEn": "Sao Paulo", "image": "https://images.unsplash.com/photo-1554168848-1c4fbb57e56d?w=800&h=600&fit=crop" },
-    { "name": "이구아수", "nameEn": "Iguazu Falls", "image": "https://images.unsplash.com/photo-1564510182800-4e6cb8c9a196?w=800&h=600&fit=crop" },
-    { "name": "살바도르", "nameEn": "Salvador", "image": "https://images.unsplash.com/photo-1567591370504-dc39e6452e96?w=800&h=600&fit=crop" }
+    {
+      "name": "리우데자네이루",
+      "nameEn": "Rio de Janeiro",
+      "image": "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "상파울루",
+      "nameEn": "Sao Paulo",
+      "image": "https://images.unsplash.com/photo-1696708430161-6951b6f32f69?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "이구아수",
+      "nameEn": "Iguazu Falls",
+      "image": "https://plus.unsplash.com/premium_photo-1667401373118-ca226f9cf0a1?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "살바도르",
+      "nameEn": "Salvador",
+      "image": "https://images.unsplash.com/photo-1766946441214-f46356c09fd1?w=800&h=600&fit=crop"
+    }
   ]
 }

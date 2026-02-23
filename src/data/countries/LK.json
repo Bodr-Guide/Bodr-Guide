@@ -93,9 +93,25 @@
     "note": "국제운전면허증(IDP) 필요. 스리랑카는 좌측통행 국가. 도로가 좁고 교통 혼잡하여 현지 운전 경험이 없으면 운전기사 고용 권장."
   },
   "cities": [
-    { "name": "콜롬보", "nameEn": "Colombo", "image": "https://images.unsplash.com/photo-1586861635167-e5223aadc9fe?w=800&h=600&fit=crop" },
-    { "name": "캔디", "nameEn": "Kandy", "image": "https://images.unsplash.com/photo-1568322503122-d644bc4a9a53?w=800&h=600&fit=crop" },
-    { "name": "시기리야", "nameEn": "Sigiriya", "image": "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=800&h=600&fit=crop" },
-    { "name": "갈레", "nameEn": "Galle", "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800&h=600&fit=crop" }
+    {
+      "name": "콜롬보",
+      "nameEn": "Colombo",
+      "image": "https://images.unsplash.com/photo-1586861635167-e5223aadc9fe?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "캔디",
+      "nameEn": "Kandy",
+      "image": "https://images.unsplash.com/photo-1743613068401-82b6207eb7cd?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "시기리야",
+      "nameEn": "Sigiriya",
+      "image": "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "갈레",
+      "nameEn": "Galle",
+      "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800&h=600&fit=crop"
+    }
   ]
 }

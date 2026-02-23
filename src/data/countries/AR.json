@@ -83,9 +83,25 @@
     "note": "국제운전면허증(IDP) 필요. 관광 목적으로 최대 체류 기간 동안 사용 가능. 부에노스아이레스 시내 교통이 혼잡하므로 주의 필요."
   },
   "cities": [
-    { "name": "부에노스아이레스", "nameEn": "Buenos Aires", "image": "https://images.unsplash.com/photo-1589909202802-8f4aadce1849?w=800&h=600&fit=crop" },
-    { "name": "이구아수", "nameEn": "Iguazu", "image": "https://images.unsplash.com/photo-1564510182800-4e6cb8c9a196?w=800&h=600&fit=crop" },
-    { "name": "바릴로체", "nameEn": "Bariloche", "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop" },
-    { "name": "멘도사", "nameEn": "Mendoza", "image": "https://images.unsplash.com/photo-1551244072-5d12893278ab?w=800&h=600&fit=crop" }
+    {
+      "name": "부에노스아이레스",
+      "nameEn": "Buenos Aires",
+      "image": "https://images.unsplash.com/photo-1589909202802-8f4aadce1849?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "이구아수",
+      "nameEn": "Iguazu",
+      "image": "https://plus.unsplash.com/premium_photo-1697730178406-e15f5e4e1261?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "바릴로체",
+      "nameEn": "Bariloche",
+      "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "멘도사",
+      "nameEn": "Mendoza",
+      "image": "https://images.unsplash.com/photo-1551244072-5d12893278ab?w=800&h=600&fit=crop"
+    }
   ]
 }

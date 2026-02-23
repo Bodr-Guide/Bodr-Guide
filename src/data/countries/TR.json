@@ -83,9 +83,25 @@
     "note": "국제운전면허증(IDP) 필요. 이스탄불 시내 교통 체증이 매우 심하며, 고속도로 톨게이트는 HGS/OGS 전자결제 시스템 사용."
   },
   "cities": [
-    { "name": "이스탄불", "nameEn": "Istanbul", "image": "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=800&h=600&fit=crop" },
-    { "name": "카파도키아", "nameEn": "Cappadocia", "image": "https://images.unsplash.com/photo-1570939274717-7eda259b50ed?w=800&h=600&fit=crop" },
-    { "name": "안탈리아", "nameEn": "Antalya", "image": "https://images.unsplash.com/photo-1593238739364-17ec52ea8609?w=800&h=600&fit=crop" },
-    { "name": "이즈미르", "nameEn": "Izmir", "image": "https://images.unsplash.com/photo-1589367920969-ab8e050bbb04?w=800&h=600&fit=crop" }
+    {
+      "name": "이스탄불",
+      "nameEn": "Istanbul",
+      "image": "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "카파도키아",
+      "nameEn": "Cappadocia",
+      "image": "https://images.unsplash.com/photo-1570939274717-7eda259b50ed?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "안탈리아",
+      "nameEn": "Antalya",
+      "image": "https://plus.unsplash.com/premium_photo-1661918291779-95136776733f?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "이즈미르",
+      "nameEn": "Izmir",
+      "image": "https://images.unsplash.com/photo-1589367920969-ab8e050bbb04?w=800&h=600&fit=crop"
+    }
   ]
 }

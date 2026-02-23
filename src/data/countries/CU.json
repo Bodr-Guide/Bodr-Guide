@@ -74,9 +74,25 @@
     "note": "국제운전면허증(IDP) 인정. 다만 관광객 대상 렌터카 서비스가 매우 제한적이며, 차량 상태가 열악할 수 있음. 국영 렌터카 업체(Cubacar, Rex 등)만 이용 가능."
   },
   "cities": [
-    { "name": "아바나", "nameEn": "Havana", "image": "https://images.unsplash.com/photo-1570299437522-25e4c4094e1e?w=800&h=600&fit=crop" },
-    { "name": "바라데로", "nameEn": "Varadero", "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop" },
-    { "name": "트리니다드", "nameEn": "Trinidad", "image": "https://images.unsplash.com/photo-1568402102990-bc541580b59f?w=800&h=600&fit=crop" },
-    { "name": "비냘레스", "nameEn": "Vinales", "image": "https://images.unsplash.com/photo-1551244072-5d12893278ab?w=800&h=600&fit=crop" }
+    {
+      "name": "아바나",
+      "nameEn": "Havana",
+      "image": "https://plus.unsplash.com/premium_photo-1697730017665-ccfeedffbefa?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "바라데로",
+      "nameEn": "Varadero",
+      "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "트리니다드",
+      "nameEn": "Trinidad",
+      "image": "https://images.unsplash.com/photo-1568402102990-bc541580b59f?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "비냘레스",
+      "nameEn": "Vinales",
+      "image": "https://images.unsplash.com/photo-1551244072-5d12893278ab?w=800&h=600&fit=crop"
+    }
   ]
 }

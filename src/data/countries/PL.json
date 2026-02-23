@@ -85,9 +85,25 @@
     "note": "국제운전면허증(IDP) 필요. EU/EEA 회원국으로 유럽 교통 규칙 적용. 고속도로 유료 구간 있으며 겨울철 스노우 타이어 필수."
   },
   "cities": [
-    { "name": "바르샤바", "nameEn": "Warsaw", "image": "https://images.unsplash.com/photo-1519197924958-dc1a67b08040?w=800&h=600&fit=crop" },
-    { "name": "크라쿠프", "nameEn": "Krakow", "image": "https://images.unsplash.com/photo-1558271736-cd043ef2e855?w=800&h=600&fit=crop" },
-    { "name": "그단스크", "nameEn": "Gdansk", "image": "https://images.unsplash.com/photo-1565711561500-49678a10a63f?w=800&h=600&fit=crop" },
-    { "name": "브로츠와프", "nameEn": "Wroclaw", "image": "https://images.unsplash.com/photo-1571847140471-1d7766e227a7?w=800&h=600&fit=crop" }
+    {
+      "name": "바르샤바",
+      "nameEn": "Warsaw",
+      "image": "https://plus.unsplash.com/premium_photo-1690474616906-4d9f87ae8dcd?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "크라쿠프",
+      "nameEn": "Krakow",
+      "image": "https://images.unsplash.com/photo-1558271736-cd043ef2e855?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "그단스크",
+      "nameEn": "Gdansk",
+      "image": "https://images.unsplash.com/photo-1565711561500-49678a10a63f?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "브로츠와프",
+      "nameEn": "Wroclaw",
+      "image": "https://images.unsplash.com/photo-1717915604611-214eb95ba797?w=800&h=600&fit=crop"
+    }
   ]
 }

@@ -83,9 +83,25 @@
     "note": "국제운전면허증(IDP)으로 최대 6개월간 운전 가능. 카타르는 우측통행이며 도로 인프라가 잘 정비되어 있음."
   },
   "cities": [
-    { "name": "도하", "nameEn": "Doha", "image": "https://images.unsplash.com/photo-1559113202-c916b8e44d8b?w=800&h=600&fit=crop" },
-    { "name": "알와크라", "nameEn": "Al Wakrah", "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop" },
-    { "name": "루사일", "nameEn": "Lusail", "image": "https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?w=800&h=600&fit=crop" },
-    { "name": "알코르", "nameEn": "Al Khor", "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop" }
+    {
+      "name": "도하",
+      "nameEn": "Doha",
+      "image": "https://plus.unsplash.com/premium_photo-1697730281608-e3d8986c1cef?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "알와크라",
+      "nameEn": "Al Wakrah",
+      "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "루사일",
+      "nameEn": "Lusail",
+      "image": "https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "알코르",
+      "nameEn": "Al Khor",
+      "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop"
+    }
   ]
 }

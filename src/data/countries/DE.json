@@ -92,9 +92,25 @@
     "note": "한국 운전면허 직접 인정 (상호인정 협정). 6개월까지 한국 면허로 운전 가능. 장기 체류 시 서류 교환으로 독일 면허 취득 가능 (실기시험 면제)."
   },
   "cities": [
-    { "name": "베를린", "nameEn": "Berlin", "image": "https://images.unsplash.com/photo-1560969184-10fe8719e047?w=800&h=600&fit=crop" },
-    { "name": "뮌헨", "nameEn": "Munich", "image": "https://images.unsplash.com/photo-1595867818082-083862f3d630?w=800&h=600&fit=crop" },
-    { "name": "프랑크푸르트", "nameEn": "Frankfurt", "image": "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=800&h=600&fit=crop" },
-    { "name": "함부르크", "nameEn": "Hamburg", "image": "https://images.unsplash.com/photo-1560930950-5f9c95501be8?w=800&h=600&fit=crop" }
+    {
+      "name": "베를린",
+      "nameEn": "Berlin",
+      "image": "https://images.unsplash.com/photo-1560969184-10fe8719e047?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "뮌헨",
+      "nameEn": "Munich",
+      "image": "https://images.unsplash.com/photo-1595867818082-083862f3d630?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "프랑크푸르트",
+      "nameEn": "Frankfurt",
+      "image": "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "함부르크",
+      "nameEn": "Hamburg",
+      "image": "https://plus.unsplash.com/premium_photo-1733306426978-f7d5a7ed2598?w=800&h=600&fit=crop"
+    }
   ]
 }

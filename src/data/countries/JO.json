@@ -77,9 +77,25 @@
     "note": "국제운전면허증(IDP) 필요. 요르단 렌터카 이용 시 IDP 필수. 사막 도로(와디럼 등) 운전 시 사륜구동 차량 권장."
   },
   "cities": [
-    { "name": "암만", "nameEn": "Amman", "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800&h=600&fit=crop" },
-    { "name": "페트라", "nameEn": "Petra", "image": "https://images.unsplash.com/photo-1579606032821-4e6161c81571?w=800&h=600&fit=crop" },
-    { "name": "아카바", "nameEn": "Aqaba", "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop" },
-    { "name": "와디럼", "nameEn": "Wadi Rum", "image": "https://images.unsplash.com/photo-1553913861-c0fddf2619ee?w=800&h=600&fit=crop" }
+    {
+      "name": "암만",
+      "nameEn": "Amman",
+      "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "페트라",
+      "nameEn": "Petra",
+      "image": "https://plus.unsplash.com/premium_photo-1675786683115-6d9b7828952e?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "아카바",
+      "nameEn": "Aqaba",
+      "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "와디럼",
+      "nameEn": "Wadi Rum",
+      "image": "https://images.unsplash.com/photo-1553913861-c0fddf2619ee?w=800&h=600&fit=crop"
+    }
   ]
 }

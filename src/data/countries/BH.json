@@ -85,9 +85,25 @@
     "note": "국제운전면허증(IDP) 필요. 관광 목적으로 최대 3개월 사용 가능. GCC 국가 간 IDP 상호 인정."
   },
   "cities": [
-    { "name": "마나마", "nameEn": "Manama", "image": "https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?w=800&h=600&fit=crop" },
-    { "name": "무하라크", "nameEn": "Muharraq", "image": "https://images.unsplash.com/photo-1559113202-c916b8e44d8b?w=800&h=600&fit=crop" },
-    { "name": "리파", "nameEn": "Riffa", "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop" },
-    { "name": "아마드타운", "nameEn": "Isa Town", "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop" }
+    {
+      "name": "마나마",
+      "nameEn": "Manama",
+      "image": "https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "무하라크",
+      "nameEn": "Muharraq",
+      "image": "https://images.unsplash.com/photo-1646759751917-af66d92dbec3?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "리파",
+      "nameEn": "Riffa",
+      "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "아마드타운",
+      "nameEn": "Isa Town",
+      "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop"
+    }
   ]
 }

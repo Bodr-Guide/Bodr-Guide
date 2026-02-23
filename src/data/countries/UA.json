@@ -46,9 +46,25 @@
     "외교부 여행경보 확인"
   ],
   "cities": [
-    { "name": "키이우", "nameEn": "Kyiv", "image": "https://images.unsplash.com/photo-1558271736-cd043ef2e855?w=800&h=600&fit=crop" },
-    { "name": "리비우", "nameEn": "Lviv", "image": "https://images.unsplash.com/photo-1568752520160-e39e54175a72?w=800&h=600&fit=crop" },
-    { "name": "오데사", "nameEn": "Odesa", "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop" },
-    { "name": "하르키우", "nameEn": "Kharkiv", "image": "https://images.unsplash.com/photo-1565711561500-49678a10a63f?w=800&h=600&fit=crop" }
+    {
+      "name": "키이우",
+      "nameEn": "Kyiv",
+      "image": "https://images.unsplash.com/photo-1558271736-cd043ef2e855?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "리비우",
+      "nameEn": "Lviv",
+      "image": "https://images.unsplash.com/photo-1681747321180-467f0923c779?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "오데사",
+      "nameEn": "Odesa",
+      "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "하르키우",
+      "nameEn": "Kharkiv",
+      "image": "https://images.unsplash.com/photo-1565711561500-49678a10a63f?w=800&h=600&fit=crop"
+    }
   ]
 }

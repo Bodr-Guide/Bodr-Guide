@@ -100,17 +100,17 @@
     {
       "name": "상하이",
       "nameEn": "Shanghai",
-      "image": "https://images.unsplash.com/photo-1537531088710-91e6ec58ba6c?w=800&h=600&fit=crop"
+      "image": "https://plus.unsplash.com/premium_photo-1752211050459-6e6feed52a79?w=800&h=600&fit=crop"
     },
     {
       "name": "광저우",
       "nameEn": "Guangzhou",
-      "image": "https://images.unsplash.com/photo-1583475020662-56d8ed78a32e?w=800&h=600&fit=crop"
+      "image": "https://images.unsplash.com/photo-1767948003983-d097cfb5bd7c?w=800&h=600&fit=crop"
     },
     {
       "name": "청두",
       "nameEn": "Chengdu",
-      "image": "https://images.unsplash.com/photo-1533552889578-e4e056089a4d?w=800&h=600&fit=crop"
+      "image": "https://images.unsplash.com/photo-1766953597804-893f1993b8af?w=800&h=600&fit=crop"
     }
   ]
 }

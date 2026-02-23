@@ -92,9 +92,25 @@
     "note": "한국 운전면허 직접 인정 (상호인정 협정). 주(Province)별로 규정이 다르며, 대부분 3~6개월까지 한국 면허로 운전 가능. 국제운전면허증(IDP) 지참 권장."
   },
   "cities": [
-    { "name": "밴쿠버", "nameEn": "Vancouver", "image": "https://images.unsplash.com/photo-1559511260-66a654ae982a?w=800&h=600&fit=crop" },
-    { "name": "토론토", "nameEn": "Toronto", "image": "https://images.unsplash.com/photo-1517090504332-edc2c553da6d?w=800&h=600&fit=crop" },
-    { "name": "몬트리올", "nameEn": "Montreal", "image": "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&h=600&fit=crop" },
-    { "name": "밴프", "nameEn": "Banff", "image": "https://images.unsplash.com/photo-1503614472-8c93d56e92ce?w=800&h=600&fit=crop" }
+    {
+      "name": "밴쿠버",
+      "nameEn": "Vancouver",
+      "image": "https://images.unsplash.com/photo-1559511260-66a654ae982a?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "토론토",
+      "nameEn": "Toronto",
+      "image": "https://plus.unsplash.com/premium_photo-1697730071424-431d797605cd?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "몬트리올",
+      "nameEn": "Montreal",
+      "image": "https://plus.unsplash.com/premium_photo-1697730163485-27d7f9c7817b?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "밴프",
+      "nameEn": "Banff",
+      "image": "https://images.unsplash.com/photo-1503614472-8c93d56e92ce?w=800&h=600&fit=crop"
+    }
   ]
 }

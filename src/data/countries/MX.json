@@ -83,9 +83,25 @@
     "note": "국제운전면허증(IDP) 필요. 멕시코는 우측통행. 국경 지역 및 치안 불안 지역에서의 야간 운전 자제 권장. 톨게이트(Caseta) 현금 준비."
   },
   "cities": [
-    { "name": "멕시코시티", "nameEn": "Mexico City", "image": "https://images.unsplash.com/photo-1585464231875-d9ef1f5ad396?w=800&h=600&fit=crop" },
-    { "name": "칸쿤", "nameEn": "Cancun", "image": "https://images.unsplash.com/photo-1552074284-5e88ef1aef18?w=800&h=600&fit=crop" },
-    { "name": "과달라하라", "nameEn": "Guadalajara", "image": "https://images.unsplash.com/photo-1564580610657-50e8e8bc5d82?w=800&h=600&fit=crop" },
-    { "name": "오악사카", "nameEn": "Oaxaca", "image": "https://images.unsplash.com/photo-1568402102990-bc541580b59f?w=800&h=600&fit=crop" }
+    {
+      "name": "멕시코시티",
+      "nameEn": "Mexico City",
+      "image": "https://images.unsplash.com/photo-1585464231875-d9ef1f5ad396?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "칸쿤",
+      "nameEn": "Cancun",
+      "image": "https://images.unsplash.com/photo-1552074284-5e88ef1aef18?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "과달라하라",
+      "nameEn": "Guadalajara",
+      "image": "https://images.unsplash.com/photo-1765087909496-f57a5d4cef7c?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "오악사카",
+      "nameEn": "Oaxaca",
+      "image": "https://images.unsplash.com/photo-1568402102990-bc541580b59f?w=800&h=600&fit=crop"
+    }
   ]
 }

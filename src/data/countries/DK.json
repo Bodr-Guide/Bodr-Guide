@@ -85,9 +85,25 @@
     "note": "한국 운전면허 직접 인정 (상호인정 협정). 관광 목적으로 최대 90일 사용 가능. 코펜하겐은 자전거 교통이 매우 활발하므로 운전 시 자전거 도로 주의."
   },
   "cities": [
-    { "name": "코펜하겐", "nameEn": "Copenhagen", "image": "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?w=800&h=600&fit=crop" },
-    { "name": "오르후스", "nameEn": "Aarhus", "image": "https://images.unsplash.com/photo-1565711561500-49678a10a63f?w=800&h=600&fit=crop" },
-    { "name": "오덴세", "nameEn": "Odense", "image": "https://images.unsplash.com/photo-1571847140471-1d7766e227a7?w=800&h=600&fit=crop" },
-    { "name": "올보르", "nameEn": "Aalborg", "image": "https://images.unsplash.com/photo-1560930950-5f9c95501be8?w=800&h=600&fit=crop" }
+    {
+      "name": "코펜하겐",
+      "nameEn": "Copenhagen",
+      "image": "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "오르후스",
+      "nameEn": "Aarhus",
+      "image": "https://images.unsplash.com/photo-1565711561500-49678a10a63f?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "오덴세",
+      "nameEn": "Odense",
+      "image": "https://images.unsplash.com/photo-1756633231294-f72b004e8c5c?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "올보르",
+      "nameEn": "Aalborg",
+      "image": "https://images.unsplash.com/photo-1748934871175-c1b8f820b81d?w=800&h=600&fit=crop"
+    }
   ]
 }

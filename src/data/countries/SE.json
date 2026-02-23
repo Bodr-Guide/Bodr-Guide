@@ -41,9 +41,25 @@
     "신용/체크카드 (현금 사용 어려움)"
   ],
   "cities": [
-    { "name": "스톡홀름", "nameEn": "Stockholm", "image": "https://images.unsplash.com/photo-1509356843151-3e7d96241e11?w=800&h=600&fit=crop" },
-    { "name": "예테보리", "nameEn": "Gothenburg", "image": "https://images.unsplash.com/photo-1565711561500-49678a10a63f?w=800&h=600&fit=crop" },
-    { "name": "말뫼", "nameEn": "Malmo", "image": "https://images.unsplash.com/photo-1571847140471-1d7766e227a7?w=800&h=600&fit=crop" },
-    { "name": "웁살라", "nameEn": "Uppsala", "image": "https://images.unsplash.com/photo-1560930950-5f9c95501be8?w=800&h=600&fit=crop" }
+    {
+      "name": "스톡홀름",
+      "nameEn": "Stockholm",
+      "image": "https://images.unsplash.com/photo-1509356843151-3e7d96241e11?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "예테보리",
+      "nameEn": "Gothenburg",
+      "image": "https://images.unsplash.com/photo-1565711561500-49678a10a63f?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "말뫼",
+      "nameEn": "Malmo",
+      "image": "https://images.unsplash.com/photo-1766246720493-2b4d3c5e1570?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "웁살라",
+      "nameEn": "Uppsala",
+      "image": "https://images.unsplash.com/photo-1692342380430-59c8682c9c55?w=800&h=600&fit=crop"
+    }
   ]
 }

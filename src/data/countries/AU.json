@@ -99,9 +99,25 @@
     "note": "한국 운전면허 직접 인정 (상호인정 협정). 국제운전면허증(IDP) 또는 공인 번역본 필요. 3개월까지 사용 가능, 이후 현지 면허 전환 필요."
   },
   "cities": [
-    { "name": "시드니", "nameEn": "Sydney", "image": "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=800&h=600&fit=crop" },
-    { "name": "멜버른", "nameEn": "Melbourne", "image": "https://images.unsplash.com/photo-1514395462725-fb4566210144?w=800&h=600&fit=crop" },
-    { "name": "브리즈번", "nameEn": "Brisbane", "image": "https://images.unsplash.com/photo-1524586420884-5de0c7e28f45?w=800&h=600&fit=crop" },
-    { "name": "골드코스트", "nameEn": "Gold Coast", "image": "https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=800&h=600&fit=crop" }
+    {
+      "name": "시드니",
+      "nameEn": "Sydney",
+      "image": "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "멜버른",
+      "nameEn": "Melbourne",
+      "image": "https://images.unsplash.com/photo-1514395462725-fb4566210144?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "브리즈번",
+      "nameEn": "Brisbane",
+      "image": "https://images.unsplash.com/photo-1707912258802-98fd535b9c03?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "골드코스트",
+      "nameEn": "Gold Coast",
+      "image": "https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=800&h=600&fit=crop"
+    }
   ]
 }

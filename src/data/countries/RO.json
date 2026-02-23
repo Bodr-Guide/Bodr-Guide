@@ -85,9 +85,25 @@
     "note": "국제운전면허증(IDP) 필요. 고속도로 이용 시 비네트(로비네타) 구매 필수. 산악 도로 야간 운전 시 주의 필요."
   },
   "cities": [
-    { "name": "부쿠레슈티", "nameEn": "Bucharest", "image": "https://images.unsplash.com/photo-1558271736-cd043ef2e855?w=800&h=600&fit=crop" },
-    { "name": "브라쇼브", "nameEn": "Brasov", "image": "https://images.unsplash.com/photo-1568752520160-e39e54175a72?w=800&h=600&fit=crop" },
-    { "name": "시비우", "nameEn": "Sibiu", "image": "https://images.unsplash.com/photo-1565711561500-49678a10a63f?w=800&h=600&fit=crop" },
-    { "name": "시기쇼아라", "nameEn": "Sighisoara", "image": "https://images.unsplash.com/photo-1571847140471-1d7766e227a7?w=800&h=600&fit=crop" }
+    {
+      "name": "부쿠레슈티",
+      "nameEn": "Bucharest",
+      "image": "https://images.unsplash.com/photo-1558271736-cd043ef2e855?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "브라쇼브",
+      "nameEn": "Brasov",
+      "image": "https://images.unsplash.com/photo-1739657181237-92a935bfd592?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "시비우",
+      "nameEn": "Sibiu",
+      "image": "https://images.unsplash.com/photo-1565711561500-49678a10a63f?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "시기쇼아라",
+      "nameEn": "Sighisoara",
+      "image": "https://plus.unsplash.com/premium_photo-1669047983472-1eeb3a5ea6a5?w=800&h=600&fit=crop"
+    }
   ]
 }

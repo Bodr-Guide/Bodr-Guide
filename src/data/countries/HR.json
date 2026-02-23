@@ -91,9 +91,25 @@
     "note": "국제운전면허증(IDP) 필요. EU/쉥겐 회원국으로 IDP 소지 시 체류 기간 동안 운전 가능. 해안 도로 절경이 유명하나 좁은 도로 주의."
   },
   "cities": [
-    { "name": "두브로브니크", "nameEn": "Dubrovnik", "image": "https://images.unsplash.com/photo-1555990538-1e6e9a144e1b?w=800&h=600&fit=crop" },
-    { "name": "스플리트", "nameEn": "Split", "image": "https://images.unsplash.com/photo-1558271736-cd043ef2e855?w=800&h=600&fit=crop" },
-    { "name": "자그레브", "nameEn": "Zagreb", "image": "https://images.unsplash.com/photo-1561630098-b37a6a8ab6db?w=800&h=600&fit=crop" },
-    { "name": "플리트비체", "nameEn": "Plitvice", "image": "https://images.unsplash.com/photo-1568752520160-e39e54175a72?w=800&h=600&fit=crop" }
+    {
+      "name": "두브로브니크",
+      "nameEn": "Dubrovnik",
+      "image": "https://plus.unsplash.com/premium_photo-1661963319778-08e753c9d20a?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "스플리트",
+      "nameEn": "Split",
+      "image": "https://images.unsplash.com/photo-1558271736-cd043ef2e855?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "자그레브",
+      "nameEn": "Zagreb",
+      "image": "https://plus.unsplash.com/premium_photo-1661962954591-3961f5101344?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "플리트비체",
+      "nameEn": "Plitvice",
+      "image": "https://plus.unsplash.com/premium_photo-1661883882128-37a263d36a16?w=800&h=600&fit=crop"
+    }
   ]
 }

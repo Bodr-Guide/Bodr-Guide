@@ -82,9 +82,25 @@
     "note": "국제운전면허증(IDP) 필요. 네팔 도로 사정이 열악하여 현지 운전 시 주의 필요."
   },
   "cities": [
-    { "name": "카트만두", "nameEn": "Kathmandu", "image": "https://images.unsplash.com/photo-1558862319-fb5c6de1db8e?w=800&h=600&fit=crop" },
-    { "name": "포카라", "nameEn": "Pokhara", "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop" },
-    { "name": "룸비니", "nameEn": "Lumbini", "image": "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?w=800&h=600&fit=crop" },
-    { "name": "치트완", "nameEn": "Chitwan", "image": "https://images.unsplash.com/photo-1551244072-5d12893278ab?w=800&h=600&fit=crop" }
+    {
+      "name": "카트만두",
+      "nameEn": "Kathmandu",
+      "image": "https://plus.unsplash.com/premium_photo-1691763916216-d64cfad0f42e?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "포카라",
+      "nameEn": "Pokhara",
+      "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "룸비니",
+      "nameEn": "Lumbini",
+      "image": "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "치트완",
+      "nameEn": "Chitwan",
+      "image": "https://images.unsplash.com/photo-1551244072-5d12893278ab?w=800&h=600&fit=crop"
+    }
   ]
 }

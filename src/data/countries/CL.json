@@ -83,9 +83,25 @@
     "note": "국제운전면허증(IDP) 필요. 관광 목적으로 체류 기간 동안 사용 가능. 산악 도로가 많으므로 운전 경험 필요."
   },
   "cities": [
-    { "name": "산티아고", "nameEn": "Santiago", "image": "https://images.unsplash.com/photo-1561484930-998b6a7b22e8?w=800&h=600&fit=crop" },
-    { "name": "발파라이소", "nameEn": "Valparaiso", "image": "https://images.unsplash.com/photo-1568402102990-bc541580b59f?w=800&h=600&fit=crop" },
-    { "name": "아타카마", "nameEn": "Atacama", "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop" },
-    { "name": "토레스델파이네", "nameEn": "Torres del Paine", "image": "https://images.unsplash.com/photo-1507272931001-fc06c17866e0?w=800&h=600&fit=crop" }
+    {
+      "name": "산티아고",
+      "nameEn": "Santiago",
+      "image": "https://images.unsplash.com/photo-1561484930-998b6a7b22e8?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "발파라이소",
+      "nameEn": "Valparaiso",
+      "image": "https://images.unsplash.com/photo-1568402102990-bc541580b59f?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "아타카마",
+      "nameEn": "Atacama",
+      "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop"
+    },
+    {
+      "name": "토레스델파이네",
+      "nameEn": "Torres del Paine",
+      "image": "https://images.unsplash.com/photo-1585426007948-fbc4076728f7?w=800&h=600&fit=crop"
+    }
   ]
 }
