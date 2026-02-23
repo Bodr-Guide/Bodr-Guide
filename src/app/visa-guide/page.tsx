@@ -185,15 +185,16 @@ export default function VisaGuidePage() {
             대한민국 여권 기준 전 세계 {countries.length}개국 비자 요건 · 무비자 · 워킹홀리데이 · 디지털노마드비자 정보를 한눈에 확인하세요.
           </p>
 
-          {/* 요약 통계 */}
+          {/* 요약 통계 — 클릭 시 해당 섹션으로 이동 */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-8">
             {statusOrder.map((status) => {
               const style = STATUS_STYLE[status];
               const info = VISA_STATUS_MAP[status];
               return (
-                <div
+                <a
                   key={status}
-                  className={`rounded-xl border ${style.border} bg-gradient-to-br ${style.bg} p-4`}
+                  href={`#${status}`}
+                  className={`rounded-xl border ${style.border} bg-gradient-to-br ${style.bg} p-4 hover:scale-[1.02] active:scale-[0.98] transition-transform`}
                 >
                   <p className={`text-2xl sm:text-3xl font-extrabold ${style.text}`}>
                     {groups[status].length}
@@ -201,7 +202,7 @@ export default function VisaGuidePage() {
                   <p className="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 mt-1">
                     {info.label}
                   </p>
-                </div>
+                </a>
               );
             })}
           </div>
@@ -277,7 +278,8 @@ export default function VisaGuidePage() {
             return (
               <div
                 key={status}
-                className={`rounded-2xl border ${style.border} bg-gradient-to-br ${style.bg} p-5 sm:p-6`}
+                id={status}
+                className={`rounded-2xl border ${style.border} bg-gradient-to-br ${style.bg} p-5 sm:p-6 scroll-mt-20`}
               >
                 {/* 헤더 */}
                 <div className="flex items-center gap-3 mb-4">
