@@ -173,10 +173,8 @@ export default function VisaGuidePage() {
           <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white leading-tight mb-3">
             비자 가이드
           </h1>
-          <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 leading-relaxed max-w-2xl">
-            대한민국 여권 기준, 전 세계 {countries.length}개국의 비자 요건을
-            한눈에 확인하세요. 무비자부터 워킹홀리데이, 디지털노마드비자까지
-            필요한 모든 정보를 제공합니다.
+          <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 leading-relaxed max-w-3xl">
+            대한민국 여권 기준 전 세계 {countries.length}개국 비자 요건 · 무비자 · 워킹홀리데이 · 디지털노마드비자 정보를 한눈에 확인하세요.
           </p>
 
           {/* 요약 통계 */}
