@@ -122,6 +122,14 @@ const VISA_CATEGORIES = [
   },
 ];
 
+// 비자 상태별 설명
+const STATUS_DESC: Record<VisaStatus, string> = {
+  visa_free: "별도 비자 없이 여권만으로 입국 가능. 체류 가능일수는 국가마다 다릅니다.",
+  visa_on_arrival: "현지 공항에서 비자를 발급받아 입국. 수수료가 발생할 수 있습니다.",
+  e_visa: "출발 전 온라인으로 전자비자를 신청해야 합니다.",
+  visa_required: "대사관/영사관에서 사전에 비자를 발급받아야 입국할 수 있습니다.",
+};
+
 // 비자 상태별 국가 그룹핑
 function groupByVisaStatus(countries: Country[]) {
   const groups: Record<VisaStatus, Country[]> = {
@@ -298,6 +306,11 @@ export default function VisaGuidePage() {
                   </span>
                 </div>
 
+                {/* 설명 */}
+                <p className="text-xs text-slate-500 dark:text-slate-400 mb-4 -mt-1">
+                  {STATUS_DESC[status]}
+                </p>
+
                 {/* 국가 그리드 */}
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">
                   {list.map((c) => (
@@ -311,17 +324,19 @@ export default function VisaGuidePage() {
                         <p className="text-xs sm:text-sm font-medium text-slate-700 dark:text-slate-200 group-hover:text-slate-900 dark:group-hover:text-white truncate">
                           {c.nameKo}
                         </p>
+                      </div>
+                      <div className="flex items-center gap-1 flex-shrink-0">
                         {c.visaFreeStayDays && (
-                          <p className="text-[10px] text-slate-500">
+                          <span className={`text-[9px] sm:text-[10px] font-semibold px-1.5 py-0.5 rounded ${style.accent}`}>
                             {c.visaFreeStayDays}일
-                          </p>
+                          </span>
+                        )}
+                        {c.entryRegistration?.required && (
+                          <span className="text-[9px] sm:text-[10px] font-medium text-orange-400 bg-orange-500/10 px-1.5 py-0.5 rounded">
+                            {c.entryRegistration.type}
+                          </span>
                         )}
                       </div>
-                      {c.entryRegistration?.required && (
-                        <span className="text-[9px] sm:text-[10px] font-medium text-orange-400 bg-orange-500/10 px-1.5 py-0.5 rounded flex-shrink-0">
-                          {c.entryRegistration.type}
-                        </span>
-                      )}
                     </Link>
                   ))}
                 </div>
