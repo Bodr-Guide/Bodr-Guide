@@ -71,7 +71,7 @@ export default function HeroSection() {
               value={searchQuery}
               onChange={(e) => handleSearch(e.target.value)}
               placeholder="어디로 떠나볼까요?"
-              className="w-full rounded-2xl border border-slate-300 dark:border-slate-600/60 bg-white dark:bg-slate-800/30 py-2.5 sm:py-3 pl-11 sm:pl-13 pr-5 text-sm sm:text-base text-slate-900 dark:text-white placeholder-slate-500 dark:placeholder-slate-500 outline-none transition-all focus:border-slate-400 dark:focus:border-slate-500 focus:ring-1 focus:ring-slate-300/30 dark:focus:ring-slate-500/30"
+              className="w-full rounded-2xl border border-slate-300 dark:border-slate-600/60 bg-white dark:bg-slate-800/30 py-2.5 sm:py-3 pl-11 sm:pl-13 pr-5 text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-500 dark:placeholder-slate-500 outline-none transition-all focus:border-slate-400 dark:focus:border-slate-500 focus:ring-1 focus:ring-slate-300/30 dark:focus:ring-slate-500/30"
             />
           </div>
         </div>
