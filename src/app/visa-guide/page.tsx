@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Metadata } from "next";
 import { getAllCountries } from "@/lib/countries";
-import { Country, VisaStatus, VISA_STATUS_MAP } from "@/lib/types";
+import { Country, Continent, VisaStatus, VISA_STATUS_MAP } from "@/lib/types";
 import Header from "@/components/layout/Header";
 
 export const metadata: Metadata = {
@@ -125,10 +125,13 @@ const VISA_CATEGORIES = [
 // 비자 상태별 설명
 const STATUS_DESC: Record<VisaStatus, string> = {
   visa_free: "별도 비자 없이 여권만으로 입국 가능. 체류 가능일수는 국가마다 다릅니다.",
-  visa_on_arrival: "현지 공항에서 비자를 발급받아 입국. 수수료가 발생할 수 있습니다.",
+  visa_on_arrival: "사전 비자 없이 출발하고, 도착 공항에서 비자를 바로 발급받아 입국합니다. 수수료가 발생할 수 있습니다.",
   e_visa: "출발 전 온라인으로 전자비자를 신청해야 합니다.",
   visa_required: "대사관/영사관에서 사전에 비자를 발급받아야 입국할 수 있습니다.",
 };
+
+// 대륙 표시 순서
+const CONTINENT_ORDER: Continent[] = ["아시아", "유럽", "북미", "남미", "오세아니아", "중동", "아프리카"];
 
 // 비자 상태별 국가 그룹핑
 function groupByVisaStatus(countries: Country[]) {
@@ -146,6 +149,20 @@ function groupByVisaStatus(countries: Country[]) {
     groups[key].sort((a, b) => a.nameKo.localeCompare(b.nameKo, "ko"));
   }
   return groups;
+}
+
+// 국가 리스트를 대륙별로 그룹핑
+function groupByContinent(countries: Country[]) {
+  const map = new Map<Continent, Country[]>();
+  for (const c of countries) {
+    const list = map.get(c.continent) || [];
+    list.push(c);
+    map.set(c.continent, list);
+  }
+  // 대륙 순서대로 정렬하여 반환
+  return CONTINENT_ORDER
+    .filter((cont) => map.has(cont))
+    .map((cont) => ({ continent: cont, countries: map.get(cont)! }));
 }
 
 export default function VisaGuidePage() {
@@ -313,33 +330,37 @@ export default function VisaGuidePage() {
                   {STATUS_DESC[status]}
                 </p>
 
-                {/* 국가 그리드 */}
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">
-                  {list.map((c) => (
-                    <Link
-                      key={c.id}
-                      href={`/country/${c.id}`}
-                      className="flex items-center gap-2 rounded-lg bg-slate-100/40 dark:bg-slate-800/40 px-3 py-2 hover:bg-slate-200/40 dark:hover:bg-slate-700/40 transition-colors group"
-                    >
-                      <span className="text-base">{c.flagEmoji}</span>
-                      <div className="flex-1 min-w-0">
-                        <p className="text-xs sm:text-sm font-medium text-slate-700 dark:text-slate-200 group-hover:text-slate-900 dark:group-hover:text-white truncate">
-                          {c.nameKo}
-                        </p>
+                {/* 대륙별 국가 그리드 */}
+                <div className="space-y-4">
+                  {groupByContinent(list).map(({ continent, countries: cList }) => (
+                    <div key={continent}>
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="text-[11px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider">
+                          {continent}
+                        </span>
+                        <span className="text-[10px] text-slate-400 dark:text-slate-600">{cList.length}</span>
+                        <div className="flex-1 h-px bg-slate-200/60 dark:bg-slate-700/40" />
                       </div>
-                      <div className="flex items-center gap-1 flex-shrink-0">
-                        {c.visaFreeStayDays && (
-                          <span className={`text-[9px] sm:text-[10px] font-semibold px-1.5 py-0.5 rounded ${style.accent}`}>
-                            {c.visaFreeStayDays}일
-                          </span>
-                        )}
-                        {c.entryRegistration?.required && (
-                          <span className="text-[9px] sm:text-[10px] font-medium text-orange-400 bg-orange-500/10 px-1.5 py-0.5 rounded">
-                            {c.entryRegistration.type}
-                          </span>
-                        )}
+                      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-1.5">
+                        {cList.map((c) => (
+                          <Link
+                            key={c.id}
+                            href={`/country/${c.id}`}
+                            className="flex items-center gap-1.5 rounded-lg bg-slate-100/40 dark:bg-slate-800/40 px-2.5 py-1.5 hover:bg-slate-200/40 dark:hover:bg-slate-700/40 transition-colors group"
+                          >
+                            <span className="text-sm">{c.flagEmoji}</span>
+                            <span className="flex-1 min-w-0 text-xs font-medium text-slate-700 dark:text-slate-200 group-hover:text-slate-900 dark:group-hover:text-white truncate">
+                              {c.nameKo}
+                            </span>
+                            {c.visaFreeStayDays && (
+                              <span className={`text-[9px] font-semibold px-1.5 py-0.5 rounded flex-shrink-0 ${style.accent}`}>
+                                {c.visaFreeStayDays}일
+                              </span>
+                            )}
+                          </Link>
+                        ))}
                       </div>
-                    </Link>
+                    </div>
                   ))}
                 </div>
               </div>

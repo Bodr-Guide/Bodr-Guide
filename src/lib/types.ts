@@ -88,7 +88,7 @@ export interface Country {
 export const VISA_STATUS_MAP: Record<VisaStatus, { label: string; color: string }> = {
   visa_free: { label: "무비자", color: "green" },
   visa_required: { label: "비자 필요", color: "red" },
-  visa_on_arrival: { label: "도착비자", color: "blue" },
+  visa_on_arrival: { label: "도착 시 비자 발급", color: "blue" },
   e_visa: { label: "전자비자", color: "yellow" },
 };
 
