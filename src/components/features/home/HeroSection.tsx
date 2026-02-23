@@ -56,7 +56,8 @@ export default function HeroSection() {
         {/* 우측: 설명 + 검색바 (타이틀 옆 하단 정렬) */}
         <div className="flex-1 max-w-xs sm:max-w-sm lg:max-w-md pb-1">
           <p className="mb-2 text-right text-[13px] sm:text-[15px] leading-relaxed text-slate-500 dark:text-slate-400">
-            흩어진 여행 정보, 여기서 준비하세요.
+            <span className="sm:hidden">흩어진 정보<br />여기서 준비하세요</span>
+            <span className="hidden sm:inline">흩어진 정보, 여기서 준비하세요</span>
           </p>
 
           {/* 검색바 */}
@@ -71,7 +72,7 @@ export default function HeroSection() {
               value={searchQuery}
               onChange={(e) => handleSearch(e.target.value)}
               placeholder="어디로 떠나볼까요?"
-              className="w-full rounded-2xl border border-slate-300 dark:border-slate-600/60 bg-white dark:bg-slate-800/30 py-2.5 sm:py-3 pl-11 sm:pl-13 pr-5 text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-500 dark:placeholder-slate-500 outline-none transition-all focus:border-slate-400 dark:focus:border-slate-500 focus:ring-1 focus:ring-slate-300/30 dark:focus:ring-slate-500/30"
+              className="w-full rounded-2xl border border-slate-300 dark:border-slate-600/60 bg-white dark:bg-slate-800/30 py-2.5 sm:py-3 pl-11 sm:pl-13 pr-5 text-[11px] sm:text-xs text-slate-900 dark:text-white placeholder-slate-500 dark:placeholder-slate-500 outline-none transition-all focus:border-slate-400 dark:focus:border-slate-500 focus:ring-1 focus:ring-slate-300/30 dark:focus:ring-slate-500/30"
             />
           </div>
         </div>
