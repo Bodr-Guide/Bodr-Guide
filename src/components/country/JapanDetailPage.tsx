@@ -6,6 +6,7 @@ import { getCountryImage, getFlagUrl } from "@/lib/countryImages";
 import { getAllCountries } from "@/lib/data";
 import TabNavigation from "./TabNavigation";
 import { Accordion, AccordionItem } from "./Accordion";
+import WeatherBadge from "./WeatherBadge";
 
 interface JapanDetailPageProps {
   country: Country;
@@ -79,9 +80,12 @@ export default function JapanDetailPage({ country }: JapanDetailPageProps) {
             <img src={getFlagUrl(country.id, 80)} alt="" className="w-16 h-auto rounded shadow-lg" />
             {country.nameKo}
           </h1>
-          <p className="text-base sm:text-lg text-white/80 uppercase tracking-wider mb-4">
-            {country.nameEn}
-          </p>
+          <div className="flex items-center gap-3 mb-4">
+            <p className="text-base sm:text-lg text-white/80 uppercase tracking-wider">
+              {country.nameEn}
+            </p>
+            <WeatherBadge countryId={country.id} />
+          </div>
 
           {/* 퀵 인포 스트립 */}
           {quickInfo && (

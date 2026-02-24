@@ -29,7 +29,7 @@ export default function WeatherBadge({ countryId }: WeatherBadgeProps) {
   // 로딩 중: 스켈레톤 배지
   if (loading) {
     return (
-      <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-3.5 py-1.5">
+      <div className="flex items-center gap-2 bg-black/30 backdrop-blur-sm rounded-full px-3.5 py-1.5">
         <div className="w-4 h-4 bg-white/20 rounded-full animate-pulse" />
         <div className="w-10 h-4 bg-white/15 rounded animate-pulse" />
       </div>
@@ -40,10 +40,10 @@ export default function WeatherBadge({ countryId }: WeatherBadgeProps) {
   if (!weather) return null;
 
   return (
-    <div className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full px-3.5 py-1.5 transition-all hover:bg-white/15">
+    <div className="flex items-center gap-1.5 bg-black/30 backdrop-blur-sm border border-white/20 rounded-full px-3.5 py-1.5">
       <span className="text-base leading-none">{weather.icon}</span>
       <span className="text-sm font-bold text-white">{weather.temperature}°C</span>
-      <span className="text-[10px] text-white/50 hidden sm:inline">{weather.description}</span>
+      <span className="text-[10px] text-white/70">{weather.description}</span>
     </div>
   );
 }
