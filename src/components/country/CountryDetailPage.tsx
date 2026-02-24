@@ -79,20 +79,18 @@ export default function CountryDetailPage({ country }: CountryDetailPageProps) {
         )}
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60" />
 
-        {/* 날씨 플로팅 배지 — 우상단 */}
-        <div className="absolute top-4 right-4 sm:top-6 sm:right-8 z-20">
-          <WeatherBadge countryId={country.id} />
-        </div>
-
         {/* 히어로 콘텐츠 */}
         <div className="relative z-10 flex flex-col justify-end h-full max-w-4xl mx-auto px-5 sm:px-8 pb-5 lg:pb-6">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-2 flex items-center gap-3">
             <img src={getFlagUrl(country.id, 80)} alt="" className="w-16 h-auto rounded shadow-lg" />
             {country.nameKo}
           </h1>
-          <p className="text-base sm:text-lg text-white/80 uppercase tracking-wider mb-4">
-            {country.nameEn}
-          </p>
+          <div className="flex items-center gap-3 mb-4">
+            <p className="text-base sm:text-lg text-white/80 uppercase tracking-wider">
+              {country.nameEn}
+            </p>
+            <WeatherBadge countryId={country.id} />
+          </div>
 
           {/* 퀵 인포 스트립 */}
           {quickInfo && (
