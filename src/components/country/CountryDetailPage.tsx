@@ -6,7 +6,6 @@ import { Country, VISA_STATUS_MAP } from "@/lib/types";
 import { getCountryImage, getFlagUrl } from "@/lib/countryImages";
 import TabNavigation from "./TabNavigation";
 import { Accordion, AccordionItem } from "./Accordion";
-import WeatherBadge from "./WeatherBadge";
 
 interface CountryDetailPageProps {
   country: Country;
@@ -81,76 +80,59 @@ export default function CountryDetailPage({ country }: CountryDetailPageProps) {
 
         {/* 히어로 콘텐츠 */}
         <div className="relative z-10 flex flex-col justify-end h-full max-w-4xl mx-auto px-5 sm:px-8 pb-5 lg:pb-6">
-          {/* 국가명 + 날씨 배지 */}
-          <div className="flex items-end justify-between gap-3 mb-1">
-            <div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-1 flex items-center gap-3">
-                <img src={getFlagUrl(country.id, 80)} alt="" className="w-16 h-auto rounded shadow-lg" />
-                {country.nameKo}
-              </h1>
-              <p className="text-base sm:text-lg text-white/80 uppercase tracking-wider">
-                {country.nameEn}
-              </p>
-            </div>
-            <WeatherBadge countryId={country.id} />
-          </div>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-2 flex items-center gap-3">
+            <img src={getFlagUrl(country.id, 80)} alt="" className="w-16 h-auto rounded shadow-lg" />
+            {country.nameKo}
+          </h1>
+          <p className="text-base sm:text-lg text-white/80 uppercase tracking-wider mb-4">
+            {country.nameEn}
+          </p>
 
           {/* 퀵 인포 스트립 */}
-          {quickInfo && (() => {
-            const voltageMatch = quickInfo.voltage.match(/^([^(]+?)(?:\s*\((.+)\))?$/);
-            const voltageMain = voltageMatch?.[1]?.trim() || quickInfo.voltage;
-            const voltageNote = voltageMatch?.[2]?.trim();
-            const currencyMatch = quickInfo.currency.match(/^([^(]+?)(?:\s*\((.+)\))?$/);
-            const currencyMain = currencyMatch?.[1]?.trim() || quickInfo.currency;
-            const currencyNote = currencyMatch?.[2]?.trim();
-
-            return (
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl max-w-3xl overflow-hidden mt-4">
-                <div className="grid grid-cols-2 sm:grid-cols-4 sm:divide-x divide-white/15">
-                  <div className="p-3 sm:p-4 border-r border-b sm:border-b-0 border-white/15">
-                    <div className="flex items-center gap-2 mb-1.5">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-white/60">
-                        <circle cx="12" cy="12" r="10" />
-                        <polyline points="12 6 12 12 16 14" />
-                      </svg>
-                      <span className="text-[11px] text-white/60 font-medium uppercase tracking-wider">시차</span>
-                    </div>
-                    <p className="text-base sm:text-lg font-bold text-white leading-tight">{quickInfo.timeDiff}</p>
+          {quickInfo && (
+            <div className="bg-black/30 backdrop-blur-md border border-white/25 rounded-xl max-w-3xl overflow-hidden">
+              <div className="grid grid-cols-2 sm:grid-cols-4 sm:divide-x divide-white/25">
+                <div className="p-3 sm:p-4 border-r border-b sm:border-b-0 border-white/25">
+                  <div className="flex items-center gap-2 mb-1.5">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-white/80">
+                      <circle cx="12" cy="12" r="10" />
+                      <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                    <span className="text-[11px] text-white/80 font-medium uppercase tracking-wider">시차</span>
                   </div>
-                  <div className="p-3 sm:p-4 border-b sm:border-b-0 border-white/15">
-                    <div className="flex items-center gap-2 mb-1.5">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-white/60">
-                        <line x1="12" y1="1" x2="12" y2="23" />
-                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                      </svg>
-                      <span className="text-[11px] text-white/60 font-medium uppercase tracking-wider">통화</span>
-                    </div>
-                    <p className="text-base sm:text-lg font-bold text-white leading-tight">{currencyMain}</p>
-                    {currencyNote && <p className="text-[10px] text-white/40 mt-0.5">{currencyNote}</p>}
+                  <p className="text-base sm:text-lg font-bold text-white leading-tight">{quickInfo.timeDiff}</p>
+                </div>
+                <div className="p-3 sm:p-4 border-b sm:border-b-0 border-white/25">
+                  <div className="flex items-center gap-2 mb-1.5">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-white/80">
+                      <line x1="12" y1="1" x2="12" y2="23" />
+                      <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                    </svg>
+                    <span className="text-[11px] text-white/80 font-medium uppercase tracking-wider">통화</span>
                   </div>
-                  <div className="p-3 sm:p-4 border-r sm:border-r-0 border-white/15">
-                    <div className="flex items-center gap-2 mb-1.5">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-white/60">
-                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-                      </svg>
-                      <span className="text-[11px] text-white/60 font-medium uppercase tracking-wider">전압</span>
-                    </div>
-                    <p className="text-base sm:text-lg font-bold text-white leading-tight">{voltageMain}</p>
-                    {voltageNote && <p className="text-[10px] text-white/40 mt-0.5">{voltageNote}</p>}
+                  <p className="text-base sm:text-lg font-bold text-white leading-tight">{quickInfo.currency}</p>
+                </div>
+                <div className="p-3 sm:p-4 border-r sm:border-r-0 border-white/25">
+                  <div className="flex items-center gap-2 mb-1.5">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-white/80">
+                      <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                    </svg>
+                    <span className="text-[11px] text-white/80 font-medium uppercase tracking-wider">전압</span>
                   </div>
-                  <div className="p-3 sm:p-4">
-                    <div className="flex items-center gap-2 mb-1.5">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-white/60">
-                        <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z" />
-                      </svg>
-                      <span className="text-[11px] text-white/60 font-medium uppercase tracking-wider">비행시간</span>
-                    </div>
-                    <p className="text-base sm:text-lg font-bold text-white leading-tight">{quickInfo.flight}</p>
+                  <p className="text-base sm:text-lg font-bold text-white leading-tight">{quickInfo.voltage}</p>
+                </div>
+                <div className="p-3 sm:p-4">
+                  <div className="flex items-center gap-2 mb-1.5">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-white/80">
+                      <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z" />
+                    </svg>
+                    <span className="text-[11px] text-white/80 font-medium uppercase tracking-wider">비행시간</span>
                   </div>
+                  <p className="text-base sm:text-lg font-bold text-white leading-tight">{quickInfo.flight}</p>
                 </div>
               </div>
-            );
-          })()}
+            </div>
+          )}
         </div>
       </section>
 
