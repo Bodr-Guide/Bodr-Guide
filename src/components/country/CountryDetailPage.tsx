@@ -96,7 +96,7 @@ export default function CountryDetailPage({ country }: CountryDetailPageProps) {
           {/* 퀵 인포 스트립 */}
           {quickInfo && (
             <div className="bg-black/30 backdrop-blur-md border border-white/25 rounded-xl max-w-3xl overflow-hidden">
-              <div className="grid grid-cols-2 sm:grid-cols-4 sm:divide-x divide-white/25">
+              <div className="grid grid-cols-2 sm:grid-cols-4">
                 <div className="p-3 sm:p-4 border-r border-b sm:border-b-0 border-white/25">
                   <div className="flex items-center gap-2 mb-1.5">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-white/80">
@@ -107,7 +107,7 @@ export default function CountryDetailPage({ country }: CountryDetailPageProps) {
                   </div>
                   <p className="text-base sm:text-lg font-bold text-white leading-tight">{quickInfo.timeDiff}</p>
                 </div>
-                <div className="p-3 sm:p-4 border-b sm:border-b-0 border-white/25">
+                <div className="p-3 sm:p-4 border-b sm:border-b-0 sm:border-r border-white/25">
                   <div className="flex items-center gap-2 mb-1.5">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-white/80">
                       <line x1="12" y1="1" x2="12" y2="23" />
@@ -115,9 +115,9 @@ export default function CountryDetailPage({ country }: CountryDetailPageProps) {
                     </svg>
                     <span className="text-[11px] text-white/80 font-medium uppercase tracking-wider">통화</span>
                   </div>
-                  <p className="text-base sm:text-lg font-bold text-white leading-tight">{quickInfo.currency}</p>
+                  <ExchangeCalculator countryId={country.id} fallbackText={quickInfo.currency} />
                 </div>
-                <div className="p-3 sm:p-4 border-r sm:border-r-0 border-white/25">
+                <div className="p-3 sm:p-4 border-r border-white/25">
                   <div className="flex items-center gap-2 mb-1.5">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-white/80">
                       <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
@@ -138,9 +138,6 @@ export default function CountryDetailPage({ country }: CountryDetailPageProps) {
               </div>
             </div>
           )}
-
-          {/* 환율 계산기 */}
-          <ExchangeCalculator countryId={country.id} />
         </div>
       </section>
 
