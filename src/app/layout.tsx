@@ -27,6 +27,10 @@ export default function RootLayout({
   return (
     <html lang="ko" suppressHydrationWarning>
       <head>
+        <meta
+          name="naver-site-verification"
+          content="6918b3de6bb30477d996460626b238b8c8372813"
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
