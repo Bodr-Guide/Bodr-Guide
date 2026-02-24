@@ -7,6 +7,7 @@ import { getAllCountries } from "@/lib/data";
 import TabNavigation from "./TabNavigation";
 import { Accordion, AccordionItem } from "./Accordion";
 import WeatherBadge from "./WeatherBadge";
+import ExchangeCalculator from "./ExchangeCalculator";
 
 interface JapanDetailPageProps {
   country: Country;
@@ -132,6 +133,9 @@ export default function JapanDetailPage({ country }: JapanDetailPageProps) {
               </div>
             </div>
           )}
+
+          {/* 환율 계산기 */}
+          <ExchangeCalculator countryId={country.id} />
         </div>
       </section>
 

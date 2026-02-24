@@ -7,6 +7,7 @@ import { getCountryImage, getFlagUrl } from "@/lib/countryImages";
 import TabNavigation from "./TabNavigation";
 import { Accordion, AccordionItem } from "./Accordion";
 import WeatherBadge from "./WeatherBadge";
+import ExchangeCalculator from "./ExchangeCalculator";
 
 interface CountryDetailPageProps {
   country: Country;
@@ -137,6 +138,9 @@ export default function CountryDetailPage({ country }: CountryDetailPageProps) {
               </div>
             </div>
           )}
+
+          {/* 환율 계산기 */}
+          <ExchangeCalculator countryId={country.id} />
         </div>
       </section>
 
