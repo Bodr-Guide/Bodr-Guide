@@ -8,6 +8,7 @@ import TabNavigation from "./TabNavigation";
 import { Accordion, AccordionItem } from "./Accordion";
 import WeatherBadge from "./WeatherBadge";
 import ExchangeCalculator from "./ExchangeCalculator";
+import ExchangeCalculatorTab from "./ExchangeCalculatorTab";
 
 interface JapanDetailPageProps {
   country: Country;
@@ -52,6 +53,16 @@ export default function JapanDetailPage({ country }: JapanDetailPageProps) {
           },
         ]
       : []),
+    {
+      id: "exchange",
+      label: "환율 계산기",
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <line x1="12" y1="1" x2="12" y2="23" />
+          <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+        </svg>
+      ),
+    },
     {
       id: "cities",
       label: "도시 정보",
@@ -150,6 +161,7 @@ export default function JapanDetailPage({ country }: JapanDetailPageProps) {
         )}
         {activeTab === "safety" && <SafetyContent />}
         {activeTab === "visaTypes" && country.visaTypes && <VisaTypesContent visaTypes={country.visaTypes} />}
+        {activeTab === "exchange" && <ExchangeCalculatorTab countryId={country.id} />}
         {activeTab === "cities" && country.cities && <CitiesContent cities={country.cities} />}
       </section>
     </div>
@@ -362,11 +374,11 @@ function PreparationContent({
       id: "comm",
       icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="text-blue-500"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M8.53 16.11a6 6 0 016.95 0"/><circle cx="12" cy="20" r="1"/></svg>,
       title: "통신",
-      summary: "eSIM 추천 (15,000원~)",
+      summary: "eSIM (15,000원~)",
       detail: (
         <div className="space-y-2 text-sm">
           <div className="flex justify-between items-center p-2 bg-sky-50 dark:bg-sky-950/30 rounded-lg">
-            <span className="font-medium">eSIM (추천)</span><span className="text-xs text-slate-500">~15,000원</span>
+            <span className="font-medium">eSIM</span><span className="text-xs text-slate-500">~15,000원</span>
           </div>
           <div className="flex justify-between items-center p-2 bg-slate-50 dark:bg-slate-800 rounded-lg">
             <span className="font-medium">현지 유심</span><span className="text-xs text-slate-500">~25,000원</span>
