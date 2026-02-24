@@ -16,6 +16,7 @@ interface CountryDetailPageProps {
 
 export default function CountryDetailPage({ country }: CountryDetailPageProps) {
   const [activeTab, setActiveTab] = useState("preparation");
+  const [travelPurpose, setTravelPurpose] = useState<string | null>("tourism");
   const heroImage = getCountryImage(country.id);
   const quickInfo = country.quickInfo;
 
@@ -69,9 +70,7 @@ export default function CountryDetailPage({ country }: CountryDetailPageProps) {
             label: "도시 정보",
             icon: (
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <rect x="1" y="6" width="6" height="14" rx="1" />
-                <rect x="9" y="2" width="6" height="18" rx="1" />
-                <rect x="17" y="8" width="6" height="12" rx="1" />
+                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
               </svg>
             ),
           },
@@ -157,24 +156,120 @@ export default function CountryDetailPage({ country }: CountryDetailPageProps) {
 
       {/* 탭 콘텐츠 */}
       <section className="max-w-4xl mx-auto px-5 sm:px-8 py-6 pb-16">
-        {activeTab === "preparation" && <PreparationTab country={country} />}
-        {activeTab === "safety" && <SafetyTab country={country} />}
-        {activeTab === "visaTypes" && country.visaTypes && <VisaTypesTab visaTypes={country.visaTypes} />}
+        {activeTab === "preparation" && (
+          <PreparationContent
+            country={country}
+            travelPurpose={travelPurpose}
+            onPurposeChange={setTravelPurpose}
+          />
+        )}
+        {activeTab === "safety" && <SafetyContent country={country} />}
+        {activeTab === "visaTypes" && country.visaTypes && <VisaTypesContent visaTypes={country.visaTypes} />}
         {activeTab === "exchange" && <ExchangeCalculatorTab countryId={country.id} />}
-        {activeTab === "cities" && country.cities && <CitiesTab cities={country.cities} />}
+        {activeTab === "cities" && country.cities && <CitiesContent cities={country.cities} />}
       </section>
     </div>
   );
 }
 
-// ──────────────────────────────────────
-// 여행 준비 탭 — 카드 그리드 레이아웃 (전체 국가 통일)
-// ──────────────────────────────────────
-function PreparationTab({ country }: { country: Country }) {
+// 여행 목적에 따라 각 절차의 우선순위 계산 (범용)
+function calculateRequirementLevel(
+  country: Country,
+  travelPurpose: string | null,
+  sectionType: "visa" | "entry_registration" | "insurance" | "license"
+): "required" | "recommended" | "optional" | null {
+  if (!travelPurpose) return null;
+
+  // 여행/관광 목적
+  if (travelPurpose === "tourism") {
+    if (sectionType === "visa") {
+      // 무비자 국가면 불필요, 비자 필요 국가면 필수
+      if (country.visaStatus === "visa_free") return null;
+      return "required";
+    }
+    if (sectionType === "entry_registration") {
+      if (!country.entryRegistration) return null;
+      return country.entryRegistration.required ? "required" : "recommended";
+    }
+    if (sectionType === "insurance") return "recommended";
+    if (sectionType === "license") return "optional";
+  }
+
+  // 출장/비즈니스 목적
+  if (travelPurpose === "business") {
+    if (sectionType === "visa") {
+      if (country.visaStatus === "visa_free") return null;
+      return "required";
+    }
+    if (sectionType === "entry_registration") {
+      if (!country.entryRegistration) return null;
+      return "recommended";
+    }
+    if (sectionType === "insurance") return "required";
+    if (sectionType === "license") return "optional";
+  }
+
+  // 유학/어학연수 목적
+  if (travelPurpose === "study") {
+    if (sectionType === "visa") return "required";
+    if (sectionType === "entry_registration") return null;
+    if (sectionType === "insurance") return "required";
+    if (sectionType === "license") return "optional";
+  }
+
+  // 취업/일 목적
+  if (travelPurpose === "work") {
+    if (sectionType === "visa") return "required";
+    if (sectionType === "entry_registration") return null;
+    if (sectionType === "insurance") return "required";
+    if (sectionType === "license") return "optional";
+  }
+
+  // 워킹홀리데이 목적
+  if (travelPurpose === "working_holiday") {
+    if (sectionType === "visa") return "required";
+    if (sectionType === "entry_registration") return null;
+    if (sectionType === "insurance") return "required";
+    if (sectionType === "license") return "optional";
+  }
+
+  return null;
+}
+
+// 배지 스타일 반환
+function getBadgeStyle(level: "required" | "recommended" | "optional" | null) {
+  if (!level) return null;
+  const styles = {
+    required: { text: "필수", color: "bg-rose-500/20 text-rose-700 dark:text-rose-400" },
+    recommended: { text: "권장", color: "bg-amber-500/20 text-amber-700 dark:text-amber-400" },
+    optional: { text: "선택", color: "bg-slate-500/20 text-slate-700 dark:text-slate-400" },
+  };
+  return styles[level];
+}
+
+
+// 여행 준비 탭 콘텐츠 — 카드 그리드 레이아웃
+function PreparationContent({
+  country,
+  travelPurpose,
+  onPurposeChange,
+}: {
+  country: Country;
+  travelPurpose: string | null;
+  onPurposeChange: (purpose: string | null) => void;
+}) {
   const [expandedCard, setExpandedCard] = useState<string | null>(null);
+
+  // 우선순위 계산
+  const visaLevel = calculateRequirementLevel(country, travelPurpose, "visa");
+  const entryRegLevel = calculateRequirementLevel(country, travelPurpose, "entry_registration");
+  const licenseBadge = getBadgeStyle(calculateRequirementLevel(country, travelPurpose, "license"));
+  const entryBadge = getBadgeStyle(entryRegLevel);
   const visaInfo = VISA_STATUS_MAP[country.visaStatus];
+
   const toggleCard = (id: string) => setExpandedCard(expandedCard === id ? null : id);
 
+  // 카드 정의
   interface PrepCard {
     id: string;
     icon: React.ReactNode;
@@ -184,35 +279,59 @@ function PreparationTab({ country }: { country: Country }) {
     detail: React.ReactNode;
   }
 
+  // 비자 요약 텍스트
+  const getVisaSummary = () => {
+    if (visaLevel === "required") {
+      if (travelPurpose === "work") return "취업비자 필요";
+      if (travelPurpose === "study") return "유학비자 필요";
+      if (travelPurpose === "working_holiday") return "워홀비자 필요";
+      return "비자 필요";
+    }
+    if (country.visaStatus === "visa_free") {
+      return country.visaFreeStayDays
+        ? `${country.visaFreeStayDays}일 무비자 체류`
+        : "무비자 입국";
+    }
+    if (country.visaStatus === "visa_on_arrival") return "도착 비자 발급";
+    if (country.visaStatus === "e_visa") return "전자비자 신청";
+    return visaInfo.label;
+  };
+
   const cards: PrepCard[] = [
     {
       id: "visa",
       icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="text-sky-500"><path d="M9 12l2 2 4-4"/><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18"/></svg>,
-      title: country.visaStatus === "visa_free" ? "비자" : visaInfo.label,
-      summary: country.visaFreeStayDays ? `${country.visaFreeStayDays}일 무비자 체류` : (country.visaNote || ""),
-      badge: country.visaStatus === "visa_free"
-        ? { text: "불필요", color: "bg-emerald-500/20 text-emerald-700 dark:text-emerald-400" }
-        : { text: "필수", color: "bg-rose-500/20 text-rose-700 dark:text-rose-400" },
-      detail: (
+      title: "비자",
+      summary: getVisaSummary(),
+      badge: visaLevel === "required"
+        ? { text: "필수", color: "bg-rose-500/20 text-rose-700 dark:text-rose-400" }
+        : { text: visaInfo.label === "무비자" ? "불필요" : visaInfo.label, color: "bg-emerald-500/20 text-emerald-700 dark:text-emerald-400" },
+      detail: visaLevel === "required" ? (
         <div className="space-y-3">
-          {country.visaNote && <p className="text-sm text-slate-700 dark:text-slate-300">{country.visaNote}</p>}
+          <p className="text-sm">
+            {travelPurpose === "work" && "취업 목적 입국 시 취업 비자가 필요합니다."}
+            {travelPurpose === "study" && "유학 목적 입국 시 유학 비자가 필요합니다."}
+            {travelPurpose === "working_holiday" && "워킹홀리데이 비자가 필요합니다."}
+            {travelPurpose === "tourism" && "관광 목적으로도 비자가 필요합니다."}
+            {travelPurpose === "business" && "비즈니스 목적 입국 시 비자가 필요합니다."}
+          </p>
+          {country.visaNote && <p className="text-sm text-slate-500">{country.visaNote}</p>}
           {country.passportValidity && (
             <p className="text-sm">여권 유효기간: 최소 <strong className="text-sky-600 dark:text-sky-400">{country.passportValidity.months}개월</strong> 이상</p>
           )}
-          {country.visaFreeStayDays && (
-            <div className="bg-white/60 dark:bg-slate-800 rounded-lg px-3 py-2 inline-block">
-              <span className="text-xs text-slate-500">최대 체류</span>
-              <p className="text-lg font-bold text-slate-900 dark:text-white">{country.visaFreeStayDays}일</p>
-            </div>
-          )}
-          {country.importantNotes && country.importantNotes.length > 0 && (
-            <div className="space-y-1.5 pt-1">
-              {country.importantNotes.map((note, i) => (
-                <p key={i} className="text-xs text-amber-700 dark:text-amber-300 flex gap-1.5">
-                  <span>⚠️</span><span>{note}</span>
-                </p>
-              ))}
-            </div>
+        </div>
+      ) : (
+        <div className="space-y-3">
+          <p className="text-sm">
+            {country.visaStatus === "visa_free" && (
+              <>한국 여권 소지자는 관광/출장 목적으로 {country.visaFreeStayDays ? `최대 ${country.visaFreeStayDays}일간 ` : ""}무비자 체류가 가능합니다.</>
+            )}
+            {country.visaStatus === "visa_on_arrival" && "도착 시 공항에서 비자를 발급받을 수 있습니다."}
+            {country.visaStatus === "e_visa" && "출발 전 온라인으로 전자비자를 신청해야 합니다."}
+          </p>
+          {country.visaNote && <p className="text-sm text-slate-500">{country.visaNote}</p>}
+          {country.passportValidity && (
+            <p className="text-sm">여권 유효기간: 최소 <strong className="text-sky-600 dark:text-sky-400">{country.passportValidity.months}개월</strong> 이상</p>
           )}
         </div>
       ),
@@ -222,9 +341,7 @@ function PreparationTab({ country }: { country: Country }) {
       icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="text-violet-500"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>,
       title: country.entryRegistration.type,
       summary: country.entryRegistration.required ? "사전 등록 필수" : "등록 시 입국 간소화",
-      badge: country.entryRegistration.required
-        ? { text: "필수", color: "bg-rose-500/20 text-rose-700 dark:text-rose-400" }
-        : { text: "권장", color: "bg-amber-500/20 text-amber-700 dark:text-amber-400" },
+      badge: entryBadge || undefined,
       detail: (
         <div className="space-y-3">
           <p className="text-sm">{country.entryRegistration.description}</p>
@@ -243,7 +360,7 @@ function PreparationTab({ country }: { country: Country }) {
       badge: { text: "권장", color: "bg-amber-500/20 text-amber-700 dark:text-amber-400" },
       detail: (
         <div className="space-y-2 text-sm">
-          <p>해외 의료비는 높은 편이므로 여행자 보험 가입을 권장합니다.</p>
+          <p>해외 의료비는 높은 편이므로 여행자 보험 가입을 강력히 권장합니다.</p>
           <ul className="space-y-1">
             <li className="flex gap-2"><span className="text-emerald-500">✓</span> 의료비 보장 (최소 3천만원)</li>
             <li className="flex gap-2"><span className="text-emerald-500">✓</span> 휴대품 손해 (분실/도난)</li>
@@ -256,7 +373,7 @@ function PreparationTab({ country }: { country: Country }) {
       id: "comm",
       icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="text-blue-500"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M8.53 16.11a6 6 0 016.95 0"/><circle cx="12" cy="20" r="1"/></svg>,
       title: "통신",
-      summary: "eSIM",
+      summary: "eSIM · 현지 유심 · 로밍",
       detail: (
         <div className="space-y-2 text-sm">
           <div className="flex justify-between items-center p-2 bg-sky-50 dark:bg-sky-950/30 rounded-lg">
@@ -275,43 +392,16 @@ function PreparationTab({ country }: { country: Country }) {
       id: "license",
       icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="text-slate-500"><rect x="1" y="6" width="22" height="12" rx="2"/><circle cx="7" cy="15" r="1.5"/><circle cx="17" cy="15" r="1.5"/><path d="M5 6V4a1 1 0 011-1h4l2 3"/></svg>,
       title: "운전면허",
-      summary: country.drivingLicense.idpAccepted ? "국제운전면허증 인정" : "국제운전면허증 불인정",
-      badge: country.drivingLicense.idpAccepted
-        ? { text: "국제운전면허증 인정", color: "bg-emerald-500/20 text-emerald-700 dark:text-emerald-400" }
-        : { text: "국제운전면허증 불인정", color: "bg-rose-500/20 text-rose-700 dark:text-rose-400" },
+      summary: country.drivingLicense.idpAccepted
+        ? "국제운전면허증 인정"
+        : (country.drivingLicense.directRecognition ? "한국 면허 직접 인정" : "국제운전면허증 불인정"),
+      badge: licenseBadge || undefined,
       detail: (
         <div className="space-y-2 text-sm">
           <p>{country.drivingLicense.note}</p>
           {country.drivingLicense.minimumAge && (
             <p className="text-xs text-slate-500">최소 운전 연령: {country.drivingLicense.minimumAge}세</p>
           )}
-        </div>
-      ),
-    }] as PrepCard[] : []),
-    ...(country.timeline && country.timeline.length > 0 ? [{
-      id: "timeline",
-      icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="text-teal-500"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>,
-      title: "준비 타임라인",
-      summary: `${country.timeline.length}단계 준비`,
-      detail: (
-        <div className="space-y-3">
-          {country.timeline.map((t, i) => (
-            <div key={i} className="flex gap-3">
-              <div className="flex-shrink-0">
-                <span className="text-xs font-bold text-sky-500 bg-sky-50 dark:bg-sky-950/30 px-2 py-1 rounded">{t.dDay}</span>
-              </div>
-              <div>
-                <p className="text-sm font-bold text-slate-900 dark:text-white">{t.title}</p>
-                <p className="text-xs text-slate-500 mt-0.5">{t.description}</p>
-                {t.actionUrl && t.actionLabel && (
-                  <a href={t.actionUrl} target="_blank" rel="noopener noreferrer"
-                    className="inline-block mt-1.5 px-3 py-1.5 bg-sky-600 text-white text-xs font-medium rounded-lg">
-                    {t.actionLabel}
-                  </a>
-                )}
-              </div>
-            </div>
-          ))}
         </div>
       ),
     }] as PrepCard[] : []),
@@ -332,14 +422,16 @@ function PreparationTab({ country }: { country: Country }) {
         </div>
         <p className="text-xs text-slate-500 dark:text-slate-400 hidden sm:block">방문 목적에 따라 필요한 절차가 달라집니다</p>
         <select
+          value={travelPurpose || ""}
+          onChange={(e) => onPurposeChange(e.target.value || null)}
           className="sm:ml-auto bg-white dark:bg-slate-800 text-slate-900 dark:text-white border border-slate-300 dark:border-slate-600 rounded-lg px-3 py-2 text-sm font-medium cursor-pointer focus:outline-none focus:ring-2 focus:ring-sky-500"
           aria-label="여행 목적 선택"
-          defaultValue="tourism"
         >
           <option value="tourism">여행 / 관광</option>
           <option value="business">출장 / 비즈니스</option>
           <option value="study">유학 / 어학연수</option>
           <option value="work">취업 / 일</option>
+          <option value="working_holiday">워킹홀리데이</option>
         </select>
       </div>
 
@@ -394,6 +486,54 @@ function PreparationTab({ country }: { country: Country }) {
         </div>
       )}
 
+      {/* 준비 타임라인 (있는 경우) */}
+      {country.timeline && country.timeline.length > 0 && (
+        <div className="bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-xl p-4">
+          <h3 className="text-sm font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="text-sky-500">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
+            준비 타임라인
+          </h3>
+          <div className="space-y-4">
+            {country.timeline.map((t, i) => (
+              <div key={i} className="flex gap-3">
+                <span className="text-xs font-bold text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950/30 px-2 py-1 rounded-lg flex-shrink-0 h-fit">
+                  {t.dDay}
+                </span>
+                <div>
+                  <p className="text-sm font-semibold text-slate-900 dark:text-white">{t.title}</p>
+                  <p className="text-xs text-slate-500 mt-0.5">{t.description}</p>
+                  {t.actionUrl && t.actionLabel && (
+                    <a
+                      href={t.actionUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block mt-1.5 px-3 py-1.5 bg-sky-500 text-white text-xs font-medium rounded-lg"
+                    >
+                      {t.actionLabel}
+                    </a>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* 중요 안내 (있는 경우) */}
+      {country.importantNotes && country.importantNotes.length > 0 && (
+        <div className="bg-amber-50 dark:bg-amber-950/20 border border-amber-200/60 dark:border-amber-800/30 rounded-xl px-4 py-3 space-y-1">
+          {country.importantNotes.map((note, i) => (
+            <p key={i} className="text-[13px] text-amber-800 dark:text-amber-300 leading-relaxed flex items-start gap-2">
+              <span className="mt-0.5 flex-shrink-0">⚠</span>
+              <span>{note}</span>
+            </p>
+          ))}
+        </div>
+      )}
+
       {/* 출국 체크리스트 */}
       {country.checklist && country.checklist.length > 0 && (
         <div className="bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-xl p-4">
@@ -415,10 +555,102 @@ function PreparationTab({ country }: { country: Country }) {
   );
 }
 
-// ──────────────────────────────────────
-// 비자 종류 탭
-// ──────────────────────────────────────
-function VisaTypesTab({ visaTypes }: { visaTypes: NonNullable<Country["visaTypes"]> }) {
+// 안전·긴급 탭 콘텐츠
+function SafetyContent({ country }: { country: Country }) {
+  return (
+    <Accordion>
+      {/* 주의사항 (alerts 데이터 활용) */}
+      {country.alerts && country.alerts.length > 0 && (
+        <AccordionItem
+          title="주의사항"
+          icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>}
+          defaultOpen={true}
+        >
+          <div className="space-y-4">
+            <div className="bg-rose-50 dark:bg-rose-950/30 border border-rose-200 dark:border-rose-800 rounded-lg p-4">
+              <h4 className="font-semibold text-rose-900 dark:text-rose-200 mb-2">⚠️ 주의사항</h4>
+              <ul className="space-y-1 text-sm text-rose-800 dark:text-rose-300">
+                {country.alerts.map((alert, idx) => (
+                  <li key={idx}>• {alert}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </AccordionItem>
+      )}
+
+      {/* 중요 안내 */}
+      {country.importantNotes && country.importantNotes.length > 0 && (
+        <AccordionItem
+          title="중요 안내"
+          icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>}
+          defaultOpen={true}
+        >
+          <div className="space-y-2">
+            {country.importantNotes.map((note, idx) => (
+              <p key={idx} className="text-sm flex items-start gap-2">
+                <span className="text-amber-500 mt-0.5">⚠</span>
+                <span>{note}</span>
+              </p>
+            ))}
+          </div>
+        </AccordionItem>
+      )}
+
+      {/* 긴급 연락처 */}
+      <AccordionItem
+        title="긴급 연락처"
+        icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>}
+      >
+        <div className="space-y-3">
+          <div className="flex justify-between items-center p-3 bg-slate-100 dark:bg-slate-800 rounded-lg">
+            <span className="font-semibold">영사콜센터 (24시간)</span>
+            <a href="tel:+82-2-3210-0404" className="text-sky-600 dark:text-sky-400 font-mono">+82-2-3210-0404</a>
+          </div>
+          <p className="text-xs text-slate-500 dark:text-slate-400">
+            현지 긴급 연락처는 외교부 해외안전여행 사이트에서 확인하세요.
+          </p>
+          <a
+            href={`https://www.0404.go.kr/dev/country_view.do?idx=${country.id}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 px-3 py-2 bg-sky-600 text-white rounded-lg text-sm font-medium"
+          >
+            외교부 안전정보 확인 →
+          </a>
+        </div>
+      </AccordionItem>
+
+      {/* 분실 시 대처법 */}
+      <AccordionItem
+        title="분실 시 대처법"
+        icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>}
+      >
+        <div className="space-y-4">
+          <div>
+            <h4 className="font-semibold text-slate-900 dark:text-white mb-2">여권 분실</h4>
+            <ol className="list-decimal list-inside space-y-1 text-sm">
+              <li>가까운 경찰서에서 분실 신고서 발급</li>
+              <li>한국 대사관/영사관 방문 (여권 사진 2매, 신분증 지참)</li>
+              <li>여행증명서 또는 신규 여권 발급</li>
+            </ol>
+          </div>
+          <div>
+            <h4 className="font-semibold text-slate-900 dark:text-white mb-2">카드 분실</h4>
+            <ol className="list-decimal list-inside space-y-1 text-sm">
+              <li>즉시 카드사에 분실 신고 (24시간 콜센터)</li>
+              <li>경찰서 방문하여 분실 신고서 발급</li>
+              <li>보험 가입 시 휴대품 손해 청구</li>
+            </ol>
+          </div>
+        </div>
+      </AccordionItem>
+    </Accordion>
+  );
+}
+
+// 비자 종류 탭 콘텐츠
+function VisaTypesContent({ visaTypes }: { visaTypes: NonNullable<Country["visaTypes"]> }) {
   return (
     <div>
       <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-1">비자 종류</h3>
@@ -450,10 +682,8 @@ function VisaTypesTab({ visaTypes }: { visaTypes: NonNullable<Country["visaTypes
   );
 }
 
-// ──────────────────────────────────────
-// 도시 정보 탭
-// ──────────────────────────────────────
-function CitiesTab({ cities }: { cities: { name: string; nameEn: string; image: string }[] }) {
+// 도시 정보 탭 콘텐츠
+function CitiesContent({ cities }: { cities: { name: string; nameEn: string; image: string }[] }) {
   return (
     <div>
       <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-4">인기 도시</h3>
@@ -474,75 +704,5 @@ function CitiesTab({ cities }: { cities: { name: string; nameEn: string; image: 
         도시별 상세 정보는 곧 업데이트됩니다.
       </p>
     </div>
-  );
-}
-
-// ──────────────────────────────────────
-// 안전·긴급 탭
-// ──────────────────────────────────────
-function SafetyTab({ country }: { country: Country }) {
-  const hasAlerts = country.alerts && country.alerts.length > 0;
-  const hasNotes = country.importantNotes && country.importantNotes.length > 0;
-
-  if (!hasAlerts && !hasNotes) {
-    return (
-      <div className="text-center py-12 text-slate-500">
-        등록된 안전 정보가 없습니다.
-      </div>
-    );
-  }
-
-  return (
-    <Accordion>
-      {/* 주의사항 */}
-      {hasAlerts && (
-        <AccordionItem
-          title="주의사항"
-          badge={`${country.alerts!.length}건`}
-          badgeColor="bg-rose-500/20 text-rose-700 dark:text-rose-400"
-          defaultOpen={true}
-          icon={
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
-              <path d="M12 9v4" />
-              <path d="M12 17h.01" />
-            </svg>
-          }
-        >
-          <div className="space-y-2">
-            {country.alerts!.map((alert, idx) => (
-              <div key={idx} className="flex items-start gap-2 p-3 bg-rose-50 dark:bg-rose-950/30 rounded-lg">
-                <span className="mt-1 w-1.5 h-1.5 rounded-full bg-rose-400 flex-shrink-0" />
-                <span className="text-sm text-rose-800 dark:text-rose-300 leading-relaxed">{alert}</span>
-              </div>
-            ))}
-          </div>
-        </AccordionItem>
-      )}
-
-      {/* 중요 안내 */}
-      {hasNotes && (
-        <AccordionItem
-          title="중요 안내"
-          defaultOpen={true}
-          icon={
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <circle cx="12" cy="12" r="10" />
-              <path d="M12 16v-4" />
-              <path d="M12 8h.01" />
-            </svg>
-          }
-        >
-          <div className="space-y-2">
-            {country.importantNotes.map((note, idx) => (
-              <div key={idx} className="flex items-start gap-2 p-3 bg-sky-50 dark:bg-sky-950/30 rounded-lg">
-                <span className="mt-1 w-1.5 h-1.5 rounded-full bg-sky-400 flex-shrink-0" />
-                <span className="text-sm text-sky-800 dark:text-sky-300 leading-relaxed">{note}</span>
-              </div>
-            ))}
-          </div>
-        </AccordionItem>
-      )}
-    </Accordion>
   );
 }

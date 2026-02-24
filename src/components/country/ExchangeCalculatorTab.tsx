@@ -6,6 +6,7 @@ import { fetchExchangeRate, type ExchangeData } from "@/lib/exchange";
 
 interface ExchangeCalculatorTabProps {
   countryId: string;
+  compact?: boolean; // true면 타이틀과 환율 요약 숨김 (Disclosure 내부 사용 시)
 }
 
 // 숫자 포맷 (천 단위 콤마)
@@ -21,7 +22,7 @@ function parseInput(value: string): number {
   return parseFloat(cleaned) || 0;
 }
 
-export default function ExchangeCalculatorTab({ countryId }: ExchangeCalculatorTabProps) {
+export default function ExchangeCalculatorTab({ countryId, compact = false }: ExchangeCalculatorTabProps) {
   const [exchange, setExchange] = useState<ExchangeData | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -164,11 +165,15 @@ export default function ExchangeCalculatorTab({ countryId }: ExchangeCalculatorT
   const krwPerUnit = 1 / exchange.rate;
 
   return (
-    <div className="max-w-md mx-auto">
-      <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-1">환율 계산기</h3>
-      <p className="text-sm text-slate-500 dark:text-slate-400 mb-5">
-        1 {currencyInfo.code} ≈ {formatNumber(krwPerUnit)} KRW
-      </p>
+    <div className={compact ? "" : "max-w-md mx-auto"}>
+      {!compact && (
+        <>
+          <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-1">환율 계산기</h3>
+          <p className="text-sm text-slate-500 dark:text-slate-400 mb-5">
+            1 {currencyInfo.code} ≈ {formatNumber(krwPerUnit)} KRW
+          </p>
+        </>
+      )}
 
       <div className="space-y-0">
         {/* 상단 입력 */}
