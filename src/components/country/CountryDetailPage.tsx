@@ -9,6 +9,8 @@ import { Accordion, AccordionItem } from "./Accordion";
 import WeatherBadge from "./WeatherBadge";
 import ExchangeCalculator from "./ExchangeCalculator";
 import ExchangeCalculatorTab from "./ExchangeCalculatorTab";
+import { countryTravelInfo } from "@/data/countryTravelInfo";
+import FlightInfoStrip from "./FlightInfoStrip";
 
 interface CountryDetailPageProps {
   country: Country;
@@ -143,7 +145,7 @@ export default function CountryDetailPage({ country }: CountryDetailPageProps) {
                     </svg>
                     <span className="text-[11px] text-white/80 font-medium uppercase tracking-wider">비행시간</span>
                   </div>
-                  <p className="text-base sm:text-lg font-bold text-white leading-tight">{quickInfo.flight}</p>
+                  <FlightInfoStrip countryId={country.id} fallbackText={quickInfo.flight} />
                 </div>
               </div>
             </div>
@@ -352,42 +354,101 @@ function PreparationContent({
         </div>
       ),
     }] as PrepCard[] : []),
-    {
-      id: "insurance",
-      icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="text-emerald-500"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>,
-      title: "보험",
-      summary: "여행자 보험 가입 추천",
-      badge: { text: "권장", color: "bg-amber-500/20 text-amber-700 dark:text-amber-400" },
-      detail: (
-        <div className="space-y-2 text-sm">
-          <p>해외 의료비는 높은 편이므로 여행자 보험 가입을 강력히 권장합니다.</p>
-          <ul className="space-y-1">
-            <li className="flex gap-2"><span className="text-emerald-500">✓</span> 의료비 보장 (최소 3천만원)</li>
-            <li className="flex gap-2"><span className="text-emerald-500">✓</span> 휴대품 손해 (분실/도난)</li>
-            <li className="flex gap-2"><span className="text-emerald-500">✓</span> 항공기 지연 보상</li>
-          </ul>
-        </div>
-      ),
-    },
-    {
-      id: "comm",
-      icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="text-blue-500"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M8.53 16.11a6 6 0 016.95 0"/><circle cx="12" cy="20" r="1"/></svg>,
-      title: "통신",
-      summary: "eSIM · 현지 유심 · 로밍",
-      detail: (
-        <div className="space-y-2 text-sm">
-          <div className="flex justify-between items-center p-2 bg-sky-50 dark:bg-sky-950/30 rounded-lg">
-            <span className="font-medium">eSIM</span><span className="text-xs text-slate-500">출국 전 구매</span>
+    (() => {
+      const info = countryTravelInfo[country.id];
+      const ins = info?.insurance;
+      const levelLabel = ins ? { very_high: "매우 높음", high: "높음", medium: "보통", low: "낮음" }[ins.level] : null;
+      return {
+        id: "insurance",
+        icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="text-emerald-500"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>,
+        title: "보험",
+        summary: ins ? `의료비 수준: ${levelLabel}` : "여행자 보험 가입 추천",
+        badge: { text: "권장", color: "bg-amber-500/20 text-amber-700 dark:text-amber-400" },
+        detail: ins ? (
+          <div className="space-y-3 text-sm">
+            <div className="flex items-center gap-2 mb-1">
+              <span className={`text-xs font-bold px-2 py-0.5 rounded-full ${
+                ins.level === "very_high" ? "bg-rose-100 text-rose-700 dark:bg-rose-900/30 dark:text-rose-300" :
+                ins.level === "high" ? "bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300" :
+                ins.level === "medium" ? "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300" :
+                "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300"
+              }`}>의료비 수준: {levelLabel}</span>
+            </div>
+            <div className="p-2.5 bg-slate-50 dark:bg-slate-800 rounded-lg">
+              <p className="text-xs text-slate-500 mb-0.5">현지 의료비 예시</p>
+              <p className="font-medium">{ins.avgMedicalCost}</p>
+            </div>
+            <div className="p-2.5 bg-sky-50 dark:bg-sky-950/30 rounded-lg">
+              <p className="text-xs text-slate-500 mb-0.5">최소 보장 금액</p>
+              <p className="font-bold text-sky-700 dark:text-sky-300">{ins.minCoverage}</p>
+            </div>
+            <ul className="space-y-1">
+              {ins.tips.map((tip, i) => (
+                <li key={i} className="flex gap-2"><span className="text-amber-500">⚠</span> {tip}</li>
+              ))}
+            </ul>
           </div>
-          <div className="flex justify-between items-center p-2 bg-slate-50 dark:bg-slate-800 rounded-lg">
-            <span className="font-medium">현지 유심</span><span className="text-xs text-slate-500">공항/매장 구매</span>
+        ) : (
+          <div className="space-y-2 text-sm">
+            <p>해외 의료비는 높은 편이므로 여행자 보험 가입을 강력히 권장합니다.</p>
+            <ul className="space-y-1">
+              <li className="flex gap-2"><span className="text-emerald-500">✓</span> 의료비 보장 (최소 3천만원)</li>
+              <li className="flex gap-2"><span className="text-emerald-500">✓</span> 휴대품 손해 (분실/도난)</li>
+              <li className="flex gap-2"><span className="text-emerald-500">✓</span> 항공기 지연 보상</li>
+            </ul>
           </div>
-          <div className="flex justify-between items-center p-2 bg-slate-50 dark:bg-slate-800 rounded-lg">
-            <span className="font-medium">국제 로밍</span><span className="text-xs text-slate-500">통신사 앱 신청</span>
+        ),
+      };
+    })(),
+    (() => {
+      const info = countryTravelInfo[country.id];
+      const comm = info?.comm;
+      return {
+        id: "comm",
+        icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="text-blue-500"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M8.53 16.11a6 6 0 016.95 0"/><circle cx="12" cy="20" r="1"/></svg>,
+        title: "통신",
+        summary: comm ? `eSIM ${comm.esim.price}` : "eSIM · 현지 유심 · 로밍",
+        detail: comm ? (
+          <div className="space-y-2.5 text-sm">
+            <div className="p-2.5 bg-sky-50 dark:bg-sky-950/30 rounded-lg">
+              <div className="flex justify-between items-center mb-1">
+                <span className="font-bold text-sky-700 dark:text-sky-300">eSIM</span>
+                <span className="text-xs font-semibold text-sky-600 dark:text-sky-400">{comm.esim.price}</span>
+              </div>
+              <p className="text-xs text-slate-500">{comm.esim.providers}</p>
+              <p className="text-xs text-slate-400 mt-0.5">{comm.esim.note}</p>
+            </div>
+            <div className="p-2.5 bg-slate-50 dark:bg-slate-800 rounded-lg">
+              <div className="flex justify-between items-center mb-1">
+                <span className="font-bold">현지 유심</span>
+                <span className="text-xs font-semibold">{comm.localSim.price}</span>
+              </div>
+              <p className="text-xs text-slate-500">{comm.localSim.carriers}</p>
+              <p className="text-xs text-slate-400 mt-0.5">{comm.localSim.note}</p>
+            </div>
+            <div className="p-2.5 bg-slate-50 dark:bg-slate-800 rounded-lg">
+              <div className="flex justify-between items-center mb-1">
+                <span className="font-bold">국제 로밍</span>
+                <span className="text-xs font-semibold">{comm.roaming.price}</span>
+              </div>
+              <p className="text-xs text-slate-400">{comm.roaming.note}</p>
+            </div>
           </div>
-        </div>
-      ),
-    },
+        ) : (
+          <div className="space-y-2 text-sm">
+            <div className="flex justify-between items-center p-2 bg-sky-50 dark:bg-sky-950/30 rounded-lg">
+              <span className="font-medium">eSIM</span><span className="text-xs text-slate-500">출국 전 구매</span>
+            </div>
+            <div className="flex justify-between items-center p-2 bg-slate-50 dark:bg-slate-800 rounded-lg">
+              <span className="font-medium">현지 유심</span><span className="text-xs text-slate-500">공항/매장 구매</span>
+            </div>
+            <div className="flex justify-between items-center p-2 bg-slate-50 dark:bg-slate-800 rounded-lg">
+              <span className="font-medium">국제 로밍</span><span className="text-xs text-slate-500">통신사 앱 신청</span>
+            </div>
+          </div>
+        ),
+      };
+    })(),
     ...(country.drivingLicense ? [{
       id: "license",
       icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="text-slate-500"><rect x="1" y="6" width="22" height="12" rx="2"/><circle cx="7" cy="15" r="1.5"/><circle cx="17" cy="15" r="1.5"/><path d="M5 6V4a1 1 0 011-1h4l2 3"/></svg>,
@@ -602,23 +663,56 @@ function SafetyContent({ country }: { country: Country }) {
         title="긴급 연락처"
         icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>}
       >
-        <div className="space-y-3">
-          <div className="flex justify-between items-center p-3 bg-slate-100 dark:bg-slate-800 rounded-lg">
-            <span className="font-semibold">영사콜센터 (24시간)</span>
-            <a href="tel:+82-2-3210-0404" className="text-sky-600 dark:text-sky-400 font-mono">+82-2-3210-0404</a>
-          </div>
-          <p className="text-xs text-slate-500 dark:text-slate-400">
-            현지 긴급 연락처는 외교부 해외안전여행 사이트에서 확인하세요.
-          </p>
-          <a
-            href={`https://www.0404.go.kr/dev/country_view.do?idx=${country.id}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-3 py-2 bg-sky-600 text-white rounded-lg text-sm font-medium"
-          >
-            외교부 안전정보 확인 →
-          </a>
-        </div>
+        {(() => {
+          const info = countryTravelInfo[country.id];
+          const em = info?.emergency;
+          return (
+            <div className="space-y-3">
+              {/* 현지 긴급번호 */}
+              {em && (
+                <div className="grid grid-cols-3 gap-2">
+                  <a href={`tel:${em.police}`} className="flex flex-col items-center p-3 bg-blue-50 dark:bg-blue-950/30 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-950/50 transition-colors">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-blue-600 dark:text-blue-400 mb-1"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    <span className="text-[10px] text-slate-500 mb-0.5">경찰</span>
+                    <span className="text-sm font-bold text-blue-700 dark:text-blue-300">{em.police}</span>
+                  </a>
+                  <a href={`tel:${em.fire}`} className="flex flex-col items-center p-3 bg-red-50 dark:bg-red-950/30 rounded-lg hover:bg-red-100 dark:hover:bg-red-950/50 transition-colors">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-red-600 dark:text-red-400 mb-1"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg>
+                    <span className="text-[10px] text-slate-500 mb-0.5">소방</span>
+                    <span className="text-sm font-bold text-red-700 dark:text-red-300">{em.fire}</span>
+                  </a>
+                  <a href={`tel:${em.ambulance}`} className="flex flex-col items-center p-3 bg-emerald-50 dark:bg-emerald-950/30 rounded-lg hover:bg-emerald-100 dark:hover:bg-emerald-950/50 transition-colors">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-emerald-600 dark:text-emerald-400 mb-1"><path d="M10 10H6"/><path d="M14 18V6a2 2 0 00-2-2H4a2 2 0 00-2 2v11a1 1 0 001 1h2"/><path d="M19 18h2a1 1 0 001-1v-3.28a1 1 0 00-.684-.948l-1.923-.641a1 1 0 01-.578-.502l-1.539-3.076A1 1 0 0016.382 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>
+                    <span className="text-[10px] text-slate-500 mb-0.5">응급</span>
+                    <span className="text-sm font-bold text-emerald-700 dark:text-emerald-300">{em.ambulance}</span>
+                  </a>
+                </div>
+              )}
+
+              {/* 대사관 */}
+              {em?.embassy && (
+                <div className="p-3 bg-violet-50 dark:bg-violet-950/30 border border-violet-200/50 dark:border-violet-800/30 rounded-lg">
+                  <p className="text-xs text-violet-600 dark:text-violet-400 font-medium mb-1">{em.embassy.name}</p>
+                  <a href={`tel:${em.embassy.phone}`} className="text-sm font-bold text-violet-800 dark:text-violet-200 hover:underline">{em.embassy.phone}</a>
+                </div>
+              )}
+
+              {/* 영사콜센터 */}
+              <div className="flex justify-between items-center p-3 bg-slate-100 dark:bg-slate-800 rounded-lg">
+                <span className="font-semibold text-sm">영사콜센터 (24시간)</span>
+                <a href="tel:+82-2-3210-0404" className="text-sky-600 dark:text-sky-400 font-mono text-sm">+82-2-3210-0404</a>
+              </div>
+              <a
+                href={`https://www.0404.go.kr/dev/country_view.do?idx=${country.id}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-2 bg-sky-600 text-white rounded-lg text-sm font-medium"
+              >
+                외교부 안전정보 확인 →
+              </a>
+            </div>
+          );
+        })()}
       </AccordionItem>
 
       {/* 분실 시 대처법 */}
