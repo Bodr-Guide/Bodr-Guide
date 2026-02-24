@@ -6,6 +6,7 @@ import { Country, VISA_STATUS_MAP } from "@/lib/types";
 import { getCountryImage, getFlagUrl } from "@/lib/countryImages";
 import TabNavigation from "./TabNavigation";
 import { Accordion, AccordionItem } from "./Accordion";
+import WeatherBadge from "./WeatherBadge";
 
 interface CountryDetailPageProps {
   country: Country;
@@ -91,7 +92,7 @@ export default function CountryDetailPage({ country }: CountryDetailPageProps) {
           {/* 퀵 인포 스트립 */}
           {quickInfo && (
             <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl max-w-3xl overflow-hidden">
-              <div className="grid grid-cols-2 sm:grid-cols-4 sm:divide-x divide-white/15">
+              <div className="grid grid-cols-2 sm:grid-cols-5 sm:divide-x divide-white/15">
                 <div className="p-3 sm:p-4 border-r border-b sm:border-b-0 border-white/15">
                   <div className="flex items-center gap-2 mb-1.5">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-white/60">
@@ -112,7 +113,7 @@ export default function CountryDetailPage({ country }: CountryDetailPageProps) {
                   </div>
                   <p className="text-base sm:text-lg font-bold text-white leading-tight">{quickInfo.currency}</p>
                 </div>
-                <div className="p-3 sm:p-4 border-r sm:border-r-0 border-white/15">
+                <div className="p-3 sm:p-4 border-r sm:border-r-0 border-b sm:border-b-0 border-white/15">
                   <div className="flex items-center gap-2 mb-1.5">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-white/60">
                       <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
@@ -121,7 +122,7 @@ export default function CountryDetailPage({ country }: CountryDetailPageProps) {
                   </div>
                   <p className="text-base sm:text-lg font-bold text-white leading-tight">{quickInfo.voltage}</p>
                 </div>
-                <div className="p-3 sm:p-4">
+                <div className="p-3 sm:p-4 border-white/15">
                   <div className="flex items-center gap-2 mb-1.5">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-white/60">
                       <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z" />
@@ -130,6 +131,7 @@ export default function CountryDetailPage({ country }: CountryDetailPageProps) {
                   </div>
                   <p className="text-base sm:text-lg font-bold text-white leading-tight">{quickInfo.flight}</p>
                 </div>
+                <WeatherBadge countryId={country.id} />
               </div>
             </div>
           )}
