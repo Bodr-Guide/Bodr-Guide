@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
+import { createPortal } from "react-dom";
 import { countryTravelInfo } from "@/data/countryTravelInfo";
 
 interface FlightInfoStripProps {
@@ -10,17 +11,46 @@ interface FlightInfoStripProps {
 
 // 히어로 퀵인포 스트립 내 비행시간 표시 컴포넌트
 // 공항별 비행시간 데이터가 있으면 드롭다운으로 표시
+// Portal 사용하여 부모 overflow-hidden에 영향받지 않음
 export default function FlightInfoStrip({ countryId, fallbackText }: FlightInfoStripProps) {
   const [open, setOpen] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
+  const btnRef = useRef<HTMLButtonElement>(null);
+  const popRef = useRef<HTMLDivElement>(null);
+  const [pos, setPos] = useState<{ top: number; left: number } | null>(null);
 
   const flights = countryTravelInfo[countryId]?.flights;
+
+  // 팝오버 위치 계산
+  const updatePos = useCallback(() => {
+    if (!btnRef.current) return;
+    const rect = btnRef.current.getBoundingClientRect();
+    setPos({
+      top: rect.bottom + 8,
+      left: Math.max(8, rect.left),
+    });
+  }, []);
+
+  // 열릴 때 위치 계산 + 스크롤/리사이즈 추적
+  useEffect(() => {
+    if (!open) return;
+    updatePos();
+    window.addEventListener("scroll", updatePos, true);
+    window.addEventListener("resize", updatePos);
+    return () => {
+      window.removeEventListener("scroll", updatePos, true);
+      window.removeEventListener("resize", updatePos);
+    };
+  }, [open, updatePos]);
 
   // 외부 클릭 시 닫기
   useEffect(() => {
     if (!open) return;
     const handler = (e: MouseEvent) => {
-      if (ref.current && !ref.current.contains(e.target as Node)) {
+      const target = e.target as Node;
+      if (
+        btnRef.current && !btnRef.current.contains(target) &&
+        popRef.current && !popRef.current.contains(target)
+      ) {
         setOpen(false);
       }
     };
@@ -37,8 +67,9 @@ export default function FlightInfoStrip({ countryId, fallbackText }: FlightInfoS
   const main = flights[0];
 
   return (
-    <div ref={ref} className="relative">
+    <>
       <button
+        ref={btnRef}
         onClick={() => setOpen(!open)}
         className="text-left group"
         aria-expanded={open}
@@ -55,9 +86,13 @@ export default function FlightInfoStrip({ countryId, fallbackText }: FlightInfoS
         )}
       </button>
 
-      {/* 드롭다운 */}
-      {open && (
-        <div className="absolute left-0 bottom-full mb-2 w-64 sm:w-72 bg-slate-900/95 backdrop-blur-xl border border-white/20 rounded-xl shadow-2xl z-50 overflow-hidden animate-[slideDown_0.2s_ease-out]">
+      {/* Portal로 body에 직접 렌더링 — 부모 overflow 영향 없음 */}
+      {open && pos && createPortal(
+        <div
+          ref={popRef}
+          style={{ position: "fixed", top: pos.top, left: pos.left, zIndex: 9999 }}
+          className="w-64 sm:w-72 bg-slate-900/95 backdrop-blur-xl border border-white/20 rounded-xl shadow-2xl overflow-hidden animate-in fade-in slide-in-from-top-2 duration-200"
+        >
           <div className="p-2.5 border-b border-white/10">
             <p className="text-[10px] text-white/50 font-medium uppercase tracking-wider">인천(ICN) 출발 기준</p>
           </div>
@@ -80,8 +115,9 @@ export default function FlightInfoStrip({ countryId, fallbackText }: FlightInfoS
               </div>
             ))}
           </div>
-        </div>
+        </div>,
+        document.body
       )}
-    </div>
+    </>
   );
 }
