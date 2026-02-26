@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "BorderWiki — Travel Without Borders",
   description:
     "흩어진 여행 정보, 여기서 끝. 출입국, 교통, 숙소, 맛집까지 한 곳에서.",
+  metadataBase: new URL("https://borderwiki.com"),
 };
 
 // 페이지 로드 시 깜빡임(FOUC) 방지: SSR 단계에서 dark 클래스를 미리 적용
