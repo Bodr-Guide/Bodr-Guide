@@ -30,7 +30,7 @@ export default function RootLayout({
       <head>
         <meta
           name="naver-site-verification"
-          content="6918b3de6bb30477d996460626b238b8c8372813"
+          content="9787849b23d7daf690f8218ccfc84763c7f52c5a"
         />
         <script
           dangerouslySetInnerHTML={{
