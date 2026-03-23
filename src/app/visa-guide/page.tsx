@@ -6,9 +6,31 @@ import Header from "@/components/layout/Header";
 import ScrollToTop from "@/components/layout/ScrollToTop";
 
 export const metadata: Metadata = {
-  title: "비자 가이드 — BorderWiki",
+  title: "비자 가이드 | 무비자·전자비자·국가별 입국 정보",
   description:
-    "대한민국 여권 기준 전 세계 비자 종류별 가이드. 무비자, 도착비자, 전자비자, 비자 필요 국가를 한눈에 확인하세요.",
+    "대한민국 여권 기준 전 세계 비자 종류별 가이드입니다. 무비자, 도착비자, 전자비자, 비자 필요 국가와 국가별 입국 정보를 보더위키에서 한눈에 확인하세요.",
+  keywords: [
+    "비자 가이드",
+    "국가별 입국 정보",
+    "무비자 국가",
+    "전자비자",
+    "도착비자",
+    "한국 여권 비자",
+    "해외여행 비자",
+    "보더위키",
+  ],
+  alternates: {
+    canonical: "/visa-guide",
+  },
+  openGraph: {
+    title: "비자 가이드 | 무비자·전자비자·국가별 입국 정보",
+    description:
+      "무비자, 도착비자, 전자비자, 비자 필요 국가를 보더위키에서 비교하고 여행 전 입국 규정을 빠르게 확인하세요.",
+    url: "https://borderwiki.com/visa-guide",
+    siteName: "보더위키(BorderWiki)",
+    locale: "ko_KR",
+    type: "article",
+  },
 };
 
 // 비자 상태별 스타일

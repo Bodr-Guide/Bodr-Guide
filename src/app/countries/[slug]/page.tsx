@@ -21,8 +21,15 @@ export async function generateMetadata({
   if (!country) return { title: "국가를 찾을 수 없습니다" };
 
   return {
-    title: `${country.nameKo} 입국 가이드 | BorderWiki`,
-    description: `한국인 여행자를 위한 ${country.nameKo} 입국 요건, 비자 정보`,
+    title: `${country.nameKo} 갤러리`,
+    description: `${country.nameKo} 여행 이미지와 핵심 입국 정보를 살펴보는 보더위키 갤러리 페이지`,
+    alternates: {
+      canonical: `/country/${country.id}`,
+    },
+    robots: {
+      index: false,
+      follow: true,
+    },
   };
 }
 

@@ -38,7 +38,7 @@ export default function HeroSection() {
               <path d="M12 2L14.09 8.26L20 9.27L15.55 13.97L16.91 20L12 16.9L7.09 20L8.45 13.97L4 9.27L9.91 8.26L12 2Z" fill="currentColor" />
             </svg>
             <span className="text-xs font-medium tracking-wider text-slate-600 dark:text-slate-300">
-              2026 VISA GUIDE
+              보더위키 VISA GUIDE
             </span>
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-slate-400 dark:text-slate-500"><path d="m9 18 6-6-6-6"/></svg>
           </Link>
@@ -56,8 +56,8 @@ export default function HeroSection() {
         {/* 우측: 설명 + 검색바 (타이틀 옆 하단 정렬) */}
         <div className="flex-1 max-w-xs sm:max-w-sm lg:max-w-md pb-1">
           <p className="mb-2 text-right text-[13px] sm:text-[15px] leading-relaxed text-slate-500 dark:text-slate-400">
-            <span className="sm:hidden">흩어진 정보<br />여기서 준비하세요</span>
-            <span className="hidden sm:inline">흩어진 정보, 여기서 준비하세요</span>
+            <span className="sm:hidden">비자·입국 정보<br />여행 준비까지 여기서</span>
+            <span className="hidden sm:inline">비자·입국 정보, 여행 준비까지 여기서 확인하세요</span>
           </p>
 
           {/* 검색바 */}
