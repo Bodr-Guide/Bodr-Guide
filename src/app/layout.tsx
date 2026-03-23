@@ -2,11 +2,98 @@ import type { Metadata } from "next";
 import "./globals.css";
 import ThemeProvider from "@/components/providers/ThemeProvider";
 
+const SITE_URL = "https://borderwiki.com";
+const SITE_NAME = "보더위키(BorderWiki)";
+const DEFAULT_TITLE = "보더위키(BorderWiki) | 국가별 입국·비자·여행 준비 가이드";
+const DEFAULT_DESCRIPTION =
+  "보더위키는 한국인 여행자를 위한 국가별 입국 정보, 비자, 무비자 체류 기간, 전자비자, 여행 체크리스트, 여행 준비 가이드를 제공하는 여행 정보 사이트입니다.";
+const DEFAULT_KEYWORDS = [
+  "보더위키",
+  "borderwiki",
+  "국가별 입국 정보",
+  "비자 정보",
+  "무비자",
+  "전자비자",
+  "입국 규정",
+  "해외여행 준비",
+  "여행 체크리스트",
+  "여행 준비물",
+  "출국 준비",
+  "여행 준비 가이드",
+];
+
 export const metadata: Metadata = {
-  title: "BorderWiki — Travel Without Borders",
-  description:
-    "흩어진 여행 정보, 여기서 끝. 출입국, 교통, 숙소, 맛집까지 한 곳에서.",
-  metadataBase: new URL("https://borderwiki.com"),
+  title: {
+    default: DEFAULT_TITLE,
+    template: "%s | 보더위키(BorderWiki)",
+  },
+  description: DEFAULT_DESCRIPTION,
+  metadataBase: new URL(SITE_URL),
+  applicationName: SITE_NAME,
+  keywords: DEFAULT_KEYWORDS,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    locale: "ko_KR",
+    images: [
+      {
+        url: "/icon.png",
+        width: 512,
+        height: 512,
+        alt: "보더위키 BorderWiki 아이콘",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    images: ["/icon.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  category: "travel",
+};
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#organization`,
+      name: "BorderWiki",
+      alternateName: "보더위키",
+      url: SITE_URL,
+      logo: `${SITE_URL}/icon.png`,
+      sameAs: [SITE_URL],
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      url: SITE_URL,
+      name: "BorderWiki",
+      alternateName: "보더위키",
+      inLanguage: "ko-KR",
+      publisher: {
+        "@id": `${SITE_URL}/#organization`,
+      },
+    },
+  ],
 };
 
 // 페이지 로드 시 깜빡임(FOUC) 방지: SSR 단계에서 dark 클래스를 미리 적용
@@ -31,6 +118,12 @@ export default function RootLayout({
         <meta
           name="naver-site-verification"
           content="9787849b23d7daf690f8218ccfc84763c7f52c5a"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData),
+          }}
         />
         <script
           dangerouslySetInnerHTML={{
