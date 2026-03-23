@@ -28,8 +28,28 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${country.nameKo} 입국 가이드 — BorderWiki`,
-    description: `한국인 여행자를 위한 ${country.nameKo}(${country.nameEn}) 입국 요건, 비자 정보, 주의사항`,
+    title: `${country.nameKo} 입국 가이드`,
+    description: `한국인 여행자를 위한 ${country.nameKo}(${country.nameEn}) 입국 요건, 비자 정보, 무비자 체류 기간, 여행 준비 체크리스트와 주의사항`,
+    keywords: [
+      `${country.nameKo} 입국`,
+      `${country.nameKo} 비자`,
+      `${country.nameKo} 여행`,
+      `${country.nameKo} 여행 준비`,
+      `${country.nameKo} 무비자`,
+      `${country.nameKo} 전자비자`,
+      "보더위키",
+    ],
+    alternates: {
+      canonical: `/country/${country.id}`,
+    },
+    openGraph: {
+      title: `${country.nameKo} 입국 가이드 | 보더위키`,
+      description: `한국인 여행자를 위한 ${country.nameKo} 비자, 입국 요건, 여행 준비 정보와 주의사항을 확인하세요.`,
+      url: `https://borderwiki.com/country/${country.id}`,
+      siteName: "보더위키(BorderWiki)",
+      locale: "ko_KR",
+      type: "article",
+    },
   };
 }
 

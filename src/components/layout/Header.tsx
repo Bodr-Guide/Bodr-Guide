@@ -34,6 +34,7 @@ export default function Header() {
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
           className="text-lg font-semibold italic tracking-tight text-slate-900 dark:text-white"
+          aria-label="BorderWiki 홈으로 이동"
         >
           BorderWiki.
         </Link>

@@ -1,6 +1,5 @@
 import type { MetadataRoute } from "next";
 import { getAllCountries } from "@/lib/data";
-import { getAllCountrySlugs } from "@/lib/countries";
 
 const SITE_URL = "https://borderwiki.com";
 
@@ -31,14 +30,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   );
 
-  const countryGalleryRoutes: MetadataRoute.Sitemap = getAllCountrySlugs().map(
-    (slug) => ({
-      url: `${SITE_URL}/countries/${slug}`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.7,
-    })
-  );
-
-  return [...staticRoutes, ...countryDetailRoutes, ...countryGalleryRoutes];
+  return [...staticRoutes, ...countryDetailRoutes];
 }
