@@ -24,7 +24,7 @@ export async function generateMetadata({
     title: `${country.nameKo} 갤러리`,
     description: `${country.nameKo} 여행 이미지와 핵심 입국 정보를 살펴보는 보더위키 갤러리 페이지`,
     alternates: {
-      canonical: `/country/${country.id}`,
+      canonical: `/countries/${country.slug}`,
     },
     robots: {
       index: false,
